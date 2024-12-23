@@ -488,7 +488,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
     ID = [x for x in df["ID"]]
 
     # CALLS THE DISCOGS OBJECT (NEEDS USER TOKEN)
-    my_user_token = "docQjZEPqWxycqKxScnAQVTKsvQKwjqFkjrmEGWA"
+    my_user_token = input("Enter DISCOGS user token")
     disco = discogs_client.Client("ExampleApplication/0.1", user_token=my_user_token)
 
     # CRIA PLAYLIST PARA ARQUIVOS ATUALIZADOS

@@ -1,7 +1,7 @@
 import discogs_client
 
 # CALLS THE DISCOGS OBJECT (NEEDS USER TOKEN)
-my_user_token = "ilGcsgSAIoyCVAFmJfFZIqmcmJFynUFVCtbHaiAM"
+my_user_token = input("Enter DISCOGS user token")
 d = discogs_client.Client('ExampleApplication/0.1', user_token=my_user_token)
 
 release = d.release(1293022)

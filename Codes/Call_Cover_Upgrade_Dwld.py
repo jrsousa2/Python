@@ -102,7 +102,7 @@ def Upgrade(PL_name=None,PL_nbr=None):
     print("\nProcessing",nbr_files_check,"files\n")
 
     # CALLS THE DISCOGS OBJECT (NEEDS USER TOKEN)
-    my_user_token = "docQjZEPqWxycqKxScnAQVTKsvQKwjqFkjrmEGWA"
+    my_user_token = input("Enter DISCOGS user token")
     disco = discogs_client.Client("ExampleApplication/0.1", user_token=my_user_token)
     
     fixed = 0

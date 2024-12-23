@@ -2,7 +2,7 @@ import requests
 
 url = 'https://api.discogs.com/oauth/identity'
 
-my_user_token = "docQjZEPqWxycqKxScnAQVTKsvQKwjqFkjrmEGWA"
+my_user_token = input("Enter DISCOGS user token")
 my_headers={"Authorization": "Discogs token="+my_user_token}
 
 # params = my_params
