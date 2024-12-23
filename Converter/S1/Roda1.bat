@@ -1,0 +1,18 @@
+set PATH=%PATH%;D:\100\Converter;D:\100\Converter\S1
+
+call trimi D:\100\Sexo\S01 "SATC - S01E02 - Models and Mortals.mkv" 00:20:33 00:21:23 001 "Barkley, modelizer"
+call trimi D:\100\Sexo\S01 "SATC - S01E03 - Bay of Married Pigs.mkv" 00:18:05 00:19:15 002 "Charlotte's doorman"
+call trimi D:\100\Sexo\S01 "SATC - S01E04 - Valley of the Twenty-Something Guys.mkv" 00:17:09 00:17:40 003 "Jon, chef"
+call trimi D:\100\Sexo\S01 "SATC - S01E06 - Secret Sex.mkv" 00:08:21 00:10:17 004 "Mike"
+call trimi D:\100\Sexo\S01 "SATC - S01E06 - Secret Sex.mkv" 00:12:38 00:13:27 005 "Rabbi"
+call trimi D:\100\Sexo\S01 "SATC - S01E07 - The Monogamists.mkv" 00:19:40 00:20:52 006 "Rick, realtor"
+call trimi D:\100\Sexo\S01 "SATC - S01E08 - Three's a Crowd.mkv" 00:04:43 00:05:14 007 "Ken, wine importer"
+call trimi D:\100\Sexo\S01 "SATC - S01E08 - Three's a Crowd.mkv" 00:20:16 00:21:20 008 "Threesome"
+call trimi D:\100\Sexo\S01 "SATC - S01E11 - The Drought.mkv" 00:10:24 00:13:02 009 "Kevin, Carrie's ex"
+call trimi D:\100\Sexo\S01 "SATC - S01E11 - The Drought.mkv" 00:20:43 00:21:49 010 "Kevin, Carrie's ex"
+call trimi D:\100\Sexo\S01 "SATC - S01E11 - The Drought.mkv" 00:13:39 00:14:13 011 "Siddharta, yoga instructor"
+call trimi D:\100\Sexo\S01 "SATC - S01E11 - The Drought.mkv" 00:19:56 00:20:38 012 "Stranger"
+call trimi D:\100\Sexo\S01 "SATC - S01E12 - Oh Come, All Ye Faithful.mkv" 00:00:55 00:02:20 013 "Catholic guy"
+call trimi D:\100\Sexo\S01 "SATC - S01E12 - Oh Come, All Ye Faithful.mkv" 00:10:43 00:12:14 014 "Catholic guy"
+call trimi D:\100\Sexo\S01 "SATC - S01E12 - Oh Come, All Ye Faithful.mkv" 00:12:41 00:13:11 015 "Small dick guy"
+call trimi D:\100\Sexo\S01 "SATC - S01E12 - Oh Come, All Ye Faithful.mkv" 00:22:34 00:22:50 016 "Small dick guy"
