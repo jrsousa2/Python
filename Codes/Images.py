@@ -18,7 +18,6 @@ import Files
 import Tags
 
 import imagehash
-from PIL import Image
 
 import cv2
 #import numpy as np
@@ -430,6 +429,8 @@ def Cover_size(Arq):
     return dict  
 
 # COVER IMG DIMENSIONS (formerly DIM)
+# THIS IS FROM PIL (Pillow). 
+# IT'S BETTER THAN THE OTHER FUNCTION BELOW (mutagen.id3)
 def Wid(image):
     #filename = os.path.join('path', 'to', 'image', 'file')
     try:
@@ -456,6 +457,7 @@ def Hei(image):
     return hei
 
 # GRABS DIMS OF THE COVER WITHOUT DETACHING THE FILE
+# THIS IS FROM mutagen.id3 AND IS NOT AS GOOD AS THE ONE FROM PIL ABOVE
 def Img_dims(arq):
     dict = {}
     dict['Hei'] = 0

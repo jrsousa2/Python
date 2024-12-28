@@ -300,7 +300,7 @@ def remove_tag(path, tag):
 
 # SCANS A WINDOWS FOLDER FOR FILES 
 # CLEANS-UP THE RESULTS FOR OPTIMAL SEARCH AND RETURNS A LIST OF TUPLES
-def get_Win_files(dir, ext):
+def get_Win_files(dir, exts):
 
     total_files = sum(len(files) for _, _, files in os.walk(dir))
     process_files = 0
@@ -315,7 +315,7 @@ def get_Win_files(dir, ext):
             #     print(f"Progress: {progress_perc:.0f}%")
             
             # ADDS FILE TO LIST ONLY IF MP3 (OR EXT PROVIDED)
-            if file.endswith(ext):
+            if file.lower().endswith(tuple(ext.lower() for ext in exts)):
                file_list.append(os.path.join(root, file))
 
     # NORMALIZE FILE LIST FOR SEARCHES IGNORING CASE AND ACCENTS
