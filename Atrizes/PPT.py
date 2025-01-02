@@ -9,7 +9,7 @@ import sys
 
 # Insert the path of modules folder  
 sys.path.insert(0, "D:\\iTunes\\Novelas") 
-sys.path.insert(0, "D:\\iTunes\\Codes")
+sys.path.insert(0, "D:\\iTunes\\Music")
 import Excel # type: ignore
 # from Images import Wid # type: ignore
 

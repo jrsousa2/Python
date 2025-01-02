@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
 /*             "editor.parameterHints": false, (nao sei se eh necessario mais-ver settings.json as well)
             "editor.hover.enabled": false,
             "editor.parameterHints.enabled": false,

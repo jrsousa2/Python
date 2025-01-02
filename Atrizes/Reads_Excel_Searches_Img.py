@@ -11,7 +11,7 @@ from re import sub
 import sys 
   
 # Insert the path of modules folder  
-sys.path.insert(0, "D:\\iTunes\\Codes") 
+sys.path.insert(0, "D:\\iTunes\\Music") 
 # import Read_PL # type: ignore
 
 import Files # type: ignore
