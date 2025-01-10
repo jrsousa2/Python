@@ -20,5 +20,5 @@ def get_size_by_extension(directory):
 
 # Change the path below to the folder you want to analyze
 #folder_path = r"D:\iTunes"
-folder_path = r"D:\math"
+folder_path = r"D:\SAS"
 get_size_by_extension(folder_path)

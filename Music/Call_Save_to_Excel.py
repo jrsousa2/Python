@@ -1,12 +1,17 @@
 # SAVES THE TRACKS FROM A PLAYLIST OR THE WHOLE LIBRARY INTO AN EXCEL FILE
-# CAN USE WMP, ITUNES (WHOLE LIBRARY, PLAYLIST OR XML)
+# YOU CAN USE WMP OR ITUNES (WHOLE LIBRARY, PLAYLIST OR XML)
 # MORE THAN ONE PLAYLIST CAN BE SELECTED
 # WHEN CREATING AN EXCEL OUTPUT FOR THE LIBRARY, A NUMBER OF TRACKS CAN BE SPECIFIED.
 # IF NOT SPECIFIED, IT'S ALL THE TRACKS.
+# MAKE SURE PYTHON HAS ACCESS TO THE FOLDER IF FOLDER RANSOMWARE PROTECTION IS ENABLED
 
-import pandas as pd
+#import pandas as pd
 from Files import file_w_ext
+from sys import path
 
+# Insert the path of modules folder  
+#sys.path.insert(0, "D:\\iTunes\\Novelas") 
+path.insert(0, "D:\\iTunes\\WMP")
 
 # MAIN CODE
 def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=False,col_names = ["Arq","Art","Title"]):
@@ -28,7 +33,7 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
                pass
            df = Read_PL.Read_xml(col_names,rows=rows)
     else:
-        import WMP_Read_PL
+        import WMP_Read_PL # type: ignore
         # EXCLUDE INVALID TAGS 
         col_names = [x for x in col_names if x in WMP_Read_PL.order_list_wmp]
         dict = WMP_Read_PL.Read_WMP_PL(col_names,PL_name=PL_name,PL_nbr=PL_nbr,Do_lib=Do_lib,rows=rows)   
@@ -76,4 +81,4 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
     # print("Hello, " + file_nm + "!")
 
 # CHAMA PROGRAM PL_name="ALL",Fave-iPhone ["Arq","Art","Title","Len"] "ID", "PID", "Added"
-Save_Excel(PL_name="House2",Do_lib=False,rows=None,iTunes=True,XML=0,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])
+Save_Excel(PL_name="Favorites-Easy",Do_lib=False,rows=None,iTunes=False,XML=0,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])

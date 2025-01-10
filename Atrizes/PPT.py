@@ -1,3 +1,16 @@
+# THIS WILL CREATE A POWERPOINT AUTOMATICALLY WITH CIRCA 200 SLIDES
+# EACH SLIDE CONTAINS A PICTURE OF ONE OF THE MOST ICONIC BRAZILIAN ACTRESSES
+# ALONG WITH A NEATLY FORMATTED TABLE OF ALL THE NOVELAS THEY WORKED IN (PLUS RELEASE YEAR OF EACH)
+# THE IMAGES WERE SELECTED AND DOWNLOADED MANUALLY BUT TO AUTOMATE THE PPT THE IMAGE PATHS
+# WHERE AUTOMATICALLY DETECTED BASED ON THE ACTOR'S NAME AND SAVED TO AN EXCEL FILE 
+# (TO NOT ADD MUCH MORE TIME TO THE PROCESS)
+# THE LIST OF NOVELAS THEY ACTED IN COMES FROM A COMPLETE DATABASE CREATED FROM A PYTON CODE 
+# THE PYTHON CODE READS WIKIPEDIA URL'S FROM AN EXCEL, LOADS THE PAGES AND GRABS THE NOVELA TITLES, 
+# THE RELEASE YEAR AND THE ENTIRE CAST NAMES
+# THAT CODE IS IN FOLDER NOVELAS
+# LONG PROCESS BUT THE END RESULT GOT BEAUTIFUL AND PAID OFF
+# A NICE VIDEO WITH SOUNDTRACK UPLOADED TO MY YOUTUBE CHANNEL
+
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
@@ -93,26 +106,6 @@ def add_slide(atriz, img_path, novelas):
     # TEXT frame
     text_frame = textbox.text_frame
 
-    # Set vertical alignment to top
-    # text_frame.margin_top = 0  # Ensure there's no top margin
-    # text_frame.vertical_anchor = MSO_ANCHOR.TOP
-
-    # Check if the length of novelas is less than 20
-    # if len(novelas) <= 20:
-    #     # Single column (helps not exceeding the width of the slide)
-    #     # Fill col2 with blank entries
-    #     col1 = novelas
-    #     col2 = [''] * len(col1)  # Create a col2 with blank strings of the same length as col1
-    # else:
-    #     # Split the list into two equal parts
-    #     split = len(novelas) // 2
-    #     split = 25
-    #     col1 = novelas[:split]  # First half for column 1
-    #     col2 = novelas[split:]  # Second half for column 2
-    #     # If col2 is shorter, fill it with blank strings
-    #     # Ensure col2 matches the length of col1
-    #     col2 = col2 + [''] * (len(col1) - len(col2))  
-    
     #split = len(novelas) // 2
     split = 25
     col1 = novelas[:split]  # First half for column 1

@@ -1,3 +1,6 @@
+# THIS CODE WASN'T USED
+# USED FUNCTIONS LOCATED UNDER THE MUSIC FOLDER INSTEAD
+
 from os.path import exists
 import os
 from re import sub

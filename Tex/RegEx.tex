@@ -1,0 +1,353 @@
+% TEX CODE FOR ONE OF MY PAPERS
+
+\documentclass[12pt]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage[superscript]{cite}
+\usepackage{geometry}
+\geometry{top=15mm,left=15mm}
+\usepackage{mathtools}
+\usepackage{tocloft}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+%REF. BIBLIOGRAFICA
+\newcommand*{\citena}[1]{%
+\begingroup
+[\color{Green}
+\romannumeral-`\x % remove space at the    beginning of \setcitestyle
+\setcitestyle{numbers}%
+\cite{#1}%
+\endgroup
+]\ignorespacesafterend
+}
+
+%REF. BIBLIOGRAFICA-SUPERSCRIPT
+\newcommand*{\citesup}[1]{%
+\begingroup
+\color{Green}
+%\romannumeral-`\x % remove space at the    beginning of \setcitestyle
+%\setcitestyle{numbers}%
+\cite{#1}%
+\endgroup
+\ignorespacesafterend
+}
+%\cite{GHN}
+
+%EQ. REF.
+\newcommand*{\eqrefe}[1]{%
+\begingroup
+(\color{BrickRed}
+\romannumeral-`\x % remove space at the    beginning of \setcitestyle
+\setcitestyle{numbers}%
+\ref{eq:#1}%
+%\cite{#1}%
+\endgroup
+)\ignorespacesafterend
+}
+
+%REF. DE SEC.
+\newcommand*{\secrefe}[1]{%
+\begingroup
+(\color{Aquamarine}
+\romannumeral-`\x % remove space at the    beginning of \setcitestyle
+\setcitestyle{numbers}%
+\ref{#1}%
+%\cite{#1}%
+\endgroup
+)\ignorespacesafterend
+}
+
+%COR DAS TAGS
+%\newtagform{Redx}{\color{BlueGreen}(}{)}
+\newtagform{Tags}[\textcolor{BrickRed}]{\color{Black}(}{)}
+
+\newcommand{\toctitlefont}{\LARGE \bfseries}
+\renewcommand{\cfttoctitlefont}{\centering \toctitlefont}
+
+%Cite command
+%\usepackage[square]{natbib}
+\usepackage[super]{natbib}
+\setcitestyle{super}
+
+\newenvironment{eqleft}
+ {\begin{equation}\hspace{0pt}}
+ {\hspace{650pt minus 1fil}\end{equation}
+\ignorespacesafterend}
+
+\renewcommand{\contentsname}{\hspace{\fill} Summary \hspace*{\fill}}
+%\newcommand{\iu}{{i\mkern1mu}}%
+%\newcommand{\di}{i}%
+\newcommand{\ii}{\bm{i}}
+
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
+\begin{document}
+\title{The Lerch's $\Phi$ Analytic Continuation}
+\date{January 12, 2021}
+\author{Jose Risomar Sousa}
+\maketitle
+\usetagform{Tags}
+
+\begin{abstract}
+We demonstrate how to obtain the analytic continuation of formulae for the Lerch transcendent function, $\Phi(e^m,k,b)$, and the polylogarithm, $\mathrm{Li}_{k}(e^{m})$, that only hold at the positive integers. The result are alternative expressions for these functions and their partial sums valid in the complex half-plane, $\Re{(k)}>0$.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+Formulae for the Lerch $\Phi$ and the polylogarithm functions were produced in \citena{Lerch}, which are only valid for positive integer $k$. Now we extend those formulae so they are valid when $\Re{(k)}>0$. In other words, they are analytically continued from the integers to the complex half-plane.\\
+
+An expression for the full Lerch $\Phi$ series valid in the whole complex plane can be created using the Abel-Plana formula, but apparently no such formulae are known for the partial series.\\
+
+In the case of the full series, the new formulae hereby presented have a possible advantage over the Abel-Plana formula, as they express the full series by means of a closed-form and an integral, which is possibly simpler than the Abel-Plana integral.
+
+\section{The formulae at the positive integers}
+The starting point for the formula derivations that follow next are the Lerch's transcendent, $\Phi(e^m,k,b)$, and the polylogarithm, $\mathrm{Li}_{k}(e^{m})$, formulae created in \citena{Lerch}, which we present in the subsequent sections. They hold for all integer $k\ge 1$ and all complex $m$ and $b$, unless otherwise noted.\\
+
+The partial and full polylogarithm formulae are spin-offs from the Lerch $\Phi$ formulae. Both are derived by taking the limit of the respective $\Phi$ formulae as $b$ tends to 0. 
+
+\subsection{Partial Lerch's $\Phi$}
+The partial sums of the Lerch's $\Phi$ function are given by:
+\begin{multline} \label{eq:lerch_parc} 
+\sum _{j=1}^{n}\frac{e^{m(j+b)}}{(j+b)^{k}}=-\frac{e^{m\,b}}{2b^{k}}+\frac{e^{m(n+b)}}{2(n+b)^{k}}+\frac{1}{2b^{k}}\sum_{j=0}^{k}\frac{(m b)^j}{j!}-\frac{1}{2(n+b)^{k}}\sum_{j=0}^{k}\frac{(m (n+b))^j}{j!}\\+\sum_{j=1}^{k}\frac{m^{k-j}}{(k-j)!}HP_{j}(n)+\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}\left(e^{m(n+b) u}-e^{m\,b\,u}\right)\coth{\frac{m u}{2}}\,du \text{,}
+\end{multline}\\
+\noindent where the $HP_{j}(n)$ are the so-called generalized harmonic progressions:
+\begin{equation} \nonumber
+HP_{j}(n)=\sum_{q=1}^{n}\frac{1}{(q+b)^j} \text{}
+\end{equation}
+
+\subsection{Full Lerch's $\Phi$}
+The Lerch $\Phi$ function is the limit of the previous expression when $n$ tends to infinity. The below limits hold for all complex $m$, except $m$ with non-negative real part and absolute imaginary part greater than $2\pi$ (that is, $\Re{(m)}>=0$ and $\abs{\Im{(m)}}>2\pi$).\\
+
+Since the main expression is improper for integer and half-integer $b$, alternative expressions are provided. Note there is a slight transformation in relation to the end results shown in \citena{Lerch}.
+
+\subsubsection{Non-integer $2b$}
+For all integer $k \ge 1$:
+\begin{multline} \label{eq:lerch_full} 
+\sum _{j=1}^{\infty}\frac{e^{m(j+b)}}{(j+b)^{k}}=-\frac{1}{2b^{k}}\left(e^{m b}+\sum_{j=0}^{k-2}\frac{(m b)^j}{j!}\right)+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j,b)\\+\frac{\pi\,m^k}{2(k-1)!}\cot{\pi b}-\frac{m^{k-1}}{(k-1)!}\log{\left(-\frac{m}{2\pi}\right)}\\-\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}e^{m\,b\,u}\coth{\frac{m u}{2}}+\frac{2\pi}{m}\left(-1+\frac{\sin{2\pi b u}}{\sin{2\pi b}}\right)\cot{\pi u}\,du 
+\end{multline}
+
+\subsubsection{Half-integer $b$}
+For all integer $k \ge 1$:
+\begin{multline} \nonumber 
+\sum _{j=1}^{\infty}\frac{e^{m(j+b)}}{(j+b)^{k}}=-\frac{1}{2b^{k}}\left(e^{m b}+\sum_{j=0}^{k-2}\frac{(m b)^j}{j!}\right)+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j,b)\\-\frac{m^{k-1}}{(k-1)!}\log{\left(-\frac{m}{\pi}\right)}-\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}e^{m\,b\,u}\coth{\frac{m u}{2}}-\frac{\pi}{m}\cos{\pi b u}\cot{\frac{\pi u}{2}}\,du 
+\end{multline}
+
+\subsubsection{Integer $b$}
+For all integer $k \ge 1$:
+\begin{multline} \nonumber 
+\sum _{j=1}^{\infty}\frac{e^{m(j+b)}}{(j+b)^{k}}=-\frac{1}{2b^{k}}\left(e^{m b}+\sum_{j=0}^{k-2}\frac{(m b)^j}{j!}\right)+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j,b)\\-\frac{m^{k-1}}{(k-1)!}\log{\left(-\frac{m}{2\pi}\right)}-\frac{m^{k-1}}{(k-1)!}\left(H(b)-\frac{1}{2b}\right)\\-\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}e^{m\,b\,u}\coth{\frac{m u}{2}}-\frac{2\pi}{m}(1-u)\cot{\pi u}\,du 
+\end{multline}
+
+\subsection{Partial polylogarithm} \label{part2}
+If one takes the limit of equation \eqrefe{lerch_parc} as $b$ tends to 0, one  obtains:
+\begin{multline} \nonumber
+\sum _{j=1}^n \frac{e^{m j}}{j^{k}}=\frac{e^{m n}}{2n^{k}}-\frac{1}{2n^{k}}\sum_{j=0}^{k}\frac{(m n)^j}{j!}+\sum_{j=1}^{k}\frac{m^{k-j}}{(k-j)!}H_{j}(n)\\
++\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}\left(e^{m n u}-1\right)\coth{\frac{m u}{2}}\,du 
+\end{multline}\\
+\indent This holds for all complex $m$. Let us call these partial sums $E^m_k(n)$.
+
+\subsection{Full polylogarithm} \label{full_poly}
+The following expression for the polylogarithm is obtained taking the limit of \eqrefe{lerch_full} as $b$ tends to 0. It holds for all integer $k\ge 1$ and all complex $m$, except $m$ such that $\Re{(m)}>=0$ and $\abs{\Im{(m)}}>2\pi$:
+\begin{multline} \nonumber
+\sum _{j=1}^{\infty} \frac{e^{m j}}{j^{k}}=-\frac{m^{k}}{2k!}-\frac{m^{k-1}}{(k-1)!}\log{\left(-\frac{m}{2\pi}\right)}+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j)\\
+-\frac{m^{k}}{2(k-1)!}\int_{0}^{1}(1-u)^{k-1}\coth{\frac{m u}{2}}-\frac{2\pi}{m}(1-u)\cot{\pi u}\,du
+\end{multline}
+
+\section{Polylogarithm analytic continuation} \label{polylog}
+We start the demonstration with the polylogarithm formulae and then generalize it for the Lerch $\Phi$.
+
+\subsection{Partial polylogarithm} \label{AC_part}
+As incredible as it may seem, if we just replace the two finite sums in the formula of $E^m_k(n)$ with closed-forms (more precisely, integrals), the end result happens to be its analytic continuation. Let us see how we can achieve that.\\
+
+First we have the finite sum:
+\begin{equation} \nonumber
+\sum_{j=1}^{k}\frac{m^{k-j}}{(k-j)!}H_{j}(n)=m^k\sum_{j=1}^{k}\frac{m^{-j}}{(k-j)!}\sum_{q=1}^{n}\frac{1}{q^j}=m^k\sum_{q=1}^{n}\sum_{j=1}^{k}\frac{(m\,q)^{-j}}{(k-j)!}
+\end{equation}\\
+\indent Let us work with just the part that matters:
+\begin{equation} \nonumber
+\sum_{j=1}^{k}\frac{(m\,q)^{-j}}{(k-j)!}=\frac{-1+e^{m\,q}(m\,q)^{-k}\,\Gamma{(k+1,m\,q)}}{k!} \text{,}
+\end{equation}
+\noindent where $\Gamma$ is the incomplete gamma function, which is given by an integral.\\
+
+Let us then rewrite the initial sum:
+\begin{equation} \nonumber
+\sum_{q=1}^{n}\sum_{j=1}^{k}\frac{(m\,q)^{-j}}{(k-j)!}=\sum_{q=1}^{n}\left(-\frac{1}{k!}+\frac{e^{m\,q}}{k!\,(m\,q)^{k}}\int_{m\,q}^{\infty}t^k e^{-t}\,dt\right) \text{}
+\end{equation}\\
+\indent We need to transform this last integral to be able to work with it, for example: 
+\begin{equation} \nonumber
+\Gamma{(k+1,m\,q)}=\int_{m\,q}^{\infty}t^k e^{-t}\,dt=m\,q\int_{1}^{c\,\infty}(m\,q\,t)^k e^{-m\,q\,t}\,dt=\int_{0}^{1}(m\,q-\log{u})^k\,e^{-m\,q}\,du \text{,}
+\end{equation}\\
+\noindent where $c$ is the directional angle of the transformation (since $m$ is complex), given by:
+\begin{equation} \nonumber
+c=\begin{cases}
+\sign{\Re{(m)}}, & \text{if }\Re{(m)} \neq 0\\
+-\ii\sign{\Im{(m)}}, & \text{otherwise.}
+\end{cases}
+\end{equation}\\
+\indent Therefore, if we introduce the constant inside the integral, we obtain:
+\begin{equation} \nonumber
+\int_{1}^{c\,\infty}\sum_{q=1}^{n}\left(-\frac{m\,q\,e^{m\,q(1-t)}}{k!}+\frac{m\,q\,t^k\,e^{m\,q(1-t)}}{k!}\right)\,dt \text{,}
+\end{equation}\\
+\noindent and collapsing the sum over $q$ we finally conclude that:
+\begin{equation} \nonumber
+\sum_{j=1}^{k}\frac{m^{-j}}{(k-j)!}H_j(n)=\frac{m}{k!}\int_{1}^{c\,\infty}(t^k-1)\frac{e^{m(1-t)}+n\,e^{m(1-t)(n+2)}-(n+1)e^{m(1-t)(n+1)}}{(e^{m(1-t)}-1)^2}\,dt
+\end{equation}\\
+\indent Let us transform this integral to get rid of the constant $c$:
+\begin{equation} \nonumber
+\sum_{j=1}^{k}\frac{m^{k-j}}{(k-j)!}H_j(n)=\frac{m^k}{k!}\int_{0}^{1}\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\left(-1+\left(1-\frac{\log{u}}{m}\right)^k\right)\,du
+\end{equation}\\
+\indent The second and last finite sum for which we need a closed-form is given by: 
+\begin{equation} \nonumber
+\sum_{j=0}^{k}\frac{(m\,n)^j}{j!}=\frac{e^{m\,n}\,\Gamma{(k+1,m\,n)}}{k!}=\frac{m^k}{k!}\int_{0}^{1}\left(n-\frac{\log{u}}{m}\right)^k\,du \text{,}
+\end{equation}\\
+\noindent which takes us to the final expression.\\
+
+For all complex $k$ and $m$ such that $\Re{(k)}>0$ and $m\neq 0$:
+\begin{multline} \label{eq:E^m_k(n)}
+\sum _{j=1}^n \frac{e^{m j}}{j^{k}}=\frac{e^{m\,n}}{2n^{k}}-\frac{e^{m\,n}}{2n^k}\frac{\Gamma{(k+1,m\,n)}}{\Gamma(k+1)}\\
+-\frac{n\,m^k}{k!}+\frac{1}{\Gamma(k+1)}\int_{0}^{1}\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\left(m-\log{u}\right)^k\,du\\
++\frac{m^{k}}{2\,\Gamma(k)}\int_0^1(1-u)^{k-1}\left(e^{m\,n\,u}-1\right)\coth{\frac{m u}{2}}\,du \text{}
+\end{multline}\\
+\indent The first term on the second line came from a simplification of the former integral.\\
+
+\textbf{Throughout this text, $k!$ is to be understood as $\Gamma{(k+1)}$, which is defined for all complex $k$, except the negative integers.}
+
+\subsection{$H_k(n)$ when $\Re{(k)}>-1$} 
+From the $E^m_k(n)$ formula from \eqrefe{E^m_k(n)}, we can derive different formulae for the generalized harmonic numbers\citesup{GHN}, $H_k(n)$. The formula allows one degree of freedom ($m$ can be any multiple of $2\pi\ii$). When $m=0$, we obtain the simplest expression, which surprisingly holds for $\Re{(k)}>-1$:
+\begin{equation} \label{eq:H_k(n)}
+\sum_{j=1}^n\frac{1}{j^{k}}=\frac{1}{k!}\int_{0}^{1}\left(\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\right)(-\log{u})^k\,du
+\end{equation}\\
+\indent The limit of \eqrefe{H_k(n)} when $n$ approaches infinity is $\zeta(k)$, whose expression is given in \eqrefe{zeta(k)}. Hence, if $\Re{(k)}>1$, we can rewrite $H_k(n)$ as:
+\begin{equation} \nonumber
+\sum_{j=1}^n\frac{1}{j^{k}}=\zeta{(k)}-\frac{1}{k!}\int_{0}^{1}\frac{(n+1)u^n-n\,u^{n+1}}{(1-u)^2}(-\log{u})^k\,du
+\end{equation}
+
+\subsection{$\zeta(k)$ outside the critical strip} \label{zeta}
+As a particular case of $\mathrm{Li}_{k}(e^{m})$, the limit of \eqrefe{H_k(n)} when $n$ goes to infinity is $\zeta(k)$. If $\Re{(k)}>1$:
+\begin{equation} \label{eq:zeta(k)}
+\zeta(k)=\frac{1}{k!}\int_{0}^{1}\frac{\left(-\log{u}\right)^k}{(1-u)^2}\,du \end{equation}\\
+\indent If $\Re{(k)}<0$, the zeta function has a different integral representation, obtained via Riemann's functional equation:
+\begin{equation} \nonumber
+\zeta(k)=-\frac{2(2\pi)^{k-1}}{k-1}\sin{\frac{k\,\pi}{2}}\int_{0}^{1}\frac{\left(-\log{u}\right)^{-k+1}}{(1-u)^2}\,du 
+\end{equation}
+
+\subsection{Full polylogarithm}
+For the purpose of producing the analytic continuation of $\mathrm{Li}_{k}(e^{m})$, it is more convenient to start from its formula seen in \secrefe{full_poly} and repeat some of the previous steps from \secrefe{AC_part}. For the polylogarithm, the first and only finite sum is:
+\begin{equation} \nonumber
+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j)=m^k\sum_{q=1}^{\infty}\sum_{j=2}^{k}\frac{(m\,q)^{-j}}{(k-j)!} \text{,}
+\end{equation}\\
+\noindent and to figure the closed-form we can take the limit of the partial sum as $n$ goes to infinity:
+\begin{equation} \nonumber
+\sum_{j=2}^{k}\frac{m^{-j}}{(k-j)!}\zeta(j)=\lim_{n\to\infty}\int_{1}^{c\,\infty}\sum_{q=1}^{n}\left(-\frac{e^{m\,q(1-t)}}{(k-1)!}+\frac{m}{k!}\left(t^k-1\right)q\,e^{m\,q(1-t)}\right)\,dt \text{}
+\end{equation}\\
+\indent Next, the sum inside the integral can be simplified collapsing the sum over $q$:
+\begin{equation} \nonumber
+\lim_{n\to\infty}\int_{1}^{c\,\infty}\left(-\frac{e^{m(1-t)}-e^{m(1-t)(n+1)}}{(k-1)!\left(e^{m(1-t)}-1\right)}+m\left(t^k-1\right)\frac{e^{m(1-t)}+n\,e^{m(1-t)(n+2)}-(n+1)e^{m(1-t)(n+1)}}{k!\left(e^{m(1-t)}-1\right)^2}\right)\,dt
+\end{equation}\\
+\indent This limit is not trivial. The solution may be found if one assumes that all terms with $n$ cancel out (which is a plausible assumption if, for example, $m$ is a positive real number) and the remaining terms constitute the limit.\\
+
+It turns out this hunch is only half right, but fortunately it is possible to figure out the term that makes up the difference through trial and error, leading to the below:
+\begin{equation} \nonumber
+\sum_{j=2}^{k}\frac{m^{-j}}{(k-j)!}\zeta(j)=-\frac{1}{m(k-1)!}+\frac{e^m}{k!}\int_{1}^{c\,\infty}\frac{k\,e^{m}+(-k-m+m\,t^k)e^{mt}}{\left(e^{m}-e^{m\,t}\right)^2}\,dt
+\end{equation}\\
+\indent It is best to make a change of variables ($u=e^{-m(t-1)}$) in order to do away with $c$ and enable the combination of the integrals:
+\begin{equation} \nonumber
+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j)=-\frac{m^{k-1}}{(k-1)!}+\frac{m^{k-1}}{k!}\int_{0}^{1}\frac{-k\,u-m+m^{-k+1}\left(m-\log{(1-u)}\right)^k}{u^2}\,du
+\end{equation}\\
+\indent Therefore, when one puts it all together one finds that:
+\begin{multline} \nonumber
+\mathrm{Li}_{k}(e^{m})=-\frac{m^{k}}{2k!}-\frac{m^{k-1}}{(k-1)!}\log{\left(-\frac{e\,m}{2\pi}\right)}+\\
+-\frac{m^{k}}{2(k-1)!}\int_{0}^{1}(1-u)^{k-1}\coth{\frac{m u}{2}}-\frac{2\pi}{m}(1-u)\cot{\pi u}+\frac{2(k\,u+m-m(1-\log{(1-u)/m})^k}{k\,m\,u^2}\,du
+\end{multline}\\
+\indent This formula is valid for all $k$ such that $\Re{(k)}>0$ and all complex $m$ (except $m$ such that $\Re{(m)}>=0$ and $\abs{\Im{(m)}}>2\pi$, though if $\abs{\Im{(m)}}=2\pi$ one must have $\Re{(k)}>1$). This convergence domain has been thoroughly checked but might still be subject to change.\\
+
+It is possible to simplify the above integral with the observation that:
+\begin{equation} \nonumber
+\int_{0}^{1}-\frac{2\pi}{m}(1-u)\cot{\pi u}+\frac{2}{m\,u}\,du=\frac{2\log2\pi}{m} \text{}
+\end{equation}\\
+\indent This takes us to the final and simplest form. For all complex $k$ ($\Re{(k)}>0$) and $m$ (except $\Re{(m)}>=0$ and $\abs{\Im{(m)}}>2\pi$):
+\begin{multline} \nonumber
+\mathrm{Li}_{k}(e^{m})=-\frac{m^{k}}{2k!}-\frac{m^{k-1}\left(1+\log{(-m)}\right)}{(k-1)!}\\
+-\frac{m^{k}}{2(k-1)!}\int_{0}^{1}(1-u)^{k-1}\coth{\frac{m u}{2}}+\frac{2\left(1-m^{-k}(m-\log{(1-u)})^k\right)}{k\,u^2}\,du
+\end{multline}
+
+\section{Lerch's $\Phi$ analytic continuation}
+Here we omit the detailed steps provided in section \secrefe{polylog}, since they can be easily replicated by analogy, but we point out some striking differences between the two cases.
+
+\subsection{Partial Lerch's $\Phi$ series}
+In the case of the partial Lerch $\Phi$ series, following the same thought process employed for the polylogarithm, we conclude that the analytic continuation for the first finite sum is given by:
+\begin{equation} \label{eq:hp_soma} \nonumber
+\sum_{j=1}^{k}\frac{m^{k-j}}{(k-j)!}HP_j(n)=\frac{m^k}{k!}\int_{0}^{1}u^b\left(b\frac{1-u^n}{1-u}+\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\right)\left(-1+\left(1-\frac{\log{u}}{m}\right)^k\right)\,du
+\end{equation}\\
+\indent The above integral converges when $\Re{(b)}>-1$, if $k$ is a non-negative integer. The complement of this domain would require a much more convoluted expression, so we are not trying to solve it. This is justified by the fact that the constant $c$ from section \secrefe{AC_part} now depends on the summation index $q$ (e.g., $\sign{\Re{(m(q+b))}}$). If, however, $k$ is not a non-negative integer, then one must have $\Re{(k)}>0$ and $\Re{(b)}>0$ for the integral to converge.\\ 
+
+The integral can be further simplified as:
+\begin{equation} \nonumber
+\sum_{j=1}^{k}\frac{m^{k-j}}{(k-j)!}HP_j(n)=-\frac{n\,m^k}{k!}+\frac{m^k}{k!}\int_{0}^{1}u^b\left(b\frac{1-u^n}{1-u}+\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\right)\left(1-\frac{\log{u}}{m}\right)^k\,du
+\end{equation}\\
+\indent Therefore, the final conclusion is that the partial Lerch $\Phi$ function for complex $k$, $m$ and $b$, such that $\Re{(k)}>0$ and $\Re{(b)}>0$ ($\Re{(b)}>-1$, if $k$ is integer), is given by:
+\begin{multline} \label{eq:partial_Lerch_AC}
+\sum _{j=1}^{n}\frac{e^{m(j+b)}}{(j+b)^{k}}=-\frac{e^{m\,b}}{2b^{k}}+\frac{e^{m\,b}}{2b^k}\frac{\Gamma{(k+1,m\,b)}}{k!}+\frac{e^{m(n+b)}}{2(n+b)^{k}}-\frac{e^{m(n+b)}}{2(n+b)^k}\frac{\Gamma{\left(k+1,m(n+b)\right)}}{k!}\\-\frac{n\,m^k}{k!}+\frac{m^k}{k!}\int_{0}^{1}u^b\left(b\frac{1-u^n}{1-u}+\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\right)\left(1-\frac{\log{u}}{m}\right)^k\,du\\+\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}\left(e^{m(n+b) u}-e^{m\,b\,u}\right)\coth{\frac{m u}{2}}\,du \text{}
+\end{multline}
+
+\subsection{$HP_{k}(n)$ when $\Re{(k)}>-1$}
+As a consequence of equation \eqrefe{partial_Lerch_AC}, an alternative integral representation for the generalized harmonic progressions, $HP_k(n)$\citesup{GHP}, valid when $\Re{(k)}>-1$ and $\Re{(b)}>-1$, is:
+\begin{equation} \label{eq:HP_k(n)}
+\sum_{j=1}^{n}\frac{1}{(j+b)^k}=\frac{1}{k!}\int_{0}^{1}u^b\left(b\frac{1-u^n}{1-u}+\frac{1-(n+1)u^n+n\,u^{n+1}}{(1-u)^2}\right)\left(-\log{u}\right)^k\,du
+\end{equation}\\
+\indent Now, using the Hurwitz zeta formula from \eqrefe{Hurwitz}, if $\Re{(k)}>1$ and $\Re{(b)}>0$, we can rewrite $HP_k(n)$ as:
+\begin{equation} \nonumber
+\sum_{j=1}^{n}\frac{1}{(j+b)^k}= \zeta(k,b+1)-\frac{1}{k!}\int_{0}^{1}u^b\left(\frac{b\,u^n}{1-u}+\frac{(n+1)u^n-n\,u^{n+1}}{(1-u)^2}\right)\left(-\log{u}\right)^k\,du
+\end{equation}
+
+\subsection{$\zeta(k,b+1)$ when $\Re{(k)}>1$}
+From the limit of \eqrefe{HP_k(n)} as $n$ tends to infinity, we obtain the Hurwitz zeta function. If $\Re{(k)}>1$ and $\Re{(b)}>0$ ($\Re{(b)}>-1$ in some cases):
+\begin{equation} \label{eq:Hurwitz}
+\zeta(k,b+1)=\frac{1}{k!}\int_{0}^{1}u^b\left(\frac{b}{1-u}+\frac{1}{(1-u)^2}\right)\left(-\log{u}\right)^k\,du
+\end{equation}
+
+\subsection{Full Lerch's $\Phi$ series}
+For the full Lerch $\Phi$ series, we need the analytic continuation of the sum of the Hurwitz zeta functions. Like before, for  non-negative integer $k$ and every $m$ the below formula holds when $\Re{(b)}>-2$:
+\begin{multline} \label{eq:hurwitz_soma} \nonumber
+\sum_{j=2}^{k}\frac{m^{k-j}}{(k-j)!}\zeta(j,b)=-\frac{m^k}{k!}-\frac{m^{k-1}}{(k-1)!}\left(1+\frac{1}{b}\right)+\frac{e^{m\,b}}{b^k}\frac{\Gamma{\left(k+1,m\,b\right)}}{k!}\\-\frac{m^{k-1}}{k!}\int_{0}^{1}\frac{(1-u)^{b}}{u^2}\left(k\,u+m\left(1+b\,u\right)\left(1-\left(1-\frac{\log{(1-u)}}{m}\right)^k\right)\right)\,du
+\end{multline}\\
+\indent We could have also obtained this sum more easily using equation \eqrefe{Hurwitz} as a shortcut.\\
+
+When the above expression is replaced in equation \eqrefe{lerch_full}, the resulting formula can be simplified using the below equation, valid if $\Re{(b)}>-1$: 
+\begin{equation} \nonumber 
+\int_0^1 \pi\left(-1+\frac{\sin{2\pi b u}}{\sin{2\pi b}}\right)\cot{\pi u}+\frac{(1-u)^{b}}{u}\,du=\log{2\pi}-\frac{1}{2b}+\frac{\pi\cot{\pi b}}{2} \text{}
+\end{equation}\\
+\indent This simplification is convenient, since it does away with $\sin{2\pi\,b}$ in the fraction's denominator within the integral, which is improper for integer and half-integer $b$, and also since the trigonometric parts of the formula cancel out.\\
+
+Therefore, the below formula for the Lerch transcendent, given as $e^{m\,b}\,\Phi(e^m,k,b)$, should be valid when $\Re{(k)}>0$, and $m$ is not such that $\Re{(m)}\ge 0$ and $\abs{\Im{(m)}}>2\pi$, and $\Re{(b)}>0$:
+\begin{multline} \nonumber 
+\sum _{j=0}^{\infty}\frac{e^{m(j+b)}}{(j+b)^{k}}=-\frac{m^k}{2\,k!}-\frac{m^{k-1}}{(k-1)!}\left(1+\log{(-m)}\right)+\frac{e^{m\,b}}{2\,b^k}\left(1+\frac{\Gamma{\left(k+1,m\,b\right)}}{k!}\right)
+\\-\frac{m^{k}}{2(k-1)!}\int_0^1(1-u)^{k-1}e^{m\,b\,u}\coth{\frac{m u}{2}}+\frac{2(1-u)^{b}\left(1+b\,u\right)}{k\,u^2}\left(1-\left(1-\frac{\log{(1-u)}}{m}\right)^k\right)\,du 
+\end{multline}\\
+\indent Remember the restriction on $b$, $\Re{(b)}>0$, did not exist for integer $k$.
+
+\newpage
+
+\begin{thebibliography}{1}
+
+\bibitem{Abra} M. Abramowitz, I. A. Stegun, {\em Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables (9th printing ed.), New York: Dover,}  1972.
+
+\bibitem{GHN} Risomar Sousa, Jose {\em Generalized Harmonic Numbers, eprint arXiv:1810.07877,} 2018.
+
+\bibitem{GHP} Risomar Sousa, Jose {\em Generalized Harmonic Progression, eprint arXiv:1811.11305,} 2018.
+
+\bibitem{Lerch} Risomar Sousa, Jose {\em Lerch's $\Phi$ and the Polylogarithm at the Positive Integers, eprint arXiv:2006.08406,} 2020.
+
+\end{thebibliography}
+
+\end{document}
