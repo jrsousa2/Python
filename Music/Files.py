@@ -10,7 +10,7 @@ from mutagen.id3 import ID3, TXXX
 from mutagen.mp3 import MP3
 
 def Is_DMP3(Arq):
-    if Arq.lower().find("d:\\mp3\\")>=0:
+    if Arq.lower().find(":\\mp3\\")>=0:
        res = True
     else:
        res = False

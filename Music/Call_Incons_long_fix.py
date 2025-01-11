@@ -38,9 +38,9 @@ def Fix_conflict():
 
 
    # CREATES THE PLAYLISTS
-    Read_PL.Cria_PL("Right_Both",recria="y")
-    Read_PL.Cria_PL("Right_Filename",recria="y")
-    Read_PL.Cria_PL("Right_Tags",recria="y")
+    Read_PL.Create_PL("Right_Both",recreate="y")
+    Read_PL.Create_PL("Right_Filename",recreate="y")
+    Read_PL.Create_PL("Right_Tags",recreate="y")
 
     # Initializes list
     to_fix_dic = []

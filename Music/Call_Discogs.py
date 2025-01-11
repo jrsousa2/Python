@@ -391,7 +391,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
     disco = discogs_client.Client("ExampleApplication/0.1", user_token=my_user_token)
 
     # CRIA PLAYLIST PARA ARQUIVOS ATUALIZADOS
-    # Cria_PL(PL_fix_nm,recria="y")
+    # Create_PL(PL_fix_nm,recreate="y")
     PL_nm = {}
     PL_nm["Year"] = "Updt_Year"
     PL_nm["Genre"] = "Updt_Genre"
@@ -399,7 +399,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
     #PL_nm["Attached"] = "Updt_Attached"
     PL_nm["Not_found"] = "Updt_Not_found"
     for key in PL_nm.keys():
-        My_PL = Read_PL.Cria_PL(PL_nm[key]) 
+        My_PL = Read_PL.Create_PL(PL_nm[key]) 
 
     # LOADS VINYL TEMPLATE
     vinyl_resized = Images.Read_and_resize("D:\\Z-Covers\\Vinyl\\template.jpg")
@@ -697,7 +697,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
                  if attachf["Attached"]:
                     fixed["Attached"] = fixed["Attached"]+1
                     New_Grouping = Tags.Add_to_tag(track,"Attached",Tag="Group")
-                    #Cria_PL.Add_track_to_PL(PLs,PL_nm["Attached"],track)
+                    #Create_PL.Add_track_to_PL(PLs,PL_nm["Attached"],track)
                  if attachf["Deleted"]:
                     fixed["Deleted"] = fixed["Deleted"]+1
                  if attachf["Exception"]:

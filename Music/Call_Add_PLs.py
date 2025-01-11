@@ -29,7 +29,7 @@ def Call_Alb_by_art(PL_name=None,PL_nbr=None,Do_lib=False):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Alb_by_Art"
     if nbr_files>0:
-       Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="y")
+       Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="y")
 
     # REASSIGNS PLAYLIST
     for i in range(nbr_files):
@@ -63,7 +63,7 @@ def Call_great_hits(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Great_hits"
     if nbr_files>0:
-       Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="y")
+       Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="y")
 
     # REASSIGNS PLAYLIST
     for i in range(nbr_files):
@@ -99,7 +99,7 @@ def Call_Alb_by_art(PL_name=None,PL_nbr=None):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Greatest_Hits"
     if len(Arq)>0:
-        Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="y")
+        Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="y")
     
     # LISTA DE GREATEST HITS
     print("Building lists of greatest hits")
@@ -163,7 +163,7 @@ def AA_check(PL=None):
 
    # CREATES THE PLAYLISTS
     AA_nm = "AA_check"
-    AA_nm_PL = Read_PL.Cria_PL(AA_nm,recria="y")
+    AA_nm_PL = Read_PL.Create_PL(AA_nm,recreate="y")
 
     # REASSIGNS PLAYLIST
     read_PL = PLs.Item(result)

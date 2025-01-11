@@ -52,8 +52,8 @@ def Brasil_conflict(PL_nbr=None):
     # 2o SYNC THE TAGS and key !='Cover'
     PL_BR = "B_in_Brasil"
     PL_not_BR = "B_not_in_Brasil"
-    Pop = Read_PL.Cria_PL(PL_BR,recria="Y")
-    Pop = Read_PL.Cria_PL(PL_not_BR,recria="Y")
+    Pop = Read_PL.Create_PL(PL_BR,recreate="Y")
+    Pop = Read_PL.Create_PL(PL_not_BR,recreate="Y")
 
     for i in range(0,len(Dist)):
         if Dist[i]==2 and exists(Arq[i]) and Tags.Is_DMP3(Arq[i]):

@@ -31,7 +31,7 @@ def Upgrade(PL_name=None,PL_nbr=None):
 
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Fix_Tag"
-    Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="n")
+    Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="n")
 
     # STATS
     print("\nUpdating",nbr_files,"files\n")

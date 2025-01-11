@@ -10,7 +10,6 @@ from Files import file_w_ext
 from sys import path
 
 # Insert the path of modules folder  
-#sys.path.insert(0, "D:\\iTunes\\Novelas") 
 path.insert(0, "D:\\iTunes\\WMP")
 
 # MAIN CODE
@@ -31,7 +30,8 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
                col_names.remove("ID")  # 6 is not in the list
            except:
                pass
-           df = Read_PL.Read_xml(col_names,rows=rows)
+           dict = Read_PL.Read_xml(col_names,rows=rows)
+           df = dict['DF']
     else:
         import WMP_Read_PL # type: ignore
         # EXCLUDE INVALID TAGS 
@@ -81,4 +81,4 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
     # print("Hello, " + file_nm + "!")
 
 # CHAMA PROGRAM PL_name="ALL",Fave-iPhone ["Arq","Art","Title","Len"] "ID", "PID", "Added"
-Save_Excel(PL_name="Favorites-Easy",Do_lib=False,rows=None,iTunes=False,XML=0,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])
+Save_Excel(PL_name="Faves-Easy",Do_lib=False,rows=None,iTunes=1,XML=0,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])

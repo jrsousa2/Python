@@ -6,6 +6,9 @@ import Proper
 import Tags
 import Files
 
+# THE DRIVE THAT THE MP3 FOLDER IS UNDER (e.g. E:\MP3)
+Drive_letter = "E"
+
 # FINDS THE FIRST VALID LETTER IN AN ARTIST
 def Acha_letra(Str):
 
@@ -92,21 +95,21 @@ def Move(Location,Art,Genre):
     
     Dir_is_right = False
     if not Is_fave and In_fave and Right_folder=="Brasil": # Not Fave but Fave folder */
-       Dest_Dir = "D:\\MP3\\Brasil\\" + Target_Dir_Letra
+       Dest_Dir = Drive_letter + ":\\MP3\\Brasil\\" + Target_Dir_Letra
     elif not Is_fave and In_fave and Right_folder=="Intl":
-        Dest_Dir = "D:\\MP3\\" + Target_Dir_Letra
+        Dest_Dir = Drive_letter + ":\\MP3\\" + Target_Dir_Letra
     elif Is_fave and not In_fave and Right_folder=="Brasil": # Fave but not Fave folder */
-        Dest_Dir = "D:\\MP3\\Favorites_Brasil"
+        Dest_Dir = Drive_letter + ":\\MP3\\Favorites_Brasil"
     elif Is_fave and not In_fave and Right_folder=="Intl":
-        Dest_Dir = "D:\\MP3\\Favorites"
+        Dest_Dir = Drive_letter + ":\\MP3\\Favorites"
     elif not Is_fave and Right_folder=="Brasil" and Right_folder != Actual_folder:
-        Dest_Dir = "D:\\MP3\\Brasil\\" + Target_Dir_Letra
+        Dest_Dir = Drive_letter + ":\\MP3\\Brasil\\" + Target_Dir_Letra
     elif not Is_fave and Right_folder=="Brasil" and Target_Dir_Letra != Actual_Dir_Letra:
-        Dest_Dir = "D:\\MP3\\Brasil\\" + Target_Dir_Letra
+        Dest_Dir = Drive_letter + ":\\MP3\\Brasil\\" + Target_Dir_Letra
     elif not Is_fave and Right_folder=="Intl" and Right_folder != Actual_folder:
-        Dest_Dir = "D:\\MP3\\" + Target_Dir_Letra
+        Dest_Dir = Drive_letter + ":\\MP3\\" + Target_Dir_Letra
     elif not Is_fave and Right_folder=="Intl" and Target_Dir_Letra != Actual_Dir_Letra:
-        Dest_Dir = "D:\\MP3\\" + Target_Dir_Letra
+        Dest_Dir = Drive_letter + ":\\MP3\\" + Target_Dir_Letra
     else:
         Dest_Dir = subdir
         Dir_is_right = True
@@ -115,11 +118,14 @@ def Move(Location,Art,Genre):
     if not Dir_is_right:
        Dest_Dir = Dest_Dir + "\\"
 
-    # Fazer se: diretorio mudou OU nome do arquivo mudou:
+    # DO IF: FOLDER HAS CHANGED OR THE NAME OF THE FILE HAS CHANGED (STRAIGHTENED)
 
-    # FINDS FILE NAME THAT DOESN'T EXIST
-    # REGULAR EXPRESSION (qq numero entre parenteses) 
-    # SUBSTITUI d+ POR d{1,3} (PARA NAO BATER SE FOR UM ANO DENTRO DOS PARENTESES)
+    # MOVE THE FILE INTO IT THE FOLDER IT BELONGS
+    # BUT FIRST FINDS FILE NAME THAT DOESN'T EXIST (TO NOT OVERWRITE)
+    # REGULAR EXPRESSION (ANY 3-DIGIT NUMBER BETWEEN BRACKETS) 
+    # HERE I REPLACED d+ FOR d{1,3} (TO NOT MATCH A YEAR INSIDE THE BRACKET)
+    # I NEED TO FIND OUT THE NUMBER THAT IS WITHIN THE BRACKET
+    # TO ORGANIZE SONGS THAT ARE DIFFERENT VERSIONS BUT WITH THE SAME NAME (E.G., ONLY LONGER OR ANY OTHER DIFFERENCE)
     aux = sub(" \(\d{1,3}\)\.[mM][pP]3", ".mp3", file) 
     no = -1
     if aux != file:
@@ -132,8 +138,8 @@ def Move(Location,Art,Genre):
     New_file = file_no_ext + ".mp3"
     New_location = Dest_Dir + New_file
     i=0
-    # Procuro arquivo que nao exista ate achar, exceto no caso do diretorio estar correto
-    # Neste ultimo caso eu paro quando o numero chegar no atual
+    # SEARCH THE FILE UNTIL IT EXISTS, EXCEPT IN CASE THE FOLDER IS ALREADY RIGHT
+    # IN THE LATTER CASE I STOP WHEN THE NUMBER REACHES THE CURRENT NUMBER (DUE TO MULTIPLE VERSIONS OF THE SAME SONG, E.g. Abba (1).mp3, Abba (2).mp
     while exists(New_location) and (i<=no-1 or not Dir_is_right or (no==-1 and New_location.lower() != Location.lower())):
         i=i+1
         New_file = file_no_ext + " ("+ str(i) + ")"+ ".mp3"

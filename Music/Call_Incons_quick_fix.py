@@ -38,9 +38,9 @@ def file_vs_tags(PL_name=None,PL_nbr=None,Do_lib=False):
     method_desc[4] = "Similarity ratio"
 
     # CRIA PLAYLISTS 
-    Diff_PL = Read_PL.Cria_PL(Diff_PL_nm, recria="n")
-    File_PL = Read_PL.Cria_PL(File_PL_nm, recria="n")
-    Tag_PL = Read_PL.Cria_PL(Tag_PL_nm, recria="n")
+    Diff_PL = Read_PL.Create_PL(Diff_PL_nm, recreate="n")
+    File_PL = Read_PL.Create_PL(File_PL_nm, recreate="n")
+    Tag_PL = Read_PL.Create_PL(Tag_PL_nm, recreate="n")
 
     # INICIALIZA
     fixed = {}

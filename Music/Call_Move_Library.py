@@ -1,4 +1,4 @@
-# READS THE ITUNES XML FILES TO OBTAIN INFO ON MISSING TRACKS LOCATION
+# READS THE ITUNES XML LIBRARY FILE TO OBTAIN INFO ON MISSING TRACKS LOCATION
 # REASSIGNS THE TRACKS TO MOVE LIBRARY TO ANOTHER DRIVE
 # IN THIS VERSION IT USES THE XLM FILE TO IDENTIFY MISSING ID'S
 # IT DOESN'T MOVE THE FILES AS IT GOES
@@ -102,7 +102,7 @@ if exists(lib_xml_path):
    # PLAYLIST WITH MIGRATED FILES
    if nbr_files>0:
       migrated_PL = "Updt_location"
-      call_PL = Read_PL.Cria_PL(migrated_PL,recria="n")
+      call_PL = Read_PL.Create_PL(migrated_PL,recreate="n")
       print("\nUpdating file location from drive",Cur_drive,"to",Dest_drive)
 
    # LOOP

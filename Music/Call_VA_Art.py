@@ -38,11 +38,11 @@ def Transfer(PL=None):
 
     # PLAYLISTS
     PL_transf_albs = "VA_transfer_albs"
-    PL_transf_albs_res = Read_PL.Cria_PL(PL_transf_albs,recria="y")
+    PL_transf_albs_res = Read_PL.Create_PL(PL_transf_albs,recreate="y")
     PL_del_cover = "VA_transfer_del_cover"
-    PL_del_cover_res = Read_PL.Cria_PL(PL_del_cover,recria="y")
+    PL_del_cover_res = Read_PL.Create_PL(PL_del_cover,recreate="y")
     PL_del_AA_tags = "VA_transfer_del_tags"
-    PL_del_AA_tags_res = Read_PL.Cria_PL(PL_del_AA_tags,recria="y")
+    PL_del_AA_tags_res = Read_PL.Create_PL(PL_del_AA_tags,recreate="y")
 
     # REASSIGNS PLAYLIST
     read_PL = playlists.Item(result)

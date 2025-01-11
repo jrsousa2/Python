@@ -1,4 +1,5 @@
-# READS AN EXCEL FILE AND SEARCHES FOR THE mp3 FILES REFERENCEND IN IT
+# READS AN EXCEL FILE AND SEARCHES FOR THE MP3 FILES REFERENCED IN IT BY THE TAGS
+# SAVES THE FULL PATH OF THE FOUND FILE IN THE SPREADSHEET
 
 #from requests import get
 from os.path import exists, isfile
@@ -150,7 +151,7 @@ def Updt_novela(PL_name=None,PL_nbr=None):
 
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS PRA ATUALIZAR
     PL_novela_nm = "Updt_novela"
-    PL_novela = Read_PL.Cria_PL(PL_novela_nm,recria="n") 
+    PL_novela = Read_PL.Create_PL(PL_novela_nm,recreate="n") 
 
     # Artist	Title	Type
     File_col = col_number(headers,"File")

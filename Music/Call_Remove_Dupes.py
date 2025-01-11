@@ -122,7 +122,7 @@ def Remove_dupes(PL_name=None,PL_nbr=None,Do_lib=False):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Dupe_Files"
     if nbr_files>0:
-       Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="y")
+       Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="y")
 
     # CREATES PLAYLIST
     PID = []

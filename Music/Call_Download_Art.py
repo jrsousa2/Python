@@ -71,7 +71,7 @@ def Call_art(PL_name="",PL=None):
         #    if (i+1) % 100==0:
         #       print("Adding file:",i+1,"of",len(Arq),":",Arq[i])
         #    if Alb_by_art_vl:
-        #       Cria_PL.Add_file_to_PL(playlists,Created_PL_name,Arq[i])
+        #       Create_PL.Add_file_to_PL(playlists,Created_PL_name,Arq[i])
 
 # CALLS FUNC
 Call_art(PL_name="Playlist 4")

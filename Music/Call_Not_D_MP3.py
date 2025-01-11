@@ -21,7 +21,7 @@ def file_vs_tags(PL_name=None,PL_nbr=None):
     # PLAYLIST NAME
     PL_nm = "A_not_D_MP3"
     # CRIA PLAYLISTS 
-    Diff_PL = Read_PL.Cria_PL(PL_nm, recria="y")
+    Diff_PL = Read_PL.Create_PL(PL_nm, recreate="y")
 
     # CHECKS WHICH FILES MEET THE CRITERIA
     # STATS

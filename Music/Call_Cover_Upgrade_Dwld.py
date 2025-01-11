@@ -96,7 +96,7 @@ def Upgrade(PL_name=None,PL_nbr=None):
     # CHAMA A FUNCAO QUE CRIA A PL
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Upgrade_Dwld"
-    Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="n")
+    Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="n")
     
     # STATS
     print("\nProcessing",nbr_files_check,"files\n")

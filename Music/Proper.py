@@ -71,7 +71,7 @@ spec_char="("
 num_spec_chars=1
 
 # COMECO DA LOGICA DE SUBSTITUICOES
-def Proper(main_dict,Str,Tag="art"):
+def Proper(Str,Tag="art"):
     New_str = ""
     if Str != "":    
        # BELOW REMOVES DUPE SPACES 

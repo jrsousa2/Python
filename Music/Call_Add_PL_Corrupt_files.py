@@ -16,7 +16,7 @@ def Corrupt(PL=None):
 
     # CRIA PLAYLISTS
     PL_nm = "Corrupt_files"
-    PL = Read_PL.Cria_PL(PL_nm,recria="y")
+    PL = Read_PL.Create_PL(PL_nm,recreate="y")
 
     # POPULATES LISTS
     Art = [x for x in df['Art']]

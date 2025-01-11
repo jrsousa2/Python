@@ -32,7 +32,7 @@ def Fix_genre(PL_name=None,PL_nbr=None,Do_lib=False):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Fix_Genre"
     if len(Arq)>0:
-        Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="n")
+        Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="n")
 
     # BREAK LINE
     print()

@@ -28,7 +28,7 @@ for i in range(1,Sources.Count+1):
 
 # def Add_PL(PL_name):
 #     # CRIA PLAYLIST SEMPRE 
-#     Updt_Year_PL = Read_PL.Cria_PL(PL_name,recria="y")
+#     Updt_Year_PL = Read_PL.Create_PL(PL_name,recreate="y")
     
 #     # ASSIGNS PLAYLIST BY NAME
 #     New_PL = playlists.ItemByName(PL_name)
@@ -40,7 +40,7 @@ for i in range(1,Sources.Count+1):
 #     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS PRA ATUALIZAR
 #     if nbr_updt>0:
 #        PL_fix_nm = "Updt_Year_fixed"
-#        Year_PL = Read_PL.Cria_PL(PL_fix_nm,recria="y") 
+#        Year_PL = Read_PL.Create_PL(PL_fix_nm,recreate="y") 
 
 def Call_Updt_Year(PL=None):
     # LOADS AN EXCEL FILE INTO A DF
@@ -55,7 +55,7 @@ def Call_Updt_Year(PL=None):
 
     # CRIA PLAYLIST SEMPRE 
     PL_name = "Updt_Year_Files"
-    Updt_Year_PL = Read_PL.Cria_PL(PL_name,recria="y")
+    Updt_Year_PL = Read_PL.Create_PL(PL_name,recreate="y")
     
     # ADDS FILES IN THE EXCEL SHEET TO THE PLAYLIST
     # TAMBEM CONSTROI A LISTA DE ARQUIVOS QUE TERAO O YEAR ATUALIZADOS
@@ -92,7 +92,7 @@ def Call_Updt_Year(PL=None):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS PRA ATUALIZAR
     if nbr_updt>0:
        PL_fix_nm = "Updt_Year_fixed"
-       Year_PL = Read_PL.Cria_PL(PL_fix_nm,recria="y") 
+       Year_PL = Read_PL.Create_PL(PL_fix_nm,recreate="y") 
 
     # START FIXING THE FILES HERE:
     fixed = 0 

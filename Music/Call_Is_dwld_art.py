@@ -27,7 +27,7 @@ def Is_dwld(PL_name=None,PL_nbr=None,Do_lib=False):
     print()
     PL_name = "Dwld_art"
     if nbr_files>0:
-       Art_PL = Read_PL.Cria_PL(PL_name,recria="y")
+       Art_PL = Read_PL.Create_PL(PL_name,recreate="y")
 
     # REASSIGNS PLAYLIST
     for i in range(df.shape[0]):

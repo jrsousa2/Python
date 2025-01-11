@@ -236,7 +236,7 @@ def Do_Covers(df):
     # CRIA PLAYLISTS
     if nbr_files_to_updt>0:
        PL_nm = "Transfer_Albs"
-       PL = Read_PL.Cria_PL(PL_nm,recria="n")
+       PL = Read_PL.Create_PL(PL_nm,recreate="n")
 
     # START
     fix_Album = 0
@@ -340,7 +340,7 @@ def Do_Year(df):
     # CRIA PLAYLISTS
     if nbr_files_to_updt>0:
        PL_nm = "Transfer_Year"
-       PL = Read_PL.Cria_PL(PL_nm,recria="n")
+       PL = Read_PL.Create_PL(PL_nm,recreate="n")
 
     # CREATES LIST OF TRACKS WHOSE YEAR IS NOT THE MIN YEAR
     fix_Year = 0
@@ -431,7 +431,7 @@ def Do_Genre(df):
     # CRIA PLAYLISTS
     if nbr_files_to_updt>0:
        PL_nm = "Transfer_Genre"
-       PL = Read_PL.Cria_PL(PL_nm,recria="n")
+       PL = Read_PL.Create_PL(PL_nm,recreate="n")
 
     # START
     fix_Genre = 0
@@ -549,7 +549,7 @@ def Do_Counts(df):
     # CRIA PLAYLISTS
     if nbr_files_to_updt>0:
        PL_nm = "Transfer_Counts"
-       PL = Read_PL.Cria_PL(PL_nm,recria="n")
+       PL = Read_PL.Create_PL(PL_nm,recreate="n")
 
     # PRINTS RESULT BEFORE UPDATE
     print("Tracks that may have Count tags updated:",nbr_files_to_updt,"\n")
@@ -794,7 +794,7 @@ def Transfer(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,call_Covers=1, call
     
     if nbr_files>0:
        PL_nm = "Transfer_Dupes"
-       PL = Read_PL.Cria_PL(PL_nm,recria="n")
+       PL = Read_PL.Create_PL(PL_nm,recreate="n")
 
        # ADD TRACKS TO NEW PL
        # DOESN"T NEED TO CHECK IF FILE EXISTS, MISSING FILES ARE NOT ADDED

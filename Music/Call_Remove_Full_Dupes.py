@@ -2,7 +2,7 @@
 # THAT IS, THESE FILES ARE THE SAME, BUT ARE DUPLICATED IN THE XML LIBRARY
 # ADDED DATETIME AND OTHER ATTRIBUTES MAY DIFFER
 
-import pandas as pd
+# import pandas as pd
 from os.path import exists
 import Read_PL
 
@@ -14,7 +14,8 @@ def Remove_full_dupes(rows=None):
     PLs = dict['PLs']
 
     col_names = ["Arq", "PID"]
-    df = Read_PL.Read_xml(col_names,rows=rows)
+    dict = Read_PL.Read_xml(col_names,rows=rows)
+    df = dict['DF']
     start_rows = df.shape[0]
     # ADD POS COLUMN
     df['Pos'] = range(1, len(df) + 1)
@@ -63,12 +64,12 @@ def Remove_full_dupes(rows=None):
     nbr_dupes = len(Remove_l)
 
     # DUPES
-    print("Dupe tracks to be deleted:",nbr_dupes)
+    print("Dupe tracks to be deleted:",nbr_dupes,"\n")
     
     # 1o PL
     if nbr_dupes>0:
        Dupes_PL_nm = "Full_Dupes"
-       PL_nm = Read_PL.Cria_PL(Dupes_PL_nm,recria="Y")
+       PL_nm = Read_PL.Create_PL(Dupes_PL_nm,recreate="Y")
 
     # ADDS DUPE TRACKS TO A PL 
     # IT DOESN'T ADD TRACKS WITH MISSING FILES

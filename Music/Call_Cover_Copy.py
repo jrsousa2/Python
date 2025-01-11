@@ -21,7 +21,8 @@ def Copy_covers():
     PLs = dict['PLs']
 
     col_names =  ["Arq","AA","Album", "PID", "Covers"]
-    df = Read_PL.Read_xml(col_names,rows=None)
+    dict = Read_PL.Read_xml(col_names,rows=None)
+    df = dict['DF']
     
     # ADDS BINARY COVER COL. (0 or 1)
     df['Covers_bin'] = df['Covers'].apply(lambda x: 1 if x > 0 else 0)
@@ -71,10 +72,10 @@ def Copy_covers():
 
     # PLAYLIST NAMES
     No_cover_PL_nm = "Cover_attached"
-    Pop = Read_PL.Cria_PL(No_cover_PL_nm,recria="N")
+    Pop = Read_PL.Create_PL(No_cover_PL_nm,recreate="N")
     # TRACKS WITH COVERS PL 
     Cover_PL_nm = "Cover_albums"
-    Pop = Read_PL.Cria_PL(Cover_PL_nm,recria="N")
+    Pop = Read_PL.Create_PL(Cover_PL_nm,recreate="N")
 
     # Initializes list
     No_cover = []

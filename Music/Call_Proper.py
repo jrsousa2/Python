@@ -1,5 +1,7 @@
-# REMOVE ENTRY "POP ROCK" FROM GENRE 
-# ADDS POP AND ROCK SEPARATELY
+# FIXES THE CASE OF THE TAGS OF ALL MP3 FILES IN THE LIBRARY 
+# ACCORDING TO A GIVEN LOGIC FOUND IN MODULE PROPER
+# IT'S NOW RELYING ON THE XML, INSTEAD OF READING THE LIBRARY, WHICH IS MUCH MORE TIME CONSUMING
+# THE XML IS ALWAYS IN SYNC WITH THE LIBRARY
 
 import Proper
 from os.path import exists
@@ -31,7 +33,8 @@ def Call_proper(rows=None):
 
     # READS XML
     col_names = ["Arq","Art","Title","AA","Album","PID"]
-    df = Read_PL.Read_xml(col_names,rows=rows)
+    dict = Read_PL.Read_xml(col_names,rows=rows)
+    df = dict['DF']
 
     # TEST LIST CREATION (list comprehension) 
     Arq = [x for x in df['Arq']]
@@ -83,7 +86,7 @@ def Call_proper(rows=None):
     if len(to_fix_dic["All"])>0:
        # CHAMA A FUNCAO QUE CRIA A PL
        PL_nm = "Fix_case"
-       Tag_PL = Read_PL.Cria_PL(PL_nm)
+       Tag_PL = Read_PL.Create_PL(PL_nm)
        
        # INITIALIZE FIXED COUNT VECTOR
        fixed = {}

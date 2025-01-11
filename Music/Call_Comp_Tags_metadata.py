@@ -7,6 +7,11 @@
 from os.path import exists
 import Files
 
+from sys import path
+
+# Insert the path of modules folder  
+path.insert(0, "D:\\iTunes\\WMP")
+
 # TENHO QUE PASSAR OS PMTS PARA QUE ELES POSSAM RETORNAR A ROTINA PRINCIPAL
 def Reads_tags(Arq,i,dict_main,tag_app,tag_tiny):
     # populates the dicts
@@ -25,9 +30,10 @@ def Comp(iTunes=True,rows=None):
        dict = Read_PL.Init_iTunes()
        App = dict['App']
        PLs = dict['PLs']
-       df = Read_PL.Read_xml(col_names,rows=rows)
+       dict = Read_PL.Read_xml(col_names,rows=rows)
+       df = dict['DF']
     else:   
-        import WMP_Read_PL as WMP
+        import WMP_Read_PL as WMP # type: ignore
         # EXCLUDE INVALID TAGS 
         col_names =  ["Arq","Art","Title","AA","Album","Genre", "Group"] # "Group"
         dict = WMP.Read_WMP_PL(col_names,Do_lib=True,rows=rows) 
@@ -65,9 +71,9 @@ def Comp(iTunes=True,rows=None):
     if iTunes:
        #PID = [x for x in df['PID2']]
        Alrdy_srchd = "Tags_already_comp"
-       PL = Read_PL.Cria_PL(Alrdy_srchd,recria="N")   
+       PL = Read_PL.Create_PL(Alrdy_srchd,recreate="N")   
        PL_Mismatch = "Tags_Mismatch"
-       PL = Read_PL.Cria_PL(PL_Mismatch,recria="N")
+       PL = Read_PL.Create_PL(PL_Mismatch,recreate="N")
 
     print("\nTags Comparison\n")
     for i in range(nbr_files):
@@ -113,7 +119,7 @@ def Comp(iTunes=True,rows=None):
         for key in to_fix_dic.keys():
             nbr_updt_key = len(to_fix_dic[key])
             if nbr_updt_key>0:
-               Tag_PL = Read_PL.Cria_PL("Compara_"+key,recria="Y")
+               Tag_PL = Read_PL.Create_PL("Compara_"+key,recreate="Y")
                print(key,"that differ:",nbr_updt_key)
 
             for i in range(nbr_updt_key):

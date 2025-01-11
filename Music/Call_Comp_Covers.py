@@ -172,9 +172,9 @@ def Comp_covers(PL_name_vl=None,PL_nbr=None,Do_lib=False,rows=None):
     # CRIA PLAYLISTS
     if nbr_files>0:
        PL_nm = "Covers_Comparable"
-       PL = Read_PL.Cria_PL(PL_nm,recria="n")
+       PL = Read_PL.Create_PL(PL_nm,recreate="n")
        Diff_cover_PL_nm = "Covers_Different"
-       Diff_cover_PL = Read_PL.Cria_PL(Diff_cover_PL_nm,recria="y")
+       Diff_cover_PL = Read_PL.Create_PL(Diff_cover_PL_nm,recreate="y")
 
     # ADD TRACKS TO NEW PL
     # DOESN'T NEED TO CHECK IF FILE EXISTS, MISSING FILES ARE NOT ADDED 

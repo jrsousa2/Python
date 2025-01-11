@@ -136,7 +136,7 @@ def Upgrade_copy(PL_name=None,PL_nbr=None):
 
     # SALVA PL COM FILES QUE SERAO CHECADOS
     All_PL_name = "Upgrade_files"
-    PL_dict = Read_PL.Cria_PL(All_PL_name,recria="n")
+    PL_dict = Read_PL.Create_PL(All_PL_name,recreate="n")
     File_list = PL_dict["Files"]
     for i in range(nbr_files):
         m = ID[i]
@@ -147,7 +147,7 @@ def Upgrade_copy(PL_name=None,PL_nbr=None):
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Upgrade_copied"
     if nbr_files_upg>0:
-       PL_dict = Read_PL.Cria_PL(Created_PL_name,recria="n")
+       PL_dict = Read_PL.Create_PL(Created_PL_name,recreate="n")
        # File_list = PL_dict["Files"]
     
     # STATS

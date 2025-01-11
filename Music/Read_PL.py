@@ -15,7 +15,7 @@ from binascii import a2b_hex
 
 # ORDER OF THE COLS. IN THE DF (BUT THEY CAN BE SPECIFIED ANY WAY)
 # THE BELOW IS JUST SO THE RIGHT HEADERS GO WITH THE RIGHT COLS.
-order_list_itunes = ["PL_name","Pos","ID","PID","Arq","Art","Title","AA","Album","Genre","Year","Group","Bitrate","Len","Covers","Plays","Skips","Added"]
+order_list_itunes = ["PL_name","Pos","ID","PID","PID2","Arq","Art","Title","AA","Album","Genre","Year","Group","Bitrate","Len","Covers","Plays","Skips","Added"]
 
 # XML COLS THAT WE WANT TO KEEP 'Track ID' "Total Time"
 #keep_lst = ["Location","Artist","Name","Persistent ID"]
@@ -199,7 +199,7 @@ def Read_PL(col_names,PL_name=None,PL_nbr=None,Do_lib=False,rows=None,Modify_col
         PL_list.append(PL_name)
         # ORDER LIST SO COLUMN HEADERS ALWAYS MATCH THEIR VALUES
         col_names = order_list(col_names,order_list=order_list_itunes)
-        # INICIA LISTA (m eh necessario para indicar posicao na playlist)
+        # INITIATES LIST (m IS NEEDED TO INDICATE POSITION IN THE PLAYLIST)
         # REMEMBER THAT POS IS ONLY USED TO REFERENCE THE iTUNES DB, NOT THE LISTS
         # THE RANGE FOR ITEMS IN AN ITUNES PL IS NOT 0 TO (N-1) (IT'S 1 TO N)
         for m in range(1,numtracks+1):
@@ -261,7 +261,7 @@ def Reassign_PL(PL_Name):
     dict = {'PL_nbr': result, 'PL_Name': New_PL_name, 'tracks': tracks}
     return dict
 
-def Cria_PL(PL_name,recria="N",Create_list=False):
+def Create_PL(PL_name,recreate="N",Create_list=False):
     PL = iTunesApp.LibrarySource.Playlists.ItemByName(PL_name)
     # CRIA PLAYLIST SE NAO EXISTE
     if PL is None:
@@ -269,7 +269,7 @@ def Cria_PL(PL_name,recria="N",Create_list=False):
        PL_exists = False
     else:
         PL_exists = True
-        if recria.lower()=="y":
+        if recreate.lower()=="y":
            PL.Delete() 
            iTunesApp.CreatePlaylist(PL_name)
     PL = iTunesApp.LibrarySource.Playlists.ItemByName(PL_name)
@@ -402,6 +402,7 @@ def time_to_sec(time_str):
     return total_sec
 
 # READS LIBRARY TO GET ID'S (SUPPOSED TO BE FASTER)
+# PROBABLY NO LONGER NEEDED SINCE THE LIBRARY XML IS MUCH FASTER
 def Read_lib_miss(rows=None):
     # THIS IS THE LIBRARY
     read_PL = iTunesApp.LibraryPlaylist

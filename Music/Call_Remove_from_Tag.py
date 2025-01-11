@@ -26,7 +26,7 @@ def Tag_updt(PL_name=None,PL_nbr=None,updt_tag="Genre",To_rem=None,To_add=[]):
 
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 
     Created_PL_name = "Fix_" + updt_tag + "_"  + "_".join(To_rem)+"_To_"+"_".join(To_add)
-    Move_PL = Read_PL.Cria_PL(Created_PL_name,recria="y")
+    Move_PL = Read_PL.Create_PL(Created_PL_name,recreate="y")
 
     # STATS
     print("\nUpdating",nbr_files,"of",nbr_files,"files\n")
