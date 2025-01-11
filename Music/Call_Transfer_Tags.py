@@ -8,7 +8,7 @@
 # IF TRACKS ARE MISSING, I CAN STILL RETRIEVE THEIR INFORMATION
 # COVER INFORMATION IS NOT BEING PULLED IN THE READ_PL CODE
 # THE REASON IS CAUSE I ONLY NEED COVER INFO FOR DUPE TRACKS
-# A Do: COLOCAR IMPROVEMENT PARA LER DUAS PLAYLISTS AO MESMO TEMPO
+# A FAZER: COLOCAR IMPROVEMENT PARA LER DUAS PLAYLISTS AO MESMO TEMPO
 # Remove Dead tracks (run with whole library for this)
 # (removes files that were deleted if they have a match
 # with a file that is not missing exists by artist/title).
@@ -205,7 +205,7 @@ def Do_Covers(df):
            (df["Count"]>1) & (df["max_New_Album"]== df["AA@Album"]), "Best_Album_track"] = df["Arq"]
     df.Best_Album_track = df.Best_Album_track.fillna("")
 
-    # NOW TAKE THE MAX OF THE PREVIOUS COL. (THAT"S WHY DF"S ARE SO HARD)
+    # NOW TAKE THE MAX OF THE PREVIOUS COL. (THAT'S WHY DF'S ARE SO HARD)
     # exemplo: df.loc[:, "max_Erro"] = df.groupby("track_stdz")["Erro"].transform("max")
     df.loc[:,"max_Best_Album_track"] = df.groupby("track_stdz")["Best_Album_track"].transform("max")
 
