@@ -1,0 +1,10 @@
+rem THE BELOW MAY FAIL DUE TO MISSING CODEC, IF SO NEEDS TO REENCODE 
+rem PARA COPIAR AUDIO E VIDEO -c:v copy -c:a copy
+rem PARA REENCODE -c:v copy -> -c:v libx264
+
+rem ABAIXO COPIA APENAS
+rem call "C:\ffmpeg\bin\ffmpeg.exe" -ss %Ini_time% -to %End_time% -i "%Fullfile%" -c:v copy -c:a copy -y "%Output%"
+rem EXEMPLO: ffmpeg -i LostInTranslation.mkv -codec copy LostInTranslation.mp4
+
+REM O ABAIXO CONVERTE COPIANDO
+rem "C:\ffmpeg\bin\ffmpeg.exe" -y -i "%Fullfile%" -ss %Ini_time% -to %End_time% -codec copy "%Output%"

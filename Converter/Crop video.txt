@@ -1,0 +1,77 @@
+CROP:
+
+Crop 229px to the left
+
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Baby\Media\Debate.mp4" -filter:v "crop=in_w-229:in_h:229:0" -c:a copy "D:\iTunes\Baby\Media\Debate_crop_ffmpg.mp4"
+
+Crop 229px to the left and remove the audio:
+
+
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Baby\Media\Debate.mp4" -an -filter:v "crop=in_w-229:in_h:229:0" "D:\iTunes\Baby\Media\Debate_crop_noaudio.mp4"
+
+Combine video with audio
+
+ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_noaudio.mp4" -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.wav" -c:v copy -c:a aac "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4"
+
+Combine video with audio (increased volume)
+
+ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_noaudio.mp4" -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice_higher.wav" -c:v copy -c:a aac -af "volume=2.0" -y "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4"
+
+Rescale to 9:16 (width x height)
+
+ISSO DAQUI DA ERRO:
+
+ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4" -vf "scale=ih*9/16:-1, crop=1050:720" -c:a copy "D:\iTunes\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
+
+TENTA DE NOVO:
+
+ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4" -vf "crop=in_w-405:720, scale=405:720" -c:a copy "D:\iTunes\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
+
+########################################################################################################
+
+
+To begin with, we’ll use a template command to learn about the different options used for cropping a video:
+
+$ ffmpeg -i input.mp4 -filter:v "crop=out_w:out_h:x:y" output.mp4
+
+In this command, ffmpeg invokes the FFmpeg tool with the -i option, used to specify the input video file. The output file is output.mp4 as appended at the end of the command.
+
+The part of the command where actual video processing happens is -filter:v “crop=out_w:out_h:x:y”. The -filter:v is used to specify a video filter, in this case, the crop filter with four parameters:
+
+out_w is the desired width of the output video
+out_h is the desired height of the output video
+x is the horizontal position in the input video
+y is the vertical position in the input video
+
+So, x and y are the starting coordinates (top left corner) of the cropped area in the output video. 
+In essence, we draw a rectangle over the input video and extract that as the output video viewport.
+
+Portanto:
+
+ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4" -filter:v "crop=405:720:322:720" -y "D:\iTunes\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
+
+
+#########################################################################################################
+
+3.2. Cropping the Sample Video
+For our particular crop, we’ll keep the central portion and remove some parts from each side of the video:
+
+$ ffmpeg -i big_buck_bunny_720p_5mb.mp4 -filter:v "crop=640:360:320:180" cropped_video.mp4
+
+
+This command creates a video file named cropped_video.mp4 by cropping the original video, starting from coordinates 320 (x), and 180 (y) resulting in a cropped video with a resolution of 640x360 pixels.
+
+Further, we can use named options in the crop filter:
+
+$ ffmpeg -i big_buck_bunny_720p_5mb.mp4 -filter:v "crop=w=640:h=360:x=320:y=180" cropped_video.mp4
+Copy
+Both of the above commands are the same and accomplish identical goals. We can also use the shortened -vf instead of -filter:v to set the video filters.
+
+
+ffmpeg -i input.mp4 -vf "crop=in_w-405:720, scale=405:720" -c:a copy output.mp4
+
+
+ffmpeg -i input_video.mp4 -vf "scale=1050:720, crop=1050:720" -c:a copy output_video.mp4
+
+
+

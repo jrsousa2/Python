@@ -1,0 +1,28 @@
+import numpy as np
+import soundfile as sf
+from pydub import AudioSegment
+
+def pitch_shift(audio_path, shift_semitones):
+    # Read the audio file
+    audio, samplerate = sf.read(audio_path)
+
+    # Compute the Fourier transform of the audio
+    transformed = np.fft.rfft(audio)
+
+    # Create a shifted frequency array
+    freqs = np.fft.rfftfreq(len(audio), d=1/samplerate)
+    shifted_freqs = freqs * (2 ** (shift_semitones / 12.0))
+
+    # Perform the inverse Fourier transform
+    shifted_audio = np.fft.irfft(transformed, n=len(shifted_freqs))
+
+    return shifted_audio, samplerate
+
+# Example usage
+audio_path = "D:\\iTunes\\Baby\\output.wav"
+shifted_audio, samplerate = pitch_shift(audio_path, 12)  # Shift up by 12 semitones (1 octave)
+
+# Save the transformed audio
+sf.write("D:\\iTunes\\Baby\\baby_voice.wav", shifted_audio, samplerate)
+
+

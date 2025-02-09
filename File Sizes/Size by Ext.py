@@ -1,7 +1,7 @@
 import os
 from collections import defaultdict
 
-def get_size_by_extension(directory):
+def get_size_by_extension(directory, exts=None):
     extension_sizes = defaultdict(int)
     
     for root, _, files in os.walk(directory):
@@ -16,9 +16,10 @@ def get_size_by_extension(directory):
     # Sort by size in descending order and print
     sorted_extensions = sorted(extension_sizes.items(), key=lambda x: x[1], reverse=True)
     for ext, size in sorted_extensions:
-        print(f"{ext}: {size / (1024 * 1024):.2f} MB")
+        if exts==None or ext.lower() in exts:
+           print(f"{ext}: {size / (1024 * 1024):.2f} MB")
 
 # Change the path below to the folder you want to analyze
 #folder_path = r"D:\iTunes"
-folder_path = r"D:\SAS"
-get_size_by_extension(folder_path)
+folder_path = r"D:\itunes"
+get_size_by_extension(folder_path, exts=[".txt"])

@@ -1,0 +1,44 @@
+V.A.
+O item que busco eh: collectionArtistName => AA
+Parece que se nao forem varios artistas, ele nao existe
+
+Vou poder pegar o ano tb:
+O ano esta em:
+"releaseDate":"2008-05-08T12:00:00Z"
+
+{
+ "resultCount":1,
+ "results": [
+{"wrapperType":"track", 
+"kind":"song", 
+"artistId":208752393, 
+"collectionId":280614453, 
+"trackId":280614513, 
+"artistName":"Emanuele Inglese", 
+"collectionName":"Best of Fahrenheit, Vol. 2", 
+"trackName":"Amazing", 
+"collectionCensoredName":"Best of Fahrenheit, Vol. 2", 
+"trackCensoredName":"Amazing", "collectionArtistId":36270, 
+"collectionArtistName":"Various Artists", 
+"artistViewUrl":"https://music.apple.com/us/artist/emanuele-inglese/208752393?uo=4", 
+"collectionViewUrl":"https://music.apple.com/us/album/amazing/280614453?i=280614513&uo=4", 
+"trackViewUrl":"https://music.apple.com/us/album/amazing/280614453?i=280614513&uo=4", 
+"previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d7/d6/14/d7d614a4-4115-5638-4859-ceb516377d8a/mzaf_2776950668091197531.plus.aac.p.m4a", 
+"artworkUrl30":"https://is4-ssl.mzstatic.com/image/thumb/Music/v4/23/d7/4c/23d74c98-b814-7efe-44af-1cfaa2c7a27b/source/30x30bb.jpg", 
+"artworkUrl60":"https://is4-ssl.mzstatic.com/image/thumb/Music/v4/23/d7/4c/23d74c98-b814-7efe-44af-1cfaa2c7a27b/source/60x60bb.jpg", 
+"artworkUrl100":"https://is4-ssl.mzstatic.com/image/thumb/Music/v4/23/d7/4c/23d74c98-b814-7efe-44af-1cfaa2c7a27b/source/100x100bb.jpg", 
+"collectionPrice":9.90, "trackPrice":0.99, "releaseDate":"2008-05-08T12:00:00Z", 
+"collectionExplicitness":"notExplicit", 
+"trackExplicitness":"notExplicit", 
+"discCount":1, 
+"discNumber":1, 
+"trackCount":10, 
+"trackNumber":6, 
+"trackTimeMillis":425760, 
+"country":"USA", 
+"currency":"USD", 
+"primaryGenreName":"Dance", 
+"isStreamable":true}]
+}
+
+

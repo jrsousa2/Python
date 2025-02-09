@@ -1,0 +1,32 @@
+CD TO C:\Python\MyEnv\Lib\site-packages\dlib>
+
+CMakeLists.txt VAI EM C:\Python\MyEnv\Lib\site-packages (NAO SEI COMO FAZER PRA MUDAR)
+
+THEN RUN:
+
+cmake .. -DDLIB_USE_CUDA=ON -DCUDAToolkit_ROOT_DIR="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7"
+
+FIXES:
+
+SET ENV SYS VAR: 
+
+CMAKE_PREFIX_PATH="C:\Program Files\NVIDIA\CUDNN\v9.6"
+
+CUDAToolkit_ROOT_DIR = "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7"
+
+set CMAKE_PREFIX_PATH=C:\Program Files\NVIDIA\CUDNN\v9.6
+set CMAKE_INCLUDE_PATH=C:\Program Files\NVIDIA\CUDNN\v9.6\include\11.8
+set CMAKE_LIBRARY_PATH=C:\Program Files\NVIDIA\CUDNN\v9.6\lib\11.8\x64
+
+PKG_CONFIG_EXECUTABLE = C:\msys64\usr\bin
+
+cmake .. -DDLIB_USE_CUDA=ON -DCUDAToolkit_ROOT_DIR="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7" 
+DCUDNN_LIBRARY="C:\Program Files\NVIDIA\CUDNN\v9.6\lib" -DCUDNN_INCLUDE_DIR="C:\Program Files\NVIDIA\CUDNN\v9.6\include" -DCMAKE_PREFIX_PATH="C:\Program Files\NVIDIA\CUDNN\v9.6" -DPKG_CONFIG_EXECUTABLE="C:\msys64\usr\bin"
+
+-DCUDNN_LIBRARY="C:\Program Files\NVIDIA\CUDNN\v9.6\lib" ^
+-DCUDNN_INCLUDE_DIR="C:\Program Files\NVIDIA\CUDNN\v9.6\include"
+
+
+
+
+I don't understand this part, No Redundant Variables: You had repeated -DCUDAToolkit_ROOT_DIR and -PKG_CONFIG_EXECUTABLE. These should only appear once. Are you saying that the pkg_config will be in the 

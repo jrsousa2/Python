@@ -1,0 +1,173 @@
+(MyEnv) C:\Temp\dlib\build>cmake .. -DDLIB_USE_CUDA=ON
+-- Building for: Visual Studio 16 2019
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Selecting Windows SDK version 10.0.18362.0 to target Windows 10.0.19045.
+-- The C compiler identification is MSVC 19.23.28105.4
+-- The CXX compiler identification is MSVC 19.23.28105.4
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at dlib/CMakeLists.txt:7 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Using CMake version: 3.31.1
+-- Compiling dlib version: 19.24.99
+CMake Deprecation Warning at dlib/cmake_utils/set_compiler_specific_options.cmake:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  dlib/CMakeLists.txt:30 (include)
+
+
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of void*
+-- Check size of void* - done
+-- Enabling SSE2 instructions
+CMake Deprecation Warning at dlib/cmake_utils/find_libpng.cmake:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  dlib/CMakeLists.txt:449 (include)
+
+
+CMake Deprecation Warning at dlib/cmake_utils/check_if_neon_available.cmake:3 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  dlib/CMakeLists.txt:492 (include)
+
+
+CMake Deprecation Warning at C:/Temp/dlib/dlib/cmake_utils/test_for_neon/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at dlib/cmake_utils/find_libjpeg.cmake:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  dlib/CMakeLists.txt:511 (include)
+
+
+-- Searching for JPEG XL
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE)
+-- PkgConfig could not be found, JPEG XL support won't be available
+-- Searching for BLAS and LAPACK
+-- Searching for BLAS and LAPACK
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+CMake Warning (dev) at dlib/CMakeLists.txt:652 (find_package):
+  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+  --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Found CUDA: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.7 (found suitable version "11.7", minimum required is "7.5")
+-- Looking for cuDNN install...
+-- Found cuDNN: C:/Program Files/NVIDIA/CUDNN/v9.6/lib/11.8/x64/cudnn.lib
+-- Building a CUDA test project to see if your compiler is compatible with CUDA...
+CMake Deprecation Warning at C:/Temp/dlib/dlib/cmake_utils/test_for_cuda/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Warning (dev) at C:/Temp/dlib/dlib/cmake_utils/test_for_cuda/CMakeLists.txt:10 (find_package):
+  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+  --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Building a cuDNN test project to check if you have the right version of cuDNN installed...
+CMake Deprecation Warning at C:/Temp/dlib/dlib/cmake_utils/test_for_cudnn/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Warning (dev) at C:/Temp/dlib/dlib/cmake_utils/test_for_cudnn/CMakeLists.txt:7 (find_package):
+  Policy CMP0146 is not set: The FindCUDA module is removed.  Run "cmake
+  --help-policy CMP0146" for policy details.  Use the cmake_policy command to
+  set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Enabling CUDA support for dlib.  DLIB WILL USE CUDA, compute capabilities: 50
+CMake Deprecation Warning at dlib/cmake_utils/find_ffmpeg.cmake:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+Call Stack (most recent call first):
+  dlib/CMakeLists.txt:865 (include)
+
+
+-- Searching for FFMPEG/LIBAV
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE)
+-- PkgConfig could not be found, FFMPEG won't be available
+-- Configuring done (45.6s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Temp/dlib/build
+
+(MyEnv) C:\Temp\dlib\build>

@@ -1,0 +1,9 @@
+Python code example:
+         {% for x in range(4) %}
+            {% if x % 2==1 %}
+                 <p>{{x}}</p>
+            {% endif %}     
+         {% endfor %}
+         {% for x in content %}
+             <p>{{x}}</p>
+         {% endfor %}

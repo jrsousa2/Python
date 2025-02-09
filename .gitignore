@@ -8,7 +8,9 @@
 *.wav
 *.html
 *.toc
-*.txt
+*.doc
+Log*.txt
+Sync*.txt
 *.jpg
 *.zip
 *.egp

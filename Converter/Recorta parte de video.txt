@@ -1,0 +1,11 @@
+TA FUNCIONANDO:
+
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iPod videos\Bring It On (2000) [1080p]\Bring.It.On.2000.1080p.BluRay.x264.YIFY.mp4" -ss 13:14 -to 16:01 -c:v copy -c:a copy "D:\iPod videos\Bring It On (2000) [1080p]\Trecho.mp4"
+
+COM LEGENDAS:
+
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iPod videos\Bring It On (2000) [1080p]\Bring.It.On.2000.1080p.BluRay.x264.YIFY.mp4" -filter_complex "subtitles=D:\Bring.srt" -ss 13:14 -to 16:01 -c:v libx265 -c:a copy "D:\iPod videos\Bring It On (2000) [1080p]\Trecho2.mp4" 
+
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iPod videos\Bring It On (2000) [1080p]\Bring.It.On.2000.1080p.BluRay.x264.YIFY.mp4" -filter_complex "subtitles=D:\\Bring.srt" -ss 13:14 -to 16:01 -c:v libx265 -c:a copy "D:\iPod videos\Bring It On (2000) [1080p]\Trecho2.mp4"
+
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iPod videos\Bring It On (2000) [1080p]\Bring.It.On.2000.1080p.BluRay.x264.YIFY.mp4"  -ss 13:14 -to 16:01 -filter_complex "subtitles=D:\\Bring.srt" -c:v libx265 -c:a copy "D:\iPod videos\Bring It On (2000) [1080p]\Trecho2.mp4"

@@ -1,0 +1,6 @@
+ffmpeg -i input.mp3 -t 60 -acodec copy output.mp3
+
+
+C:\ffmpeg\bin\ffmpeg.exe -i "E:\MP3\Favorites\George Michael - Killer, Papa Was A Rollin' Stone.mp3" -t 60 "D:\iTunes\Baby\killer.wav"
+
+C:\ffmpeg\bin\ffmpeg.exe -i "E:\MP3\Favorites\George Michael - Killer, Papa Was A Rollin' Stone.mp3" -t 10 "D:\iTunes\Baby\killer.mp3"

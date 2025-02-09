@@ -1,0 +1,13 @@
+# CREATE VIRT ENV IN THE CURRENT DIR
+python -m venv MyEnv
+
+# ACTIVATE THE VIRT ENV JUST CREATED
+myenv\Scripts\activate  # On Windows
+
+C:\Python\myenv\Scripts\activate (FOI ADICIONADO AO PATH, SO ACTIVATE JA SERVE)
+
+DENTRO DO VS CODE, ATIVE DE NOVO USANDO O TERMINAL COM O CMD:
+myenv\Scripts\activate
+
+PARA DESATIVAR:
+deactivate

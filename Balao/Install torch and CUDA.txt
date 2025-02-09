@@ -1,0 +1,60 @@
+REQUIREMENTS FOR REALESRGAN:
+
+# CREATE VIRT ENV IN THE CURRENT DIR
+python -m venv MyEnv
+
+# ACTIVATE THE VIRT ENV JUST CREATED
+myenv\Scripts\activate  # On Windows
+
+C:\Python\myenv\Scripts\activate
+
+DENTRO DO VS CODE, ATIVE DE NOVO USANDO O TERMINAL COM O CMD:
+myenv\Scripts\activate
+
+PARA DESATIVAR:
+deactivate
+
+C:\Python\myenv\Scripts\activate
+
+basicsr>=1.4.2
+facexlib>=0.2.5
+gfpgan>=1.3.5
+numpy
+opencv-python
+Pillow
+torch>=1.7 (I have 2.0.1+cu117)
+torchvision (I have 0.15.2+cu117)
+tqdm
+
+
+NEEDS TO UPGRADE PIP BEFORE CREATING THE VIRT ENV
+pip install --upgrade pip
+
+It requires all these packages: 
+pip install basicsr facexlib gfpgan numpy opencv-python Pillow ... tqdm
+
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu117
+
+
+They are installed already in a virtual environment
+
+
+ERRO CORRIGIDO:
+/stable-diffusion-webui/venv/lib/python3.10/site-packages/basicsr/data/degradations.py
+
+Change:
+
+from torchvision.transforms.functional_tensor import rgb_to_grayscale 
+
+TO:
+
+from torchvision.transforms.functional import rgb_to_grayscale
+
+AQUI ABAIXO EH DE OUTRO PROGRAMA
+
+pip install opencv-python-headless ffmpeg-python realesrgan Pillow torch torchvision
+
+# Install your packages inside the virtual environment
+pip install torch torchvision realesrgan opencv-python-headless
+
+

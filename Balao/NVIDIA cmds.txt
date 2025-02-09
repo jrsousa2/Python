@@ -1,0 +1,6 @@
+check NVIDIA's GPU'S
+nvidia-smi
+
+Verify Installation: After installation, you can check if CUDA is properly installed by running nvcc --version in your command prompt, 
+
+or checking the C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7\ directory for the DLL files.

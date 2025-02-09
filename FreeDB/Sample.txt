@@ -1,0 +1,71 @@
+﻿# xmcd CD database file
+#
+# Track frame offsets:
+#	150
+#	4824
+#	17401
+#	25480
+#	27006
+#	37295
+#	43474
+#	47602
+#	49676
+#	56793
+#	63076
+#	71908
+#	82818
+#	89257
+#	95205
+#	109448
+#	132501
+#	139620
+#
+# Disc length: 2215 seconds
+#
+# Revision: 0
+# Processed by: cddbd v1.5.2PL0 Copyright (c) Steve Scherf et al.
+# Submitted via: CDex 1.70beta2
+#
+DISCID=0008a512
+DTITLE=DAMAS GRATIS / EN VIVO EN PARAGUAY
+DYEAR=
+DGENRE=Salsa
+TTITLE0=01 - Intro (En vivo)
+TTITLE1=02 - No tom￩s (En vivo)
+TTITLE2=03 - Se te ve la tanga (En viv
+TTITLE3=04 - Quiero vitamina (En vivo)
+TTITLE4=05 - El fumanchero (En vivo)
+TTITLE5=06 - Yo tengo una piedra (En v
+TTITLE6=07 - Pata sucia (En vivo)
+TTITLE7=08 - Sentate en el pelado (En
+TTITLE8=09 - La pollera de Jimmy (En v
+TTITLE9=10 - La danza de los mirlos (E
+TTITLE10=11 - Solo aspirina (En vivo)
+TTITLE11=12 - Los due￱os del pabell￳n (
+TTITLE12=13 - La danza de los mirlos (E
+TTITLE13=14 - La danza del tabl￳n (En v
+TTITLE14=15 - Alza las manos (En vivo)
+TTITLE15=16 - Se te ve la tanga (En viv
+TTITLE16=17 - Animaci￳n (En vivo)
+TTITLE17=18 - Los due￱os del pabell￳n (
+EXTD=
+EXTT0=
+EXTT1=
+EXTT2=
+EXTT3=
+EXTT4=
+EXTT5=
+EXTT6=
+EXTT7=
+EXTT8=
+EXTT9=
+EXTT10=
+EXTT11=
+EXTT12=
+EXTT13=
+EXTT14=
+EXTT15=
+EXTT16=
+EXTT17=
+PLAYORDER=
+

@@ -1,0 +1,18 @@
+pyinstaller --onefile QualityScaler.py
+
+pyinstaller --noconsole --onefile --strip Call_Move_Library_GUI.py
+
+https://drive.google.com/file/d/16aL286gj5nKe3EF9GOY5TeEP9w-ADWMw/view?usp=sharing
+
+pyinstaller --onefile your_script.py
+
+pyinstaller --onefile --strip --exclude-module test --exclude-module doctest your_script.py
+
+pyinstaller --onefile --strip --exclude-module=pandas --exclude-module=xml.etree.ElementTree --exclude-module=urllib.parse --exclude-module=os.path --exclude-module=struct --exclude-module=binascii --exclude-module=Read_PL call_move_library.py
+
+
+--onefile: Bundles everything into a single executable.
+--strip: Removes debug information to reduce the size.
+--exclude-module: Excludes unnecessary modules.
+
+upx --best D:\iTunes\VS Code\dist\Call_Move_Library.exe

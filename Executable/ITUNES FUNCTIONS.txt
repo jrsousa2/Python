@@ -1,0 +1,480 @@
+Migrate your iTunes library with a free applet built in Python
+Nao passar de 10 minutos de video.
+
+AE533B6A86544EC5
+
+https://github.com/jrsousa2/iTunesLibrary/releases/tag/v1.0.0
+https://github.com/jrsousa2/iTunesLibrary/releases/download/v1.0.0/iTunesLibraryMigration.exe
+
+https://github.com/jrsousa2/iTunesLibrary/blob/main/README.md
+
+HIGH / LOW long integers
+(-1370277014, -2041295163)
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Application Version</key><string>12.10.2.3</string>
+	<key>Date</key><date>2024-06-24T07:04:44Z</date>
+	<key>Features</key><integer>5</integer>
+	<key>Library Persistent ID</key><string>9CE0CA6A188A8121</string>
+	<key>Tracks</key>
+	<dict>
+		<key>46000</key>
+		<dict>
+			<key>Track ID</key><integer>46000</integer>
+			<key>Size</key><integer>5326118</integer>
+			<key>Total Time</key><integer>218305</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Track Count</key><integer>14</integer>
+			<key>Year</key><integer>2001</integer>
+			<key>Date Modified</key><date>2023-10-29T07:10:00Z</date>
+			<key>Date Added</key><date>2012-06-30T23:14:51Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2014-10-13T14:39:23Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>AE533B6A86544EC5</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Africa</string>
+			<key>Artist</key><string>E-Type Feat. Nana</string>
+			<key>Album Artist</key><string>E-Type</string>
+			<key>Album</key><string>14 Hits With E-Type</string>
+			<key>Grouping</key><string>GreatestHits\Tag_file_match\</string>
+			<key>Genre</key><string>Eurodance\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/E/E-Type%20Feat.%20Nana%20-%20Africa.mp3</string>
+		</dict>
+		<key>46002</key>
+		<dict>
+			<key>Track ID</key><integer>46002</integer>
+			<key>Size</key><integer>10262671</integer>
+			<key>Total Time</key><integer>253466</integer>
+			<key>Year</key><integer>1986</integer>
+			<key>Date Modified</key><date>2023-10-29T07:29:48Z</date>
+			<key>Date Added</key><date>2012-06-30T23:14:51Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>11</integer>
+			<key>Play Date</key><integer>3677696485</integer>
+			<key>Play Date UTC</key><date>2020-07-16T02:21:25Z</date>
+			<key>Skip Count</key><integer>14</integer>
+			<key>Skip Date</key><date>2017-09-03T04:02:29Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>F70E7823078D8B7B</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>You Can Leave Your Hat On</string>
+			<key>Artist</key><string>Joe Cocker</string>
+			<key>Album Artist</key><string>Joe Cocker</string>
+			<key>Album</key><string>Cocker</string>
+			<key>Grouping</key><string>Searched\Found\Tag_file_match\</string>
+			<key>Genre</key><string>Favorite\Rock\Folk Rock\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/Favorites/Joe%20Cocker%20-%20You%20Can%20Leave%20Your%20Hat%20On.mp3</string>
+		</dict>
+		<key>46004</key>
+		<dict>
+			<key>Track ID</key><integer>46004</integer>
+			<key>Size</key><integer>6889030</integer>
+			<key>Total Time</key><integer>279614</integer>
+			<key>Year</key><integer>1988</integer>
+			<key>Date Modified</key><date>2023-10-29T08:40:24Z</date>
+			<key>Date Added</key><date>2012-06-30T23:14:52Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>85F0D8A7FFDCAFA2</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Sleeping Single</string>
+			<key>Artist</key><string>Roxette</string>
+			<key>Album Artist</key><string>Roxette</string>
+			<key>Album</key><string>Look Sharp!</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Pop\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/R/Roxette%20-%20Sleeping%20Single.mp3</string>
+		</dict>
+		<key>46006</key>
+		<dict>
+			<key>Track ID</key><integer>46006</integer>
+			<key>Size</key><integer>5282069</integer>
+			<key>Total Time</key><integer>215588</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>17</integer>
+			<key>Year</key><integer>1991</integer>
+			<key>Date Modified</key><date>2023-10-29T07:55:24Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:04Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2013-05-02T18:49:14Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>4EBF0769142239DC</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Just The Two Of Us</string>
+			<key>Artist</key><string>Chubb Rock</string>
+			<key>Album Artist</key><string>Chubb Rock</string>
+			<key>Composer</key><string>Richard Simpson</string>
+			<key>Album</key><string>The One</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Dance\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Sort Album</key><string>One</string>
+			<key>Location</key><string>file://localhost/E:/MP3/C/Chubb%20Rock%20-%20Just%20The%20Two%20Of%20Us.mp3</string>
+		</dict>
+		<key>46008</key>
+		<dict>
+			<key>Track ID</key><integer>46008</integer>
+			<key>Size</key><integer>3840528</integer>
+			<key>Total Time</key><integer>233822</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Track Count</key><integer>17</integer>
+			<key>Year</key><integer>1991</integer>
+			<key>Date Modified</key><date>2023-10-29T07:55:24Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:04Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3579176247</integer>
+			<key>Play Date UTC</key><date>2017-06-01T19:37:27Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>28142C7EFF3F4CFF</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>The Chubbster</string>
+			<key>Artist</key><string>Chubb Rock</string>
+			<key>Album Artist</key><string>Chubb Rock</string>
+			<key>Composer</key><string>Howard Thompson/Richard Simpson</string>
+			<key>Album</key><string>The One</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Dance\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Sort Name</key><string>Chubbster</string>
+			<key>Sort Album</key><string>One</string>
+			<key>Location</key><string>file://localhost/E:/MP3/C/Chubb%20Rock%20-%20The%20Chubbster.mp3</string>
+		</dict>
+		<key>46010</key>
+		<dict>
+			<key>Track ID</key><integer>46010</integer>
+			<key>Size</key><integer>4408446</integer>
+			<key>Total Time</key><integer>181733</integer>
+			<key>Year</key><integer>1992</integer>
+			<key>Date Modified</key><date>2023-10-29T07:25:50Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:04Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2015-09-03T22:18:14Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>440AF21150CACE8A</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Yabadabadoo</string>
+			<key>Artist</key><string>Chubb Rock</string>
+			<key>Album Artist</key><string>Chubb Rock</string>
+			<key>Album</key><string>I Gotta Get Mine Yo! - Book Of Rhymes</string>
+			<key>Grouping</key><string>Searched\Small\Tag_file_match\</string>
+			<key>Genre</key><string>Hip-Hop\Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/C/Chubb%20Rock%20-%20Yabadabadoo.mp3</string>
+		</dict>
+		<key>46012</key>
+		<dict>
+			<key>Track ID</key><integer>46012</integer>
+			<key>Size</key><integer>3902877</integer>
+			<key>Total Time</key><integer>240013</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>15</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2023-10-29T08:10:09Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2018-02-26T00:12:27Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>1A4A69C3D5A5ACA1</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Die Mother Fucker</string>
+			<key>Artist</key><string>Geto Boys</string>
+			<key>Album Artist</key><string>Geto Boys</string>
+			<key>Album</key><string>The Ressurection</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Sort Album</key><string>Ressurection</string>
+			<key>Location</key><string>file://localhost/E:/MP3/G/Geto%20Boys%20-%20Die%20Mother%20Fucker.mp3</string>
+		</dict>
+		<key>46014</key>
+		<dict>
+			<key>Track ID</key><integer>46014</integer>
+			<key>Size</key><integer>6582544</integer>
+			<key>Total Time</key><integer>252656</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Year</key><integer>2005</integer>
+			<key>Date Modified</key><date>2023-10-29T07:10:32Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>204</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3551437547</integer>
+			<key>Play Date UTC</key><date>2016-07-15T18:25:47Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>65F044944B431889</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>G-Code</string>
+			<key>Artist</key><string>Geto Boys</string>
+			<key>Album Artist</key><string>Geto Boys</string>
+			<key>Album</key><string>The Foundation</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Sort Album</key><string>Foundation</string>
+			<key>Location</key><string>file://localhost/E:/MP3/G/Geto%20Boys%20-%20G-Code.mp3</string>
+		</dict>
+		<key>46016</key>
+		<dict>
+			<key>Track ID</key><integer>46016</integer>
+			<key>Size</key><integer>4801494</integer>
+			<key>Total Time</key><integer>294164</integer>
+			<key>Year</key><integer>1990</integer>
+			<key>Date Modified</key><date>2023-10-29T08:10:09Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3444595572</integer>
+			<key>Play Date UTC</key><date>2013-02-25T05:06:12Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2014-04-15T21:40:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>E0A060C8F15470DC</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Scarface</string>
+			<key>Artist</key><string>Geto Boys</string>
+			<key>Album Artist</key><string>Geto Boys</string>
+			<key>Album</key><string>The Geto Boys</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Sort Album</key><string>Geto Boys</string>
+			<key>Location</key><string>file://localhost/E:/MP3/G/Geto%20Boys%20-%20Scarface.mp3</string>
+		</dict>
+		<key>46018</key>
+		<dict>
+			<key>Track ID</key><integer>46018</integer>
+			<key>Size</key><integer>7434040</integer>
+			<key>Total Time</key><integer>304613</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Year</key><integer>1986</integer>
+			<key>Date Modified</key><date>2023-10-29T08:19:56Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>1619404D68B0ED66</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Go See The Doctor</string>
+			<key>Artist</key><string>Kool Moe Dee</string>
+			<key>Album Artist</key><string>Kool Moe Dee</string>
+			<key>Album</key><string>Kool Moe Dee</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Black Music\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/K/Kool%20Moe%20Dee%20-%20Go%20See%20The%20Doctor.mp3</string>
+		</dict>
+		<key>46020</key>
+		<dict>
+			<key>Track ID</key><integer>46020</integer>
+			<key>Size</key><integer>4951050</integer>
+			<key>Total Time</key><integer>222746</integer>
+			<key>Disc Number</key><integer>2</integer>
+			<key>Disc Count</key><integer>3</integer>
+			<key>Track Number</key><integer>28</integer>
+			<key>Year</key><integer>2007</integer>
+			<key>BPM</key><integer>91</integer>
+			<key>Date Modified</key><date>2023-10-29T08:29:27Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>176</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Skip Count</key><integer>2</integer>
+			<key>Skip Date</key><date>2014-05-31T00:11:11Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>DBDA227D795C0838</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Bed Work</string>
+			<key>Artist</key><string>Nardo Ranks</string>
+			<key>Album Artist</key><string>Various</string>
+			<key>Composer</key><string>Lee</string>
+			<key>Album</key><string>Trojan Slack Reggae Box Set</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Reggae\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/N/Nardo%20Ranks%20-%20Bed%20Work.mp3</string>
+		</dict>
+		<key>46022</key>
+		<dict>
+			<key>Track ID</key><integer>46022</integer>
+			<key>Size</key><integer>3080691</integer>
+			<key>Total Time</key><integer>179226</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>2004</integer>
+			<key>Date Modified</key><date>2023-10-29T08:29:28Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>F6D691D960222D97</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Thief's Theme</string>
+			<key>Artist</key><string>Nas</string>
+			<key>Album Artist</key><string>Nas</string>
+			<key>Album</key><string>Street's Disciple (Disc 2)</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/N/Nas%20-%20Thief's%20Theme.mp3</string>
+		</dict>
+		<key>46024</key>
+		<dict>
+			<key>Track ID</key><integer>46024</integer>
+			<key>Size</key><integer>5018933</integer>
+			<key>Total Time</key><integer>302576</integer>
+			<key>Year</key><integer>1990</integer>
+			<key>Date Modified</key><date>2023-10-29T08:35:35Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3584268280</integer>
+			<key>Play Date UTC</key><date>2017-07-30T18:04:40Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>916B026C5EA86085</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Brothers Gonna Work It Out</string>
+			<key>Artist</key><string>Public Enemy</string>
+			<key>Album Artist</key><string>Public Enemy</string>
+			<key>Album</key><string>Fear Of A Black Planet</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/P/Public%20Enemy%20-%20Brothers%20Gonna%20Work%20It%20Out.mp3</string>
+		</dict>
+		<key>46026</key>
+		<dict>
+			<key>Track ID</key><integer>46026</integer>
+			<key>Size</key><integer>5275428</integer>
+			<key>Total Time</key><integer>319373</integer>
+			<key>Year</key><integer>1988</integer>
+			<key>Date Modified</key><date>2023-10-29T08:35:36Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2016-07-30T02:53:18Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>92918CC380527707</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Don't Believe The Hype</string>
+			<key>Artist</key><string>Public Enemy</string>
+			<key>Album Artist</key><string>Public Enemy</string>
+			<key>Album</key><string>It Takes A Nation Of Millions To Hold Us Back</string>
+			<key>Grouping</key><string>Searched\Found\Tag_file_match\</string>
+			<key>Genre</key><string>Favorite\Rap\Conscious\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/Favorites/Public%20Enemy%20-%20Don't%20Believe%20The%20Hype.mp3</string>
+		</dict>
+		<key>46028</key>
+		<dict>
+			<key>Track ID</key><integer>46028</integer>
+			<key>Size</key><integer>11595698</integer>
+			<key>Total Time</key><integer>285648</integer>
+			<key>Year</key><integer>1989</integer>
+			<key>Date Modified</key><date>2023-10-29T08:35:36Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:05Z</date>
+			<key>Bit Rate</key><integer>320</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2017-05-27T20:06:39Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>AD137F889AC2368F</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Fight The Power</string>
+			<key>Artist</key><string>Public Enemy</string>
+			<key>Album Artist</key><string>Public Enemy</string>
+			<key>Album</key><string>Fear Of A Black Planet</string>
+			<key>Grouping</key><string>Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/P/Public%20Enemy%20-%20Fight%20The%20Power.mp3</string>
+		</dict>
+		<key>46030</key>
+		<dict>
+			<key>Track ID</key><integer>46030</integer>
+			<key>Size</key><integer>5894259</integer>
+			<key>Total Time</key><integer>234527</integer>
+			<key>Track Number</key><integer>12</integer>
+			<key>Year</key><integer>2002</integer>
+			<key>Date Modified</key><date>2023-10-29T08:54:21Z</date>
+			<key>Date Added</key><date>2012-07-01T09:57:06Z</date>
+			<key>Bit Rate</key><integer>192</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>0787C5BDD5162277</string>
+			<key>Track Type</key><string>File</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+			<key>Name</key><string>Diaboly</string>
+			<key>Artist</key><string>Will Smith</string>
+			<key>Album Artist</key><string>Will Smith</string>
+			<key>Composer</key><string>Bobby Robinson/Cedric 'K-Ci' Hailey/Darren 'Limitless' Henson/Lennie Bennett/Will Smith</string>
+			<key>Album</key><string>Greatest Hits</string>
+			<key>Grouping</key><string>GreatestHits\Tag_file_match\</string>
+			<key>Genre</key><string>Rap\</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Location</key><string>file://localhost/E:/MP3/W/Will%20Smith%20-%20Diaboly.mp3</string>
+		</dict>
+		<key>46032</key>
+		<dict>

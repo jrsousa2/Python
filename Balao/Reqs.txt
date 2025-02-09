@@ -1,0 +1,7 @@
+basicsr
+facexlibgfpgan
+numpy
+opencv-python
+Pillow
+torch torchvision --index-url https://download.pytorch.org/whl/cu117
+tqdm

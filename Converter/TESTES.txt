@@ -1,0 +1,22 @@
+ESSE AQUI FUNCIONA:
+"C:\ffmpeg\bin\ffplay.exe" "001.mkv" -vf "drawtext=fontfile=C\\:/Windows/fonts/arial.ttf:text='Hello World'" 
+
+ABAIXO ESTA FUNCIONANDO PERFEITO:
+"C:\ffmpeg\bin\ffplay.exe" "001.mkv" -vf "drawtext=fontfile=C\\:/Windows/fonts/arial.ttf:text='Hello World':fontcolor=yellow:x=(w-text_w)/2:y=(h-text_h)/2:fontsize=30:enable='between(t,0,5)'" 
+
+ABAIXO ESTA FUNCIONANDO PERFEITO:
+"C:\ffmpeg\bin\ffplay.exe" "001.mkv" -vf "[in]drawtext=fontfile=C\\:/Windows/fonts/arial.ttf:text='Hello World':fontcolor=yellow:x=(w-text_w)/2:y=(h-text_h)/2:fontsize=35:enable='between(t,0,5)',drawtext=fontfile=C\\:/Windows/fonts/arial.ttf:text='Second line':fontcolor=yellow:x=(w-text_w)/2:y=35+(h-text_h)/2:fontsize=25:enable='between(t,0,5)'[out]" -c:v xb264
+
+RE-ENCODE AND ADD TEXT: (AQUI O TAM. 45 PARECE SER MELHOR). RE-ENCODE RESOLVE OS PROBLEMAS MAS EH MUITO DEMORADO
+TESTAR SE mkv OU mp4 EH MELHOR
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\100\Sexo\S01\SATC - S01E03 - Bay of Married Pigs.mkv" -ss 00:18:05 -to 00:19:15 -vf "[in]drawtext=fontfile=C\\:/Windows/fonts/arial.ttf:text='Hello World':fontcolor=yellow:x=(w-text_w)/2:y=(h-text_h)/2:fontsize=35:enable='between(t,0,5)'" -c:v libx265 -c:a copy AAA.mkv
+
+USEI ESSE MODELO:
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\100\Sexo\S01\SATC - S01E03 - Bay of Married Pigs.mkv" -ss 00:18:05 -to 00:18:12 -vf "[in]drawtext=fontfile=C\\:/Windows/fonts/arial.ttf:text='Hello World':fontcolor=yellow:x=(w-text_w)/2:y=(h-text_h)/2:fontsize=55:enable='between(t,18*60+5,18*60+12)'" -c:v libx265 -c:a copy AAA2.mkv
+
+SE FOR mkv:
+Conversao leva 13.75 min (825/60) por 7 segundos
+
+1.96 min por segundo / cerca de 2 minutos por segundo
+
+encoded 168 frames in 884.94s (0.19 fps), 1495.99 kb/s, Avg QP:32.07

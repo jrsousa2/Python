@@ -1,0 +1,15 @@
+<!-- <select name= colour method="GET" action="/">
+    {% for colour in colours %}
+    <option value= "{{colour}}" SELECTED>{{colour}}</option>"
+    {% endfor %}
+</select>
+ -->
+
+<select name="colour" method="GET" action="/">
+    <option value="{{colours[0]}}" selected>{{colours[0]}}</option>
+    {% for colour in colours[1:] %}
+      <option value="{{colour}}">{{colour}}</option>
+    {% endfor %}
+  </select>
+
+  <input type="submit">

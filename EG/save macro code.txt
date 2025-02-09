@@ -1,0 +1,220 @@
+%macro Changes_tags(playlist,tabela,check_art=true,encode=Utf8);
+/* THESE ARE ALL THE COUNTS TO KEEP TRACK OF: */
+%let vari1=Artist;
+%let vari2=Name;
+%let vari3=AlbumArtist;
+%let vari4=Album;
+%let vari5=Genre;
+%let vari6=Grouping;
+
+%let vari7=Year;
+%let vari8=Rating;
+%let vari9=PlayedCount;
+%let vari10=SkippedCount;
+%let vari11=SortArtist;
+%let vari12=SortAlbumArtist;
+
+%let No_Vars=12;
+%let check_art=%sysfunc(lowcase(&check_art));
+
+/* SET MODIFY ON OR OFF FOR ALL */
+data _null_;
+file "/home/jrsousa2/Vbscripts/&playlist..vbs " encoding=&encode;
+set &tabela end=fim;
+/*T=fim;*/
+/* Here it can't be a Rename cause sometimes these fields don't exist */
+/* AQUI TENHO QUE COLOCAR VARIAVEIS QUE NAO TEM O NOME ESPERADO PELO ITUNES */
+rename Art= New_Artist=New_Art;
+New_Name=New_Title;
+New_AlbumArtist=New_AA;
+New_SortArtist=New_Art_Sort;
+New_SortAlbumArtist=New_AA_Sort;
+
+/* Flag */
+Artist_Flag=Art_Flag;
+Name_Flag=Title_Flag;
+AlbumArtist_Flag=AA_Flag;
+Location_Flag=File_Flag;
+
+/* INITIALIZATION */
+if _n_=1 then do; 
+   put "Dim iTunesApp ";
+   put "Dim playlist ";
+   put "Dim FullPath ";
+   put "Dim tracks ";
+   put "Dim track ";
+   put;
+
+/*Connect to iTunes app*/
+   put "Set iTunesApp = CreateObject(""iTunes.Application.1"") ";
+   put "Set FSO = CreateObject(""Scripting.FileSystemObject"") ";
+/*   put "Set oTracks = iTunesApp.LibraryPlaylist ";*/
+   put;
+/*'Create playlist*/
+put "Set playlist = iTunesApp.LibrarySource.Playlists.ItemByName(""&playlist_name"") ";
+put "If playlist is Nothing Then ";
+put "   iTunesApp.CreatePlaylist(""&playlist_name"") ";
+put "   Set playlist = iTunesApp.LibrarySource.Playlists.ItemByName(""&playlist_name"") ";
+put "Else ";
+/*'DELETE*/
+put "   playlist.delete ";
+/*'recreate playlist*/
+put "   iTunesApp.CreatePlaylist(""&playlist_name"") ";
+put "   Set playlist = iTunesApp.LibrarySource.Playlists.ItemByName(""&playlist_name"") ";
+put "End If ";
+put ;
+put ;
+put "On error resume next ";
+/* THE BELOW IS TO COUNT HOW MANY TAGS OF EACH KIND CHANGED */
+%do i=1 %to &No_Vars;
+    put "count_&&vari&i = 0 ";
+%end;
+
+/* BELOW IS THE INITIALIZATION OF THE TRACK (WILL BE INCREMENTED IF NO ERROR ADDING TRACK) */
+put "Obs = 0 ";
+put "Miss = 0 ";
+put "has_art = 0 ";
+put;
+/* SAS IF END */
+end;
+
+put ;
+length cmd aux $250.;
+
+/* THE BELOW BLOCK WILL ONLY BE EXECUTE IF TRACK ASSIGN DOESN'T FAIL */
+put;
+put;
+cmd="If FSO.FileExists("""||trim(location)||""") Then";
+put cmd;
+put "Obs = Obs+1 ";
+/* ADDS FILE TO PLAYLIST */
+cmd="playlist.AddFile("""||trim(location)||""") ";
+put cmd;
+
+/* DISPLAYS MESSAGE ON THE SCREEN */
+cmd="WScript.Echo ""Track "" & Obs & "" - "" & """||trim(location)||""" ";
+put cmd;
+/* ADDS TRACK */
+cmd="Set track = playlist.Tracks.Item(Obs) ";
+put cmd;
+
+/* IF NOT TO CHECK ART, THEN SET HAS_ART TO FALSE REGARDLESS OF HAVING ART */
+if not (lowcase("&Check_Art")="false")
+   then do;
+          put "Set Artobj = track.Artwork ";
+          put "If Artobj.Count>0 Then ";
+          put "   Has_Art = True ";
+          put "Else ";
+          put "   Has_Art = False ";
+          put "End If ";
+        end;
+   else put "Has_Art = False ";
+put;
+
+/* UPDATES ALL 10 TAGS */
+%do i=1 %to &No_Vars;
+/* EXCEPTION FOR ALBUM CHANGE */
+/* ONLY WHEN CHANGING ALBUM I NEED TO CHECK IF THERE'S ART */
+/* (I DON'T WANT TO CHANGE IT TO MISMATCH COVER) */
+%if %sysfunc(lowcase(&&vari&i))=albumartist or %sysfunc(lowcase(&&vari&i))=album
+    %then %let Art_Check=not Has_Art;
+    %else %let Art_Check=True;
+
+/*
+%let VBfuncao=;
+%if %sysfunc(lowcase(&&vari&i))=location
+    %then %do; 
+            %let funcao=lowcase;
+			%let VBfuncao=Lcase;
+		  %end;
+*/
+
+%if &i<=6
+    %then %let funcao=trim;
+	%else %let funcao=compress;
+
+if missing(New_&&vari&i)
+   then do;
+         /* put "WScript.Echo ""Can't set &&vari&i to blank"" ";*/
+		end;
+   else if 1 /*&&vari&i ne New_&&vari&i*/
+           then do; /* a parte abaixo foi adicionada para o caso de eu querer forcar a regravacao da tag */
+		          if not (&&vari&i=New_&&vari&i and not missing(&&vari&i))
+                     then cmd="If (&Art_Check) and track.&&vari&i<>"""||&funcao(New_&&vari&i)||""" Then ";
+					 else cmd="If (&Art_Check) Then ";
+		          put cmd;
+                  put "   WScript.Echo ""Changing &&vari&i"" ";
+                  if New_&&vari&i ne "@delete"
+                     then cmd="track.&&vari&i = """||&funcao(New_&&vari&i)||""" ";
+					 else cmd="track.&&vari&i = """" ";
+		          put "   " cmd;
+                  put "   " "count_&&vari&i = count_&&vari&i+1 ";
+                  put "Else ";
+				  cmd="   If track.&&vari&i="""||&funcao(New_&&vari&i)||""" Then ";
+				  put "   " cmd;
+				  put "      WScript.Echo ""Not changing &&vari&i, tags are equal!"" ";
+				  put "   Else ";
+				  put "      WScript.Echo ""Not changing &&vari&i, tags are different!"" ";
+				  put "      If Has_Art and ""&check_art""=""true"" and ""&&vari&i""=""Album"" Then ";
+				  put "         WScript.Echo ""Track has art!"" ";
+				  put "         " "has_art = has_art+1 ";
+				  put "      End If ";
+				  put "   End If ";
+                  put "End If ";
+				  put ;
+	            end;
+%end;
+
+/* ADDING A GENRE */
+if missing(Add_Genre)
+   then do;
+          /*put "WScript.Echo ""Can't add Genre"" ";*/
+        end;
+   else do;
+          put "WScript.Echo ""Adding Genre"" ";
+          put "If track.genre = """" Then  ";
+		  cmd="track.Genre="""||trim(Add_Genre)||""" ";
+		  put "   " cmd;
+		  put "   " "count_genre = count_genre+1 ";
+		  put "Else ";
+          cmd="If Instr(Lcase(track.genre),"""||trim(lowcase(Add_Genre))||""")=0 Then ";
+          put "   " cmd;
+		  cmd="track.Genre=Replace(track.Genre & ""\"||trim(Add_Genre)||""" ,""\\"",""\"")";
+		  put "      " cmd;
+		  put "      " "count_genre = count_genre+1 ";
+		  put "   End If ";
+		  put "End If ";
+        end;
+put "Else ";
+put "    miss = miss + 1";
+put "    Wscript.Echo ""File not found!""";
+/* END OF THE TEST FOR ERROR ADDING TRACK */
+put "End If ";
+/* LINE BREAK */
+put "WScript.Echo ";
+
+if fim=1 
+then do;
+       put;
+	   cmd="Wscript.Echo ""Finished!"" ";
+	   put cmd;
+	   %do i=1 %to &No_Vars;
+	       cmd="Wscript.Echo ""&&vari&i: "" & count_&&vari&i & "" tags modified"" ";
+           put cmd;
+	   %end;
+	   cmd="Wscript.Echo ""Missing files: "" & miss ";
+       put cmd;
+	   cmd="Wscript.Echo ""Albums not changed due to artwork: "" & has_art ";
+       put cmd;
+	   put ;
+	   if 0
+	      then do;
+                 put "Wscript.StdOut.Write vbNewLine & ""Press ENTER to continue"" ";
+                 put "Do While Not WScript.StdIn.AtEndOfLine ";
+                 put "   Input = WScript.StdIn.Read(1) ";
+                 put "Loop ";
+	           end;
+     end;
+/* FIM */
+run;
+%mend;

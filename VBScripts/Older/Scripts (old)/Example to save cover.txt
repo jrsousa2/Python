@@ -1,0 +1,62 @@
+Dim iTunesApp
+Dim playlist
+Dim track
+Dim ExtArray(4)
+
+Set iTunesApp = CreateObject("iTunes.Application.1")
+Set FSO = CreateObject("Scripting.FileSystemObject")
+
+ExtArray(0) = "unk"
+ExtArray(1) = "jpg"
+ExtArray(2) = "png"
+ExtArray(3) = "bmp"
+
+Set playlist = iTunesApp.LibrarySource.Playlists.ItemByName("scri")
+If playlist is Nothing Then
+   iTunesApp.CreatePlaylist("scri")
+   Set playlist = iTunesApp.LibrarySource.Playlists.ItemByName("scri")
+Else
+   playlist.delete
+   iTunesApp.CreatePlaylist("scri")
+   Set playlist = iTunesApp.LibrarySource.Playlists.ItemByName("scri")
+End If
+
+count=count+1
+
+WScript.Echo "Adding track 0001:            ."
+playlist.AddFile("D:\MP3\A\The A'z - Yadadamean.mp3")
+Set track = playlist.Tracks.Item(1)
+Set Artobj = track.Artwork
+If Artobj.Count>0 Then
+   Wscript.Echo "Exporting cover"
+   Formato = Artobj.Item(1).Format
+   Wscript.Echo "Format is " & Formato
+   Art_filename = "D:\Z-Covers\Exported_from_iTunes\           .." & ExtArray(Formato)
+   If FSO.FileExists(Art_filename) Then
+      Wscript.Echo "Cover already exported"
+   Else
+      Artobj.Item(1).SaveArtworkToFile(Art_filename)
+   End If
+Else
+   Wscript.Echo "Importing cover"
+   If FSO.FileExists("D:\Z-Covers\Exported_from_iTunes\           ..jpg") Then
+      Track.AddArtworkFromFile("D:\Z-Covers\Exported_from_iTunes\           ..jpg")
+      count=count+1
+   Else
+      If FSO.FileExists("D:\Z-Covers\Exported_from_iTunes\           ..png") Then
+         Track.AddArtworkFromFile("D:\Z-Covers\Exported_from_iTunes\           ..png")
+         count=count+1
+      Else
+         Wscript.Echo "Art file not found"
+      End If
+   End If
+End If
+Wscript.Echo
+
+
+
+Wscript.Echo "Finished: " & count & " covers copied"
+Wscript.StdOut.Write vbNewLine & "Press ENTER to continue"
+Do While Not WScript.StdIn.AtEndOfLine
+Input = WScript.StdIn.Read(1)
+Loop

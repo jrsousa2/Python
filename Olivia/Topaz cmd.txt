@@ -1,0 +1,147 @@
+"C:\Program Files\Topaz Labs LLC\Topaz Video AI\Topaz Video AI.exe"
+
+
+"C:\Program Files\Topaz Labs LLC\Topaz Video AI\Topaz Video AI.exe" -i "D:\Videos\Olivia Newton-John\teaser.jpg" -o "D:\Videos\Olivia Newton-John\enhanced.png" -m proteus
+
+LAUNCH THE CMD PROMPT FROM THE GUY, THE SYS VARS NEEDED ARE THESE:
+TVAI_MODEL_DATA_DIR=C:\ProgramData\Topaz Labs LLC\Topaz Video AI\models\
+TVAI_MODEL_DIR=C:\ProgramData\Topaz Labs LLC\Topaz Video AI\models
+
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+ffmpeg -i "D:\Videos\Balao\Balao_time_dim_crop.mp4" -t 6 -vf "fps=29.97" "D:\Videos\Balao\Input\frame_%04d.png"
+
+ffmpeg -ss 0 -i "D:\Videos\Olivia\Magic.mp4" -t 2 -vf "fps=29.97" "D:\Videos\Olivia\Input\frame_%04d.png"
+
+ABAIXO FUNCIONA:
+
+ffmpeg "-hide_banner" -start_number 4 "-i" "D:/Videos/Olivia/Input/frame_%04d.png" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=640:h=480:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=640:h=480:flags=lanczos:threads=0" "-c:v" "png" "-pix_fmt" "rgb24" -start_number 4 "D:/Videos/Olivia/Output/frame_%04d.png"
+
+
+###############################################################################################
+###############################################################################################
+
+CMD GERADO PELO TOPAZ:
+
+
+ffmpeg "-hide_banner" "-t" "11.94527861194528" "-framerate" "29.97" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Balao/Input/frame_%04d.png" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=640:h=480:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=640:h=480:flags=lanczos:threads=0" "-c:v" "png" "-pix_fmt" "rgb24" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using prob-4; mode: auto; revert compression at 0; recover details at 0; sharpen at 0; reduce noise at 0; dehalo at 0; anti-alias/deblur at 0; focus fix Off; and recover original detail at 20. Changed resolution to 640x480" "D:\Topaz/Input_1_prob4/%06d.png"
+
+THE RUNDOWN:
+
+This FFmpeg command performs the following tasks in sequence:
+
+-hide_banner: Hides the initial FFmpeg banner output, reducing clutter in the terminal.
+
+-t "11.94527861194528": Specifies the duration of the video or sequence to process, which in this case is approximately 11.95 seconds.
+
+-framerate "29.97": Sets the input framerate to 29.97 frames per second (fps), indicating the frame rate of the source images.
+
+-ss "0": Sets the start time for processing to 0 seconds, meaning it starts at the beginning of the input.
+
+-start_number "1": Specifies that the input image sequence starts with the filename frame_0001.png (for image sequences named frame_%04d.png).
+
+-i "D:/Videos/Balao/Input/frame_%04d.png": Sets the input source, which is a series of images named frame_0001.png, frame_0002.png, and so on. The %04d is a placeholder for the frame number.
+
+-sws_flags "spline+accurate_rnd+full_chroma_int": Defines the scaling algorithm options for better image processing. This combination ensures high-quality scaling with spline interpolation, accurate rounding, and full chroma interpolation.
+
+-filter_complex: Specifies a complex filter chain for video processing:
+
+tvai_up=model=prob-4:scale=0:w=640:h=480:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1: This is a Topaz Video AI filter chain (using the prob-4 model for upscaling). It processes the video to upscale to 640x480 resolution with specific settings for noise reduction, detail recovery, compression, and blending.
+scale=w=640:h=480:flags=lanczos:threads=0: Scales the output to 640x480 resolution using Lanczos scaling and allows FFmpeg to use threads for better performance.
+
+-c:v "png": Specifies that the output codec should be PNG, so the frames are saved as PNG images.
+
+-pix_fmt "rgb24": Sets the pixel format for the output to RGB24, which means 24-bit color depth.
+
+-start_number "1": Repeats the -start_number option to ensure the sequence of output images begins from 1.
+
+-movflags "use_metadata_tags+write_colr": Includes metadata tags in the output and writes the color information (colr) to the output file.
+
+-metadata "videoai=Enhanced using prob-4; ...": Adds metadata to the output, explaining the settings used in the enhancement process (including the model used, resolution changes, and all the applied settings such as detail recovery, noise reduction, etc.).
+
+"D:\Topaz/Input_1_prob4/%06d.png": Specifies the output directory and filename pattern for the processed images. The %06d means the output images will be numbered with six digits (e.g., 000001.png, 000002.png, etc.).
+
+MODIFICADO (INCOMPLETO)
+
+ffmpeg "-hide_banner" "-i" "D:/Videos/Balao/Input/frame_%04d.png" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=640:h=480:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=640:h=480:flags=lanczos:threads=0" "-c:v" "png" "-pix_fmt" "rgb24" "-start_number" "1" "D:\Topaz/Input_1_prob4/%06d.png"
+
+###############################################################################################
+###############################################################################################
+
+
+/* SIMPLIFICADO (ESSE AQUI EH O UNICO QUE RODA) */
+
+ffmpeg "-hide_banner" "-i" "D:/Videos/Olivia/Input/frame_%04d.png" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=640:h=480:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=640:h=480:flags=lanczos:threads=0" "-c:v" "png" "-pix_fmt" "rgb24" "-start_number" "1" "D:/Videos/Olivia/Output/frame_%04d.png"
+
+THE BATCH:
+D:\Videos\Olivia\Run.bat
+
+###############################################################################################
+###############################################################################################
+
+###############################################################################################
+###############################################################################################
+
+TVAI_MODEL_DATA_DIR
+
+This variable should be set to the folder where you want model files to be downloaded. A location with ~80 GB of free space will work best.
+Default value:
+Chosen during initial installation (Windows)
+
+/Applications/Topaz Video AI.app/Contents/Resources/models (macOS)
+
+PODERIA SER ESSE DIRETORIO TB
+C:\Users\All Users\Topaz Labs LLC\Topaz Video AI\models
+
+###############################################################################################
+###############################################################################################
+
+TVAI_MODEL_DIR
+
+This variable should be set to the folder containing the model definition files (.json), your authentication file (auth.tpz), and the tvai.tz file.
+In most cases, this value should not be changed from its default setting.
+Default value:
+Chosen during initial installation (Windows)
+/Applications/Topaz Video AI.app/Contents/Resources/models (macOS)
+
+###############################################################################################
+###############################################################################################
+
+
+-vf "tvai_up=model=aaa-10:scale=2"
+
+Add the `-strict 2 -hwaccel auto` flags
+Set `-c:v` to `hevc_nvenc` or `h264_nvenc`
+Add `-profile main -preset medium`
+Set `-global_quality` to the desired quality
+Add `-pix_fmt yuv420p -movflags frag_keyframe+empty_moov`
+Provide TVAI filter string
+
+./ffmpeg -hide_banner -nostdin -y -strict 2 -hwaccel auto -i "input.mp4" -c:v hevc_nvenc -profile main -preset medium -global_quality 19 -pix_fmt yuv420p -movflags frag_keyframe+empty_moov -vf "tvai_up=model=amq-13:scale=2" "output-artemis.mp4"
+
+###############################################################################################
+###############################################################################################
+
+CMD TO CHATGPT
+
+ffmpeg -hide_banner -nostdin -y -strict 2 -hwaccel auto -i "D:\Videos\Olivia Newton-John\teaser.jpg" -vf "tvai_up=model=amq-13:scale=2" "D:\Videos\Olivia Newton-John\out-artemis.png"
+
+ffmpeg -hide_banner -nostdin -y -strict 2 -hwaccel auto -i "D:\Videos\Olivia Newton-John\teaser.jpg" -c:v h264_nvenc -profile high -preset medium -global_quality 19 -pix_fmt yuv420p -vf "tvai_up=model=amq-13:scale=2" "D:\Videos\Olivia Newton-John\out-artemis.png"
+
+ffmpeg -hide_banner -nostdin -y -strict 2 -hwaccel cuvid -i "D:\Videos\Olivia Newton-John\teaser.jpg" -c:v h264_nvenc -profile:v high -preset medium -global_quality 19 -pix_fmt yuv420p -vf "tvai_up=model=amq-13:scale=2" "D:\Videos\Olivia Newton-John\out-artemis.png"
+
+ffmpeg -hide_banner -nostdin -y -strict 2 -hwaccel auto -i "D:\Videos\Olivia Newton-John\teaser.jpg" -c:v libx265 -profile:v high -preset medium -global_quality 19 -pix_fmt yuv420p -vf "tvai_up=model=amq-13:scale=2" "D:\Videos\Olivia Newton-John\out-artemis.png"
+
+
+
+
+###############################################################################################
+###############################################################################################
+
+ffmpeg "-hide_banner" "-t" "2.0020000092917125" "-ss" "0" "-i" "D:\Videos\Olivia Newton-John\teaser.jpg" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=480:h=360:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1" "-c:v" "png" "-pix_fmt" "rgb24" "-start_number" "0" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using prob-4; mode: auto; revert compression at 0; recover details at 0; sharpen at 0; reduce noise at 0; dehalo at 0; anti-alias/deblur at 0; focus fix Off; and recover original detail at 20" "D:/Topaz/Olivia Newton-John/Olivia/previews/Olivia Newton John - Magic (live on the midnight special)_2_prob4/%06d.png"
+
+
+CMD GERADO PELO TOPAZ:
+
+ffmpeg "-hide_banner" "-t" "2.0020000092917125" "-ss" "0" "-i" "D:/Videos/Olivia Newton-John/Olivia Newton John - Magic (live on the midnight special).mp4" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=480:h=360:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1" "-c:v" "png" "-pix_fmt" "rgb24" "-start_number" "0" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using prob-4; mode: auto; revert compression at 0; recover details at 0; sharpen at 0; reduce noise at 0; dehalo at 0; anti-alias/deblur at 0; focus fix Off; and recover original detail at 20" "D:/Topaz/Olivia Newton-John/Olivia/previews/Olivia Newton John - Magic (live on the midnight special)_2_prob4/%06d.png"
+

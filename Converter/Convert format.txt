@@ -1,0 +1,4 @@
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\recording.m4a" output.wav
+
+
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\recording.m4a" "D:\iTunes\Baby\recording.wav"

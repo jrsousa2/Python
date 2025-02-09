@@ -1,0 +1,12 @@
+ffmpeg -i input_video.mp4 -vn -c:a copy output_audio.wav
+
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\Media\D:\iTunes\Baby\Media\Debate.mp4" -vn -c:a copy "D:\iTunes\Baby\Media\Debate.wav"
+
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\Media\Debate.mp4" -vn -c:a copy "D:\iTunes\Baby\Media\Debate.wav"
+
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\Media\Debate.mp4" -vn -acodec pcm_s16le -ar 44100 -ac 2 "D:\iTunes\Baby\Media\Debate2.wav"
+
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\Media\Debate_crop.mp4" -vn -acodec pcm_s16le -ar 44100 -ac 2 "D:\iTunes\Baby\Media\Debate_crop.wav"
+
+
+

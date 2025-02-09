@@ -1,0 +1,75 @@
+Option Explicit
+
+If WScript.Arguments.Count > 0 Then Syntax
+
+Dim arrCDROMs, i, j, k, objFreeDB, strMsg
+i = 0
+
+Const CDDB_MODE_TEST   = 0
+Const CDDB_MODE_SUBMIT = 1
+
+' Create a uFREEDB object
+Set objFreeDB = CreateObject( "FREEDBControl.uFREEDB" )
+
+With objFreeDB
+    ' Mandatory properties, freedb.freedb.org does not seem to accept the defaults
+    .AppName      = "QueryCD"
+    .AppVersion   = "1.01"
+    .EmailAddress = "test@scripting.eu"
+    .CDDBServer   = "freedb.freedb.org"
+    .CDDBMode     = CDDB_MODE_TEST  ' Use CDDB_MODE_SUBMIT only if you need to
+                                    ' submit new or modified CD data to freedb.org
+
+    ' Get an array with all CDROM drive letters
+    arrCDROMs = Split( .GetCdRoms, "|" )
+
+    ' Loop through the array of CDROM drives
+    For j = 0 To UBound( arrCDROMs )
+        ' Media Info "" means there is no CD in drive
+        If .GetMediaInfo( arrCDROMs(j) ) <> "" Then
+            ' Count the number of CDs found
+            i = i + 1
+            ' Query the freedb.org database for the CD, based on its TOC
+            .LookupMediaByToc .GetMediaTOC( arrCDROMs(j) )
+            ' Return Album properties
+            strMsg = "The CD in drive " & UCase( arrCDROMs(j) ) _
+                   & ": is """ & .GetAlbumName & """ by " _
+                   & .GetArtistName & " (" & .GetAlbumYear & ", " _
+                   & .GetAlbumGenre & ", " _
+                   & .SecondsToTimeString( .GetAlbumLength ) & ")" & vbCrLf & vbCrLf
+            ' Loop through the list of tracks
+            For k = 1 To .GetAlbumTracks
+                ' Append track properties
+                strMsg = strMsg & "Track " & Right( " " & k, 2 ) & ":  " _
+                       & .GetTrackName( CInt(k) ) _
+                       & " (" & .SecondsToTimeString( .GetTrackTime( CInt(k) ) ) & ")" _
+                       & vbCrLf
+            Next
+        End If
+    Next
+    If i = 0 Then
+        strMsg = "No CD found."
+    End If
+End With
+
+' Display the result
+WScript.Echo strMsg
+
+' Release the object
+Set objFreeDB = Nothing
+
+
+Sub Syntax
+    strMsg = "QueryCD.vbs,  Version 1.01" & vbCrLf _
+           & "Display album and track properties for all CDs in all CDROM drives" _
+           & vbCrLf & vbCrLf _
+           & "Usage:  QUERYCD.VBS" & vbCrLf & vbCrLf _
+           & "Note:   This script requires ufreedb.ocx" & vbCrLf _
+           & "        by Jon F. Zahornacky and Peter Schmiedseder" & vbCrLf _
+           & "        http://www.robvanderwoude.com/vbstech_multimedia_freedb.html" _
+           & vbCrLf & vbCrLf _
+           & "Written by Rob van der Woude" & vbCrLf _
+           & "http://www.robvanderwoude.com" & vbCrLf
+    WScript.Echo strMsg
+    WScript.Quit 1
+End Sub
