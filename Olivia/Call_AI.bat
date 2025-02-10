@@ -2,6 +2,7 @@
 REM IT SEEMS THAT IT NEEDS AT LEAST 4 IMAGES TO PROCESS OR IT WON'T DO IT.
 REM setlocal enabledelayedexpansion
 
+REM MOVES TO C:
 C:
 
 cd "C:\Program Files\Topaz Labs LLC\Topaz Video AI"
@@ -44,6 +45,9 @@ if %frames_to_go% lss %total_frames% (
 ) else (
     echo Skipping FFmpeg command...
 )
+
+REM GOES BACK TO ORIGINAL DRIVE:
+D:
 
 REM END OF SCRIPT
 echo.

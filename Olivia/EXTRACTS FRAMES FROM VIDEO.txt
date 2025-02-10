@@ -1,0 +1,7 @@
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO
+ffmpeg -ss 0 -i "D:\Videos\Olivia\Magic.mp4" -t 2 -vf "fps=29.97" "D:\Videos\Olivia\Input\frame_%04d.png"
+
+EXTRACTS ALL FRAMES OF THE VIDEO 
+ffmpeg -ss 0 -i "D:\Videos\Olivia\Magic.mp4" -vf "fps=29.97" "D:\Videos\Olivia\Input\frame_%04d.png"

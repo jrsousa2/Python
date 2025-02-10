@@ -1,0 +1,43 @@
+/* OBTAIN INFO ABOUT THE AUDIO QUALITY */
+
+ffmpeg -i "D:\Videos\Olivia\Magic.mp4"
+
+THE ORIGINAL AUDIO IS AAC, SO EXTRACT AAC:
+
+/* FINAL FORMAT USED */
+ffmpeg -i "D:\Videos\Olivia\Magic.mp4" -vn -c:a copy "D:\Videos\Olivia\Magic.aac"
+
+###############################################################
+
+/* THIS DOES NOT WORK */
+If the audio is AAC, MP3, or another lossy format, use this instead to avoid re-encoding:
+
+/* FINAL COMMAND */
+ffmpeg -i "D:\Videos\Olivia\Magic.mp4" -vn -c:a copy "D:\Videos\Olivia\Magic.wav"
+
+###############################################################
+
+The best possible quality extension for extracting audio from an MP4 file is WAV (.wav).
+
+Why?
+Lossless: WAV retains the original audio quality with no compression.
+No re-encoding: Extracting as WAV avoids quality loss from lossy formats like MP3 or AAC.
+
+Command to extract lossless audio using FFmpeg:
+
+ffmpeg -i input.mp4 -q:a 0 -map a output.wav
+
+###############################################################
+
+ffmpeg -i input.mp4 -vn -acodec copy output.aac
+
+This keeps the original quality intact. Use .flac instead of .wav if you need lossless compression.
+
+################################################################
+################################################################
+
+
+ffmpeg.exe -i "D:\iTunes\Baby\Media\D:\iTunes\Baby\Media\Debate.mp4" -vn -c:a copy "D:\iTunes\Baby\Media\Debate.wav"
+
+
+ffmpeg -i input.mp3 -t 60 -acodec copy output.mp3
