@@ -1,0 +1,1 @@
+ffmpeg -i "D:\Videos\Arosio\\Arosio_cropped.mp4" -filter:v "minterpolate='fps=30'" -y "D:\Videos\Arosio\\Arosio_crop_fps.mp4"

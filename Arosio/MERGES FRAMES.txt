@@ -1,0 +1,13 @@
+LOSSLESS FORMAT WITH CUDA (PRECISA TVZ TIRAR FFMPEG DA GRAPH SETTINGS)
+ffmpeg -framerate 29.97 -hwaccel cuda -i D:\Videos\Olivia\Output\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 29.97 -pix_fmt yuv420p D:\Videos\Olivia\Olivia_nosound.mp4
+
+#############################################################################################################
+
+REASSEMBLING FRAMES INTO VIDEO
+ffmpeg -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\iTunes\Balao\Balao_up.mp4
+
+TRULY LOSSLESS (nao eh legal, sem formato)
+ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\iTunes\Balao\Balao_lossless.raw
+
+Tentativa
+ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v ffv1 -pix_fmt rgb24 D:\iTunes\Balao\Balao_lossless.mkv

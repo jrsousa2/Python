@@ -1,0 +1,17 @@
+RECORTAR VIDEO
+
+ffmpeg.exe -i "D:\Videos\Arosio\Arosio.mp4" -vf "crop=in_w-118-108:in_h-8:118:8" -y "D:\Videos\Arosio\\Arosio_crop.mp4"
+
+/* FINAL */
+ffmpeg.exe -i "D:\Videos\Arosio\Arosio.mp4" -vf "crop=in_w-108-100:in_h-7:108:7" -y "D:\Videos\Arosio\\Arosio_crop2.mp4"
+
+SINTAXE: cropping x from left, a from right, y from top, and b from bottom):
+bash
+Copy
+Edit
+ffmpeg -i input_video.mp4 -vf "crop=in_w-x-a:in_h-y-b:x:y" output_video.mp4
+in_w-x-a: Crops x from the left and a from the right.
+in_h-y-b: Crops y from the top and b from the bottom.
+x:y: Moves the crop starting position to (x, y).
+
+setx PATH "%PATH%;C:\Ffmpeg\bin"

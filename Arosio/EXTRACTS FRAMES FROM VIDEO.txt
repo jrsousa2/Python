@@ -1,0 +1,7 @@
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO
+ffmpeg -ss 0 -i "D:\Videos\Arosio\Arosio_crop.mp4" -t 2 -vf "fps=23.98" "D:\Videos\Arosio\Input\frame_%04d.png"
+
+EXTRACTS ALL FRAMES OF THE VIDEO 
+ffmpeg -ss 0 -i "D:\Videos\Arosio\Arosio_crop.mp4" -vf "fps=23.98" -y "D:\Videos\Arosio\Input\frame_%04d.png"
