@@ -1,5 +1,5 @@
 LOSSLESS FORMAT WITH CUDA (PRECISA TVZ TIRAR FFMPEG DA GRAPH SETTINGS)
-ffmpeg -framerate 29.97 -hwaccel cuda -i D:\Videos\Olivia\Output\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 29.97 -pix_fmt yuv420p D:\Videos\Olivia\Olivia_nosound.mp4
+ffmpeg -framerate 23.98 -hwaccel cuda -i D:\Videos\Arosio\Output\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 23.98 -pix_fmt yuv420p -y D:\Videos\Arosio\Arosio_hd_nosound.mp4
 
 #############################################################################################################
 
