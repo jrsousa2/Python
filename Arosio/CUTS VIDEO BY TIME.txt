@@ -1,0 +1,1 @@
+ffmpeg -i "D:\Videos\Arosio\Arosio_crop.mp4" -t 4 -c copy -y "D:\Videos\Arosio\Arosio_crop_4s.mp4"

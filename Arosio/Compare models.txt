@@ -1,0 +1,50 @@
+ffmpeg -hide_banner -start_number %frames_to_go% -i "%input_dir%\frame_%%04d.png"  "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0" "-c:v" "png" "-pix_fmt" "rgb24" "-compression_algo" "deflate" -start_number %frames_to_go% "%output_dir%\frame_%%04d.png"
+
+###########################################################################################################################
+Proteus (regular)
+
+ffmpeg "-hide_banner" "-t" "2.002002002002002" "-framerate" "23.976" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Arosio/4s/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using prob-4; mode: auto; revert compression at 0; recover details at 0; sharpen at 0; reduce noise at 0; dehalo at 0; anti-alias/deblur at 0; focus fix Off; and recover original detail at 20. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/4s_prob4/%06d.tiff"
+
+Proteus="tvai_up=model=prob-4:scale=0:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720"
+
+Iris="tvai_up=model=iris-2:scale=0:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720"
+
+Nyx="tvai_up=model=nyx-3:scale=1:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720"
+
+Artemis="tvai_up=model=ahq-12:scale=0:w=1280:h=720:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720"
+
+Theia="tvai_up=model=thf-4:scale=0:w=1280:h=720:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720"
+
+###########################################################################################################################
+Iris (specialized enhancement for faces)
+
+ffmpeg "-hide_banner" "-t" "2.002002002002002" "-framerate" "23.976" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Arosio/4s/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=iris-2:scale=0:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using iris-2; mode: auto; revert compression at 0; recover details at 0; sharpen at 0; reduce noise at 0; dehalo at 0; anti-alias/deblur at 0; focus fix Off; and recover original detail at 20. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/4s_iris2/%06d.tiff"
+
+
+
+###########################################################################################################################
+Nyx (dedicated denoising)
+
+ffmpeg "-hide_banner" "-t" "2.002002002002002" "-framerate" "23.976" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Arosio/4s/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=nyx-3:scale=1:w=1280:h=720:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using nyx-3; mode: auto; reduce noise at 0; reduce large grain at 0; revert compression at 0; sharpen at 0; dehalo at 0; and anti-alias/deblur at 0. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/4s_nyx3/%06d.tiff"
+
+###########################################################################################################################
+Artemis (denoising and sharpening)
+
+ffmpeg "-hide_banner" "-t" "2.002002002002002" "-framerate" "23.976" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Arosio/4s/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=ahq-12:scale=0:w=1280:h=720:blend=0.2:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using ahq-12; and recover original detail at 20. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/4s_ahq12/%06d.tiff"
+
+###########################################################################################################################
+Theia (high fidelity and detail enhancement)
+
+ffmpeg "-hide_banner" "-t" "2.002002002002002" "-framerate" "23.976" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Arosio/4s/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=thf-4:scale=0:w=1280:h=720:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Enhanced using thf-4; revert compression at 0; sharpen at 0; reduce noise at 0; and focus fix Off. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/4s_thf4/%06d.tiff"
+
+###########################################################################################################################
+
+
+SHOW COMMAND CHRONOS-FAST
+ffmpeg "-hide_banner" "-t" "1.4814814814814818" "-framerate" "29.97" "-ss" "2.489" "-start_number" "1" "-i" "D:/Videos/Arosio/Test/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_fi=model=chf-3:slowmo=1:rdt=0.01:fps=23.976:device=0:vram=0.1:instances=1,tvai_up=model=thf-4:scale=0:w=1280:h=720:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Framerate changed to 23.976 using chf-3 replacing duplicate frames. Enhanced using thf-4; revert compression at 0; sharpen at 0; reduce noise at 0; and focus fix Off. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/Test_chf3_thf4/%06d.tiff"
+
+/* BLACK BORDERS */
+ffmpeg "-hide_banner" "-t" "1.4814814814814818" "-framerate" "29.97" "-ss" "2.489" "-start_number" "1" "-i" "D:/Videos/Arosio/Test/frame_%04d.png" "-flush_packets" "1" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_fi=model=chf-3:slowmo=1:rdt=0.01:fps=23.976:device=0:vram=0.1:instances=1,tvai_up=model=thf-4:scale=0:w=1280:h=720:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=decrease,pad=1280:720:-1:-1:color=black" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Framerate changed to 23.976 using chf-3 replacing duplicate frames. Enhanced using thf-4; revert compression at 0; sharpen at 0; reduce noise at 0; and focus fix Off. Changed resolution to 1280x720" "D:/Topaz/Arosio/Arosio/previews/Test_chf3_thf4/%06d.tiff"
+
+EXPORT
+ffmpeg "-hide_banner" "-t" "4.7714381047714385" "-framerate" "29.97" "-ss" "0" "-start_number" "1" "-i" "D:/Videos/Arosio/Test/frame_%04d.png" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_fi=model=chf-3:slowmo=1:rdt=0.01:fps=23.976:device=0:vram=0.1:instances=1,tvai_up=model=thf-4:scale=0:w=1280:h=720:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1,scale=w=1280:h=720:flags=lanczos:threads=0:force_original_aspect_ratio=increase,crop=1280:720" "-c:v" "tiff" "-pix_fmt" "rgb24" "-compression_algo" "deflate" "-start_number" "1" "-movflags" "use_metadata_tags+write_colr" "-metadata" "videoai=Framerate changed to 23.976 using chf-3 replacing duplicate frames. Enhanced using thf-4; revert compression at 0; sharpen at 0; reduce noise at 0; and focus fix Off. Changed resolution to 1280x720" "D:\Topaz/Test_chf3_thf4/%06d.tiff"

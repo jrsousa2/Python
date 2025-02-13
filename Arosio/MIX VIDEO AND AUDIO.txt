@@ -1,7 +1,7 @@
 FAZER O MIX DO VIDEO COM O AUDIO
 
 /* THIS IS LOSSLESS (FLAC IS LOSSLESS) */
-ffmpeg -i "D:\Videos\Olivia\Magic_nosound.mp4" -i "D:\Videos\Olivia\Magic.aac" -c:v copy -c:a flac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Olivia\Magic_final.mp4"
+ffmpeg -i "D:\Videos\Arosio\Arosio_hd_nosound.mp4" -i "D:\Videos\Arosio\Audio.aac" -c:v copy -c:a flac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Arosio\Arosio_final.mp4"
 
 /* THIS IS MORE COMPATIBLE WITH MOST PLAYERS */
 ffmpeg -i "D:\Videos\Olivia\Magic_nosound.mp4" -i "D:\Videos\Olivia\Magic.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Olivia\Magic_final.mp4"
