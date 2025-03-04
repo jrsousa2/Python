@@ -1,10 +1,12 @@
-# CREATE VIRT ENV IN THE CURRENT DIR
-python -m venv MyEnv
+# CREATE VIRT ENV IN THE MAIN PYTHON DIR 
 
-# ACTIVATE THE VIRT ENV JUST CREATED
-myenv\Scripts\activate  # On Windows
+/* OLD VERSION */
+python3.8 -m venv MyEnv
 
-C:\Python\myenv\Scripts\activate
+# ACTIVATE THE VIRT ENV CREATED
+MyEnv\Scripts\activate  # On Windows
+
+C:\Python\MyEnv\Scripts\activate (FOI ADICIONADO AO PATH, SO ACTIVATE JA SERVE)
 
 DENTRO DO VS CODE, ATIVE DE NOVO USANDO O TERMINAL COM O CMD:
 myenv\Scripts\activate
@@ -12,7 +14,19 @@ myenv\Scripts\activate
 PARA DESATIVAR:
 deactivate
 
+############################################################
 
+/* NEWER VERSION */
+C:\Python\Python39\python -m venv MyEnv39
+
+# ACTIVATE THE VIRT ENV CREATED
+MyEnv39\Scripts\activate
+
+/* BELOW MUST WORK AS WELL */
+C:\Python\Python39\python -m pip install --upgrade pip
+
+INSTALL A PACKAGE (EXAMPLE):
+C:\Python\Python39\Scripts\pip install yt-dlp
 
 
 

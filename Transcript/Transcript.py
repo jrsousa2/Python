@@ -9,7 +9,7 @@ print("GPU device name:",torch.cuda.get_device_name(torch.cuda.current_device())
 # Verify the TORCH_HOME environment variable
 torch_home = os.getenv('TORCH_HOME')
 
-print(f"TORCH_HOME is set to {torch_home}")
+print(f"\nTORCH_HOME is set to {torch_home}\n")
 print()
 
 def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.srt"):

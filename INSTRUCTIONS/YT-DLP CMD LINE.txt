@@ -1,0 +1,17 @@
+domain, host, path, secure, expiration, name, value.
+
+SID, SIDCC, APISID, HSID
+
+/* USANDO BROWSER COOKIES (PARECE O MELHOR CMD) */
+yt-dlp --cookies-from-browser chrome https://www.youtube.com/watch?v=kOzGFJZZVe8
+
+/* LIST FORMATOS DISPONIVEIS */
+yt-dlp --cookies-from-browser chrome --list-formats https://www.youtube.com/watch?v=kOzGFJZZVe8
+
+/* BAIXA IMAGENS */
+yt-dlp --cookies-from-browser chrome -f sb0 https://www.youtube.com/watch?v=kOzGFJZZVe8
+
+/* USANDO NETSCAPE COOKIES */
+yt-dlp --cookies D:\Videos\Pobres\cookies.json [https://www.youtube.com/watch?v=kOzGFJZZVe8]
+
+https://youtu.be/kOzGFJZZVe8
