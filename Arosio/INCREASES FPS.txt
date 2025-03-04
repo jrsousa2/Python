@@ -1,1 +1,3 @@
-ffmpeg -i "D:\Videos\Arosio\\Arosio_cropped.mp4" -filter:v "minterpolate='fps=30'" -y "D:\Videos\Arosio\\Arosio_crop_fps.mp4"
+ffmpeg -i "D:\Videos\Arosio\Arosio_hd_nosound.mp4" -filter:v "minterpolate='fps=30'" -y "D:\Videos\Arosio\\Arosio_crop_fps.mp4"
+
+ffmpeg -i "D:\Videos\Arosio\Arosio_hd_nosound.mp4" -filter:v "minterpolate='fps=30'" -c:v libx264 -crf 0 -preset slow -y "D:\Videos\Arosio\\Arosio_crop_fps2.mp4"

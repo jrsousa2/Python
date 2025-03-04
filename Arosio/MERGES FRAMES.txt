@@ -1,5 +1,13 @@
 LOSSLESS FORMAT WITH CUDA (PRECISA TVZ TIRAR FFMPEG DA GRAPH SETTINGS)
-ffmpeg -framerate 23.98 -hwaccel cuda -i D:\Videos\Arosio\Output\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 23.98 -pix_fmt yuv420p -y D:\Videos\Arosio\Arosio_hd_nosound.mp4
+
+/* THIS HAS LOW BITRATE */
+ffmpeg -framerate 23.98 -hwaccel cuda -i D:\Videos\Arosio\Output\frame_%04d.png -c:v libx264 -crf 0 -preset slow -r 23.98 -pix_fmt yuv420p -y D:\Videos\Arosio\Arosio_hd_nosound.mp4
+
+/* SET HIGH BITRATE */
+ffmpeg -framerate 23.98 -hwaccel cuda -i D:\Videos\Arosio\Output\frame_%04d.png -c:v libx264 -b:v 6000k -maxrate 7000k -bufsize 10000k -preset veryslow -r 23.98 -pix_fmt yuv420p -y D:\Videos\Arosio\Arosio_hd_nosound.mp4
+HERE COULD BE SLOW only
+
+ffmpeg -framerate 23.98 -hwaccel cuda -i D:\Videos\Arosio\Output\frame_%04d.png -c:v libx264 -b:v 5000k -minrate 5000k -maxrate 5000k -bufsize 10000k -preset slow -r 23.98 -pix_fmt yuv420p -y D:\Videos\Arosio\Arosio_hd_nosound.mp4
 
 #############################################################################################################
 
