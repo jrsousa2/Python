@@ -21,6 +21,9 @@ rem set dim_Wid=1280
 set dim_Hei=1080
 set dim_Wid=1440
 
+REM DON'T FORGET TO SET THE IMAGE TYPE
+set Ext=tiff
+
 REM #########################################################################
 
 REM ENTER HERE THE DEFAULT MODEL
@@ -35,7 +38,7 @@ if "%1%"=="" (
 REM endlocal
 
 echo.
-echo Input was Parameter was: %1%
+echo Input Parameter was: %1%
 echo Sel_Model was set to: %Sel_Model%
 
 REM THIS IS FOR TEST PURPOSES ONLY
@@ -44,7 +47,7 @@ set output_dir=D:/Videos/Praia/Models/%Sel_model%
 
 if not exist "%output_dir%" (
     echo.
-    echo Directory %output_dir% doesn't exist, creating...
+    echo Directory "%output_dir%" doesn't exist, creating...
     mkdir "%output_dir%"
 )
 
@@ -70,26 +73,29 @@ REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING 
 set Re_scale_Pad=N
 
 REM IF APPLICABLE, WILL THE ASPECT RATIO FOR THE UPSCALED MATCH THE THE ORIGINAL VIDEO?
-set Aspect_ratio_change=Y
+set Aspect_ratio_change=N
 
 REM BLOCK OF NESTED IF'S
 if %Re_scale_YN%==Y (
 
-    if %Re_scale_Pad%==Y (
-        REM ADICIONA BARRAS LATERAIS PRA COMPLETAR AS DIMENSOES
-        echo.
-        echo Padding with vertical bars to attain desired aspect ratio
-        set crop=decrease^,pad=%dim_Wid%:%dim_Hei%:-1:-1:color=black
-    ) else (
-        REM REDIMENSIONA TIRANDO PARTES DOS LADOS PRA DAR 16:9
-        echo.
-        echo Cropping frames to obtain desired aspect ratio
-        set crop=increase^,crop=%dim_Wid%:%dim_Hei%
-    )
-
     if %Aspect_ratio_change%==Y (
+        
+        REM IF ASPECT RATIO WILL CHANGE SET VAR CROP
+        if %Re_scale_Pad%==Y (
+            REM ADICIONA BARRAS LATERAIS PRA COMPLETAR AS DIMENSOES
+            echo.
+            echo Padding with vertical bars to obtain desired aspect ratio
+            set crop=decrease^,pad=%dim_Wid%:%dim_Hei%:-1:-1:color=black
+        ) else (
+            REM REDIMENSIONA TIRANDO PARTES DOS LADOS PRA DAR 16:9
+            echo.
+            echo Cropping frames to obtain desired aspect ratio
+            set crop=increase^,crop=%dim_Wid%:%dim_Hei%
+        )
+
         REM FORCE ASPECT RATIO ONLY NEEDED IF ASPECT RATIO IS DIFFERENT FROM ORIGINAL
         set Aspect_ratio=^:force_original_aspect_ratio=%crop%
+
     ) else (
         REM IF THE ASPECT RATIO IS THE SAME FOR THE UPSCALED AS THE ORIGINAL VIDEO THEN VARIABLE IS BLANK
         echo.
@@ -167,12 +173,12 @@ echo.
 
 REM #########################################################################
 
-:: Count PNG files in the Input directory
-for /f %%A in ('dir /b /a-d "%input_dir%\*.png" 2^>nul ^| find /c /v ""') do set total_frames=%%A
+:: Count image files in the Input directory
+for /f %%A in ('dir /b /a-d "%input_dir%\*.%Ext%" 2^>nul ^| find /c /v ""') do set total_frames=%%A
 
 
-:: Count PNG files in the output directory
-for /f %%A in ('dir /b /a-d "%output_dir%\*.png" 2^>nul ^| find /c /v ""') do set frames_done=%%A
+:: Count image files in the output directory
+for /f %%A in ('dir /b /a-d "%output_dir%\*.%Ext%" 2^>nul ^| find /c /v ""') do set frames_done=%%A
 
 
 REM Increment count by 1
@@ -185,18 +191,18 @@ REM TURN OFF DISPLAY OF CMDS
 REM @echo on
 
 REM DISPLAY INFO BEFORE PROCEEDING
-echo Found %frames_done% PNG files in the output directory ^(out of %total_frames%^)
+echo Found %frames_done% %Ext% files in the output directory ^(out of %total_frames%^)
 echo Next frame: %frames_done_pls_1%
 echo.
 
 REM CHECK IF THE VARIABLES ARE RIGHT
-pause
+rem pause
 
 REM CHECK IF THE CODE NEEDS TO RUN
 if %frames_done_pls_1% lss %total_frames% (
 
 REM THE MAIN COMMAND
-ffmpeg -hide_banner -start_number %frames_done_pls_1% -i "%input_dir%\frame_%%04d.png"  "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" %Model% "-c:v" "png" "-pix_fmt" "rgb24" -start_number  %frames_done_pls_1% -y "%output_dir%\frame_%%04d.png"
+ffmpeg -hide_banner -start_number %frames_done_pls_1% -i "%input_dir%\frame_%%04d.%Ext%"  "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" %Model% "-c:v" "%Ext%" "-pix_fmt" "rgb24" -start_number  %frames_done_pls_1% -y "%output_dir%\frame_%%04d.%Ext%"
 
 REM GOES BACK TO ORIGINAL DRIVE:
 D:
@@ -209,8 +215,7 @@ echo FINISHED THIS BATCH
 echo RESTARTING...
 call_AI
 
-) 
-else (
+) else (
 D:
 echo THE END!
 )
