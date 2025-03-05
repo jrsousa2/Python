@@ -1,0 +1,87 @@
+CONVERT TO MP4:
+ffmpeg -i "D:\Videos\Pobres\Documento Especial - Os Pobres Vão à Praia.webm" -ss 00:17 -to 28:08 -y "D:\Videos\Pobres\Praia.mp4"
+
+O VIDEO EH 1920 X 1080
+
+NA VERDADE O ASPECT RATIO DELE EH 4:3
+
+SE TIRAR 480 (240 DE CADA LADO), A WIDTH FICA EM 1440 (4X360); E A ALTURA EH 1080=3*360
+
+#########################################################################################################
+#########################################################################################################
+
+CROPS VIDEO DIMENSIONS:
+
+DO ONLY 10 SECONDS, START AT 1 SEC
+ffmpeg.exe -ss 1 -i "D:\Videos\Praia\Praia.mp4" -t 10 -vf "crop=in_w-480:in_h:240:0" -y "D:\Videos\Praia\Praia_crop.mp4"
+
+DO ONLY 10 SECONDS, START AT 1 SEC (NAO USAR ESSE)
+ffmpeg.exe -ss 1 -i "D:\Videos\Praia\Praia.mp4" -t 10 -vf "crop=in_w-499:in_h:262:0" -y "D:\Videos\Praia\Praia_crop.mp4"
+
+
+in_w - 499 → Width after removing 262 + 237 = 499 pixels.
+in_h → Keep the full height.
+262 → Start the crop at X = 262 (to remove the left part).
+0 → No cropping from the top.
+
+
+ffmpeg.exe -i "D:\Videos\Praia\Praia.mp4" -vf "crop=in_w-262-237:in_h-0-0:262:0" -y "D:\Videos\Praia\Praia_crop.mp4"
+
+SINTAXE: cropping x from left, a from right, y from top, and b from bottom):
+
+ffmpeg -i input_video.mp4 -vf "crop=in_w-x-a:in_h-y-b:x:y" output_video.mp4
+in_w-x-a: Crops x from the left and a from the right.
+in_h-y-b: Crops y from the top and b from the bottom.
+x:y: Moves the crop starting position to (x, y).
+
+#########################################################################################################
+#########################################################################################################
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO
+ffmpeg -ss 0 -i "D:\Videos\Praia\Praia_crop.mp4" -t 5 -vf "fps=29.97" "D:\Videos\Praia\5s\frame_%04d.png"
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO (LESS LOSS OF DETAIL)
+ffmpeg -ss 0 -i "D:\Videos\Praia\Praia_crop.mp4" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" "D:\Videos\Praia\5s\frame_%04d.png"
+
+/* FINAL TUDO */
+ffmpeg -ss 0 -i "D:\Videos\Praia\Praia_crop.mp4" -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -y "D:\Videos\Praia\5s\frame_%04d.png"
+
+ffmpeg -i "D:\iTunes\Baby_voice\Media\Debate_orig.mp4" -r 30 -af "asetrate=44100*1.5,atempo=0.6667" "D:\iTunes\Baby_voice\Media\Debate_chipmunk.mp4"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if %Re_scale_Pad%=Y (
+    REM ADICIONA BARRAS LATERAIS PRA COMPLETAR AS DIMENSOES
+    set crop=decrease^,pad=%dim_Wid%:%dim_Hei%:-1:-1:color=black
+) 
+else (
+    REM REDIMENSIONA TIRANDO PARTES DOS LADOS PRA DAR 16:9
+    set crop=increase^,crop=%dim_Wid%:%dim_Hei%
+)
+
+if %Aspect_ratio_change%=Y (
+    REM FORCE ASPECT RATIO ONLY NEEDED IF ASPECT RATIO IS DIFFERENT FROM ORIGINAL
+    set Aspect_ratio=^:force_original_aspect_ratio=%crop%
+) 
+else (
+    REM IF THE ASPECT RATIO IS THE SAME FOR THE UPSCALED AS THE ORIGINAL VIDEO THEN VARIABLE IS BLANK
+    set Aspect_ratio=
+)
+
+REM SET RE-SCALING VARIABLE
+set Re_scale=^,scale=w=%dim_Wid%:h=%dim_Hei%:flags=lanczos:threads=0%Aspect_ratio%

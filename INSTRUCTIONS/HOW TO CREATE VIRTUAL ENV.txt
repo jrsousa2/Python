@@ -6,12 +6,12 @@ python3.8 -m venv MyEnv
 # ACTIVATE THE VIRT ENV CREATED
 MyEnv\Scripts\activate  # On Windows
 
-C:\Python\MyEnv\Scripts\activate (FOI ADICIONADO AO PATH, SO ACTIVATE JA SERVE)
+C:\Python\MyEnv\Scripts\activate (WAS ADDED TO THE PATH, JUST "ACTIVATE" WORKS)
 
-DENTRO DO VS CODE, ATIVE DE NOVO USANDO O TERMINAL COM O CMD:
+WITHIN VS CODE, ACTIVATE AGAIN USING THE TERMINAL WITH THE CMD:
 myenv\Scripts\activate
 
-PARA DESATIVAR:
+TO DEACTIVATE:
 deactivate
 
 ############################################################
@@ -22,7 +22,7 @@ C:\Python\Python39\python -m venv MyEnv39
 # ACTIVATE THE VIRT ENV CREATED
 MyEnv39\Scripts\activate
 
-/* BELOW MUST WORK AS WELL */
+/* USE BELOW TO AVOID AMBIGUOUS */
 C:\Python\Python39\python -m pip install --upgrade pip
 
 INSTALL A PACKAGE (EXAMPLE):
