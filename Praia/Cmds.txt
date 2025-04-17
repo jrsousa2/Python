@@ -11,6 +11,13 @@ NA VERDADE O ASPECT RATIO DELE EH 4:3
 
 SE TIRAR 480 (240 DE CADA LADO), A WIDTH FICA EM 1440 (4X360); E A ALTURA EH 1080=3*360
 
+CROPS DIRETO, SEM CONVERTER O FILME:
+ffmpeg -ss 00:18 -i "D:\Videos\Praia\Praia.webm" -t 5 -vf "fps=29.97, crop=in_w-480:in_h:240:0" -pix_fmt rgb24 -y "D:\Videos\Praia\5s\frame_%04d.tiff"
+
+FINAL (CROPS AND DOWNSIZES BY 2)
+ffmpeg -ss 00:18 -i "D:\Videos\Praia\Praia.webm" -t 5 -vf "fps=29.97, crop=in_w-480:in_h:240:0, scale=w=iw/2:h=ih/2" -pix_fmt rgb24 -y "D:\Videos\Praia\5s\frame_%04d.tiff"
+
+
 #########################################################################################################
 #########################################################################################################
 

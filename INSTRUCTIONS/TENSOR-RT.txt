@@ -1,0 +1,297 @@
+ZIP NAME
+TensorRT-8.4.1.5.Windows10.x86_64.cuda-11.6.cudnn8.4
+
+FOLDER
+TENSORRT_HOME=C:\Program Files\NVIDIA GPU Computing Toolkit\TensorRT-8.4.1.5
+
+ADD TO PATH:
+C:\Program Files\NVIDIA GPU Computing Toolkit\TensorRT-8.4.1.5\lib
+
+PYTHON:
+Install one of the TensorRT Python wheel files from <installpath>/python 
+(replace cp3x with the desired Python version, for example, cp310 for Python 3.10):
+
+INSTALL PYTHON3.8 WHEEL
+C:\Python\Python38\python.exe -m pip install tensorrt-*-cp38-none-win_amd64.whl
+
+C:\Python\Python38\python.exe -m pip install tensorrt-8.4.1.5-cp38-none-win_amd64.whl
+
+C:\Python\Python38\python.exe -m pip install --upgrade pip
+
+TO MAKE LINK TEMPORARILY THE DEFAULT (instead of the MSYS2 one)
+export PATH="/c/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/MSVC/14.23.28105/bin/Hostx64/x64:$PATH"
+
+THE MSYS2 ONE:
+C:\msys64\usr\bin\link.exe
+
+LIST FILES WITH EXT *.h IN SUBDIR:
+find /c/PROGRA~1/NVIDIA~2/CUDA/v11.7/include -name "*.h"
+
+COUNTS HOW MANY FILES:
+find /c/PROGRA~1/NVIDIA~2/CUDA/v11.7/include -name "*.h" | wc -l
+
+find /c/PROGRA~1/NVIDIA~2/CUDA/v11.7/include -maxdepth 1 -name "*.h" | wc -l
+
+RELOADS THE PROFILE WITHOUT CLOSING SESSION
+source ~/.bash_profile
+
+C:\Program Files (x86)\Microsoft Visual Studio\2019
+vcvarsall "amd64"
+
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build
+issue
+vcvarsall "amd64
+
+CC=cl ./configure --toolchain=msvc --target-os=win64 --arch=x86_64 --disable-shared --enable-static --enable-nonfree
+
+# PATH INHERITANCE (PATH INHERITANCE PMT HAS BEN CHANGED ALREADY IN THE SCRIP-SET TO DEFAULT)
+C:\msys64\msys2_shell.cmd -mingw64 -full-path
+
+# NO BASH_PROFILE LOADING
+C:\msys64\msys2_shell.cmd -mingw64 --no-start
+
+chmod +x build_ffmpeg.sh
+./build_ffmpeg.sh
+
+LOAD SCRIPT
+source "/c/msys64/home/JR Sousa/.bash_profile_bak"
+
+--enable-cross-compile
+
+# CHECK PMTS
+./configure --help | grep host
+
+###############################################################################################################
+###############################################################################################################
+
+cp $CUDA_HOME/*.h $CUDA_HOME/*.lib /c/FFmpeg/nv_sdk/ 2>/dev/null
+cp $CUDA_INCLUDE_DIR/*.h $CUDA_INCLUDE_DIR/*.lib /c/FFmpeg/nv_sdk/ 2>/dev/null
+cp $CUDA_LIBRARY/*.h $CUDA_LIBRARY/*.lib /c/FFmpeg/nv_sdk/ 2>/dev/null
+cp $NV_CODEC_INCLUDE/*.h $NV_CODEC_INCLUDE/*.lib /c/FFmpeg/nv_sdk/ 2>/dev/null
+
+$CUDA_INCLUDE_DIR and $CUDA_LIBRARY
+
+INICIA COM
+cd /c/
+
+ORIGINAL (ADD --enable-tensorrt FOR TENSORRT)
+CC=cl ./configure --enable-cross-compile --target-os=win64 --arch=x86_64 --enable-nonfree --disable-shared --enable-static --enable-cuda-nvcc --enable-libnpp --toolchain=msvc --extra-cflags="-I$CUDA_INCLUDE_DIR -I$NV_CODEC_INCLUDE" --extra-ldflags="-LIBPATH:$CUDA_LIBRARY nppc.lib nppig.lib nppicc.lib nppidei.lib nppif.lib"
+
+CC=cl ./configure --enable-nonfree --disable-shared --enable-static --enable-cuda-nvcc --enable-libnpp --disable-libdrm --toolchain=msvc --nvccflags="-gencode arch=compute_50,code=sm_50" --extra-cflags="-I$CUDA_INCLUDE_DIR -I$NV_CODEC_INCLUDE" --extra-ldflags="-LIBPATH:$CUDA_LIBRARY nppc.lib nppig.lib nppicc.lib nppidei.lib nppif.lib"
+
+ 
+ ISSO EH INTERESSANTE:
+  --enable-yasm \
+  --enable-asm
+
+CC=cl ./configure --enable-nonfree --disable-shared --enable-static --enable-cuda-llvm --enable-libnpp --disable-libdrm --toolchain=msvc --extra-cflags="-I$CUDA_INCLUDE_DIR -I$NV_CODEC_INCLUDE" --extra-ldflags="-LIBPATH:$CUDA_LIBRARY nppc.lib nppig.lib nppicc.lib nppidei.lib nppif.lib"
+
+CC=cl ./configure --target-os=win64 --arch=x86_64 --enable-nonfree --disable-shared --enable-static --enable-cuda-nvcc --enable-libnpp --disable-libdrm --toolchain=msvc --extra-cflags="-I$CUDA_INCLUDE_DIR -I$NV_CODEC_INCLUDE" --extra-ldflags="-LIBPATH:$CUDA_LIBRARY nppc.lib nppig.lib nppicc.lib nppidei.lib nppif.lib"
+
+
+
+
+make clean
+
+Compile the code by executing the following command. (4 EH O NUMERO DE PROCESSADORES)
+make -j 4
+
+# INSTALL
+make install
+
+CHECAR:
+ffmpeg -hwaccels
+
+CHECAR FLAGS DO BUILD (OPCOES USADAS NA COMPILACAO):
+./ffmpeg -buildconf
+
+CHECAR GPU DETAILS
+nvidia-smi
+
+COMPUTE CAPABILITY:
+C:\>nvidia-smi --query-gpu=compute_cap --format=csv
+compute_cap
+5.0
+
+JR Sousa@Jose-laptop MINGW64 /c/Ffmpeg
+$ cygpath -w /usr/local
+C:\msys64\usr\local
+
+which ffmpeg              # Shows MSYS2 path
+cygpath -w $(which ffmpeg) # Converts to Windows path
+
+cp $CUDA_SDK_ROOT_DIR/*.h $CUDA_SDK_ROOT_DIR/*.lib /c/FFmpeg/nv_sdk/ 2>/dev/null
+
+USE PKG-CONFIG TO SEARCH FOR A PACKAGE
+pkg-config --modversion cuda  # Should print CUDA version.
+pkg-config --modversion ffnvcodec
+# DISPLAYS THE PATH
+pkg-config --variable=pcfiledir ffnvcodec
+
+
+MEU LAPTOP TEM 4 PROCESSADORES
+echo %NUMBER_OF_PROCESSORS%
+
+DESABILITAR O C11 TEST (IGNORAR E CONTINUAR)-UNICA DIFERENCA EH disable-c11test
+./configure --enable-nonfree --disable-shared --enable-cuda-nvcc --enable-libnpp --toolchain=msvc \
+--extra-cflags=-I../nv_sdk --extra-ldflags=-libpath:../nv_sdk --disable-c11test
+
+
+TALVEZ PRECISE DESABILITAR SE FOR USAR MSVC (NAO SEI SE ESSES FEATURES SAO NECESSARIOS): 
+--disable-c11 --disable-cxx11 
+
+FOR TENSOR-RT CUDNN LIBS/HEADERS ARE NEEDED.
+
+
+#############################################################################
+#############################################################################
+
+Compiling for Windows
+FFmpeg with NVIDIA GPU acceleration is supported on all Windows platforms, with compilation through Microsoft Visual Studio 2013 SP2 and above, and MinGW. Depending upon the Visual Studio Version and CUDA SDK version used, the paths specified may have to be changed accordingly.
+
+To compile FFmpeg on Windows, do the following:
+
+Install msys2 from www.msys2.org.
+Clone ffnvcodec
+git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+
+Clone FFmpeg's public GIT repository.
+git clone https://git.ffmpeg.org/ffmpeg.git
+
+Create a folder named nv_sdk in the parent directory of FFmpeg and copy all the header files from C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include and library files from C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64 to nv_sdk folder.
+Launch the Visual Studio x64 Native Tools Command Prompt.
+From the Visual Studio x64 Native Tools Command Prompt, launch the MinGW64 environment by running mingw64.exe from the msys2 installation folder.
+In the MinGW64 environment, install the necessary packages.
+pacman -S diffutils make pkg-config yasm
+
+Add the following paths by running the commands.
+export PATH="/c/Program Files (x86)/Microsoft Visual Studio 12.0/VC/BIN/amd64/":$PATH
+export PATH="/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v8.0/bin/":$PATH
+
+Goto nv-codec-headers directory and install ffnvcodec
+make install PREFIX=/usr
+
+Go to the FFmpeg installation folder and run the following command.
+./configure --enable-nonfree –disable-shared --enable-cuda-nvcc --enable-libnpp –-toolchain=msvc --extra-cflags=-I../nv_sdk --extra-ldflags=-libpath:../nv_sdk
+
+Compile the code by executing the following command.
+make -j 8
+
+
+
+#############################################################################
+#############################################################################
+#############################################################################
+
+./configure --enable-nonfree --disable-shared --enable-cuda-nvcc --enable-libnpp --toolchain=msvc --extra-cflags="-I../nv_sdk" --extra-ldflags="-libpath:../nv_sdk"
+
+./configure --enable-nvenc --enable-cuda --enable-cuvid --enable-nvdec --enable-nonfree --extra-cflags="-I$TENSORRT_INCLUDE_DIR" --extra-ldflags="-L$TENSORRT_LIBRARY" --enable-libnpp
+
+./configure --enable-nonfree --disable-shared --enable-cuda-nvcc --enable-libnpp --toolchain=msvc --extra-cflags="-I/c/FFmpeg/nv_sdk -std=c11" --extra-ldflags="-L/c/FFmpeg/nv_sdk"
+
+
+
+
+
+BASIC GCC OF FFMPEG (STACK EXCHANGE):
+
+Installed MSYS2 (THIS ONE WORKS)
+Update MSYS2: pacman -Syu followed by pacman -Su
+Install Required Packages: pacman -S make pkg-config gcc yasm nasm git diffutils
+
+Clone FFmpeg Source Code: git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+
+Change directory to ffmpeg: cd ffmpeg
+
+Ran the configure script: ./configure --prefix=/usr/local --disable-shared --enable-static
+
+Compile FFmpeg: make
+
+CONFIGURACAO PARA TENSOR-RT AND CUDA:
+
+./configure --enable-nonfree --enable-libtensorrt --enable-cuda-nvcc --extra-cflags=-I/usr/local/cuda/include --extra-ldflags=-L/usr/local/cuda/lib64 --disable-static --enable-shared --nvccflags="-gencode arch=compute_86,code=sm_86"
+
+
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+
+THE DEFAULT INSTALLATION
+
+ffmpeg -hwaccels
+ffmpeg version 7.0.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-zlib --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-sdl2 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libgme --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libtheora --enable-libvo-amrwbenc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-librubberband
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Hardware acceleration methods:
+cuda
+vaapi
+dxva2
+qsv
+d3d11va
+d3d12va
+
+USED BY TOPAZ
+
+D:\iTunes>"C:\Program Files\Topaz Labs LLC\Topaz Video AI\ffmpeg" -hwaccels
+ffmpeg version 7.0.git Copyright (c) 2000-2024 the FFmpeg developers
+  built with Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30154 for x64
+  configuration: --toolchain=msvc --prefix=output-conan --enable-libvpx --enable-libaom --enable-shared --enable-x86asm --x86asmexe=yasm --enable-nvenc --enable-nvdec --disable-vulkan --enable-amf --enable-libvpl --enable-zlib --enable-libzimg --enable-tvai --extra-cflags='-I./conan/lib3rdparty/videoai/include/videoai -I./conan/lib3rdparty/amf/include -I./conan/lib3rdparty/libvpx/include -I./conan/lib3rdparty/aom/include -I./conan/lib3rdparty/libvpl/include/vpl -I./conan/lib3rdparty/zlib-mt/include/ -I./conan/lib3rdparty/zimg/include/' --extra-ldflags='-libpath:./conan/lib3rdparty/videoai/lib -libpath:./conan/lib3rdparty/zlib-mt/lib -libpath:./conan/lib3rdparty/libvpx/lib -libpath:./conan/lib3rdparty/aom/lib -libpath:./conan/lib3rdparty/libvpl/lib -libpath:./conan/lib3rdparty/zimg/lib -incremental:no'
+  libavutil      59. 16.101 / 59. 16.101
+  libavcodec     61.  5.103 / 61.  5.103
+  libavformat    61.  3.103 / 61.  3.103
+  libavdevice    61.  2.100 / 61.  2.100
+  libavfilter    10.  2.101 / 10.  2.101
+  libswscale      8.  2.100 /  8.  2.100
+  libswresample   5.  2.100 /  5.  2.100
+Hardware acceleration methods:
+cuda
+dxva2
+qsv
+d3d11va
+d3d12va
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+CONFLITOS
+
+Cl.exe (Microsoft's C/C++ compiler)
+
+Both MSVC (Visual Studio) and MSYS2 provide their own versions of cl.exe, the Microsoft C/C++ compiler. If the wrong version is picked up during the build process, it can cause issues.
+Nasm.exe (Assembler)
+
+MSYS2 might have its own version of nasm for assembly code, while Visual Studio might have another. If both versions are in the PATH, the wrong version might be used during compilation.
+Ar.exe (Archiver)
+
+The archiver utility (ar) used for creating static libraries might conflict between MSYS2 and MSVC.
+Cmake.exe
+
+While both MSVC and MSYS2 support CMake, they may install different versions or configurations of CMake that behave differently depending on which one is found first in the PATH.
+Gcc.exe / G++.exe
+
+MSYS2 typically uses gcc and g++ for C and C++ compilation. If you're using Visual Studio tools, the MSVC version of cl.exe would typically be used, but conflicts could arise if gcc or g++ are used from MSYS2 unexpectedly.
+Make.exe
+
+Both MSYS2 and Visual Studio might have their own versions of make or nmake, the build system tools. If both versions are available in the path, it can cause confusion during the build process.
+
+YASM ; NASM; 
+
+
+
+
+
+
+
+PENDING QUESTIONS
+
+
+I just uninstalled cmake and will install it in msys2 instead. any other pgms which may conflict that you can think of, that is, programs, that I should keep in as few locations as possible (like, msys2 instead of outside). 

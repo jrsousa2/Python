@@ -67,7 +67,7 @@ REM #########################################################################
 REM SET THE VARIABLES
 
 REM RE-SCALING VIDEO
-set Re_scale_YN=N
+set Re_scale_YN=Y
 
 REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING VIDEO BASELINES
 set Re_scale_Pad=N
@@ -201,22 +201,22 @@ rem pause
 REM CHECK IF THE CODE NEEDS TO RUN
 if %frames_done_pls_1% lss %total_frames% (
 
-REM THE MAIN COMMAND
-ffmpeg -hide_banner -start_number %frames_done_pls_1% -i "%input_dir%\frame_%%04d.%Ext%"  "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" %Model% "-c:v" "%Ext%" "-pix_fmt" "rgb24" -start_number  %frames_done_pls_1% -y "%output_dir%\frame_%%04d.%Ext%"
+    REM THE MAIN COMMAND
+    ffmpeg -hide_banner -start_number %frames_done_pls_1% -i "%input_dir%\frame_%%04d.%Ext%"  "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" %Model% "-c:v" "%Ext%" "-pix_fmt" "rgb24" -hwaccel_device 0 -start_number  %frames_done_pls_1% -y "%output_dir%\frame_%%04d.%Ext%"
 
-REM GOES BACK TO ORIGINAL DRIVE:
-D:
+    REM GOES BACK TO ORIGINAL DRIVE:
+    D:
 
-REM END OF SCRIPT
-echo.
-echo.
-echo FINISHED THIS BATCH
+    REM END OF SCRIPT
+    echo.
+    echo.
+    echo FINISHED THIS BATCH
 
-echo RESTARTING...
-call_AI
+    echo RESTARTING...
+    call_AI
 
 ) else (
-D:
-echo THE END!
+    D:
+    echo THE END!
 )
 
