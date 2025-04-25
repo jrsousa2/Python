@@ -5,7 +5,6 @@
 
 import discogs_client
 from requests import get
-from os.path import exists, isfile
 from timeit import default_timer
 from time import sleep
 # import openpyxl
@@ -102,7 +101,7 @@ def Srch_priority(disco,Art,Title,AA,Album,Genre,Year):
     return Res_list
 
 # MAIN CODE
-def Call_disco(PL_name=None,PL_nbr=None):
+def Call_discogs(PL_name=None,PL_nbr=None):
     # CALLS FUNCTION
     col_names =  ["Arq","Art","Title","AA","Album","Year","Genre","Group","Covers","ID"]
     dict = Read_PL.Read_PL(col_names,PL_name=PL_name,PL_nbr=PL_nbr)
@@ -180,7 +179,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
                 Files.Print_to_file(Log_file,"INTERNET IS OK: {}\n\n",Files.track_time())   
         # IF INTERNET OK
         fixed["Processed"] = i+1
-        file_exists = exists(Arq[i])
+        file_exists = Files.exists(Arq[i])
         file_nm = Files.File_no_nbr_no_ext(Arq[i])
         m = ID[i]
         # ASSIGNS TRACK WITH TUPLE
@@ -473,4 +472,4 @@ def Call_disco(PL_name=None,PL_nbr=None):
     print(miss,"files missing\n")        
     
 # CALLS FUNC
-Call_disco(PL_name="Playlist 2")
+Call_discogs(PL_name="Playlist 2")
