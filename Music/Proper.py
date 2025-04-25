@@ -70,7 +70,7 @@ Kw["7''"]="7 Inch"
 spec_char="("
 num_spec_chars=1
 
-# COMECO DA LOGICA DE SUBSTITUICOES
+# BEGINNING THE LOGIC OF REPLACEMENTS
 def Proper(Str,Tag="art"):
     New_str = ""
     if Str != "":    

@@ -146,8 +146,6 @@ def get_sec(time_str):
 # PRINT ON SCREEN AND IN THE FILE
 # args NEEDS TO BE A TUPLE
 def Print_to_file(Arq, txt, *args):
-    #for arg in *args:
-    #print("TESTA SE FUNCIONA NO PRINT",txt.format(*args))
     with open(Arq, "a", encoding="utf-8") as file:
          file.write(txt.format(*args))
 
@@ -178,7 +176,7 @@ def track_time():
     # Display the time
     return time_string
 
-# ESSE DAQUI NAO EH MUITO RELIABLE / TINYTAG EH MELHOR
+# THIS ONE IS NOT VERY RELIABLE / TINYTAG IS BEST (MAYBE THIS STATEMENT IS NOT TRUE)
 def read_eyed3(File, tag): #MP3_tag
     eyed3.log.setLevel("ERROR")
     value = ""
@@ -257,7 +255,7 @@ def write_tag(path, tag, value):
            written = False   
     return written
 
-# READS A CUSTOMIZED TAG
+# READS A CUSTOMIZED/EXTENDED TAG
 def ext_tag_exist(path, tag):
     tag_exists = False
     if exists(path):
@@ -321,4 +319,3 @@ def get_Win_files(dir, exts):
     # NORMALIZE FILE LIST FOR SEARCHES IGNORING CASE AND ACCENTS
     normal_filelist = [(file, unidecode(file_wo_ext(file.lower()))) for file in file_list]           
     return normal_filelist
-

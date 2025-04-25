@@ -1,13 +1,14 @@
-# LOOKS UP DISCOGS DB TO TRY AND UPDATE THE YEAR TAG OF TRACKS IN AN EXCEL FILE
-# IT DOESN"T NEED AN INITIAL PLAYLIST, IT CREATES THE PLAYLIST FIRST
-# 1o ADICIONA TRACKS NA PLAYLIST
+# LOOKS UP THE DISCOGS DB TO TRY AND UPDATE THE YEAR TAG OF TRACKS IN AN EXCEL FILE
+# IF FOUND, IT WILL UPDATE OTHER TAGS SUCH AS ALBUM
+# IT DOESN'T NEED AN INITIAL PLAYLIST, IT CREATES THE PLAYLIST FIRST
+# FIRST ADDS TR TRACKS IN PLAYLIST
 
 import discogs_client
 from requests import get
 from os.path import exists, isfile
 from timeit import default_timer
 from time import sleep
-import openpyxl
+# import openpyxl
 # import datetime
 import Read_PL
 import Tags
@@ -21,7 +22,7 @@ Log_artist = "D:\\iTunes\\Log_Artist.txt"
 Log_title = "D:\\iTunes\\Log_Title.txt"
 Log_year = "D:\\iTunes\\Log_Year.txt"
 
-# SHEETS LAYOUTS
+# SHEETS LAYOUTS (DISABLED FOR NOW)
 Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_artists", "Srch_variations"]
 Title_layout = ["API", "Search", "Cur_title", "Nbr_srch_title", "Srch_title"]
 Year_layout = ["Art", "Title", "Hits", "Master_cnt", "Master_Year", "Release_cnt", "Release_Year"]
@@ -100,7 +101,7 @@ def Stdz_list(my_list):
     # Return the updated list
     return my_list
 
-# CHECA SE UM ATRIBUTO (DADO POR UMA STRING) FAZ PARTE DE UM OBJETO
+# CHECKS IF AN ATTRIB (GIVEN BY A STRING) IS PART OF AN OBJECT
 def Check_attrib(Obj,attrib):
     try:
         test2 = getattr(Obj, attrib) is not None #and not getattr(Obj, attrib)
@@ -202,9 +203,9 @@ def Search_track_in_list(song,songlist):
     song_stdz = Tags.Stdz(song)
     stdz_songlist = Stdz_list(songlist)
     dict = {}
-    Achou = song_stdz in stdz_songlist
-    dict["res"] = Achou
-    if Achou:
+    Found = song_stdz in stdz_songlist
+    dict["res"] = Found
+    if Found:
        indice = stdz_songlist.index(song_stdz) 
        dict["pos"] = indice
     else:
@@ -388,6 +389,11 @@ def Call_disco(PL_name=None,PL_nbr=None):
 
     # CALLS THE DISCOGS OBJECT (NEEDS USER TOKEN)
     my_user_token = input("Enter DISCOGS user token")
+    # Open the file in read mode
+    with open("D:\\iTunes\\Music\\Discogs_token.dat", 'r') as file:
+         # Read the first line and strip any extra whitespace
+         my_user_token = file.readline().strip()
+
     disco = discogs_client.Client("ExampleApplication/0.1", user_token=my_user_token)
 
     # CRIA PLAYLIST PARA ARQUIVOS ATUALIZADOS
@@ -487,7 +493,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
                   print("API call",k+1,"of",nbr_calls,"-Type:",srch_res["Type"],"-By:",srch_res["Srch_by"],"-Count:",nbr_res)
                   j = 0
                   while(j<nbr_matches and fixed["Searches"]<20 and elapsed_time<time_lim_sec):
-                        # CONSIDERAR BUSCA SO SE NAO HOUVER EXCEPTION NA LEITURA 
+                        # ONLY CONSIDER SEARCH IF THERE IS NO EXCEPTION UPON READING
                         try:
                             Obj = results[j]
                         except Exception:

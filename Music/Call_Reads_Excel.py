@@ -11,7 +11,7 @@ import fnmatch
 
 import Read_PL
 import Files
-from Tags import similar_ratio
+from Search import similar_ratio
 #from Stdz import Simple_stdz
 
 # SPLITS THE FILE LIST INTO A DICTIONARY

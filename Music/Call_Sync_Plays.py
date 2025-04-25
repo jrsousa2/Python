@@ -9,7 +9,7 @@
 
 from os.path import exists
 import Read_PL
-import pandas as pd
+# import pandas as pd
 import Files
 
 from sys import path
@@ -101,7 +101,7 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # WMP
     miss_files = []
     if Do_lib:
-       print("\nReading the WMP playlist...")
+       print("\nReading the WMP library...")
        wmp_dict = WMP.Read_WMP_PL(col_names,Do_lib=Do_lib,rows=rows,Modify_cols=False) 
     else:
         Arq = [x for x in iTu_df["Location"] if exists(x)]
@@ -209,7 +209,6 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
               WMP_track.setItemInfo("UserPlayCount", max_plays)
               #WMP_track.setItemInfo("UserPlayCount", str(max_plays))
               print("(doublecheck WMP count:",WMP_track.getiteminfo("UserPlayCount"),")")
-
     
     print("\nUpdated",wmp_cnt,"WMP plays")
     print("Updated",iTu_cnt,"iTunes plays")
@@ -230,4 +229,4 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
        print()
 
 # CALLS PROGRAM 
-Sync_plays(PL_name="AAA", Do_lib=True)
+Sync_plays(Do_lib=True)

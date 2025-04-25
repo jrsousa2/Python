@@ -2,7 +2,7 @@
 # COMPARES IF FILENAMES MATCH THE TAGS (SYNCS FILENAMES WITH TAGS)
 from os.path import exists
 import Read_PL
-import Tags
+# import Tags
 import Files
 
 # 1o ADICIONA TRACKS NA PLAYLIST

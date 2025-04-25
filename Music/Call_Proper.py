@@ -9,11 +9,11 @@ import Read_PL
 #import Files
 
 # INITIALIZE DICTS
-def Proper_dic(main_dict):
+def Proper_dict(main_dict):
     # populates the dicts
     proper_dict = {}
     for key in main_dict:
-        proper_dict[key] = Proper.Proper(main_dict,main_dict[key],key)
+        proper_dict[key] = Proper.Proper(main_dict[key],key)
     return proper_dict
 
 # CHECK IF A VALUE IS THIS PESKY NAN VALUE
@@ -61,7 +61,7 @@ def Call_proper(rows=None):
     for i in range(nbr_files):
         if exists(Arq[i]): # and Files.Is_DMP3(Arq[i])
            #proper_dic = {}
-           proper_dic = Proper_dic(main_dic[i])
+           proper_dic = Proper_dict(main_dic[i])
 
            if main_dic[i] != proper_dic:
               to_fix_dic['All'].append(i)
@@ -105,7 +105,7 @@ def Call_proper(rows=None):
               # ADDS FIXED FILE TO PL
               Read_PL.Add_track_to_PL(PLs,PL_nm,track)    
               #main_dic = {}
-              proper_dic = Proper_dic(main_dic[n])
+              proper_dic = Proper_dict(main_dic[n])
             
               for key in main_dic[0]:
                   if main_dic[n][key] != proper_dic[key]:
