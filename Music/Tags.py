@@ -718,7 +718,7 @@ def coalesce(*args):
     pick = ""
     for arg in reversed(args):
         if arg != "":
-            pick = arg
+           pick = arg
     return pick
 
 def compress(input):
@@ -726,4 +726,3 @@ def compress(input):
     input = unidecode(input)
     comp_name = re.sub(r'[^a-zA-Z0-9\s]', '', input)
     return comp_name
-
