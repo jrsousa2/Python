@@ -13,5 +13,5 @@
 - Automatic creation of formatted slides with formatted data scraped from Wikipedia (see final video created below)
 - Image, audio and video processing using ffmpeg
 
-<br>Video created from a powerpoint deck created automatically in Python (audio synced with ffmpeg):
+Video created from a powerpoint deck created automatically in Python (audio synced with ffmpeg):
 [Famous Brazilian actresses](https://github.com/jrsousa2/VS_code/blob/main/Atrizes/Final_video/Atrizes.mp4)
