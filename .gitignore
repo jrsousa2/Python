@@ -8,8 +8,8 @@
 *.html
 *.toc
 *.doc
-Log*.txt
-Sync*.txt
+# Log*.txt
+# Sync*.txt
 *.jpg
 *.zip
 *.egp
@@ -22,7 +22,7 @@ Sync*.txt
 *.pbix
 Z-*
 z-*
-_init_.*
+*__init__.py
 Mp3Tag/
 Excel/
 Fazer/
@@ -30,6 +30,5 @@ E-commerce/
 PowerBI/
 Shortcuts/
 Snowflake/
-iTunes*/
 Job*/
 

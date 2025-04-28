@@ -1,0 +1,1285 @@
+
+
+TIME: Monday 03/11/24 10:55 PM
+
+
+Files where name mismatches tags: 4 (match 0)
+
+Final STATS: Match -> 0
+
+Final STATS: Mismatch -> 4
+
+Final STATS: Exc -> 0
+
+
+TIME: Monday 03/11/24 10:56 PM
+
+
+
+Checking file: 15 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - O Sonho É Popular
+
+Winning method: 2 (Eq Title/diff Art)- Best:
+
+Changing file name: Engenheiros Do Hawaii - O Sonho E Popular -> Engenheiros Do Hawaii - O Sonho É Popular
+
+
+Checking file: 16 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - Concreto E Asfalto (Ao Vivo)
+
+Winning method: 3 (Superset)- Best:
+
+Changing file name: Engenheiros Do Hawaii - Concreto E Asfalto -> Engenheiros Do Hawaii - Concreto E Asfalto (Ao Vivo)
+
+
+Checking file: 17 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - Pra Ser Sincero (Ao Vivo)
+
+Winning method: 3 (Superset)- Best:
+
+Changing file name: Engenheiros Do Hawaii - Pra Ser Sincero (1) -> Engenheiros Do Hawaii - Pra Ser Sincero (Ao Vivo) (1)
+
+
+Checking file: 18 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - Nunca Se Sabe (Ao Vivo)
+
+Winning method: 3 (Superset)- Best:
+
+Changing file name: Engenheiros Do Hawaii - Nunca Se Sabe (1) -> Engenheiros Do Hawaii - Nunca Se Sabe (Ao Vivo)
+
+
+Checking file: 19 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - Ando Só (Ao Vivo)
+
+Winning method: 3 (Superset)- Best:
+
+Changing file name: Engenheiros Do Hawaii - Ando Só (1) -> Engenheiros Do Hawaii - Ando Só (Ao Vivo)
+
+
+Checking file: 20 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - Perfeita Simetria / O Papa É Pop (Ao Vivo)
+
+Winning method: 3 (Superset)- Best:
+
+Changing file name: Engenheiros Do Hawaii - Perfeita Simetria + O Papa É Pop -> Engenheiros Do Hawaii - Perfeita Simetria, O Papa É Pop (Ao Vivo)
+
+
+Checking file: 21 of 21 ->
+
+Tags ->Engenheiros Do Hawaii - Parabólica (Ao Vivo)
+
+Winning method: 3 (Superset)- Best:
+
+Changing file name: Engenheiros Do Hawaii - Parabólica -> Engenheiros Do Hawaii - Parabólica (Ao Vivo)
+
+Files where name mismatches tags: 14 (match 7)
+
+Final STATS: Match -> 7
+
+Final STATS: Mismatch -> 14
+
+Final STATS: Exc -> 0
+
+Location updates: 2 (Eq Title/diff Art) -> 1
+
+Location updates: 3 (Superset) -> 6
+
+
+TIME: Monday 03/11/24 11:08 PM
+
+
+
+Files where name mismatches tags: 4 (match 0)
+Final STATS:
+Key: Match -> 0
+Key: Mismatch -> 4
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+
+TIME: Monday 03/11/24 11:09 PM
+
+
+
+Files where name mismatches tags: 11 (match 0)
+Final STATS:
+Key: Match -> 0
+Key: Mismatch -> 11
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+
+TIME: Monday 03/11/24 11:09 PM
+
+
+Checking file 16 of 19 -> D:\MP3\Brasil\C\Cv E Pcc - Uniao (Funk Proibidao).mp3
+Tags -> Cv E Pcc - União (Funk Proibidão)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Cv E Pcc - Uniao (Funk Proibidao) -> Cv E Pcc - União (Funk Proibidão)
+Checking file 17 of 19 -> D:\MP3\C\Cut Copy - Hearts On Fire (Original Version).mp3
+Tags -> Cut Copy - Hearts On Fire (Original)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Cut Copy - Hearts On Fire (Original Version) -> Cut Copy - Hearts On Fire (Original)
+Checking file 18 of 19 -> D:\MP3\C\Curtis Mayfield - Move On Up (Extended Version).mp3
+Tags -> Curtis Mayfield - Move On Up (Extended)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Curtis Mayfield - Move On Up (Extended Version) -> Curtis Mayfield - Move On Up (Extended)
+
+Files where name mismatches tags: 16 (match 3)
+Final STATS:
+Key: Match -> 3
+Key: Mismatch -> 16
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 2 (Eq Title/diff Art) -> 3
+
+TIME: Monday 03/11/24 11:12 PM
+
+
+
+Files where name mismatches tags: 19 (match 0)
+
+Final STATS:
+Key: Match -> 0
+Key: Mismatch -> 19
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+
+TIME: Monday 03/11/24 11:13 PM
+
+
+
+Checking file 20 of 27 -> D:\MP3\Favorites\Celine Dion & Peabo Bryson - Beauty & The Beast.mp3
+Tags -> Celine Dion & Peabo Bryson - Beauty And The Beast
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Celine Dion & Peabo Bryson - Beauty & The Beast -> Celine Dion & Peabo Bryson - Beauty And The Beast
+
+Checking file 23 of 27 -> D:\MP3\C\Celine Dion - It's All Coming Back To Me Now.mp3
+Tags -> Céline Dion - It's All Coming Back To Me Now
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Celine Dion - It's All Coming Back To Me Now -> Céline Dion - It's All Coming Back To Me Now
+
+Checking file 24 of 27 -> D:\MP3\Brasil\C\Cazuza - Quarta-Feira.mp3
+Tags -> Cazuza - Quarta-Feira (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Cazuza - Quarta-Feira -> Cazuza - Quarta-Feira (Ao Vivo)
+
+Checking file 25 of 27 -> D:\MP3\Brasil\C\Cazuza - Exagerado.mp3
+Tags -> Cazuza - Exagerado (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Cazuza - Exagerado -> Cazuza - Exagerado (Ao Vivo) (3)
+
+Checking file 26 of 27 -> D:\MP3\Favorites\Cathy Dennis - Touch Me.mp3
+Tags -> Cathy Dennis - Touch Me (All Night Long)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Cathy Dennis - Touch Me -> Cathy Dennis - Touch Me (All Night Long) (2)
+
+Checking file 27 of 27 -> D:\MP3\Favorites\Cathy Dennis - Touch Me (All Night Long) (1).mp3
+Tags -> Cathy Dennis - Touch Me (All Night Long) (Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Cathy Dennis - Touch Me (All Night Long) (1) -> Cathy Dennis - Touch Me (All Night Long) (Edit)
+
+Files where name mismatches tags: 21 (match 6)
+
+Final STATS:
+Key: Match -> 6
+Key: Mismatch -> 21
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 2 (Eq Title/diff Art) -> 2
+Key: 3 (Superset) -> 4
+
+
+TIME: Monday 03/11/24 11:16 PM
+
+
+Checking file 292 of 619 -> D:\MP3\Favorites\Freddie Mercury - Living On My Own (2).mp3
+Tags -> Freddie Mercury - Living On My Own (Remix)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Freddie Mercury - Living On My Own (2) -> Freddie Mercury - Living On My Own (Remix)
+
+Checking file 293 of 619 -> D:\MP3\F\Freddie Mercury - Love Kills (Extended Version).mp3
+Tags -> Freddie Mercury - Love Kills (Extended)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Freddie Mercury - Love Kills (Extended Version) -> Freddie Mercury - Love Kills (Extended)
+
+Checking file 294 of 619 -> D:\MP3\F\Four Seasons - December 1963 (Oh What A Night) (80'S Remix).mp3
+Tags -> Frankie Valli & The Four Seasons - December, 1963 (Oh What A Night) (80's Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Four Seasons - December 1963 (Oh What A Night) (80'S Remix) -> Frankie Valli & The Four Seasons - December, 1963 (Oh What A Night) (80's Remix)
+
+Checking file 295 of 619 -> D:\MP3\Favorites\Frankie Valli - Can't Take My Eyes Off You.mp3
+Tags -> Frankie Valli & The Four Seasons - Can't Take My Eyes Off You
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Frankie Valli - Can't Take My Eyes Off You -> Frankie Valli & The Four Seasons - Can't Take My Eyes Off You
+
+Checking file 296 of 619 -> D:\MP3\F\Frankie Knuckles Presents Satoshi Tomiie - Tears (Full Intention Mix).mp3
+Tags -> Frankie Knuckles Feat. Satoshi Tomiie - Tears (Full Intention Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Frankie Knuckles Presents Satoshi Tomiie - Tears (Full Intention Mix) -> Frankie Knuckles Feat. Satoshi Tomiie - Tears (Full Intention Mix)
+
+Checking file 297 of 619 -> D:\MP3\F\Frankie Knuckles - Your Love.mp3
+Tags -> Frankie Knuckles - Your Love (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Frankie Knuckles - Your Love -> Frankie Knuckles - Your Love (Extended)
+
+Checking file 299 of 619 -> D:\MP3\F\Four Tops - River Deep,Mountain High.mp3
+Tags -> Four Tops - River Deep, Mountain High
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+
+Checking file 301 of 619 -> D:\MP3\F\Flirts - Passion.mp3
+Tags -> The Flirts - Passion
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Flirts - Passion -> The Flirts - Passion (1)
+
+Checking file 302 of 619 -> D:\MP3\Brasil\F\Flávio Venturini - Casa Vazia.mp3
+Tags -> Flávio Venturini - Casa Vazia (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Flávio Venturini - Casa Vazia -> Flávio Venturini - Casa Vazia (Ao Vivo)
+
+Checking file 305 of 619 -> D:\MP3\F\Fast Eddie - Yo Yo Get Funky.mp3
+Tags -> Fast Eddie Smith - Yo Yo Get Funky
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Fast Eddie - Yo Yo Get Funky -> Fast Eddie Smith - Yo Yo Get Funky
+
+Checking file 306 of 619 -> D:\MP3\Brasil\F\Fagner - Ultimo Pau-De-Arara.mp3
+Tags -> Fagner - Ultimo Pau-De-Arara (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Fagner - Ultimo Pau-De-Arara -> Fagner - Ultimo Pau-De-Arara (Ao Vivo)
+
+Checking file 307 of 619 -> D:\MP3\Brasil\F\Fagner - Fanatismo.mp3
+Tags -> Fagner - Fanatismo (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Fagner - Fanatismo -> Fagner - Fanatismo (Ao Vivo)
+
+Checking file 308 of 619 -> D:\MP3\Brasil\F\Fagner - Cebola Cortada.mp3
+Tags -> Fagner - Cebola Cortada (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Fagner - Cebola Cortada -> Fagner - Cebola Cortada (Ao Vivo)
+
+Checking file 309 of 619 -> D:\MP3\Brasil\F\Fagner - Jura Secreta.mp3
+Tags -> Fagner - Jura Secreta (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Fagner - Jura Secreta -> Fagner - Jura Secreta (Ao Vivo)
+
+Checking file 310 of 619 -> D:\MP3\Brasil\F\Fagner - Mucuripe.mp3
+Tags -> Fagner - Mucuripe (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Fagner - Mucuripe -> Fagner - Mucuripe (Ao Vivo)
+
+Checking file 311 of 619 -> D:\MP3\Brasil\F\Fagner - Asa Partida.mp3
+Tags -> Fagner - Asa Partida (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Fagner - Asa Partida -> Fagner - Asa Partida (Ao Vivo)
+
+Checking file 312 of 619 -> D:\MP3\Brasil\F\Fafá De Belém - Medida Da Paixao.mp3
+Tags -> Fafá De Belém - Medida Da Paixão
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Fafá De Belém - Medida Da Paixao -> Fafá De Belém - Medida Da Paixão
+
+Checking file 313 of 619 -> D:\MP3\F\F.R. David - Words (Original Version 1983).mp3
+Tags -> F.R. David - Words (Original 1983)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: F.R. David - Words (Original Version 1983) -> F.R. David - Words (Original 1983)
+
+Checking file 316 of 619 -> D:\MP3\E\E-Type - Free Like A Flying Demon (7 Version).mp3
+Tags -> E-Type - Free Like A Flying Demon (7 Inch Version)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: E-Type - Free Like A Flying Demon (7 Version) -> E-Type - Free Like A Flying Demon (7 Inch Version)
+
+Checking file 319 of 619 -> D:\MP3\Favorites_Brasil\Erasmo Carlos - Sentado À Beira Do Caminho.mp3
+Tags -> Erasmo Carlos - Sentado À Beira Do Caminho (Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Erasmo Carlos - Sentado À Beira Do Caminho -> Erasmo Carlos - Sentado À Beira Do Caminho (Edit)
+
+Checking file 320 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Ouça O Que Eu Digo, Não Ouça Ninguém.mp3
+Tags -> Engenheiros Do Hawaii - Ouça O Que Eu Digo Não Ouça Ninguém (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Ouça O Que Eu Digo, Não Ouça Ninguém -> Engenheiros Do Hawaii - Ouça O Que Eu Digo Não Ouça Ninguém (Ao Vivo)
+
+Checking file 321 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Nunca Se Sabe (2).mp3
+Tags -> Engenheiros Do Hawaii - Nunca Se Sabe (2a Versao)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Nunca Se Sabe (2) -> Engenheiros Do Hawaii - Nunca Se Sabe (2a Versao)
+
+Checking file 322 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - A Perigo (1).mp3
+Tags -> Engenheiros Do Hawaii - A Perigo (2a Versao)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - A Perigo (1) -> Engenheiros Do Hawaii - A Perigo (2a Versao)
+
+Checking file 323 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Eu Que Não Amo Você (2).mp3
+Tags -> Engenheiros Do Hawaii - Eu Que Não Amo Você (2a Versao)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Eu Que Não Amo Você (2) -> Engenheiros Do Hawaii - Eu Que Não Amo Você (2a Versao)
+
+Checking file 324 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - O Papa E Pop.mp3
+Tags -> Engenheiros Do Hawaii - O Papa É Pop (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - O Papa E Pop -> Engenheiros Do Hawaii - O Papa É Pop (Ao Vivo)
+
+Checking file 325 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Ouça O Que Eu Digo Não Ouça Ninguém.mp3
+Tags -> Engenheiros Do Hawaii - Ouça O Que Eu Digo Não Ouça Ninguém (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Ouça O Que Eu Digo Não Ouça Ninguém -> Engenheiros Do Hawaii - Ouça O Que Eu Digo Não Ouça Ninguém (Ao Vivo) (1)
+
+Checking file 326 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Era Um Garoto Que Como Eu....mp3
+Tags -> Engenheiros Do Hawaii - Era Um Garoto Que Como Eu (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Era Um Garoto Que Como Eu... -> Engenheiros Do Hawaii - Era Um Garoto Que Como Eu (Ao Vivo)
+
+Checking file 327 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Piano Bar (1).mp3
+Tags -> Engenheiros Do Hawaii - Piano Bar (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Piano Bar (1) -> Engenheiros Do Hawaii - Piano Bar (Ao Vivo)
+
+Checking file 328 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Somos Quem Podemos Ser (1).mp3
+Tags -> Engenheiros Do Hawaii - Somos Quem Podemos Ser (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Somos Quem Podemos Ser (1) -> Engenheiros Do Hawaii - Somos Quem Podemos Ser (Ao Vivo) (1)
+
+Checking file 329 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Toda Forma De Poder (2).mp3
+Tags -> Engenheiros Do Hawaii - Toda Forma De Poder (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Toda Forma De Poder (2) -> Engenheiros Do Hawaii - Toda Forma De Poder (Ao Vivo)
+
+Checking file 330 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Parabolica.mp3
+Tags -> Engenheiros Do Hawaii - Parabolica (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Parabolica -> Engenheiros Do Hawaii - Parabolica (Ao Vivo)
+
+Checking file 331 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Ninguem = Ninguem (1).mp3
+Tags -> Engenheiros Do Hawaii - Ninguem = Ninguem (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Ninguem = Ninguem (1) -> Engenheiros Do Hawaii - Ninguem = Ninguem (Ao Vivo)
+
+Checking file 332 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Infinita Highway (2).mp3
+Tags -> Engenheiros Do Hawaii - Infinita Highway (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Infinita Highway (2) -> Engenheiros Do Hawaii - Infinita Highway (Ao Vivo)
+
+Checking file 333 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - A Montanha (1).mp3
+Tags -> Engenheiros Do Hawaii - A Montanha (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - A Montanha (1) -> Engenheiros Do Hawaii - A Montanha (Ao Vivo) (1)
+
+Checking file 334 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Refrão De Bolero.mp3
+Tags -> Engenheiros Do Hawaii - Refrão De Bolero (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Refrão De Bolero -> Engenheiros Do Hawaii - Refrão De Bolero (Ao Vivo) (3)
+
+Checking file 335 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Ando So.mp3
+Tags -> Engenheiros Do Hawaii - Ando Só
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Ando So -> Engenheiros Do Hawaii - Ando Só (1)
+
+Checking file 336 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Ouça O Que Eu Digo, Não Ouça Ninguém (1).mp3
+Tags -> Engenheiros Do Hawaii - Ouça O Que Eu Digo, Não Ouça Ninguém (Acústico)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Ouça O Que Eu Digo, Não Ouça Ninguém (1) -> Engenheiros Do Hawaii - Ouça O Que Eu Digo, Não Ouça Ninguém (Acústico)
+
+Checking file 337 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Infinita Highway (1).mp3
+Tags -> Engenheiros Do Hawaii - Infinita Highway (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Infinita Highway (1) -> Engenheiros Do Hawaii - Infinita Highway (Ao Vivo) (1)
+
+Checking file 338 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Cidade Em Chamas (1).mp3
+Tags -> Engenheiros Do Hawaii - Cidade Em Chamas (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Cidade Em Chamas (1) -> Engenheiros Do Hawaii - Cidade Em Chamas (Ao Vivo)
+
+Checking file 339 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Crônica (2).mp3
+Tags -> Engenheiros Do Hawaii - Crônica (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Crônica (2) -> Engenheiros Do Hawaii - Crônica (Ao Vivo)
+
+Checking file 340 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Vozes (1).mp3
+Tags -> Engenheiros Do Hawaii - Vozes (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Vozes (1) -> Engenheiros Do Hawaii - Vozes (Ao Vivo)
+
+Checking file 341 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Toda Forma De Poder (1).mp3
+Tags -> Engenheiros Do Hawaii - Toda Forma De Poder (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Toda Forma De Poder (1) -> Engenheiros Do Hawaii - Toda Forma De Poder (Ao Vivo) (1)
+
+Checking file 342 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Quando O Carnaval Chegar.mp3
+Tags -> Engenheiros Do Hawaii - Quando O Carnaval Chegar (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Quando O Carnaval Chegar -> Engenheiros Do Hawaii - Quando O Carnaval Chegar (Ao Vivo)
+
+Checking file 343 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Eu Que Não Amo Você.mp3
+Tags -> Engenheiros Do Hawaii - Eu Que Não Amo Você (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Eu Que Não Amo Você -> Engenheiros Do Hawaii - Eu Que Não Amo Você (Ao Vivo)
+
+Checking file 344 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - A Conquista Do Espaco.mp3
+Tags -> Engenheiros Do Hawaii - A Conquista Do Espaço
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Engenheiros Do Hawaii - A Conquista Do Espaco -> Engenheiros Do Hawaii - A Conquista Do Espaço
+
+Checking file 345 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - O Exército De Um Homem Só.mp3
+Tags -> Engenheiros Do Hawaii - O Exército De Um Homem Só (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - O Exército De Um Homem Só -> Engenheiros Do Hawaii - O Exército De Um Homem Só (Ao Vivo)
+
+Checking file 346 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Ando Só.mp3
+Tags -> Engenheiros Do Hawaii - Ando Só (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Ando Só -> Engenheiros Do Hawaii - Ando Só (Ao Vivo) (1)
+
+Checking file 347 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Alívio Imediato.mp3
+Tags -> Engenheiros Do Hawaii - Alívio Imediato (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Alívio Imediato -> Engenheiros Do Hawaii - Alívio Imediato (Ao Vivo)
+
+Checking file 348 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Pra Ser Sincero.mp3
+Tags -> Engenheiros Do Hawaii - Pra Ser Sincero (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Pra Ser Sincero -> Engenheiros Do Hawaii - Pra Ser Sincero (Ao Vivo) (2)
+
+Checking file 349 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Crônica (1).mp3
+Tags -> Engenheiros Do Hawaii - Crônica (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Crônica (1) -> Engenheiros Do Hawaii - Crônica (Ao Vivo) (1)
+
+Checking file 350 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Pra Entender (1).mp3
+Tags -> Engenheiros Do Hawaii - Pra Entender (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Pra Entender (1) -> Engenheiros Do Hawaii - Pra Entender (Ao Vivo)
+
+Checking file 351 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Além Dos Outdoors.mp3
+Tags -> Engenheiros Do Hawaii - Além Dos Outdoors (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Além Dos Outdoors -> Engenheiros Do Hawaii - Além Dos Outdoors (Ao Vivo)
+
+Checking file 352 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Somos Quem Podemos Ser.mp3
+Tags -> Engenheiros Do Hawaii - Somos Quem Podemos Ser (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Somos Quem Podemos Ser -> Engenheiros Do Hawaii - Somos Quem Podemos Ser (Ao Vivo) (2)
+
+Checking file 353 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Terra De Gigantes.mp3
+Tags -> Engenheiros Do Hawaii - Terra De Gigantes (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Terra De Gigantes -> Engenheiros Do Hawaii - Terra De Gigantes (Ao Vivo) (1)
+
+Checking file 354 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Toda Forma De Poder.mp3
+Tags -> Engenheiros Do Hawaii - Toda Forma De Poder (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Toda Forma De Poder -> Engenheiros Do Hawaii - Toda Forma De Poder (Ao Vivo) (2)
+
+Checking file 355 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - A Verdade A Ver Navios.mp3
+Tags -> Engenheiros Do Hawaii - A Verdade A Ver Navios (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - A Verdade A Ver Navios -> Engenheiros Do Hawaii - A Verdade A Ver Navios (Ao Vivo)
+
+Checking file 356 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Infinita Highway.mp3
+Tags -> Engenheiros Do Hawaii - Infinita Highway (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Infinita Highway -> Engenheiros Do Hawaii - Infinita Highway (Ao Vivo) (2)
+
+Checking file 357 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - A Revolta Dos Dândis II.mp3
+Tags -> Engenheiros Do Hawaii - A Revolta Dos Dândis II (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - A Revolta Dos Dândis II -> Engenheiros Do Hawaii - A Revolta Dos Dândis II (Ao Vivo)
+
+Checking file 358 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - A Revolta Dos Dândis I.mp3
+Tags -> Engenheiros Do Hawaii - A Revolta Dos Dândis I (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Engenheiros Do Hawaii - A Revolta Dos Dândis I -> Engenheiros Do Hawaii - A Revolta Dos Dândis I (Ao Vivo)
+
+Checking file 359 of 619 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Somos Quem Podemos Serr (Acústico).mp3
+Tags -> Engenheiros Do Hawaii - Somos Quem Podemos Ser (Acústico)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Engenheiros Do Hawaii - Somos Quem Podemos Serr (Acústico) -> Engenheiros Do Hawaii - Somos Quem Podemos Ser (Acústico)
+
+Checking file 362 of 619 -> D:\MP3\Favorites\Elton John - Candle In The Wind (1).mp3
+Tags -> Elton John - Candle In The Wind (1986)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Elton John - Candle In The Wind (1) -> Elton John - Candle In The Wind (1986)
+
+Checking file 363 of 619 -> D:\MP3\Favorites\Elton John - Candle In The Wind.mp3
+Tags -> Elton John - Candle In The Wind (1974)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Elton John - Candle In The Wind -> Elton John - Candle In The Wind (1974)
+
+Checking file 366 of 619 -> D:\MP3\Favorites_Brasil\Elis Regina - Fascinacão.mp3
+Tags -> Elis Regina - Fascinacão (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Elis Regina - Fascinacão -> Elis Regina - Fascinacão (Ao Vivo)
+
+Checking file 368 of 619 -> D:\MP3\E\Elephant Man - Log On (Radio Version).mp3
+Tags -> Elephant Man - Log On (Radio Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Elephant Man - Log On (Radio Version) -> Elephant Man - Log On (Radio Edit)
+
+Checking file 369 of 619 -> D:\MP3\E\El Chavo - Infieles (Feat. La K Y La J Los Presidentez).mp3
+Tags -> El Chavo Feat. La K Y La J Los Presidentez - Infieles
+Winning method: 3 (Superset)- Best: tags
+Changing file name: El Chavo - Infieles (Feat. La K Y La J Los Presidentez) -> El Chavo Feat. La K Y La J Los Presidentez - Infieles
+
+Checking file 370 of 619 -> D:\MP3\E\Einstein Doctor DJ - Elektro Woman (Interconnection Mix).mp3
+Tags -> Einstein Doctor DeeJay - Elektro Woman (Interconnection Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Einstein Doctor DJ - Elektro Woman (Interconnection Mix) -> Einstein Doctor DeeJay - Elektro Woman (Interconnection Mix)
+
+Checking file 371 of 619 -> D:\MP3\E\Ed Ames - Do You Hear What I Hear.mp3
+Tags -> Ed Ames - Do You Hear What I Hear?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Ed Ames - Do You Hear What I Hear -> Ed Ames - Do You Hear What I Hear_
+
+Checking file 374 of 619 -> D:\MP3\D\Duran Duran - Hold Back The Rain (Carnival Remix) (1).mp3
+Tags -> Duran Duran - Hold Back The Rain (Carnival Remix) (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Duran Duran - Hold Back The Rain (Carnival Remix) (1) -> Duran Duran - Hold Back The Rain (Carnival Remix) (Extended)
+
+Checking file 375 of 619 -> D:\MP3\D\Duran Duran - Do You Believe In Shame.mp3
+Tags -> Duran Duran - Do You Believe In Shame?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Duran Duran - Do You Believe In Shame -> Duran Duran - Do You Believe In Shame_
+
+Checking file 381 of 619 -> D:\MP3\Favorites\Double You - Part-Time Lover.mp3
+Tags -> Double You Feat. Alexia - Part-Time Lover
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Double You - Part-Time Lover -> Double You Feat. Alexia - Part-Time Lover
+
+Checking file 382 of 619 -> D:\MP3\D\Double Vision - Free Your Mind.mp3
+Tags -> Double Vision Feat. Kate - Free Your Mind
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Double Vision - Free Your Mind -> Double Vision Feat. Kate - Free Your Mind
+
+Checking file 384 of 619 -> D:\MP3\Favorites\Donna Summer - MacArthur Park (1).mp3
+Tags -> Donna Summer - MacArthur Park Reprise
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Donna Summer - MacArthur Park (1) -> Donna Summer - MacArthur Park Reprise
+
+Checking file 385 of 619 -> D:\MP3\T\DJ Topsider - Awesome (Timeflies X Duke Dumont & AME X Wallpaper. X Audien).mp3
+Tags -> DJ Topsider - Awesome (Timeflies X Duke Dumont & A*M*E X Wallpaper. X Audien)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: DJ Topsider - Awesome (Timeflies X Duke Dumont & AME X Wallpaper. X Audien) -> DJ Topsider - Awesome (Timeflies X Duke Dumont & A_M_E X Wallpaper. X Audien)
+
+Checking file 386 of 619 -> D:\MP3\P\Lula, DJ Paulo - Master & Servant (DJ Paulo & Alain Jackinsky Tribamerican Mix).mp3
+Tags -> DJ Paulo Feat. Lula - Master & Servant (DJ Paulo & Alain Jackinsky Tribamerican Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Lula, DJ Paulo - Master & Servant (DJ Paulo & Alain Jackinsky Tribamerican Mix) -> DJ Paulo Feat. Lula - Master & Servant (DJ Paulo & Alain Jackinsky Tribamerican Mix)
+
+Checking file 388 of 619 -> D:\MP3\Favorites\Jazzy Jeff & Fresh Prince - Summertime '98.mp3
+Tags -> DJ Jazzy Jeff & The Fresh Prince - Summertime '98
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Jazzy Jeff & Fresh Prince - Summertime '98 -> DJ Jazzy Jeff & The Fresh Prince - Summertime '98
+
+Checking file 389 of 619 -> D:\MP3\D\Disco Boys - Here On My Own (Extended Mix).mp3
+Tags -> The Disco Boys - Here On My Own (Extended Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Disco Boys - Here On My Own (Extended Mix) -> The Disco Boys - Here On My Own (Extended Mix)
+
+Checking file 391 of 619 -> D:\MP3\Favorites\Dimples D - Sucker DJ.mp3
+Tags -> Dimples D & Marley Marl - Sucker DJ
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Dimples D - Sucker DJ -> Dimples D & Marley Marl - Sucker DJ (1)
+
+Checking file 392 of 619 -> D:\MP3\D\Diddy, The Notorious B.I.G., Mase - Been Around The World (Feat. The Notorious B.I.G. & Mase).mp3
+Tags -> Diddy Feat. The Notorious B.I.G. & Mase - Been Around The World
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Diddy, The Notorious B.I.G., Mase - Been Around The World (Feat. The Notorious B.I.G. & Mase) -> Diddy Feat. The Notorious B.I.G. & Mase - Been Around The World
+
+Checking file 393 of 619 -> D:\MP3\D\Dick Dale - Miserlou.mp3
+Tags -> Dick Dale & The Deltones - Miserlou
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Dick Dale - Miserlou -> Dick Dale & The Deltones - Miserlou
+
+Checking file 400 of 619 -> D:\MP3\D\Def Squad Vs. Madonna - Rapper's Holiday (DJ Chaos Mashup).mp3
+Tags -> Def Squad & Madonna - Rapper's Holiday (DJ Chaos Mashup)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Def Squad Vs. Madonna - Rapper's Holiday (DJ Chaos Mashup) -> Def Squad & Madonna - Rapper's Holiday (DJ Chaos Mashup)
+
+Checking file 401 of 619 -> D:\MP3\Favorites\Bette Midler - War Of Roses.mp3
+Tags -> Deep Influence Feat. Bette Midler - War Of Roses
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bette Midler - War Of Roses -> Deep Influence Feat. Bette Midler - War Of Roses
+
+Checking file 403 of 619 -> D:\MP3\Favorites\Dead Or Alive - Spin Me Round (12 Inch).mp3
+Tags -> Dead Or Alive - You Spin Me Round (12 Inch)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Dead Or Alive - Spin Me Round (12 Inch) -> Dead Or Alive - You Spin Me Round (12 Inch)
+
+Checking file 409 of 619 -> D:\MP3\D\David Guetta Vs. Tocadisco - Tomorrow Can't Wait (Club Mix).mp3
+Tags -> David Guetta & Tocadisco - Tomorrow Can't Wait (Club Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: David Guetta Vs. Tocadisco - Tomorrow Can't Wait (Club Mix) -> David Guetta & Tocadisco - Tomorrow Can't Wait (Club Mix)
+
+Checking file 411 of 619 -> D:\MP3\D\Daughtry, Slash - What I Want (Feat. Slash).mp3
+Tags -> Daughtry Feat. Slash - What I Want
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Daughtry, Slash - What I Want (Feat. Slash) -> Daughtry Feat. Slash - What I Want
+
+Checking file 412 of 619 -> D:\MP3\Favorites\Darkness - In My Dreams.mp3
+Tags -> The Darkness - In My Dreams (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Darkness - In My Dreams -> The Darkness - In My Dreams (Extended)
+
+Checking file 413 of 619 -> D:\MP3\D\Danity Kane - Damaged (1).mp3
+Tags -> Danity Kane - Damaged (2)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Danity Kane - Damaged (1) -> Danity Kane - Damaged (2)
+
+Checking file 427 of 619 -> D:\MP3\Favorites\The Culture Club - Do You Really Want To Hurt Me.mp3
+Tags -> Culture Club - Do You Really Want To Hurt Me
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: The Culture Club - Do You Really Want To Hurt Me -> Culture Club - Do You Really Want To Hurt Me
+
+Checking file 431 of 619 -> D:\MP3\Favorites\Communards - Don't Leave Me This Way.mp3
+Tags -> The Communards, Sarah Jane Morris - Don't Leave Me This Way
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Communards - Don't Leave Me This Way -> The Communards, Sarah Jane Morris - Don't Leave Me This Way
+
+Checking file 432 of 619 -> D:\MP3\Favorites\Communards With Sarah Jane Morris - Don't Leave Me This Way.mp3
+Tags -> The Communards & Sarah Jane Morris - Don't Leave Me This Way
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Communards With Sarah Jane Morris - Don't Leave Me This Way -> The Communards & Sarah Jane Morris - Don't Leave Me This Way
+
+Checking file 433 of 619 -> D:\MP3\Favorites\Communards - Never Can Say Goodbye.mp3
+Tags -> The Communards - Never Can Say Goodbye
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Communards - Never Can Say Goodbye -> The Communards - Never Can Say Goodbye
+
+Checking file 434 of 619 -> D:\MP3\Favorites\Commodores - Still.mp3
+Tags -> Commodores Feat. Lionel Richie - Still
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Commodores - Still -> Commodores Feat. Lionel Richie - Still (1)
+
+Checking file 441 of 619 -> D:\MP3\Favorites_Brasil\Claudia Telles - Fim De Tarde.mp3
+Tags -> Cláudia Telles - Fim De Tarde
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Claudia Telles - Fim De Tarde -> Cláudia Telles - Fim De Tarde
+
+Checking file 447 of 619 -> D:\MP3\C\Chriss Ortega And Thomas Gold - African Experience (Dark Mix).mp3
+Tags -> Chriss Ortega & Thomas Gold - African Experience (Dark Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Chriss Ortega And Thomas Gold - African Experience (Dark Mix) -> Chriss Ortega & Thomas Gold - African Experience (Dark Mix)
+
+Checking file 448 of 619 -> D:\MP3\C\Chris Roberts - Hab' Ich Dir Heute Schon Gesagt, Dass Ich Dich Liebe.mp3
+Tags -> Chris Roberts - Hab' Ich Dir Heute Schon Gesagt, Dass Ich Dich Liebe?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Chris Roberts - Hab' Ich Dir Heute Schon Gesagt, Dass Ich Dich Liebe -> Chris Roberts - Hab' Ich Dir Heute Schon Gesagt, Dass Ich Dich Liebe_
+
+Checking file 450 of 619 -> D:\MP3\C\Chris Brown - Yo (Excuse Me Miss).mp3
+Tags -> Chris Brown - Yo (Excuse Me Miss) (Live)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Chris Brown - Yo (Excuse Me Miss) -> Chris Brown - Yo (Excuse Me Miss) (Live)
+
+Checking file 457 of 619 -> D:\MP3\C\Charles Aznavour - La Bohème (Stelios Remix) (KCPK Extended Version).mp3
+Tags -> Charles Aznavour - La Bohème (Stelios Remix) (KCPK Extended)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Charles Aznavour - La Bohème (Stelios Remix) (KCPK Extended Version) -> Charles Aznavour - La Bohème (Stelios Remix) (KCPK Extended)
+
+Checking file 462 of 619 -> D:\MP3\C\Céline Dion Feat. Gloria Estefan, Shania Twain & Carole King - You've Got A Friend.mp3
+Tags -> Céline Dion Feat. Gloria Estefan, Shania Twain & Carole King - You've Got A Friend (Live)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Céline Dion Feat. Gloria Estefan, Shania Twain & Carole King - You've Got A Friend -> Céline Dion Feat. Gloria Estefan, Shania Twain & Carole King - You've Got A Friend (Live)
+
+Checking file 465 of 619 -> D:\MP3\C\Carrie Underwood - Before He Cheats.mp3
+Tags -> Carrie Underwood - Before He Cheats (1)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Carrie Underwood - Before He Cheats -> Carrie Underwood - Before He Cheats (1)
+
+Checking file 468 of 619 -> D:\MP3\C\Carl Orff - Fortuna Imperatrix Mundi O Fortuna.mp3
+Tags -> Carl Orff - Fortuna Imperatrix Mundi: O Fortuna
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Carl Orff - Fortuna Imperatrix Mundi O Fortuna -> Carl Orff - Fortuna Imperatrix Mundi_ O Fortuna
+
+Checking file 470 of 619 -> D:\MP3\Favorites\Captain Hollywood - Impossible.mp3
+Tags -> Captain Hollywood Project - Impossible
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Captain Hollywood - Impossible -> Captain Hollywood Project - Impossible (1)
+
+Checking file 475 of 619 -> D:\MP3\Brasil\C\Raul Seixas - Muita Estrela, Pouca Constelação.mp3
+Tags -> Camisa De Vênus & Raul Seixas - Muita Estrela, Pouca Constelação
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Raul Seixas - Muita Estrela, Pouca Constelação -> Camisa De Vênus & Raul Seixas - Muita Estrela, Pouca Constelação
+
+Checking file 476 of 619 -> D:\MP3\Brasil\C\Caetano Veloso & Chico Buarque - Cotidiano.mp3
+Tags -> Caetano Veloso & Chico Buarque - Cotidiano (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Caetano Veloso & Chico Buarque - Cotidiano -> Caetano Veloso & Chico Buarque - Cotidiano (Ao Vivo)
+
+Checking file 477 of 619 -> D:\MP3\Brasil\C\Caetano Veloso - A Tua Presenca Morena.mp3
+Tags -> Caetano Veloso - A Tua Presença Morena
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Caetano Veloso - A Tua Presenca Morena -> Caetano Veloso - A Tua Presença Morena
+
+Checking file 478 of 619 -> D:\MP3\Favorites\C+C Music Factory - Here We Go (Let's Rock & Roll).mp3
+Tags -> C+C Music Factory Feat. Freedom Williams - Here We Go (Let's Rock & Roll)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: C+C Music Factory - Here We Go (Let's Rock & Roll) -> C+C Music Factory Feat. Freedom Williams - Here We Go (Let's Rock & Roll)
+
+Checking file 479 of 619 -> D:\MP3\Favorites\C+C Music Factory - Things That Make You Go Hmmm....mp3
+Tags -> C+C Music Factory Feat. Freedom Williams - Things That Make You Go Hmmm...
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: C+C Music Factory - Things That Make You Go Hmmm... -> C+C Music Factory Feat. Freedom Williams - Things That Make You Go Hmmm...
+
+Checking file 480 of 619 -> D:\MP3\B\Busta Rhymes, Janet Jackson - What's It Gonna Be! (Feat. Janet Jackson).mp3
+Tags -> Busta Rhymes Feat. Janet Jackson - What's It Gonna Be?!
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Busta Rhymes, Janet Jackson - What's It Gonna Be! (Feat. Janet Jackson) -> Busta Rhymes Feat. Janet Jackson - What's It Gonna Be_!
+
+Checking file 481 of 619 -> D:\MP3\B\Bros - When Will I Be Famous (1).mp3
+Tags -> Bros - When Will I Be Famous?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bros - When Will I Be Famous (1) -> Bros - When Will I Be Famous_
+
+Checking file 484 of 619 -> D:\MP3\Favorites\Brandy Feat. Monica - The Boy Is Mine (Radio Edit).mp3
+Tags -> Brandy & Monica - The Boy Is Mine (Radio Edit)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Brandy Feat. Monica - The Boy Is Mine (Radio Edit) -> Brandy & Monica - The Boy Is Mine (Radio Edit) (1)
+
+Checking file 486 of 619 -> D:\MP3\B\LL COOL J, Boyz II Men - Hey Lover.mp3
+Tags -> Boyz II Men Feat. LL Cool J - Hey Lover
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: LL COOL J, Boyz II Men - Hey Lover -> Boyz II Men Feat. LL Cool J - Hey Lover
+
+Checking file 488 of 619 -> D:\MP3\Favorites\Boney M. - Rivers Of Babylon (1).mp3
+Tags -> Boney M. - Rivers Of Babylon (Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Boney M. - Rivers Of Babylon (1) -> Boney M. - Rivers Of Babylon (Edit)
+
+Checking file 489 of 619 -> D:\MP3\Favorites\Boney M. - Rivers Of Babylon.mp3
+Tags -> Boney M. - Rivers Of Babylon (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Boney M. - Rivers Of Babylon -> Boney M. - Rivers Of Babylon (Extended)
+
+Checking file 491 of 619 -> D:\MP3\Favorites\Bomb The Bass - Beat Dis (1).mp3
+Tags -> Bomb The Bass - Beat Dis (Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Bomb The Bass - Beat Dis (1) -> Bomb The Bass - Beat Dis (Edit)
+
+Checking file 492 of 619 -> D:\MP3\B\Bobby Byrd - I Know You Got Soul (Extended Version).mp3
+Tags -> Bobby Byrd - I Know You Got Soul (Extended)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bobby Byrd - I Know You Got Soul (Extended Version) -> Bobby Byrd - I Know You Got Soul (Extended)
+
+Checking file 497 of 619 -> D:\MP3\B\Blind Guardian - The Bard's Song In The Forest.mp3
+Tags -> Blind Guardian - The Bard's Song: In The Forest
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Blind Guardian - The Bard's Song In The Forest -> Blind Guardian - The Bard's Song_ In The Forest
+
+Checking file 498 of 619 -> D:\MP3\B\Black Eyed Peas Feat. Sting - Union.mp3
+Tags -> The Black Eyed Peas Feat. Sting - Union
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas Feat. Sting - Union -> The Black Eyed Peas Feat. Sting - Union
+
+Checking file 499 of 619 -> D:\MP3\B\Black Eyed Peas Feat. LMFAO - Boom Boom Pow (Party Rock Remix).mp3
+Tags -> The Black Eyed Peas Feat. LMFAO - Boom Boom Pow (Party Rock Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas Feat. LMFAO - Boom Boom Pow (Party Rock Remix) -> The Black Eyed Peas Feat. LMFAO - Boom Boom Pow (Party Rock Remix)
+
+Checking file 500 of 619 -> D:\MP3\Favorites\Black Eyed Peas Feat. Justin Timberlake - Where Is The Love.mp3
+Tags -> The Black Eyed Peas Feat. Justin Timberlake - Where Is The Love? (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Black Eyed Peas Feat. Justin Timberlake - Where Is The Love -> The Black Eyed Peas Feat. Justin Timberlake - Where Is The Love_ (Extended)
+
+Checking file 501 of 619 -> D:\MP3\B\Black Eyed Peas Feat. Jack Johnson - Gone Going.mp3
+Tags -> The Black Eyed Peas Feat. Jack Johnson - Gone Going
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas Feat. Jack Johnson - Gone Going -> The Black Eyed Peas Feat. Jack Johnson - Gone Going
+
+Checking file 502 of 619 -> D:\MP3\Favorites\Black Eyed Peas Feat. Fatman Scoop - Boom Boom Pow (Remix).mp3
+Tags -> The Black Eyed Peas Feat. Fatman Scoop - Boom Boom Pow (Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas Feat. Fatman Scoop - Boom Boom Pow (Remix) -> The Black Eyed Peas Feat. Fatman Scoop - Boom Boom Pow (Remix)
+
+Checking file 503 of 619 -> D:\MP3\B\Black Eyed Peas Feat. Cee-Lo, John Legend, Talib Kweli & Q-Tip - Like That.mp3
+Tags -> The Black Eyed Peas Feat. Cee-Lo, John Legend, Talib Kweli & Q-Tip - Like That
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas Feat. Cee-Lo, John Legend, Talib Kweli & Q-Tip - Like That -> The Black Eyed Peas Feat. Cee-Lo, John Legend, Talib Kweli & Q-Tip - Like That
+
+Checking file 504 of 619 -> D:\MP3\B\Black Eyed Peas & LMFAO - Don't Stop The Party Rock Anthem Segue (DJ Jenil Party Starter).mp3
+Tags -> The Black Eyed Peas & LMFAO - Don't Stop The Party Rock Anthem Segue (DJ Jenil Party Starter)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas & LMFAO - Don't Stop The Party Rock Anthem Segue (DJ Jenil Party Starter) -> The Black Eyed Peas & LMFAO - Don't Stop The Party Rock Anthem Segue (DJ Jenil Party Starter)
+
+Checking file 505 of 619 -> D:\MP3\B\Black Eyed Peas & Beyonce - Where Is The Love.mp3
+Tags -> The Black Eyed Peas & Beyonce - Where Is The Love?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas & Beyonce - Where Is The Love -> The Black Eyed Peas & Beyonce - Where Is The Love_
+
+Checking file 506 of 619 -> D:\MP3\B\Black Eyed Peas - The Time (Omer M & Yitav K).mp3
+Tags -> The Black Eyed Peas - The Time (Omer M & Yitav K)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - The Time (Omer M & Yitav K) -> The Black Eyed Peas - The Time (Omer M & Yitav K)
+
+Checking file 507 of 619 -> D:\MP3\B\Black Eyed Peas - Rock That Body (DJ Performance & DJ Tenere Mix).mp3
+Tags -> The Black Eyed Peas - Rock That Body (DJ Performance & DJ Tenere Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Rock That Body (DJ Performance & DJ Tenere Mix) -> The Black Eyed Peas - Rock That Body (DJ Performance & DJ Tenere Mix)
+
+Checking file 508 of 619 -> D:\MP3\Favorites\Black Eyed Peas - My Humps (DJ Paulo S LA NY Mix).mp3
+Tags -> The Black Eyed Peas - My Humps (DJ Paulo S LA NY Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - My Humps (DJ Paulo S LA NY Mix) -> The Black Eyed Peas - My Humps (DJ Paulo S LA NY Mix)
+
+Checking file 509 of 619 -> D:\MP3\B\Black Eyed Peas - Let's Get It Started (Danny Rush Remix).mp3
+Tags -> The Black Eyed Peas - Let's Get It Started (Danny Rush Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Let's Get It Started (Danny Rush Remix) -> The Black Eyed Peas - Let's Get It Started (Danny Rush Remix)
+
+Checking file 510 of 619 -> D:\MP3\B\Black Eyed Peas - Had The Time Of My Life.mp3
+Tags -> The Black Eyed Peas - Had The Time Of My Life
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Had The Time Of My Life -> The Black Eyed Peas - Had The Time Of My Life
+
+Checking file 511 of 619 -> D:\MP3\B\Black Eyed Peas - Boom Boom Pow 2011 (Max Fabian Mainroom Mix).mp3
+Tags -> The Black Eyed Peas - Boom Boom Pow 2011 (Max Fabian Mainroom Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Boom Boom Pow 2011 (Max Fabian Mainroom Mix) -> The Black Eyed Peas - Boom Boom Pow 2011 (Max Fabian Mainroom Mix)
+
+Checking file 512 of 619 -> D:\MP3\B\Black Eyed Peas - Just Can't Get Enough (Roger Slato 2011 Remix).mp3
+Tags -> The Black Eyed Peas - Just Can't Get Enough (Roger Slato 2011 Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Just Can't Get Enough (Roger Slato 2011 Remix) -> The Black Eyed Peas - Just Can't Get Enough (Roger Slato 2011 Remix)
+
+Checking file 513 of 619 -> D:\MP3\B\Black Eyed Peas - Don't Stop The Party (Shutterz Bootleg).mp3
+Tags -> The Black Eyed Peas - Don't Stop The Party (Shutterz Bootleg)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Don't Stop The Party (Shutterz Bootleg) -> The Black Eyed Peas - Don't Stop The Party (Shutterz Bootleg)
+
+Checking file 514 of 619 -> D:\MP3\B\Black Eyed Peas - I Gotta Feelin' (O.B Electribe Mix).mp3
+Tags -> The Black Eyed Peas - I Gotta Feelin' (O.B Electribe Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - I Gotta Feelin' (O.B Electribe Mix) -> The Black Eyed Peas - I Gotta Feelin' (O.B Electribe Mix)
+
+Checking file 515 of 619 -> D:\MP3\B\Black Eyed Peas - Don't Phunk With My Heart.mp3
+Tags -> The Black Eyed Peas - Don't Phunk With My Heart
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Don't Phunk With My Heart -> The Black Eyed Peas - Don't Phunk With My Heart
+
+Checking file 516 of 619 -> D:\MP3\B\Black Eyed Peas - They Don't Want Music.mp3
+Tags -> The Black Eyed Peas - They Don't Want Music
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - They Don't Want Music -> The Black Eyed Peas - They Don't Want Music
+
+Checking file 517 of 619 -> D:\MP3\B\Black Eyed Peas - Bebot.mp3
+Tags -> The Black Eyed Peas - Bebot
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Bebot -> The Black Eyed Peas - Bebot
+
+Checking file 518 of 619 -> D:\MP3\B\Black Eyed Peas - Feel It.mp3
+Tags -> The Black Eyed Peas - Feel It
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Feel It -> The Black Eyed Peas - Feel It
+
+Checking file 519 of 619 -> D:\MP3\B\Black Eyed Peas - Dum Diddly.mp3
+Tags -> The Black Eyed Peas - Dum Diddly
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Dum Diddly -> The Black Eyed Peas - Dum Diddly
+
+Checking file 520 of 619 -> D:\MP3\B\Black Eyed Peas - Don't Lie.mp3
+Tags -> The Black Eyed Peas - Don't Lie
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Don't Lie -> The Black Eyed Peas - Don't Lie
+
+Checking file 521 of 619 -> D:\MP3\B\Black Eyed Peas - Dirty Dancing.mp3
+Tags -> The Black Eyed Peas - Dirty Dancing
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Dirty Dancing -> The Black Eyed Peas - Dirty Dancing
+
+Checking file 522 of 619 -> D:\MP3\Favorites\Black Eyed Peas - Third Eye.mp3
+Tags -> The Black Eyed Peas - Third Eye
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Third Eye -> The Black Eyed Peas - Third Eye
+
+Checking file 523 of 619 -> D:\MP3\Favorites\Black Eyed Peas - Where Is The Love.mp3
+Tags -> The Black Eyed Peas - Where Is The Love?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Where Is The Love -> The Black Eyed Peas - Where Is The Love_ (1)
+
+Checking file 524 of 619 -> D:\MP3\B\Black Eyed Peas - Let's Get Retarded.mp3
+Tags -> The Black Eyed Peas - Let's Get Retarded
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Let's Get Retarded -> The Black Eyed Peas - Let's Get Retarded
+
+Checking file 525 of 619 -> D:\MP3\B\Black Eyed Peas - Mare.mp3
+Tags -> The Black Eyed Peas - Mare
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Mare -> The Black Eyed Peas - Mare
+
+Checking file 526 of 619 -> D:\MP3\B\Black Eyed Peas - Simple Little Melody.mp3
+Tags -> The Black Eyed Peas - Simple Little Melody
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Simple Little Melody -> The Black Eyed Peas - Simple Little Melody
+
+Checking file 527 of 619 -> D:\MP3\B\Black Eyed Peas - Rockin' To Beat.mp3
+Tags -> The Black Eyed Peas - Rockin' To Beat
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Rockin' To Beat -> The Black Eyed Peas - Rockin' To Beat
+
+Checking file 528 of 619 -> D:\MP3\B\Black Eyed Peas - Now Generation.mp3
+Tags -> The Black Eyed Peas - Now Generation
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Now Generation -> The Black Eyed Peas - Now Generation
+
+Checking file 529 of 619 -> D:\MP3\B\Black Eyed Peas - Showdown.mp3
+Tags -> The Black Eyed Peas - Showdown
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Showdown -> The Black Eyed Peas - Showdown
+
+Checking file 530 of 619 -> D:\MP3\B\Black Eyed Peas - Electric City.mp3
+Tags -> The Black Eyed Peas - Electric City
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Electric City -> The Black Eyed Peas - Electric City
+
+Checking file 531 of 619 -> D:\MP3\B\Black Eyed Peas - Out Of My Head.mp3
+Tags -> The Black Eyed Peas - Out Of My Head
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Out Of My Head -> The Black Eyed Peas - Out Of My Head
+
+Checking file 532 of 619 -> D:\MP3\B\Black Eyed Peas - Party All The Time.mp3
+Tags -> The Black Eyed Peas - Party All The Time
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Party All The Time -> The Black Eyed Peas - Party All The Time
+
+Checking file 533 of 619 -> D:\MP3\B\Black Eyed Peas - Ring-a-Ling.mp3
+Tags -> The Black Eyed Peas - Ring-a-Ling
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Ring-a-Ling -> The Black Eyed Peas - Ring-a-Ling
+
+Checking file 534 of 619 -> D:\MP3\B\Black Eyed Peas - Missing You.mp3
+Tags -> The Black Eyed Peas - Missing You
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Missing You -> The Black Eyed Peas - Missing You
+
+Checking file 535 of 619 -> D:\MP3\B\Black Eyed Peas - Alive.mp3
+Tags -> The Black Eyed Peas - Alive
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Alive -> The Black Eyed Peas - Alive
+
+Checking file 536 of 619 -> D:\MP3\Favorites\Black Eyed Peas - I Gotta Feeling.mp3
+Tags -> The Black Eyed Peas - I Gotta Feeling
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - I Gotta Feeling -> The Black Eyed Peas - I Gotta Feeling
+
+Checking file 537 of 619 -> D:\MP3\B\Black Eyed Peas - Imma Be.mp3
+Tags -> The Black Eyed Peas - Imma Be
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Imma Be -> The Black Eyed Peas - Imma Be
+
+Checking file 538 of 619 -> D:\MP3\B\Black Eyed Peas - Rock That Body.mp3
+Tags -> The Black Eyed Peas - Rock That Body
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Rock That Body -> The Black Eyed Peas - Rock That Body
+
+Checking file 539 of 619 -> D:\MP3\Favorites\Black Eyed Peas - Boom Boom Pow.mp3
+Tags -> The Black Eyed Peas - Boom Boom Pow
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Boom Boom Pow -> The Black Eyed Peas - Boom Boom Pow
+
+Checking file 540 of 619 -> D:\MP3\B\Black Eyed Peas - I Gotta Feeling (Fractal System Remix).mp3
+Tags -> The Black Eyed Peas - I Gotta Feeling (Fractal System Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - I Gotta Feeling (Fractal System Remix) -> The Black Eyed Peas - I Gotta Feeling (Fractal System Remix)
+
+Checking file 541 of 619 -> D:\MP3\Favorites\Black Eyed Peas - The Time (The Dirty Bit Remix).mp3
+Tags -> The Black Eyed Peas - The Time (The Dirty Bit Remix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - The Time (The Dirty Bit Remix) -> The Black Eyed Peas - The Time (The Dirty Bit Remix)
+
+Checking file 542 of 619 -> D:\MP3\B\Black Eyed Peas - Love Won't Wait.mp3
+Tags -> The Black Eyed Peas - Love Won't Wait
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - Love Won't Wait -> The Black Eyed Peas - Love Won't Wait
+
+Checking file 543 of 619 -> D:\MP3\Favorites\Black Eyed Peas - The Time (Dirty Bit).mp3
+Tags -> The Black Eyed Peas - The Time (Dirty Bit)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Black Eyed Peas - The Time (Dirty Bit) -> The Black Eyed Peas - The Time (Dirty Bit)
+
+Checking file 546 of 619 -> D:\MP3\B\Beyonce - Irreplaceable.mp3
+Tags -> Beyoncé - Irreplaceable
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beyonce - Irreplaceable -> Beyoncé - Irreplaceable
+
+Checking file 549 of 619 -> D:\MP3\Favorites\Beloved - Your Love Takes Me Higher (The Pod Went Pop Mix).mp3
+Tags -> The Beloved - Your Love Takes Me Higher (The Pod Went Pop Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beloved - Your Love Takes Me Higher (The Pod Went Pop Mix) -> The Beloved - Your Love Takes Me Higher (The Pod Went Pop Mix)
+
+Checking file 551 of 619 -> D:\MP3\Favorites\Beats International - Dub Be Good To Me (1).mp3
+Tags -> Beats International Feat. Lindy Layton - Dub Be Good To Me
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beats International - Dub Be Good To Me (1) -> Beats International Feat. Lindy Layton - Dub Be Good To Me (2)
+
+Checking file 552 of 619 -> D:\MP3\B\Beatmasters - I Can't Dance.mp3
+Tags -> The Beatmasters - I Can't Dance
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beatmasters - I Can't Dance -> The Beatmasters - I Can't Dance
+
+Checking file 553 of 619 -> D:\MP3\B\Beatmasters - Rok Da House.mp3
+Tags -> The Beatmasters - Rok Da House
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beatmasters - Rok Da House -> The Beatmasters - Rok Da House
+
+Checking file 554 of 619 -> D:\MP3\B\Beatmasters - Rock Da House.mp3
+Tags -> The Beatmasters - Rock Da House
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beatmasters - Rock Da House -> The Beatmasters - Rock Da House
+
+Checking file 555 of 619 -> D:\MP3\B\Beatmasters - Burn It Up (12 Inch).mp3
+Tags -> The Beatmasters - Burn It Up (12 Inch)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beatmasters - Burn It Up (12 Inch) -> The Beatmasters - Burn It Up (12 Inch)
+
+Checking file 556 of 619 -> D:\MP3\Favorites\Beatmasters - Who's In The House.mp3
+Tags -> The Beatmasters - Who's In The House (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Beatmasters - Who's In The House -> The Beatmasters - Who's In The House (Extended)
+
+Checking file 557 of 619 -> D:\MP3\Favorites\Beatmasters - Who's In The House (1).mp3
+Tags -> The Beatmasters - Who's In The House
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Beatmasters - Who's In The House (1) -> The Beatmasters - Who's In The House (1)
+
+Checking file 560 of 619 -> D:\MP3\B\Bassheads - Is There Anybody Out There (Extended).mp3
+Tags -> Bassheads - Is There Anybody Out There? (Extended)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bassheads - Is There Anybody Out There (Extended) -> Bassheads - Is There Anybody Out There_ (Extended)
+
+Checking file 561 of 619 -> D:\MP3\B\Bassheads - Is There Anybody Out There (12 Inch).mp3
+Tags -> Bassheads - Is There Anybody Out There? (12 Inch)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bassheads - Is There Anybody Out There (12 Inch) -> Bassheads - Is There Anybody Out There_ (12 Inch)
+
+Checking file 562 of 619 -> D:\MP3\B\Bassheads - Is There Anybody Out There.mp3
+Tags -> Bassheads - Is There Anybody Out There?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bassheads - Is There Anybody Out There -> Bassheads - Is There Anybody Out There_
+
+Checking file 563 of 619 -> D:\MP3\B\Bassheads - Is There Anybody Out There (1).mp3
+Tags -> Bassheads - Is There Anybody Out There?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bassheads - Is There Anybody Out There (1) -> Bassheads - Is There Anybody Out There_ (1)
+
+Checking file 565 of 619 -> D:\MP3\B\Barry Mann - Ven (I'm Lost).mp3
+Tags -> Barry Mann - Ven (I'm Lost) (Spanish)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Barry Mann - Ven (I'm Lost) -> Barry Mann - Ven (I'm Lost) (Spanish)
+
+Checking file 566 of 619 -> D:\MP3\B\Bar-Kays, The - Freakshow On The Dance Floor.mp3
+Tags -> The Bar-Kays - Freakshow On The Dance Floor
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bar-Kays, The - Freakshow On The Dance Floor -> The Bar-Kays - Freakshow On The Dance Floor
+
+Checking file 569 of 619 -> D:\MP3\B\Barbara Roy With Ecstacy, Passion & Pain - Touch And Go.mp3
+Tags -> Barbara Roy Vs. Ecstacy, Passion & Pain - Touch And Go
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Barbara Roy With Ecstacy, Passion & Pain - Touch And Go -> Barbara Roy Vs. Ecstacy, Passion & Pain - Touch And Go
+
+Checking file 570 of 619 -> D:\MP3\Favorites_Brasil\Barão Vermelho - Maior Abandonado (1).mp3
+Tags -> Barão Vermelho Feat. Frejat - Maior Abandonado (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Barão Vermelho - Maior Abandonado (1) -> Barão Vermelho Feat. Frejat - Maior Abandonado (Ao Vivo) (1)
+
+Checking file 571 of 619 -> D:\MP3\Brasil\B\Barão Vermelho E Kid Abelha - Bete Balanço.mp3
+Tags -> Barão Vermelho E Kid Abelha - Bete Balanço (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Barão Vermelho E Kid Abelha - Bete Balanço -> Barão Vermelho E Kid Abelha - Bete Balanço (Ao Vivo)
+
+Checking file 572 of 619 -> D:\MP3\Favorites\Bangles - Walk Like An Egyptian.mp3
+Tags -> The Bangles - Walk Like An Egyptian
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Bangles - Walk Like An Egyptian -> The Bangles - Walk Like An Egyptian
+
+Checking file 573 of 619 -> D:\MP3\B\The Bangles - In Your Room.mp3
+Tags -> Bangles - In Your Room
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: The Bangles - In Your Room -> Bangles - In Your Room
+
+Checking file 574 of 619 -> D:\MP3\Favorites\Band Of Gold - Love Songs Are Back Again.mp3
+Tags -> Band Of Gold - Love Songs Are Back Again (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Band Of Gold - Love Songs Are Back Again -> Band Of Gold - Love Songs Are Back Again (Extended)
+
+Checking file 575 of 619 -> D:\MP3\Favorites\Baltimora - Tarzan Boy (1).mp3
+Tags -> Baltimora - Tarzan Boy (Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Baltimora - Tarzan Boy (1) -> Baltimora - Tarzan Boy (Edit)
+
+Checking file 576 of 619 -> D:\MP3\B\Baltimora - Key Key Karimba (7- Version).mp3
+Tags -> Baltimora - Key Key Karimba (7 Inch Version)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Baltimora - Key Key Karimba (7- Version) -> Baltimora - Key Key Karimba (7 Inch Version)
+
+Checking file 577 of 619 -> D:\MP3\B\Backstreet Boys - Everybody (Backstreet's Back) (Extended Version).mp3
+Tags -> Backstreet Boys - Everybody (Backstreet's Back) (Extended)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Backstreet Boys - Everybody (Backstreet's Back) (Extended Version) -> Backstreet Boys - Everybody (Backstreet's Back) (Extended)
+
+Checking file 580 of 619 -> D:\MP3\A\Az Yet, Peter Cetera - Hard To Say I'm Sorry (Feat. Peter Cetera).mp3
+Tags -> Az Yet Feat. Peter Cetera - Hard To Say I'm Sorry
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Az Yet, Peter Cetera - Hard To Say I'm Sorry (Feat. Peter Cetera) -> Az Yet Feat. Peter Cetera - Hard To Say I'm Sorry
+
+Checking file 582 of 619 -> D:\MP3\Favorites\Avril Lavigne - Girlfriend.mp3
+Tags -> Avril Lavigne - Girlfriend (Radio Edit)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Avril Lavigne - Girlfriend -> Avril Lavigne - Girlfriend (Radio Edit)
+
+Checking file 583 of 619 -> D:\MP3\Favorites\Atlantic Star - Always.mp3
+Tags -> Atlantic Starr - Always
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Atlantic Star - Always -> Atlantic Starr - Always
+
+Checking file 585 of 619 -> D:\MP3\A\ATB - 9 P.M..mp3
+Tags -> ATB - 9 PM (Till I Come)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: ATB - 9 P.M. -> ATB - 9 PM (Till I Come) (2)
+
+Checking file 587 of 619 -> D:\MP3\A\Armin Van Buuren, Vanvelzen - Take Me Where I Wanna Go Feat. Vanvelzen.mp3
+Tags -> Armin Van Buuren Feat. Vanvelzen - Take Me Where I Wanna Go
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Armin Van Buuren, Vanvelzen - Take Me Where I Wanna Go Feat. Vanvelzen -> Armin Van Buuren Feat. Vanvelzen - Take Me Where I Wanna Go
+
+Checking file 589 of 619 -> D:\MP3\Favorites\Armand Van Helden Feat. Duane Harden - You Don't Know Me.mp3
+Tags -> Armand Van Helden Feat. Duane Harden - U Don't Know Me
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Armand Van Helden Feat. Duane Harden - You Don't Know Me -> Armand Van Helden Feat. Duane Harden - U Don't Know Me
+
+Checking file 591 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - Rosa De Ouro.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - Rosa De Ouro
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - Rosa De Ouro -> Aracy Cortes & Clementina De Jesus - Rosa De Ouro
+
+Checking file 592 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - Semente Do Samba.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - Semente Do Samba
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - Semente Do Samba -> Aracy Cortes & Clementina De Jesus - Semente Do Samba
+
+Checking file 593 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - Bate Canela.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - Bate Canela
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - Bate Canela -> Aracy Cortes & Clementina De Jesus - Bate Canela
+
+Checking file 594 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - Nasceste De Uma Semente.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - Nasceste De Uma Semente
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - Nasceste De Uma Semente -> Aracy Cortes & Clementina De Jesus - Nasceste De Uma Semente
+
+Checking file 595 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - Escurinho, Se Eu Pudesse, Nem É Bom Falar.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - Escurinho, Se Eu Pudesse, Nem É Bom Falar
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - Escurinho, Se Eu Pudesse, Nem É Bom Falar -> Aracy Cortes & Clementina De Jesus - Escurinho, Se Eu Pudesse, Nem É Bom Falar
+
+Checking file 596 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - Senhora Rainha.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - Senhora Rainha
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - Senhora Rainha -> Aracy Cortes & Clementina De Jesus - Senhora Rainha
+
+Checking file 597 of 619 -> D:\MP3\Brasil\A\Clementina De Jesus - D. Maria.mp3
+Tags -> Aracy Cortes & Clementina De Jesus - D. Maria
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Clementina De Jesus - D. Maria -> Aracy Cortes & Clementina De Jesus - D. Maria
+
+Checking file 599 of 619 -> D:\MP3\Favorites\The Animals - House Of The Rising Sun.mp3
+Tags -> The Animals - The House Of The Rising Sun
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: The Animals - House Of The Rising Sun -> The Animals - The House Of The Rising Sun
+
+Checking file 602 of 619 -> D:\MP3\Favorites\Andrea True Connection - More, More, More.mp3
+Tags -> Andrea True Connection - More, More, More (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Andrea True Connection - More, More, More -> Andrea True Connection - More, More, More (Extended)
+
+Checking file 603 of 619 -> D:\MP3\Favorites_Brasil\Amado Batista - Meu Ex-Amor.mp3
+Tags -> Amado Batista - Meu Ex-Amor (Ao Vivo)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Amado Batista - Meu Ex-Amor -> Amado Batista - Meu Ex-Amor (Ao Vivo)
+
+Checking file 604 of 619 -> D:\MP3\A\Aly & Fila, Roger Shah, Adriana Thorpe - Perfect Love Feat. Adriana Thorpe.mp3
+Tags -> Aly & Fila, Roger Shah Feat. Adriana Thorpe - Perfect Love
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Aly & Fila, Roger Shah, Adriana Thorpe - Perfect Love Feat. Adriana Thorpe -> Aly & Fila, Roger Shah Feat. Adriana Thorpe - Perfect Love
+
+Checking file 606 of 619 -> D:\MP3\A\Althea And Donna - Uptown Top Ranking.mp3
+Tags -> Althea & Donna - Uptown Top Ranking
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Althea And Donna - Uptown Top Ranking -> Althea & Donna - Uptown Top Ranking
+
+Checking file 608 of 619 -> D:\MP3\Favorites_Brasil\Almir Sáter - Cabecinha No Ombro.mp3
+Tags -> Almir Sáter & Sergio Reis - Cabecinha No Ombro
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Almir Sáter - Cabecinha No Ombro -> Almir Sáter & Sergio Reis - Cabecinha No Ombro
+
+Checking file 609 of 619 -> D:\MP3\A\Alice In Chains - Would (1).mp3
+Tags -> Alice In Chains - Would?
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Alice In Chains - Would (1) -> Alice In Chains - Would_
+
+Checking file 610 of 619 -> D:\MP3\A\Alice DJ - Better Off Alone (Remastered) (1999 Original Hit Radio).mp3
+Tags -> Alice DJ - Better Off Alone (1999 Original Hit Radio)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Alice DJ - Better Off Alone (Remastered) (1999 Original Hit Radio) -> Alice DJ - Better Off Alone (1999 Original Hit Radio)
+
+Checking file 612 of 619 -> D:\MP3\A\Alex Gaudino - Destination Calabria (Beatcode Project Mix).mp3
+Tags -> Alex Gaudino Feat. Crystal Waters - Destination Calabria (Beatcode Project Mix)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Alex Gaudino - Destination Calabria (Beatcode Project Mix) -> Alex Gaudino Feat. Crystal Waters - Destination Calabria (Beatcode Project Mix)
+
+Checking file 613 of 619 -> D:\MP3\Favorites\Alex Gaudino - Destination Calabria.mp3
+Tags -> Alex Gaudino Feat. Crystal Waters - Destination Calabria (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Alex Gaudino - Destination Calabria -> Alex Gaudino Feat. Crystal Waters - Destination Calabria (Extended)
+
+Checking file 614 of 619 -> D:\MP3\A\Alex Ferrari - Caldeirao.mp3
+Tags -> Alex Ferrari - Caldeirão
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Alex Ferrari - Caldeirao -> Alex Ferrari - Caldeirão
+
+Checking file 615 of 619 -> D:\MP3\Favorites_Brasil\Alceu Valença - Solidão (1).mp3
+Tags -> Alceu Valença - Solidão 
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Alceu Valença - Solidão (1) -> Alceu Valença - Solidão (2)
+
+Checking file 616 of 619 -> D:\MP3\Favorites\Alain Jackinsky - My Mind.mp3
+Tags -> Alain Jackinsky Feat. Candi Staton - My Mind
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Alain Jackinsky - My Mind -> Alain Jackinsky Feat. Candi Staton - My Mind
+
+Checking file 617 of 619 -> D:\MP3\Favorites\Adamsky - Space Jungle.mp3
+Tags -> Adamsky - Space Jungle (Extended)
+Winning method: 3 (Superset)- Best: tags
+Changing file name: Adamsky - Space Jungle -> Adamsky - Space Jungle (Extended)
+
+Checking file 619 of 619 -> D:\MP3\Favorites\Ace Of Base - Lucky Love (Extended Original Version).mp3
+Tags -> Ace Of Base - Lucky Love (Extended Original)
+Winning method: 2 (Eq Title/diff Art)- Best: tags
+Changing file name: Ace Of Base - Lucky Love (Extended Original Version) -> Ace Of Base - Lucky Love (Extended Original)
+
+Files where name mismatches tags: 407 (match 212)
+
+Final STATS:
+Key: Match -> 212
+Key: Mismatch -> 407
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 2 (Eq Title/diff Art) -> 126
+Key: 3 (Superset) -> 85

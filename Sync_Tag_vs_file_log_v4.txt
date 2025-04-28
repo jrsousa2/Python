@@ -1,0 +1,1557 @@
+
+
+
+TIME: Friday 03/15/24 2:50 PM
+
+
+Checking file 2 of 341 -> D:\MP3\Y\Young Buck - Let Me In (Album Version Explicit).mp3
+Tags -> Young Buck - Let Me In (Explicit)
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Friday 03/15/24 3:01 PM
+
+
+Checking file 12 of 341 -> D:\MP3\W\The Who - My Generation (Stereo Version).mp3
+Tags -> The Who - My Generation
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Friday 03/15/24 3:04 PM
+
+
+Checking file 9 of 311 -> D:\MP3\Favorites\When In Rome - The Promise (Studio 1987 Version).mp3
+Tags -> When In Rome - The Promise (Studio Version)
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Friday 03/15/24 3:12 PM
+
+
+Checking file 8 of 383 -> D:\MP3\M\M.A.R.R.S. - Pump Up The Volume (Bonus Beats) , 1987 4th & Br.mp3
+Tags -> M.A.R.R.S. - Pump Up The Volume (Bonus Beats)
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Friday 03/15/24 3:13 PM
+
+
+Checking file 11 of 383 -> D:\MP3\D\Dance Macabre - B3 Staggering Up The Stairs.mp3
+Tags -> Dance Macabre - Staggering Up The Stairs
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Friday 03/15/24 3:15 PM
+
+
+Checking file 13 of 383 -> D:\MP3\Favorites\Chic - I Want Your Love (Edit).mp3
+Tags -> Chic - I Want Your Love
+Winning method: 3 (Superset) - Best: file
+
+Checking file 18 of 383 -> D:\MP3\J\Jazmine - Makes Me Go Mmm (Z103 Remix) (ReEdited By DJ Geremy).mp3
+Tags -> Jazmine - Makes Me Go Mmmm
+Winning method: 3 (Superset) - Best: file
+
+Checking file 19 of 383 -> D:\MP3\H\Daryl Hall & John Oates - Method Of Modern Love.mp3
+Tags -> Hall & Oates - Method Of Modern Love
+Winning method: 2 (Eq Title/diff Art) - Best: file
+
+
+TIME: Friday 03/15/24 3:20 PM
+
+
+Checking file 19 of 381 -> D:\MP3\B\Blues Br-Others (Dr. Dre, Snoop Dogg, 50ct, Kanye, Beastie Boys) - Every Rapper Needs Somebody To Love (Pytski Mashup).mp3
+Tags -> Blues Brothers - Every Rapper Needs Somebody To Love (Pytski Mashup)
+Winning method: 2 (Eq Title/diff Art) - Best: file
+
+
+TIME: Friday 03/15/24 3:24 PM
+
+
+Checking file 30 of 382 -> D:\MP3\T\Tone-Loc Meets ZZ-Bros. - Funky Cold Medina Y2K.mp3
+Tags -> Tone-Loc & ZZ-Bros. - Funky Cold Medina Y2K
+Winning method: 2 (Eq Title/diff Art) - Best: file
+
+
+TIME: Friday 03/15/24 3:25 PM
+
+
+Checking file 43 of 382 -> D:\MP3\J\Jim Croce - I Got A Name (Stereo Version).mp3
+Tags -> Jim Croce - I Got A Name
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Friday 03/15/24 3:26 PM
+
+
+Checking file 50 of 382 -> D:\MP3\Favorites_Brasil\Charlie Brown Jr. - Proibida Pra Mim (Grazon).mp3
+Tags -> Charlie Brown Jr. - Proibida Pra Mim
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Saturday 03/16/24 1:05 AM
+
+
+Files where name mismatches tags: 142 (match 0)
+
+Final STATS:
+Key: Match -> 0
+Key: Mismatch -> 142
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+
+
+TIME: Saturday 03/16/24 1:07 AM
+
+
+Checking file 18 of 435 -> D:\MP3\C\Boy George & The Culture Club - Time.mp3
+Tags -> Culture Club feat. Boy George - Time (Extended)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Boy George & The Culture Club - Time -> Culture Club feat. Boy George - Time (Extended)
+
+Checking file 33 of 435 -> D:\MP3\Favorites_Brasil\Charlie Brown Jr. - Proibida Pra Mim (Grazon).mp3
+Tags -> Charlie Brown Jr. - Proibida Pra Mim
+Winning method: 3 (Superset) - Best: file
+
+
+TIME: Saturday 03/16/24 1:08 AM
+
+
+Checking file 37 of 434 -> D:\MP3\J\Jocelyn Brown - Love's Gonna Get You (12 Inch Mix).mp3
+Tags -> Jocelyn Brown - Love's Gonna Get You (12 Inch Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 52 of 434 -> D:\MP3\Favorites\Joey Scarbury - Believe It Or Not.mp3
+Tags -> Joey Scarbury - Believe It Or Not
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 58 of 434 -> D:\MP3\I\The Immortals - Mortal Kombat (Techno-Syndrome 12 Inch Mix).mp3
+Tags -> The Immortals - Mortal Kombat (Techno-Syndrome 12 inch Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 84 of 434 -> D:\MP3\Favorites\Captain Jack Feat. Gipsy Kings - Get Up! (Techno).mp3
+Tags -> Captain Jack Feat. Gipsy Kings - Get Up! (Techno)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 86 of 434 -> D:\MP3\Brasil\C\Cássia Eller - Sabotagem.mp3
+Tags -> Cássia Eller - Sabotagem (Acustico)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Cássia Eller - Sabotagem -> Cássia Eller - Sabotagem (Acustico)
+
+Checking file 97 of 434 -> D:\MP3\C\Clubnature - Time 4 Dance (DJ Splash Remix).mp3
+Tags -> Clubnature - Time 4 Dance (DJ Splash Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 98 of 434 -> D:\MP3\C\Coldplay - Every Teardrop Is A Waterfall (We Don't Belong In Pacha Club Mix).mp3
+Tags -> Coldplay - Every Teardrop Is A Waterfall (We Don't Belong In Pacha Club Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 112 of 434 -> D:\MP3\D\Down Low - Moonlight (1).mp3
+Tags -> Down Low - Moonlight
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 114 of 434 -> D:\MP3\D\Drunken Monkey - E (As).mp3
+Tags -> Drunken Monkey - E (As)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 119 of 434 -> D:\MP3\Favorites\Elton John - Candle In The Wind 1997.mp3
+Tags -> Elton John - Candle In The Wind 1997
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 171 of 434 -> D:\MP3\M\Maureen - Don't Fight The Music (12 Inch Vocal Club Mix).mp3
+Tags -> Maureen - Don't Fight The Music (12 inch Vocal Club Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 201 of 434 -> D:\MP3\R\Raze - Break 4 Love (English 12 Inch Mix).mp3
+Tags -> Raze - Break 4 Love (English 12 inch Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 234 of 434 -> D:\MP3\U\U 96 - I Wanna Be A Kennedy.mp3
+Tags -> U 96 - I Wanna Be A Kennedy
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 235 of 434 -> D:\MP3\U\U 96 - Headline.mp3
+Tags -> U 96 - Headline
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 236 of 434 -> D:\MP3\U\U 96 - Heaven (Prophecy Mix).mp3
+Tags -> U 96 - Heaven (Prophecy Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 237 of 434 -> D:\MP3\U\U 96 - A Night To Remember (12 Inch Mix).mp3
+Tags -> U 96 - A Night To Remember (12 Inch Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 241 of 434 -> D:\MP3\Favorites\When In Rome - The Promise (Studio 1987 Version).mp3
+Tags -> When In Rome - The Promise (Studio 1987 Version)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 254 of 434 -> D:\MP3\D\Dan Q & Basement Jaxx - Aura Tribe (Club 69 Tribal Mix) , Fly Life.mp3
+Tags -> Dan Q & Basement Jaxx - Aura Tribe (Club 69 Tribal Mix) / Fly Life
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 267 of 434 -> D:\MP3\M\Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) , Plastic Surgery.mp3
+Tags -> Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) / Plastic Surgery
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 275 of 434 -> D:\MP3\S\Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) , Lunar Camel.mp3
+Tags -> Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) / Lunar Camel
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 279 of 434 -> D:\MP3\B\Blues Brothers - Jailhouse.mp3
+Tags -> The Blues Brothers - Jailhouse
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Blues Brothers - Jailhouse -> The Blues Brothers - Jailhouse
+
+Checking file 280 of 434 -> D:\MP3\B\Backstreet Boys & N'sync - Megamix.mp3
+Tags -> Backstreet Boys & *NSync - Megamix
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Backstreet Boys & N'sync - Megamix -> Backstreet Boys & _NSync - Megamix
+
+Checking file 282 of 434 -> D:\MP3\E\94 East - Games.mp3
+Tags -> 94 East Feat. Prince - Games
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: 94 East - Games -> 94 East Feat. Prince - Games (1)
+
+Checking file 283 of 434 -> D:\MP3\A\Ace Of Base - Beautiful Life (C. Baumann Remix).mp3
+Tags -> Ace Of Base - Beautiful Life (C. Baumann Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 284 of 434 -> D:\MP3\A\Ace Of Base - Waiting For Magic (Radio Edit).mp3
+Tags -> Ace Of Base - Waiting For Magic (Radio Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 285 of 434 -> D:\MP3\A\Al Corley - The Answers, The Solutions.mp3
+Tags -> Al Corley - The Answers, The Solutions
+Winning method: 1 (Perfect match) - Best: both
+
+
+TIME: Saturday 03/16/24 1:14 AM
+
+
+Checking file 1 of 317 -> D:\MP3\Y\Young Buck - Let Me In (Explicit).mp3
+Tags -> Young Buck - Let Me In (Explicit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 3 of 317 -> D:\MP3\Y\Yeah Yeah Yeahs - Gold Lion.mp3
+Tags -> Yeah Yeah Yeahs - Gold Lion
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 4 of 317 -> D:\MP3\Favorites\Yazoo - Situation.mp3
+Tags -> Yazoo - Situation
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 10 of 317 -> D:\MP3\W\The Who - Won't Get Fooled Again (Original).mp3
+Tags -> The Who - Won't Get Fooled Again (Original)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 11 of 317 -> D:\MP3\W\The Who - My Generation (1).mp3
+Tags -> The Who - My Generation
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 12 of 317 -> D:\MP3\W\Weezer - Keep Fishin'.mp3
+Tags -> Weezer - Keep Fishin'
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 13 of 317 -> D:\MP3\V\Vicious, Doug E. Fresh - Freaks.mp3
+Tags -> Vicious, Doug E. Fresh - Freaks
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 18 of 317 -> D:\MP3\T\TV On The Radio - Wolf Like Me (1).mp3
+Tags -> TV On The Radio - Wolf Like Me
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 21 of 317 -> D:\MP3\T\Tone-Loc & ZZ-Bros. - Funky Cold Medina Y2K.mp3
+Tags -> Tone-Loc & ZZ-Bros. - Funky Cold Medina Y2K
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 22 of 317 -> D:\MP3\T\Tone-Loc & Vanilla Ice - Ice Wild Thing (Old School Mash).mp3
+Tags -> Tone-Loc & Vanilla Ice - Ice Wild Thing (Old School Mash)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 23 of 317 -> D:\MP3\Favorites\Tone-Loc - Wild Thing.mp3
+Tags -> Tone-Loc - Wild Thing
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 24 of 317 -> D:\MP3\T\Tommy James & The Shondells - Crimson & Clover (Extended).mp3
+Tags -> Tommy James & The Shondells - Crimson & Clover (Extended)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 27 of 317 -> D:\MP3\T\Tina Charles & Bon Entendeur - I Love To Love.mp3
+Tags -> Tina Charles & Bon Entendeur - I Love To Love (Edit)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Tina Charles & Bon Entendeur - I Love To Love -> Tina Charles & Bon Entendeur - I Love To Love (Edit)
+
+Checking file 28 of 317 -> D:\MP3\T\Thursday - Signals Over The Air.mp3
+Tags -> Thursday - Signals Over The Air
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 29 of 317 -> D:\MP3\T\Them Feat. Van Morrison - Gloria (2).mp3
+Tags -> Them Feat. Van Morrison - Gloria
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 32 of 317 -> D:\MP3\Favorites\Terence Trent D'Arby - Wishing Well.mp3
+Tags -> Terence Trent D'Arby - Wishing Well
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 33 of 317 -> D:\MP3\Favorites\A Taste Of Honey - Boogie Oogie Oogie (Single).mp3
+Tags -> A Taste Of Honey - Boogie Oogie Oogie (Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 34 of 317 -> D:\MP3\S\SWV & Wu Tang Clan - Anything (Old Skool Remix).mp3
+Tags -> SWV & Wu Tang Clan - Anything (Old Skool Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 39 of 317 -> D:\MP3\S\Stevie Wonder - Summer Soft.mp3
+Tags -> Stevie Wonder - Summer Soft
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 41 of 317 -> D:\MP3\Favorites\State Of Grace - Hello (Exodus).mp3
+Tags -> State Of Grace - Hello (Exodus)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 45 of 317 -> D:\MP3\S\Simply Red - To Be Free (VISNADI 12 Inch).mp3
+Tags -> Simply Red - To Be Free (VISNADI 12 Inch)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 46 of 317 -> D:\MP3\S\Simple Minds - Stage Fright.mp3
+Tags -> Simple Minds - Stage Fright
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 47 of 317 -> D:\MP3\S\Simon & Garfunkel - Mrs. Robinson.mp3
+Tags -> Simon & Garfunkel - Mrs. Robinson
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 57 of 317 -> D:\MP3\S\Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) , Lunar Camel.mp3
+Tags -> Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) / Lunar Camel
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 58 of 317 -> D:\MP3\S\Sam Cooke - (What A) Wonderful World.mp3
+Tags -> Sam Cooke - (What A) Wonderful World
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 61 of 317 -> D:\MP3\R\Rose Royce - Car Wash (Extended).mp3
+Tags -> Rose Royce - Car Wash (Extended)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 69 of 317 -> D:\MP3\R\Rihanna - Pon De Replay (1).mp3
+Tags -> Rihanna - Pon De Replay
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 79 of 317 -> D:\MP3\P\Primus - John The Fisherman.mp3
+Tags -> Primus - John The Fisherman
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 80 of 317 -> D:\MP3\P\Powerman 5000 - When Worlds Collide.mp3
+Tags -> Powerman 5000 - When Worlds Collide
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 81 of 317 -> D:\MP3\Favorites\Playahitty - 1-2-3 (Train With Me).mp3
+Tags -> Playahitty - 1-2-3 (Train With Me)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 84 of 317 -> D:\MP3\P\Paul Van Dyk - Castles In The Sky.mp3
+Tags -> Paul Van Dyk - Castles In The Sky
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 85 of 317 -> D:\MP3\P\Paul Oakenfold & Paul Van Dyk - Words (For Love).mp3
+Tags -> Paul Oakenfold & Paul Van Dyk - Words (For Love)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 89 of 317 -> D:\MP3\P\P. Lion - Happy Children (2).mp3
+Tags -> P. Lion - Happy Children
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 90 of 317 -> D:\MP3\O\The Outfield - Voices Of Babylon.mp3
+Tags -> The Outfield - Voices Of Babylon
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 92 of 317 -> D:\MP3\O\The Osmonds - Let Me In (1).mp3
+Tags -> The Osmonds - Let Me In
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 95 of 317 -> D:\MP3\O\Oingo Boingo - Weird Science.mp3
+Tags -> Oingo Boingo - Weird Science
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 101 of 317 -> D:\MP3\O\O.M.D. - Electricity.mp3
+Tags -> O.M.D. - Electricity
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 107 of 317 -> D:\MP3\N\Nelly Furtado - Say It Right (Friscia And Lamboy Electrotribe Mix).mp3
+Tags -> Nelly Furtado - Say It Right (Friscia And Lamboy Electrotribe Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 109 of 317 -> D:\MP3\N\Nas - The World Is Yours (Explicit).mp3
+Tags -> Nas - The World Is Yours (Explicit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 110 of 317 -> D:\MP3\N\N.O.R.E. - Grimey (Explicit).mp3
+Tags -> N.O.R.E. - Grimey (Explicit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 112 of 317 -> D:\MP3\M\Mötley Crüe - Dr. Feelgood.mp3
+Tags -> Mötley Crüe - Dr. Feelgood
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 115 of 317 -> D:\MP3\Favorites\Michael Sembello - Maniac.mp3
+Tags -> Michael Sembello - Maniac
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 117 of 317 -> D:\MP3\M\Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) , Plastic Surgery.mp3
+Tags -> Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) / Plastic Surgery
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 119 of 317 -> D:\MP3\Favorites\Michael Jackson - Will You Be There (Extended).mp3
+Tags -> Michael Jackson - Will You Be There (Extended)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 121 of 317 -> D:\MP3\Favorites\Men At Work - It's A Mistake (1).mp3
+Tags -> Men At Work - It's A Mistake
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 127 of 317 -> D:\MP3\M\Marvin Gaye - How Sweet It Is (To Be Loved By You).mp3
+Tags -> Marvin Gaye - How Sweet It Is (To Be Loved By You)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 128 of 317 -> D:\MP3\M\Marvin Gaye - Pride And Joy (1).mp3
+Tags -> Marvin Gaye - Pride And Joy
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 130 of 317 -> D:\MP3\M\Maria McKee - Show Me Heaven.mp3
+Tags -> Maria McKee - Show Me Heaven
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 133 of 317 -> D:\MP3\M\Mandy Moore - In My Pocket.mp3
+Tags -> Mandy Moore - In My Pocket
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 136 of 317 -> D:\MP3\M\Madonna - I'll Remember.mp3
+Tags -> Madonna - I'll Remember
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 138 of 317 -> D:\MP3\M\M.A.R.R.S. - Pump Up The Volume (Bonus Beats).mp3
+Tags -> M.A.R.R.S. - Pump Up The Volume (Bonus Beats)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 142 of 317 -> D:\MP3\L\Luciano Pavarotti - Toreador Song, Carmen.mp3
+Tags -> Luciano Pavarotti - Toreador Song / Carmen
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 145 of 317 -> D:\MP3\L\Love - My Little Red Book.mp3
+Tags -> Love - My Little Red Book
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 146 of 317 -> D:\MP3\L\Los Microwaves - Radio Heart.mp3
+Tags -> Los Microwaves - Radio Heart
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 147 of 317 -> D:\MP3\L\Los Microwaves - If You Want It.mp3
+Tags -> Los Microwaves - If You Want It
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 148 of 317 -> D:\MP3\L\Los Microwaves - You Bet.mp3
+Tags -> Los Microwaves - You Bet
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 149 of 317 -> D:\MP3\L\Los Microwaves - Is There Life After Breakfast.mp3
+Tags -> Los Microwaves - Is There Life After Breakfast
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 150 of 317 -> D:\MP3\L\Los Microwaves - Coast To Coast.mp3
+Tags -> Los Microwaves - Coast To Coast
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 151 of 317 -> D:\MP3\L\Los Microwaves - La Voix Humane.mp3
+Tags -> Los Microwaves - La Voix Humane
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 152 of 317 -> D:\MP3\L\Los Microwaves - Postponed Is Not Forgotten.mp3
+Tags -> Los Microwaves - Postponed Is Not Forgotten
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 153 of 317 -> D:\MP3\L\Los Microwaves - Forever.mp3
+Tags -> Los Microwaves - Forever
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 154 of 317 -> D:\MP3\L\Los Microwaves - Home Alone.mp3
+Tags -> Los Microwaves - Home Alone
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 155 of 317 -> D:\MP3\L\Los Microwaves - T.V. In My Eye.mp3
+Tags -> Los Microwaves - T.V. In My Eye
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 156 of 317 -> D:\MP3\L\Los Microwaves - Reckless Dialogue.mp3
+Tags -> Los Microwaves - Reckless Dialogue
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 157 of 317 -> D:\MP3\Favorites\Los Microwaves - Time To Get Up.mp3
+Tags -> Los Microwaves - Time To Get Up
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 158 of 317 -> D:\MP3\L\Lonyo Comme Ci Comme Ça - Summer Of Love.mp3
+Tags -> Lonyo Comme Ci Comme Ca - Summer Of Love
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Lonyo Comme Ci Comme Ça - Summer Of Love -> Lonyo Comme Ci Comme Ca - Summer Of Love
+
+
+TIME: Saturday 03/16/24 1:15 AM
+
+
+Checking file 57 of 317 -> D:\MP3\S\Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) , Lunar Camel.mp3
+Tags -> Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) / Lunar Camel
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 117 of 317 -> D:\MP3\M\Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) , Plastic Surgery.mp3
+Tags -> Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) / Plastic Surgery
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 158 of 317 -> D:\MP3\L\Lonyo Comme Ci Comme Ça - Summer Of Love.mp3
+Tags -> Lonyo Comme Ci Comme Ça - Summer Of Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 162 of 317 -> D:\MP3\Favorites\Lionel Richie, Diana Ross - Endless Love.mp3
+Tags -> Lionel Richie & Diana Ross - Endless Love
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Lionel Richie, Diana Ross - Endless Love -> Lionel Richie & Diana Ross - Endless Love
+
+Checking file 164 of 317 -> D:\MP3\L\Limited Edition - You Make Me Feel So Good.mp3
+Tags -> Limited Edition - You Make Me Feel So Good
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 165 of 317 -> D:\MP3\Favorites\Limahl - Never Ending Story (1).mp3
+Tags -> Limahl - Never Ending Story (Extended)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Limahl - Never Ending Story (1) -> Limahl - Never Ending Story (Extended)
+
+Checking file 170 of 317 -> D:\MP3\Favorites_Brasil\Kid Abelha - Pintura Íntima (1).mp3
+Tags -> Kid Abelha - Pintura Íntima
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 171 of 317 -> D:\MP3\K\Kenny Loggins - I'm Alright.mp3
+Tags -> Kenny Loggins - I'm Alright
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 175 of 317 -> D:\MP3\Favorites\Jon Bon Jovi - Blaze Of Glory.mp3
+Tags -> Jon Bon Jovi - Blaze Of Glory
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 176 of 317 -> D:\MP3\Favorites\Johnny Rivers - Baby I Need Your Lovin'.mp3
+Tags -> Johnny Rivers - Baby I Need Your Lovin'
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 177 of 317 -> D:\MP3\J\Johnny Cash - I Walk The Line (1).mp3
+Tags -> Johnny Cash - I Walk The Line
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 179 of 317 -> D:\MP3\Favorites\Joe Cocker, Jennifer Warnes - Up Where We Belong.mp3
+Tags -> Joe Cocker, Jennifer Warnes - Up Where We Belong
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 180 of 317 -> D:\MP3\J\Jim Croce - I Got A Name.mp3
+Tags -> Jim Croce - I Got A Name
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 182 of 317 -> D:\MP3\J\JAY-Z, Amil, Ja Rule - Can I Get A....mp3
+Tags -> JAY-Z, Amil, Ja Rule - Can I Get A...
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 183 of 317 -> D:\MP3\J\James Brown - Living In America.mp3
+Tags -> James Brown - Living In America
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 186 of 317 -> D:\MP3\J\Jadakiss - Knock Yourself Out (Explicit).mp3
+Tags -> Jadakiss - Knock Yourself Out (Explicit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 187 of 317 -> D:\MP3\J\Jack 'n' Chill - The House That Jack Built.mp3
+Tags -> Jack 'n' Chill - The House That Jack Built
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 189 of 317 -> D:\MP3\I\It's A Beautiful Day - White Bird.mp3
+Tags -> It's A Beautiful Day - White Bird
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 190 of 317 -> D:\MP3\I\The Isley Brothers - This Old Heart Of Mine (Is Weak For You) (Single) (1).mp3
+Tags -> The Isley Brothers - This Old Heart Of Mine (Is Weak For You) (Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 191 of 317 -> D:\MP3\I\The Isley Brothers - This Old Heart Of Mine (Is Weak For You) (Single).mp3
+Tags -> The Isley Brothers - This Old Heart Of Mine (Is Weak For You) (Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 195 of 317 -> D:\MP3\H\Hilary Duff - With Love.mp3
+Tags -> Hilary Duff - With Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 197 of 317 -> D:\MP3\H\Heller & Farley Project - Ultra Flava (1).mp3
+Tags -> Heller & Farley Project - Ultra Flava
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 200 of 317 -> D:\MP3\H\Hall & Oates - Private Eyes.mp3
+Tags -> Hall & Oates - Private Eyes
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 201 of 317 -> D:\MP3\H\Hall & Oates - She's Gone.mp3
+Tags -> Hall & Oates - She's Gone
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 202 of 317 -> D:\MP3\H\Hall & Oates - She's Gone (Single Version).mp3
+Tags -> Hall & Oates - She's Gone (Single)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Hall & Oates - She's Gone (Single Version) -> Hall & Oates - She's Gone (Single)
+
+Checking file 203 of 317 -> D:\MP3\H\Hall & Oates - Rich Girl.mp3
+Tags -> Hall & Oates - Rich Girl
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 204 of 317 -> D:\MP3\H\Hall & Oates - It's A Laugh.mp3
+Tags -> Hall & Oates - It's A Laugh
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 205 of 317 -> D:\MP3\H\Hall & Oates - Method Of Modern Love.mp3
+Tags -> Hall & Oates - Method Of Modern Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 208 of 317 -> D:\MP3\G\GTA Vs. P. Diddy - Zero Bad Boys (GTA Bootleg).mp3
+Tags -> GTA Vs. P. Diddy - Zero Bad Boys (GTA Bootleg)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 211 of 317 -> D:\MP3\Favorites\Glenn Frey - The Heat Is On.mp3
+Tags -> Glenn Frey - The Heat Is On
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 217 of 317 -> D:\MP3\Favorites\The Fugees Feat. Lauryn Hill - Ready Or Not (Edit).mp3
+Tags -> The Fugees Feat. Lauryn Hill - Ready Or Not (Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 218 of 317 -> D:\MP3\F\The Free - Love Letter From Space.mp3
+Tags -> The Free - Love Letter From Space
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 221 of 317 -> D:\MP3\F\Foxy Brown, Baby Cham - Tables Will Turn (Explicit).mp3
+Tags -> Foxy Brown, Baby Cham - Tables Will Turn (Explicit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 222 of 317 -> D:\MP3\F\Four Tops - River Deep, Mountain High.mp3
+Tags -> Four Tops - River Deep, Mountain High
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 225 of 317 -> D:\MP3\E\The Everly Brothers - Cathy's Clown.mp3
+Tags -> The Everly Brothers - Cathy's Clown
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 227 of 317 -> D:\MP3\E\Erykah Badu, Common - Love Of My Life (An Ode To Hip Hop) (Edit).mp3
+Tags -> Erykah Badu Feat. Common - Love Of My Life (An Ode To Hip Hop) (Edit)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Erykah Badu, Common - Love Of My Life (An Ode To Hip Hop) (Edit) -> Erykah Badu Feat. Common - Love Of My Life (An Ode To Hip Hop) (Edit)
+
+Checking file 229 of 317 -> D:\MP3\Brasil\E\Engenheiros Do Hawaii - Terra De Gigantes, Números (Acústico).mp3
+Tags -> Engenheiros Do Hawaii - Terra De Gigantes / Números (Acústico)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 232 of 317 -> D:\MP3\Favorites_Brasil\Elis Regina - Fascinação.mp3
+Tags -> Elis Regina - Fascinação
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 234 of 317 -> D:\MP3\D\Dru Hill - How Deep Is Your Love.mp3
+Tags -> Dru Hill - How Deep Is Your Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 237 of 317 -> D:\MP3\D\The Diplomats, Cam'ron, Juelz Santana - Dipset Anthem.mp3
+Tags -> The Diplomats, Cam'ron, Juelz Santana - Dipset Anthem
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 245 of 317 -> D:\MP3\D\David Guetta Feat. Zara Larsson - This Ones For You (Official Song Uefa Euro 2016).mp3
+Tags -> David Guetta Feat. Zara Larsson - This One's For You (Official Song Uefa Euro 2016)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: David Guetta Feat. Zara Larsson - This Ones For You (Official Song Uefa Euro 2016) -> David Guetta Feat. Zara Larsson - This One's For You (Official Song Uefa Euro 2016) (3)
+
+Checking file 246 of 317 -> D:\MP3\D\David Guetta Feat. Nicki Minaj & Flo Rida - Where Them Girls At (Jr. Matta Edit).mp3
+Tags -> David Guetta Feat. Nicki Minaj & Flo Rida - Where Them Girls At (Jr. Matta Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 247 of 317 -> D:\MP3\D\Dance Macabre - It Started With.mp3
+Tags -> Dance Macabre - It Started With...
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Dance Macabre - It Started With -> Dance Macabre - It Started With...
+
+Checking file 248 of 317 -> D:\MP3\D\Dance Macabre - Echo.mp3
+Tags -> Dance Macabre - Echo
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 249 of 317 -> D:\MP3\D\Dance Macabre - Staggering Up The Stairs.mp3
+Tags -> Dance Macabre - Staggering Up The Stairs
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 250 of 317 -> D:\MP3\D\Dance Macabre - You.mp3
+Tags -> Dance Macabre - You
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 251 of 317 -> D:\MP3\D\Dance Macabre - Try.mp3
+Tags -> Dance Macabre - Try
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 252 of 317 -> D:\MP3\D\Dance Macabre - Hell.mp3
+Tags -> Dance Macabre - Hell
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 253 of 317 -> D:\MP3\D\Dance Macabre - Memories.mp3
+Tags -> Dance Macabre - Memories
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 254 of 317 -> D:\MP3\D\Dance Macabre - What About Me.mp3
+Tags -> Dance Macabre - What About Me
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 255 of 317 -> D:\MP3\D\Dance Macabre - No Answers.mp3
+Tags -> Dance Macabre - No Answers
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 256 of 317 -> D:\MP3\D\Dance Macabre - Scars.mp3
+Tags -> Dance Macabre - Scars
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 257 of 317 -> D:\MP3\D\Dance Macabre - Wet !!!.mp3
+Tags -> Dance Macabre - Wet
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Dance Macabre - Wet !!! -> Dance Macabre - Wet
+
+Checking file 259 of 317 -> D:\MP3\D\Dan Q & Basement Jaxx - Aura Tribe (Club 69 Tribal Mix) , Fly Life.mp3
+Tags -> Dan Q & Basement Jaxx - Aura Tribe (Club 69 Tribal Mix) / Fly Life
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 263 of 317 -> D:\MP3\Favorites\Cyndi Lauper - Girls Just Want To Have Fun (1).mp3
+Tags -> Cyndi Lauper - Girls Just Want To Have Fun
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 264 of 317 -> D:\MP3\C\The Cure - Let's Dance.mp3
+Tags -> The Cure - Let's Dance
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 265 of 317 -> D:\MP3\Favorites\The Culture Club Feat. Pet Shop Boys - The Crying Game.mp3
+Tags -> Culture Club Feat. Pet Shop Boys - The Crying Game
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: The Culture Club Feat. Pet Shop Boys - The Crying Game -> Culture Club Feat. Pet Shop Boys - The Crying Game
+
+Checking file 269 of 317 -> D:\MP3\C\The Commitments, Andrew Strong - Mustang Sally.mp3
+Tags -> The Commitments, Andrew Strong - Mustang Sally
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 270 of 317 -> D:\MP3\Favorites\Club Nouveau - Rumors.mp3
+Tags -> Club Nouveau - Rumors
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 272 of 317 -> D:\MP3\Brasil\C\Clara Nunes - O Que É Que A Baiana Tem_.mp3
+Tags -> Clara Nunes - O Que É Que A Baiana Tem?
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 275 of 317 -> D:\MP3\Favorites\Christina Aguilera, Lil' Kim, Mýa & Pink - Lady Marmalade (Thunderpuss Club Mix).mp3
+Tags -> Christina Aguilera, Lil' Kim, Mýa & Pink - Lady Marmalade (Thunderpuss Club Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 277 of 317 -> D:\MP3\C\Chicago Cast - Cell Block Tango.mp3
+Tags -> Chicago Cast - Cell Block Tango
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 280 of 317 -> D:\MP3\C\Charlie Sexton - Beat's So Lonely.mp3
+Tags -> Charlie Sexton - Beat's So Lonely
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 282 of 317 -> D:\MP3\Favorites\Charles & Eddie - Would I Lie To You_ (1).mp3
+Tags -> Charles & Eddie - Would I Lie To You?
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 287 of 317 -> D:\MP3\C\Céline Dion - Because You Loved Me.mp3
+Tags -> Céline Dion - Because You Loved Me
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 289 of 317 -> D:\MP3\Favorites\Carpenters - For All We Know.mp3
+Tags -> Carpenters - For All We Know
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 290 of 317 -> D:\MP3\C\Carnaby Street Pop Orchestra - A Taste Of Excitement.mp3
+Tags -> Carnaby Street Pop Orchestra - A Taste Of Excitement
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 291 of 317 -> D:\MP3\Favorites_Brasil\Capital Inicial - O Passageiro.mp3
+Tags -> Capital Inicial - O Passageiro
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 292 of 317 -> D:\MP3\C\Capilari & Salvavida - Oye Como Va (Michael Moor And Deniz Koyu Remix Edit).mp3
+Tags -> Capilari & Salvavida - Oye Como Va (Michael Moor And Deniz Koyu Remix Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 293 of 317 -> D:\MP3\C\Candyland - Rage In Love.mp3
+Tags -> Candyland - Rage In Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 296 of 317 -> D:\MP3\B\Bonnie Tyler - Holding Out For A Hero (1).mp3
+Tags -> Bonnie Tyler - Holding Out For A Hero
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 298 of 317 -> D:\MP3\Favorites\Bob Sinclar Feat. Gary Nesta Pine - Love Generation.mp3
+Tags -> Bob Sinclar Feat. Gary Nesta Pine - Love Generation
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 299 of 317 -> D:\MP3\B\Blues BrOthers - Every Rapper Needs Somebody To Love (Pytski Mashup).mp3
+Tags -> Blues Brothers - Every Rapper Needs Somebody To Love (Pytski Mashup)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 300 of 317 -> D:\MP3\B\Billy Preston - Nothing From Nothing.mp3
+Tags -> Billy Preston - Nothing From Nothing
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 301 of 317 -> D:\MP3\B\Bernie Paul - Atentione.mp3
+Tags -> Bernie Paul - Atentione
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 304 of 317 -> D:\MP3\B\Beanie Sigel, Freeway - Roc The Mic (Explicit).mp3
+Tags -> Beanie Sigel, Freeway - Roc The Mic (Explicit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 305 of 317 -> D:\MP3\B\Barbra Streisand - Evergreen.mp3
+Tags -> Barbra Streisand - Evergreen
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 306 of 317 -> D:\MP3\B\Barbarella - My Name Is Barbarella.mp3
+Tags -> Barbarella - My Name Is Barbarella
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 307 of 317 -> D:\MP3\Favorites\B.J. Thomas - Everybody's Talking.mp3
+Tags -> B.J. Thomas - Everybody's Talking
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 309 of 317 -> D:\MP3\A\Axwell & Bob Sinclar Feat. Ron Caroll - What A Wonderful World.mp3
+Tags -> Axwell & Bob Sinclar Feat. Ron Caroll - What A Wonderful World
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 312 of 317 -> D:\MP3\A\Armando - 05_Jan_2001.mp3
+Tags -> Armando - 05/Jan/2001
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 314 of 317 -> D:\MP3\Favorites_Brasil\Ângela Rô Rô - Cuca (1).mp3
+Tags -> Ângela Rô Rô - Cuca
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 315 of 317 -> D:\MP3\Favorites\Althea & Donna - Uptown Top Ranking.mp3
+Tags -> Althea & Donna - Uptown Top Ranking
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 316 of 317 -> D:\MP3\A\Alphaville - Sounds Like A Melody (Special Extended).mp3
+Tags -> Alphaville - Sounds Like A Melody (Special Extended)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 317 of 317 -> D:\MP3\A\Al Corley - The Answers, The Solutions.mp3
+Tags -> Al Corley - The Answers, The Solutions
+Winning method: 1 (Perfect match) - Best: both
+
+Files where name mismatches tags: 142 (match 85)
+
+Final STATS:
+Key: Match -> 85
+Key: Mismatch -> 142
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 2 (Eq Title/diff Art) -> 6
+Key: 3 (Superset) -> 2
+
+
+TIME: Saturday 03/16/24 4:03 PM
+
+
+Checking file 34 of 180 -> D:\MP3\S\Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) , Lunar Camel.mp3
+Tags -> Santo Gold Feat. Kid Cudi - Find A Way (Graeme And Switch Mix) / Lunar Camel
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 53 of 180 -> D:\MP3\Favorites\Playahitty - 1-2-3 (Train With Me) (Train With Mix).mp3
+Tags -> Playahitty Feat. Corona - 1-2-3! (Train With Me) (Train With Mix)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Playahitty - 1-2-3 (Train With Me) (Train With Mix) -> Playahitty Feat. Corona - 1-2-3! (Train With Me) (Train With Mix)
+
+Checking file 54 of 180 -> D:\MP3\Favorites\Playahitty - 1-2-3! (Train With Me) (Radio Edit).mp3
+Tags -> Playahitty Feat. Corona - 1-2-3! (Train With Me) (Radio Edit)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Playahitty - 1-2-3! (Train With Me) (Radio Edit) -> Playahitty Feat. Corona - 1-2-3! (Train With Me) (Radio Edit)
+
+Checking file 55 of 180 -> D:\MP3\Favorites\Playahitty - 1-2-3 (Train With Me).mp3
+Tags -> Playahitty Feat. Corona - 1-2-3! (Train With Me)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Playahitty - 1-2-3 (Train With Me) -> Playahitty Feat. Corona - 1-2-3! (Train With Me)
+
+Checking file 79 of 180 -> D:\MP3\M\Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) , Plastic Surgery.mp3
+Tags -> Michael Kamen Conducting The National Philharmonic Orchestra Of London - The Party (Part 1) / Plastic Surgery
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 110 of 180 -> D:\MP3\Favorites\Joe Cocker, Jennifer Warnes - Up Where We Belong.mp3
+Tags -> Joe Cocker & Jennifer Warnes - Up Where We Belong
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Joe Cocker, Jennifer Warnes - Up Where We Belong -> Joe Cocker & Jennifer Warnes - Up Where We Belong
+
+Checking file 131 of 180 -> D:\MP3\F\The Four Tops - Don't Walk Away.mp3
+Tags -> Four Tops - Don't Walk Away
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: The Four Tops - Don't Walk Away -> Four Tops - Don't Walk Away
+
+Checking file 132 of 180 -> D:\MP3\F\The Four Tops - Climb Ev'ry Mountain.mp3
+Tags -> Four Tops - Climb Ev'ry Mountain
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: The Four Tops - Climb Ev'ry Mountain -> Four Tops - Climb Ev'ry Mountain
+
+Checking file 133 of 180 -> D:\MP3\F\The Four Tops - Keeper Of The Castle.mp3
+Tags -> Four Tops - Keeper Of The Castle
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: The Four Tops - Keeper Of The Castle -> Four Tops - Keeper Of The Castle
+
+Checking file 134 of 180 -> D:\MP3\F\The Four Tops - Shake Me, Wake Me.mp3
+Tags -> Four Tops - Shake Me, Wake Me
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: The Four Tops - Shake Me, Wake Me -> Four Tops - Shake Me, Wake Me
+
+Checking file 152 of 180 -> D:\MP3\D\Dan Q & Basement Jaxx - Aura Tribe (Club 69 Tribal Mix) , Fly Life.mp3
+Tags -> Dan Q & Basement Jaxx - Aura Tribe (Club 69 Tribal Mix) / Fly Life
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+
+Checking file 173 of 180 -> D:\MP3\Favorites\Black Box - Strike It Up.mp3
+Tags -> Black Box Feat. Stepz - Strike It Up
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Black Box - Strike It Up -> Black Box Feat. Stepz - Strike It Up
+
+Checking file 174 of 180 -> D:\MP3\Favorites\Black Box - Strike It Up (3).mp3
+Tags -> Black Box Feat. Stepz - Strike It Up
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Black Box - Strike It Up (3) -> Black Box Feat. Stepz - Strike It Up (1)
+
+Checking file 178 of 180 -> D:\MP3\A\ATB - 9pm (Till I Come).mp3
+Tags -> ATB - 9PM (Till I Come)
+Winning method: 1 (Perfect match) - Best: both
+
+Files where name mismatches tags: 128 (match 14)
+
+Final STATS:
+Key: Match -> 14
+Key: Mismatch -> 128
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 2 (Eq Title/diff Art) -> 10
+
+
+TIME: Sunday 03/17/24 12:33 AM
+
+
+Checking file 1 of 168 -> D:\MP3\Youtube\PEPEU - NOMES DE MENINAS.mp3
+Tags ->  - PEPEU - NOMES DE MENINAS
+Winning method: 3 (Superset) - Best: tags
+Changing file name: PEPEU - NOMES DE MENINAS -> - PEPEU - NOMES DE MENINAS
+
+
+TIME: Sunday 03/17/24 12:35 AM
+
+
+Checking file 1 of 168 -> D:\MP3\Youtube\PEPEU - NOMES DE MENINAS.mp3
+Tags -> Pepeu - Nomes De Meninas
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 2 of 168 -> D:\MP3\Y\Yes - I've Seen All Good People_ Your Move, All Good People (Live).mp3
+Tags -> Yes - I've Seen All Good People: Your Move / All Good People (Live)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 3 of 168 -> D:\MP3\Brasil\X\Xuxa - O Sapo Não Lava O Pé, Minhoca, O Coelho.mp3
+Tags -> Xuxa - O Sapo Não Lava O Pé / Minhoca / O Coelho
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 4 of 168 -> D:\MP3\X\Xscape - Just Kickin' It (Remix).mp3
+Tags -> Xscape - Just Kickin' It (Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 5 of 168 -> D:\MP3\X\X Stress - I've Got The The Feeling.mp3
+Tags -> X Stress - I've Got The The Feeling
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 6 of 168 -> D:\MP3\W\Wyclef Jean Feat. Refugee Allstars - Guantanamera.mp3
+Tags -> Wyclef Jean Feat. Refugee Allstars - Guantanamera
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 8 of 168 -> D:\MP3\V\_V_I_R_G_O_ - Kink.mp3
+Tags -> *V*I*R*G*O* - Kink
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 9 of 168 -> D:\MP3\S\Unknown - You're Still The One (Version Zouk).mp3
+Tags -> Unknown - You're Still The One (Version Zouk)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 10 of 168 -> D:\MP3\Favorites\Unknown - Ice Ice Baby.mp3
+Tags -> Unknown - Ice Ice Baby
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 11 of 168 -> D:\MP3\U\Ulli Martin - Ich Träume Mit Offenen Augen Von Dir.mp3
+Tags -> Ulli Martin - Ich Träume Mit Offenen Augen Von Dir
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 12 of 168 -> D:\MP3\Favorites\Twenty 4 Seven - I Can't Stand It (Bolero Mix 7 Inch).mp3
+Tags -> Twenty 4 Seven - I Can't Stand It (Bolero Mix 7 Inch)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 13 of 168 -> D:\MP3\Brasil\T\Trio Los Angeles - Tempero Latino (Música Incidental Mambo N. 5).mp3
+Tags -> Trio Los Angeles - Tempero Latino (Música Incidental Mambo N. 5)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 14 of 168 -> D:\MP3\T\T-Rex - Solid Gold Easy Action.mp3
+Tags -> T-Rex - Solid Gold Easy Action
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 15 of 168 -> D:\MP3\T\Tommy James And The Shondells - Crystal Blue Persuasion.mp3
+Tags -> Tommy James & The Shondells - Crystal Blue Persuasion
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Tommy James And The Shondells - Crystal Blue Persuasion -> Tommy James & The Shondells - Crystal Blue Persuasion
+
+Checking file 17 of 168 -> D:\MP3\T\Tesla - Signs (Live At The Trocadero).mp3
+Tags -> Tesla - Signs (Live At The Trocadero)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 18 of 168 -> D:\MP3\Favorites\The Stylistics - Betcha By Golly, wow (Live).mp3
+Tags -> The Stylistics - Betcha By Golly, Wow (Live)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 20 of 168 -> D:\MP3\S\Stray Cats - Oh Boy!.mp3
+Tags -> Stray Cats - Oh, Boy!
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Stray Cats - Oh Boy! -> Stray Cats - Oh, Boy!
+
+Checking file 21 of 168 -> D:\MP3\Favorites\Stockard Channing - There Are Worse Things I Could Do.mp3
+Tags -> Stockard Channing - There Are Worse Things I Could Do
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 22 of 168 -> D:\MP3\S\Steve Winwood - Higher Love (2).mp3
+Tags -> Steve Winwood - Higher Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 24 of 168 -> D:\MP3\S\Snap! - Megamix (Ooops Up, The Power, Cult Of Snap, Mary Had A Little Boy).mp3
+Tags -> Snap! - Megamix (Ooops Up / The Power / Cult Of Snap / Mary Had A Little Boy)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 26 of 168 -> D:\MP3\S\Sheena Easton - Did It For Love.mp3
+Tags -> Sheena Easton - Did It For Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 27 of 168 -> D:\MP3\S\Shakira - Techno (Remix).mp3
+Tags -> Shakira - Techno (Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 28 of 168 -> D:\MP3\S\Shakira - Tú.mp3
+Tags -> Shakira - Tú
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 29 of 168 -> D:\MP3\S\Shakin' Stevens - A Rockin' Good Way.mp3
+Tags -> Shakin' Stevens - A Rockin' Good Way
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 31 of 168 -> D:\MP3\Favorites\Sebastian Ingrosso & Alesso - Calling (Original Instrumental Mix).mp3
+Tags -> Sebastian Ingrosso & Alesso - Calling (Original Instrumental Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 32 of 168 -> D:\MP3\S\Seals And Crofts - My Fair Share (The Love Theme From One On One).mp3
+Tags -> Seals And Crofts - My Fair Share (The Love Theme From One On One)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 33 of 168 -> D:\MP3\S\Sarah Brightman & Hot Gossip - I Lost My Heart To A Starship Trooper.mp3
+Tags -> Sarah Brightman & Hot Gossip - I Lost My Heart To A Starship Trooper
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 34 of 168 -> D:\MP3\R\Roxy Music Feat. Bryan Ferry - More Than This.mp3
+Tags -> Roxy Music Feat. Bryan Ferry - More Than This
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 35 of 168 -> D:\MP3\R\Roxette - The Look (Head-Drum Mix).mp3
+Tags -> Roxette - The Look (Head-Drum Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 37 of 168 -> D:\MP3\R\Rod Stewart - Da Ya Think I'm Sexy (Special Disco Mix).mp3
+Tags -> Rod Stewart - Da Ya Think I'm Sexy? (Special Disco Mix)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Rod Stewart - Da Ya Think I'm Sexy (Special Disco Mix) -> Rod Stewart - Da Ya Think I'm Sexy_ (Special Disco Mix)
+
+Checking file 38 of 168 -> D:\MP3\R\Rock Solid Mafia - Shake That Ass Bitch (2010 Pulsedriver Radio Edit).mp3
+Tags -> Rock Solid Mafia - Shake That Ass Bitch (2010 Pulsedriver Radio Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 39 of 168 -> D:\MP3\Favorites\Robin Skouteris - Barbra Streisand Strikes A Pose! Vogue! (Duck Sauce Vs. Madonna).mp3
+Tags -> Robin Skouteris - Barbra Streisand Strikes A Pose! Vogue! (Duck Sauce Vs. Madonna)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 40 of 168 -> D:\MP3\Brasil\R\Roberto Carlos & Varias - Como É Grande O Meu Amor Por Você.mp3
+Tags -> Roberto Carlos & Varias - Como É Grande O Meu Amor Por Você
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 41 of 168 -> D:\MP3\Favorites\Roberta Flack - Killing Me Softly (With His Song).mp3
+Tags -> Roberta Flack - Killing Me Softly (With His Song)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 42 of 168 -> D:\MP3\R\RMB - Spring (Vocal Mix).mp3
+Tags -> RMB - Spring (Vocal Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 43 of 168 -> D:\MP3\R\Ricky Nelson - I Will Follow You.mp3
+Tags -> Ricky Nelson - I Will Follow You
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 44 of 168 -> D:\MP3\R\Ricky Nelson - Teenage Idol.mp3
+Tags -> Ricky Nelson - Teenage Idol
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 45 of 168 -> D:\MP3\R\Rex Smith - You Take My Breath Away.mp3
+Tags -> Rex Smith - You Take My Breath Away
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 46 of 168 -> D:\MP3\R\Retro Feat. Fab - Silent Running (Just Dance Video Edit).mp3
+Tags -> Retro Feat. Fab - Silent Running (Just Dance Video Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 47 of 168 -> D:\MP3\Favorites_Brasil\Raul Seixas - Let Me Sing, Let Me Sing (Ao Vivo).mp3
+Tags -> Raul Seixas - Let Me Sing, Let Me Sing (Ao Vivo)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 48 of 168 -> D:\MP3\Favorites_Brasil\Raul Seixas - Rock Das Aranha.mp3
+Tags -> Raul Seixas - Rock Das Aranha
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 50 of 168 -> D:\MP3\R\Rakim, Ken-Y & Ivy Queen - Te Regalo Amores (Official Remix).mp3
+Tags -> Rakim, Ken-Y & Ivy Queen - Te Regalo Amores (Official Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 51 of 168 -> D:\MP3\Favorites\Pseudo Echo - Funky town (3).mp3
+Tags -> Pseudo Echo - Funky town
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 52 of 168 -> D:\MP3\Favorites_Brasil\Placa Luminosa - Fica comigo.mp3
+Tags -> Placa Luminosa - Fica Comigo
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 53 of 168 -> D:\MP3\Favorites\Phenomena - Did It All For Love.mp3
+Tags -> Phenomena II - Did It All For Love
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Phenomena - Did It All For Love -> Phenomena II - Did It All For Love
+
+
+TIME: Sunday 03/17/24 12:36 AM
+
+
+Checking file 53 of 168 -> D:\MP3\Favorites\Phenomena - Did It All For Love.mp3
+Tags -> Phenomena - Did It All For Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 54 of 168 -> D:\MP3\Favorites\Panjabi MC - Mundian To Bach Ke.mp3
+Tags -> Panjabi MC - Mundian To Bach Ke
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 56 of 168 -> D:\MP3\Favorites\P. P. Arnold - Angel Of The Morning.mp3
+Tags -> P. P. Arnold - Angel Of The Morning
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 59 of 168 -> D:\MP3\O\O.M.D. - We Love You.mp3
+Tags -> O.M.D. - We Love You
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 60 of 168 -> D:\MP3\O\O.M.D. - So In Love.mp3
+Tags -> O.M.D. - So In Love
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 61 of 168 -> D:\MP3\O\O.M.D. - Sailing On The Seven Seas.mp3
+Tags -> O.M.D. - Sailing On The Seven Seas
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 62 of 168 -> D:\MP3\O\O.M.D. - Enola Gay.mp3
+Tags -> O.M.D. - Enola Gay
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 63 of 168 -> D:\MP3\O\O.M.D. - Messages.mp3
+Tags -> O.M.D. - Messages
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 64 of 168 -> D:\MP3\O\O.M.D. - Dreaming (2).mp3
+Tags -> O.M.D. - Dreaming
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 66 of 168 -> D:\MP3\Favorites\_NSync, Backstreet Boys & 98° - Dance Mega Mix.mp3
+Tags -> *NSync, Backstreet Boys & 98° - Dance Mega Mix
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 67 of 168 -> D:\MP3\Favorites\No Doubt - Don't Speak.mp3
+Tags -> No Doubt - Don't Speak
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 68 of 168 -> D:\MP3\Favorites_Brasil\Nenhum De Nós - O Astronauta De Mármore.mp3
+Tags -> Nenhum De Nós - Astronauta De Mármore
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Nenhum De Nós - O Astronauta De Mármore -> Nenhum De Nós - Astronauta De Mármore
+
+Checking file 69 of 168 -> D:\MP3\N\Nas Feat. Various - Where Are They Now (90's Remix).mp3
+Tags -> Nas Feat. Various - Where Are They Now (90's Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 70 of 168 -> D:\MP3\M\Mr. President - Up 'N' Away.mp3
+Tags -> Mr. President - Up 'N' Away
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 71 of 168 -> D:\MP3\M\Mo-Do - Eins, Zwei, Polizei (Gendarmele Mix).mp3
+Tags -> Mo-Do - Eins, Zwei, Polizei (Gendarmele Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 72 of 168 -> D:\MP3\Favorites\Minnie Riperton - Lovin' You (Single).mp3
+Tags -> Minnie Riperton - Lovin' You (Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 74 of 168 -> D:\MP3\M\Michael Kamen & The National Philharmonic Orchestra Of London - The Party (Part 1), Plastic Surgery.mp3
+Tags -> Michael Kamen & The National Philharmonic Orchestra Of London - The Party (Part 1) / Plastic Surgery
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 75 of 168 -> D:\MP3\Favorites\Michael Jackson - DMC Megamix.mp3
+Tags -> Michael Jackson - DMC Megamix
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 77 of 168 -> D:\MP3\Favorites\Melleefresh & Deadmau5 - Hey Baby (Olav Basoski Mix).mp3
+Tags -> Melleefresh & Deadmau5 - Hey Baby (Olav Basoski Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 78 of 168 -> D:\MP3\M\Meat Loaf - I'd Do Anything For Love (But I Won't Do That) (Live From The Beacon Theatre, New York).mp3
+Tags -> Meat Loaf - I'd Do Anything For Love (But I Won't Do That) (Live From The Beacon Theatre, New York)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 79 of 168 -> D:\MP3\Brasil\M\Maysa - Bésame Mucho.mp3
+Tags -> Maysa - Besame Mucho
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Maysa - Bésame Mucho -> Maysa - Besame Mucho
+
+
+TIME: Sunday 03/17/24 12:37 AM
+
+
+Checking file 79 of 168 -> D:\MP3\Brasil\M\Maysa - Bésame Mucho.mp3
+Tags -> Maysa - Bésame Mucho
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 80 of 168 -> D:\MP3\M\Mauro Picotto - Iguana (Mas Mix).mp3
+Tags -> Mauro Picotto - Iguana (Mas Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 81 of 168 -> D:\MP3\M\Marvin Gaye, Tammi Terrell - Ain't No Mountain High Enough.mp3
+Tags -> Marvin Gaye, Tammi Terrell - Ain't No Mountain High Enough
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 82 of 168 -> D:\MP3\M\The Marvelettes - Please Mr. Postman (Single).mp3
+Tags -> The Marvelettes - Please Mr. Postman (Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 83 of 168 -> D:\MP3\M\Marco V. - C__Del _.mp3.mp3
+Tags -> Marco V. - C:\Del *.mp3
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 84 of 168 -> D:\MP3\M\Ma-Radscha - Cuckoo 4 Your Luv (Airplay Edit).mp3
+Tags -> Ma-Radscha - Cuckoo 4 Your Luv (Airplay Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 86 of 168 -> D:\MP3\M\Magic! - Rude (Zedd Extended Edit).mp3
+Tags -> Magic! - Rude (Zedd Extended Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 87 of 168 -> D:\MP3\M\Madonna - Nobody Knows Me (Peter Rauhofer's Private Life) (Part 1).mp3
+Tags -> Madonna - Nobody Knows Me (Peter Rauhofer's Private Life) (Part 1)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 88 of 168 -> D:\MP3\Favorites\M.A.R.R.S. - Pump Up The Volume (UK 12 Inch Mix).mp3
+Tags -> M.A.R.R.S. - Pump Up The Volume (UK 12 inch Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 92 of 168 -> D:\MP3\Favorites\Loveland Feat. Rachel Mcfarlane - I Need Somebody (Full On Vocal Radio Edit).mp3
+Tags -> Loveland Feat. Rachel McFarlane - I Need Somebody (Loveland's Full On Vocal Radio Edit)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Loveland Feat. Rachel Mcfarlane - I Need Somebody (Full On Vocal Radio Edit) -> Loveland Feat. Rachel McFarlane - I Need Somebody (Loveland's Full On Vocal Radio Edit)
+
+Checking file 93 of 168 -> D:\MP3\L\Lonnie Gordon - Gonna Catch You (Wideboys Electro Mix).mp3
+Tags -> Lonnie Gordon - Gonna Catch You (Wideboys Electro Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 94 of 168 -> D:\MP3\L\Lonnie Gordon - Happenin' All Over Again (1).mp3
+Tags -> Lonnie Gordon - Happenin' All Over Again
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 95 of 168 -> D:\MP3\L\Lonnie Gordon - Happenin' All Over Again.mp3
+Tags -> Lonnie Gordon - Happenin' All Over Again (Extended)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Lonnie Gordon - Happenin' All Over Again -> Lonnie Gordon - Happenin' All Over Again (Extended)
+
+Checking file 96 of 168 -> D:\MP3\L\Linka & Mondello 'G - Vagabond (Original Mix).mp3
+Tags -> Linka & Mondello 'G - Vagabond (Original Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 97 of 168 -> D:\MP3\Brasil\L\Legião Urbana - Hoje A Noite Não Tem Luar.mp3
+Tags -> Legião Urbana - Hoje A Noite Não Tem Luar
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 98 of 168 -> D:\MP3\L\Lee Dorsey - Working In a Coalmine.mp3
+Tags -> Lee Dorsey - Working In A Coalmine
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 99 of 168 -> D:\MP3\L\Lady Gaga - Love Game (Jody Den Broeder Club Mix).mp3
+Tags -> Lady GaGa - Love Game (Jody Den Broeder Club Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 101 of 168 -> D:\MP3\K\Ken Laszlo - 1, 2, 3, 4, 5, 6, 7, 8.mp3
+Tags -> Ken Laszlo - 1, 2, 3, 4, 5, 6, 7, 8
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 102 of 168 -> D:\MP3\J\Justin Timberlake & Linkin Park - Faint Back.mp3
+Tags -> Justin Timberlake & Linkin Park - Faint Back
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 103 of 168 -> D:\MP3\J\Juliane Werding - Am Tag Als Conny Kramer Starb (The Night They Drove Old Dixie Down).mp3
+Tags -> Juliane Werding - Am Tag Als Conny Kramer Starb (The Night They Drove Old Dixie Down)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 104 of 168 -> D:\MP3\J\John Sebastian - Welcome Back.mp3
+Tags -> John Sebastian - Welcome Back
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 105 of 168 -> D:\MP3\J\Joe Cocker & Jennifer Warnes - Up Where We Belong.mp3
+Tags -> Joe Cocker & Jennifer Warnes - Up Where We Belong
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 106 of 168 -> D:\MP3\J\James Brown - Get Up I Feel Like Being A Sex Machine (Part 1 Single).mp3
+Tags -> James Brown - Get Up I Feel Like Being A Sex Machine (Part 1 Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 107 of 168 -> D:\MP3\J\James Brown - Soul Power (Part 1 Single).mp3
+Tags -> James Brown - Soul Power (Part 1 Single)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 108 of 168 -> D:\MP3\J\Ja Rule Feat. Case - Livin' It Up.mp3
+Tags -> Ja Rule Feat. Case - Livin' It Up
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 109 of 168 -> D:\MP3\Favorites\INXS - Suicide Blonde.mp3
+Tags -> INXS - Suicide Blonde
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 112 of 168 -> D:\MP3\H\Hi-Five - I Like The Way (The Kissing Game).mp3
+Tags -> Hi-Five - I Like The Way (The Kissing Game)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 113 of 168 -> D:\MP3\H\Heller & Farley Project - Ultra Flava.mp3
+Tags -> Heller & Farley project - Ultra Flava
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 118 of 168 -> D:\MP3\Brasil\G\Gonzaguinha - Galopando, Música Incidental_ Galope.mp3
+Tags -> Gonzaguinha - Galopando / Música Incidental: "Galope"
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Gonzaguinha - Galopando, Música Incidental_ Galope -> Gonzaguinha - Galopando, Música Incidental_ _Galope_
+
+Checking file 119 of 168 -> D:\MP3\G\Girls Aloud - Sexy! No No No... (Tony Lamezma's 'Yes Yes Yes' Mix).mp3
+Tags -> Girls Aloud - Sexy! No No No... (Tony Lamezma's 'Yes Yes Yes' Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 120 of 168 -> D:\MP3\Favorites\Gina G - Ooh... Aah Just A Little Bit.mp3
+Tags -> Gina G - Ooh... Aah Just A Little Bit
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 121 of 168 -> D:\MP3\Favorites_Brasil\Gilliard - Não Diga Nada (Edit).mp3
+Tags -> Gilliard - Não Diga Nada (Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 124 of 168 -> D:\MP3\F\Frédéric Chopin - Impromptu (Nr.1 In As-Dur).mp3
+Tags -> Frédéric Chopin - Impromptu - Nr.1 In As-Dur
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Frédéric Chopin - Impromptu (Nr.1 In As-Dur) -> Frédéric Chopin - Impromptu - Nr.1 In As-Dur
+
+
+TIME: Sunday 03/17/24 12:38 AM
+
+
+Checking file 125 of 168 -> D:\MP3\F\Frédéric Chopin - Op. 18 (In E).mp3
+Tags -> Frédéric Chopin - Op. 18 (In E)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 126 of 168 -> D:\MP3\F\Fedde Le Grand & Funkerman Feat. Andy Sherman - 3 Minutes To Explain (Funkerman Fame Mix).mp3
+Tags -> Fedde Le Grand & Funkerman Feat. Dorothy & Andy Sherman - 3 Minutes To Explain (Funkerman Fame Mix)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Fedde Le Grand & Funkerman Feat. Andy Sherman - 3 Minutes To Explain (Funkerman Fame Mix) -> Fedde Le Grand & Funkerman Feat. Dorothy & Andy Sherman - 3 Minutes To Explain (Funkerman Fame Mix)
+
+Checking file 128 of 168 -> D:\MP3\E\The Essence - The Cat (Disc One_ Purity 1985).mp3
+Tags -> The Essence - The Cat (Disc One: Purity 1985)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 129 of 168 -> D:\MP3\E\Erich Kunzel And The Cincinnati Pops Orchestra - Lara's Theme (Doctor Zhivago).mp3
+Tags -> Erich Kunzel And The Cincinnati Pops Orchestra - Lara's Theme (Doctor Zhivago)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 130 of 168 -> D:\MP3\E\Elvis Presley - If I'm A Fool.mp3
+Tags -> Elvis Presley - If I'm A Fool
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 133 of 168 -> D:\MP3\Favorites\Double 99 - Rip groove.mp3
+Tags -> Double 99 & Top Cat - Rip Groove
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Double 99 - Rip groove -> Double 99 & Top Cat - Rip Groove
+
+Checking file 135 of 168 -> D:\MP3\D\Del Tha Funkee Homosapien - Eye Examination.mp3
+Tags -> Del Tha Funkee Homosapien - Eye Examination
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 136 of 168 -> D:\MP3\D\Del Tha Funkee Homosapien - Sleepin' On My Couch (Music).mp3
+Tags -> Del Tha Funkee Homosapien - Sleepin' On My Couch (Music)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 138 of 168 -> D:\MP3\Favorites\Dead Or Alive - You Spin Me Round (Like A Record) (Metro 12 Inch Extended Mix).mp3
+Tags -> Dead Or Alive - You Spin Me Round (Like A Record) (Metro 12 Inch Extended Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 140 of 168 -> D:\MP3\D\D-Devils - The 6th Gate (Bountyhunter Remix).mp3
+Tags -> D-Devils - The 6th Gate (Bountyhunter Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 143 of 168 -> D:\MP3\D\Marley Damian - Welcome To Jamrock (Instrumental).mp3
+Tags -> Damian Marley - Welcome To Jamrock (Instrumental)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Marley Damian - Welcome To Jamrock (Instrumental) -> Damian Marley - Welcome To Jamrock (Instrumental)
+
+Checking file 144 of 168 -> D:\MP3\D\Daft Punk - Prime Time Of Your Life (Para One Remix).mp3
+Tags -> Daft Punk - Prime Time Of Your Life (Para One Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 146 of 168 -> D:\MP3\Favorites\Culture Club Feat. Boy George - The War Song.mp3
+Tags -> Culture Club Feat. Boy George - The War Song (Extended)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Culture Club Feat. Boy George - The War Song -> Culture Club Feat. Boy George - The War Song (Extended)
+
+Checking file 148 of 168 -> D:\MP3\C\Cornell Vs. The Lisa Marie Experience - Keep On Jumpin' (Electro Mix).mp3
+Tags -> Cornell Vs. The Lisa Marie Experience - Keep On Jumpin' (Electro Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 149 of 168 -> D:\MP3\C\Claudio & Gino & Mr. Slide - Fiesta Latina (Radio Edit).mp3
+Tags -> Claudio & Gino & Mr. Slide - Fiesta Latina (Radio Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 151 of 168 -> D:\MP3\Favorites_Brasil\Cidade Negra - Onde Você Mora (Acústico).mp3
+Tags -> Cidade Negra - Onde Você Mora? (Acústico)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Cidade Negra - Onde Você Mora (Acústico) -> Cidade Negra - Onde Você Mora_ (Acústico)
+
+Checking file 153 of 168 -> D:\MP3\C\Cher - Love Is A Lonely Place Without You (Thunderpuss Mix).mp3
+Tags -> Cher - Love Is A Lonely Place Without You (Thunderpuss Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 154 of 168 -> D:\MP3\C\Cheap Trick - I Want You To Want Me (Live At Nippon Budokan, Tokyo).mp3
+Tags -> Cheap Trick - I Want You To Want Me (Live At Nippon Budokan, Tokyo)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 155 of 168 -> D:\MP3\Favorites_Brasil\Charlie Brown Jr. - Proibida Pra Mim.mp3
+Tags -> Charlie Brown Jr. - Proibida Pra Mim
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 159 of 168 -> D:\MP3\C\Cementerio Club, Mar De Copas & Libido - Mix Rock Peruano (Live).mp3
+Tags -> Cementerio Club, Mar De Copas & Libido - Mix Rock Peruano (Live)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 160 of 168 -> D:\MP3\Favorites\Céline Dion - My Heart Will Go On (2).mp3
+Tags -> Céline Dion - My Heart Will Go On
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 161 of 168 -> D:\MP3\B\Britney Spears - I Wanna Go (Moguai Remix).mp3
+Tags -> Britney Spears - I Wanna Go (Moguai Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 162 of 168 -> D:\MP3\Favorites\Brandy & Monica - The Boy Is Mine (Radio Edit).mp3
+Tags -> Brandy & Monica - The Boy Is Mine (Radio Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 163 of 168 -> D:\MP3\B\Bob Sinclar Vs. Karlos Kastillo - Far Lamor Back (Deejay Lilboy Bootleg).mp3
+Tags -> Bob Sinclar Vs. Karlos Kastillo - Far Lamor Back (Deejay Lilboy Bootleg)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 164 of 168 -> D:\MP3\Favorites\Benny Benassi - Satisfaction (Isak Original Remix).mp3
+Tags -> Benny Benassi - Satisfaction (Isak Original Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 165 of 168 -> D:\MP3\Favorites\The Beatfreakz - Peak Hour Break 12 (The Beatfreakz).mp3
+Tags -> The Beatfreakz - Peak Hour Break 12 (The Beatfreakz)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 167 of 168 -> D:\MP3\A\Arthur Rubinstein, Frederic Chopin - Ballades (No. 1 In G Minor, Op. 23).mp3
+Tags -> Arthur Rubinstein, Frédéric Chopin - Ballades (No. 1 In G Minor, Op. 23)
+Winning method: 2 (Eq Title/diff Art) - Best: tags
+Changing file name: Arthur Rubinstein, Frederic Chopin - Ballades (No. 1 In G Minor, Op. 23) -> Arthur Rubinstein, Frédéric Chopin - Ballades (No. 1 In G Minor, Op. 23)
+
+Files where name mismatches tags: 42 (match 27)
+
+Final STATS:
+Key: Match -> 27
+Key: Mismatch -> 42
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 2 (Eq Title/diff Art) -> 5
+Key: 3 (Superset) -> 1
+
+
+TIME: Sunday 03/17/24 3:48 AM
+
+
+Checking file 5 of 46 -> D:\MP3\Favorites\The House master Boyz & The Rude Boy Of House - House Nation (remix edit).mp3
+Tags -> The House Master Boyz & The Rude Boy Of House - House Nation (Remix Edit)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 8 of 46 -> D:\MP3\C\Chiquetete - La Gloria Eres Tú.mp3
+Tags -> Chiquetete - La Gloria Eres Tú
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 9 of 46 -> D:\MP3\A\Anto & Key - Boys Come And Go (Extended).mp3
+Tags -> Anto & Key - Boys Come And Go (Extended)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 14 of 46 -> D:\MP3\Favorites\De La Soul - Me, Myself & I (Extended).mp3
+Tags -> De La Soul - Me, Myself & I (Extended)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 39 of 46 -> D:\MP3\Favorites\P.M. Dawn - Set Adrift On Memory Bliss (Remix).mp3
+Tags -> P.M. Dawn - Set Adrift On Memory Bliss (Remix)
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 40 of 46 -> D:\MP3\P\Panjabi MC - Mundian To Bach Ke.mp3
+Tags -> Panjabi MC - Mundian To Bach Ke (Extended)
+Winning method: 3 (Superset) - Best: tags
+Changing file name: Panjabi MC - Mundian To Bach Ke -> Panjabi MC - Mundian To Bach Ke (Extended)
+
+Checking file 41 of 46 -> D:\MP3\R\Raul Di Blasio - Malagueña.mp3
+Tags -> Raul Di Blasio - Malagueña
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 42 of 46 -> D:\MP3\R\Rondò Veneziano - Aria Di Festa.mp3
+Tags -> Rondò Veneziano - Aria Di Festa
+Winning method: 1 (Perfect match) - Best: both
+
+Checking file 44 of 46 -> D:\MP3\S\Solina - Back To You (Club Mix).mp3
+Tags -> Solina - Back To You (Club Mix)
+Winning method: 1 (Perfect match) - Best: both
+
+Files where name mismatches tags: 34 (match 9)
+
+Final STATS:
+Key: Match -> 9
+Key: Mismatch -> 34
+Key: Exc -> 0
+
+Tag updates:
+
+Location updates:
+Key: 3 (Superset) -> 1
