@@ -130,8 +130,8 @@ if exists(lib_xml_path):
 
    # TO SAVE DEAD TRACKS TO EXCEL
    print("\nSaving dead tracks to Excel...")
-   if exists("D:\\iTunes\\Excel"):
-      file_nm = "D:\\iTunes\\Excel\\Dead_tracks.xlsx"
+   if exists("D:\\Python\\Excel"):
+      file_nm = "D:\\Python\\Excel\\Dead_tracks.xlsx"
    else:  
        file_nm = iTunes_folder + "\\Dead_tracks.xlsx"
 

@@ -2,30 +2,30 @@ CROP:
 
 Crop 229px to the left
 
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Baby\Media\Debate.mp4" -filter:v "crop=in_w-229:in_h:229:0" -c:a copy "D:\iTunes\Baby\Media\Debate_crop_ffmpg.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Baby\Media\Debate.mp4" -filter:v "crop=in_w-229:in_h:229:0" -c:a copy "D:\Python\Baby\Media\Debate_crop_ffmpg.mp4"
 
 Crop 229px to the left and remove the audio:
 
 
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Baby\Media\Debate.mp4" -an -filter:v "crop=in_w-229:in_h:229:0" "D:\iTunes\Baby\Media\Debate_crop_noaudio.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Baby\Media\Debate.mp4" -an -filter:v "crop=in_w-229:in_h:229:0" "D:\Python\Baby\Media\Debate_crop_noaudio.mp4"
 
 Combine video with audio
 
-ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_noaudio.mp4" -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.wav" -c:v copy -c:a aac "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4"
+ffmpeg -i "D:\Python\Baby\Media\Debate_crop_noaudio.mp4" -i "D:\Python\Baby\Media\Debate_crop_baby_voice.wav" -c:v copy -c:a aac "D:\Python\Baby\Media\Debate_crop_baby_voice.mp4"
 
 Combine video with audio (increased volume)
 
-ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_noaudio.mp4" -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice_higher.wav" -c:v copy -c:a aac -af "volume=2.0" -y "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4"
+ffmpeg -i "D:\Python\Baby\Media\Debate_crop_noaudio.mp4" -i "D:\Python\Baby\Media\Debate_crop_baby_voice_higher.wav" -c:v copy -c:a aac -af "volume=2.0" -y "D:\Python\Baby\Media\Debate_crop_baby_voice.mp4"
 
 Rescale to 9:16 (width x height)
 
 ISSO DAQUI DA ERRO:
 
-ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4" -vf "scale=ih*9/16:-1, crop=1050:720" -c:a copy "D:\iTunes\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
+ffmpeg -i "D:\Python\Baby\Media\Debate_crop_baby_voice.mp4" -vf "scale=ih*9/16:-1, crop=1050:720" -c:a copy "D:\Python\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
 
 TENTA DE NOVO:
 
-ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4" -vf "crop=in_w-405:720, scale=405:720" -c:a copy "D:\iTunes\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
+ffmpeg -i "D:\Python\Baby\Media\Debate_crop_baby_voice.mp4" -vf "crop=in_w-405:720, scale=405:720" -c:a copy "D:\Python\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
 
 ########################################################################################################
 
@@ -48,7 +48,7 @@ In essence, we draw a rectangle over the input video and extract that as the out
 
 Portanto:
 
-ffmpeg -i "D:\iTunes\Baby\Media\Debate_crop_baby_voice.mp4" -filter:v "crop=405:720:322:720" -y "D:\iTunes\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
+ffmpeg -i "D:\Python\Baby\Media\Debate_crop_baby_voice.mp4" -filter:v "crop=405:720:322:720" -y "D:\Python\Baby\Media\Debate_crop_baby_voice_rescaled.mp4"
 
 
 #########################################################################################################

@@ -15,4 +15,4 @@ pyinstaller --onefile --strip --exclude-module=pandas --exclude-module=xml.etree
 --strip: Removes debug information to reduce the size.
 --exclude-module: Excludes unnecessary modules.
 
-upx --best D:\iTunes\VS Code\dist\Call_Move_Library.exe
+upx --best D:\Python\VS Code\dist\Call_Move_Library.exe

@@ -73,7 +73,7 @@ df = pd.DataFrame(data, columns=col_names)
     #y = playlist.getAttribute("PlaylistID")
     #print(f"Playlist Name: {playlist.name}\nPlaylist ID: {playlist.getAttribute("PlaylistID")}\n")
 # SAVES DUPES TO AN EXCEL FILE
-file_nm = "D:\\iTunes\\Excel\\WMP.xlsx"
+file_nm = "D:\\Python\\Excel\\WMP.xlsx"
 #df.to_excel(file_nm, index=False)
 
 # ADD COUNT COL. AND SELECT

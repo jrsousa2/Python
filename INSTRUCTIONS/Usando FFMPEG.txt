@@ -2,4 +2,4 @@ ffmpeg -i input.mp4 -vf "scale=1280:720" -r 30 -af "asetrate=44100*1.5,atempo=0.
 
 
 
-ffmpeg -i "D:\iTunes\Baby_voice\Media\Debate_orig.mp4" -r 30 -af "asetrate=44100*1.5,atempo=0.6667" "D:\iTunes\Baby_voice\Media\Debate_chipmunk.mp4"
+ffmpeg -i "D:\Python\Baby_voice\Media\Debate_orig.mp4" -r 30 -af "asetrate=44100*1.5,atempo=0.6667" "D:\Python\Baby_voice\Media\Debate_chipmunk.mp4"

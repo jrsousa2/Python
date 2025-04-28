@@ -25,7 +25,7 @@ def transcribe_audio(audio_path):
     return words
 
 # Example usage
-audio_path = "D:\\iTunes\\Baby\\Media\\Debate_crop.wav"
+audio_path = "D:\\Python\\Baby\\Media\\Debate_crop.wav"
 words = transcribe_audio(audio_path)
 
 # Print transcribed words and timings

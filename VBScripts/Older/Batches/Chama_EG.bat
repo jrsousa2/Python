@@ -34,7 +34,7 @@ rem pause
 
 rem Sets date to past
 date %past_date%
-start "" "C:\Program Files\SASHome\x86\SASEnterpriseGuide\4.3\SEGuide.exe" /openfile:F:\iTunes\Codes\organiza.egp
+start "" "C:\Program Files\SASHome\x86\SASEnterpriseGuide\4.3\SEGuide.exe" /openfile:F:\Python\EG\organiza.egp
 
 rem The below will set the date back to what it was
 echo Press a key to continue

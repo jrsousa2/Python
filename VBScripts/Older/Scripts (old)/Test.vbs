@@ -157,7 +157,7 @@ For i = 1 to sources.Count
  		   		TrackPath = track.Location
  		   		'LOOKS FOR ARTWORK
  		   		Set Artobj = track.Artwork.Item(1)
- 		   		Artobj.SetArtworkFromFile("d:\itunes\Adriana Calcanhoto - Coletanea Pessoal.jpg")
+ 		   		Artobj.SetArtworkFromFile("D:\Python\Adriana Calcanhoto - Coletanea Pessoal.jpg")
  		   		
  		   		Artobj_Count = Artobj.Count
  		   		
@@ -190,7 +190,7 @@ For i = 1 to sources.Count
  		   		     'WILL SAVE THE ART TO A FILE
  		   		     NumFiles = NumFiles+1
  		   		  	 Format = Art_busca.Format
-                     ArtDir = "D:\ITUNES" 
+                     ArtDir = "D:\Python" 
                      Dim RegX
                      Set RegX = new RegExp
                      RegX.Pattern = "[/:\\\*\?""""<>]"

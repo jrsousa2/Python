@@ -2,13 +2,13 @@
 # O ALGORITMO BURRO DO CHAT GPT NAO SOUBE A FORMA CORRETA DE USAR
 # NAO SERA MAIS NECESSARIO SE EU CONSEGUIR FAZER A CHAMADA DIRETO, AGORA QUE EU SEI COMO FUNCIONA
 
-#def upscale_video(input_path, output_path, scale=4, model_path="D:\\iTunes\\Balao\\RealESRGAN_x4plus.pth"): #RealESRGAN_x4plus.pth
+#def upscale_video(input_path, output_path, scale=4, model_path="D:\\Python\\Balao\\RealESRGAN_x4plus.pth"): #RealESRGAN_x4plus.pth
 
 
 import subprocess
 import os
 
-def upscale_video(input_path, output_path, outscale=4, model_name="D:\\iTunes\\Balao\\RealESRGAN_x4plus.pth"):
+def upscale_video(input_path, output_path, outscale=4, model_name="D:\\Python\\Balao\\RealESRGAN_x4plus.pth"):
     # Build the command to run the inference script
     command = [
         "C:\\Python\\MyEnv\\Scripts\\python", "inference_realesrgan_video.py",
@@ -24,10 +24,10 @@ def upscale_video(input_path, output_path, outscale=4, model_name="D:\\iTunes\\B
 def upscale_image(input_path, output_path, outscale=2, model_name = "RealESRGAN_x4plus_anime_6B"):
     # Build the command to run the inference script
     command = [
-        "C:\\Python\\MyEnv\\Scripts\\python", "D:\\iTunes\\Balao\\inference_realesrgan.py",  # Path to your script
+        "C:\\Python\\MyEnv\\Scripts\\python", "D:\\Python\\Balao\\inference_realesrgan.py",  # Path to your script
         "--input", input_path,
         "--output", output_path,
-        "--model_path", "D:\\iTunes\\Balao\\weights\\RealESRGAN_x4plus_anime_6B.pth",
+        "--model_path", "D:\\Python\\Balao\\weights\\RealESRGAN_x4plus_anime_6B.pth",
         "--model_name", model_name,
         "--outscale", str(outscale),
         "--suffix", "upscaled"
@@ -44,6 +44,6 @@ def upscale_image(input_path, output_path, outscale=2, model_name = "RealESRGAN_
 
 # MAIN NAME
 # Run the function
-#upscale_video("D:\\iTunes\\Balao\\Balao.mp4", "D:\\iTunes\\Balao\\Balao2.mp4", outscale=2)
+#upscale_video("D:\\Python\\Balao\\Balao.mp4", "D:\\Python\\Balao\\Balao2.mp4", outscale=2)
 
-upscale_image("D:\\iTunes\\Balao\\teaser.jpg", "D:\\iTunes\\Balao\\teaser2.jpg", outscale=2)
+upscale_image("D:\\Python\\Balao\\teaser.jpg", "D:\\Python\\Balao\\teaser2.jpg", outscale=2)

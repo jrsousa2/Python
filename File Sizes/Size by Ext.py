@@ -20,6 +20,6 @@ def get_size_by_extension(directory, exts=None):
            print(f"{ext}: {size / (1024 * 1024):.2f} MB")
 
 # Change the path below to the folder you want to analyze
-#folder_path = r"D:\iTunes"
-folder_path = r"D:\itunes"
+#folder_path = r"D:\Python"
+folder_path = r"D:\Python"
 get_size_by_extension(folder_path, exts=[".txt"])

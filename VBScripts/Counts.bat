@@ -8,6 +8,6 @@ rem Sort fields (-S): pega sort fields
 rem Sort fields (-C): pega field counts
 
 D:
-cd D:\iTunes\Scripts
+cd D:\Python\Scripts
 cscript Excel.vbs -a -c
 

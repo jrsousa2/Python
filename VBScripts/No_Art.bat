@@ -9,6 +9,6 @@ rem Sort fields (-S): pega sort fields
 rem Sort fields (-X): pega Date fields
 
 D:
-cd D:\iTunes\Scripts
+cd D:\Python\Scripts
 cscript Excel.vbs -X
 

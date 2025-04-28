@@ -417,11 +417,11 @@ Next
 'SAVE FILE
 objExcel.DisplayAlerts = False
 
-Wscript.StdOut.Write "Output name (file will be saved to D:\iTunes\Excel\all.xls): "
+Wscript.StdOut.Write "Output name (file will be saved to D:\Python\Excel\all.xls): "
 result = WScript.StdIn.ReadLine
 'result = "xxx"
 'COLOCAR O NUMERO DA PLAYLIST DESEJADA AQUI
-my_sheet = "D:\iTunes\Excel\"& result &".xlsx"
+my_sheet = "D:\Python\Excel\"& result &".xlsx"
 objWorkbook.SaveAs(my_sheet)
 
 'objExcel.ActiveWorkbook.Save 'my_sheet

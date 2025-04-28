@@ -44,11 +44,11 @@ def download_images(search_query, num_images=3):
             print(f"Could not retrieve image URL: {e}")
 
     # Save images locally
-    os.makedirs("D:\\iTunes\\Atrizes\\images", exist_ok=True)
+    os.makedirs("D:\\Python\\Atrizes\\images", exist_ok=True)
     for i, url in enumerate(image_urls):  # Limit to num_images
         try:
             img_data = requests.get(url).content
-            with open(f"D:\\iTunes\\Atrizes\\images\\image_{i}.jpg", "wb") as file:
+            with open(f"D:\\Python\\Atrizes\\images\\image_{i}.jpg", "wb") as file:
                 file.write(img_data)
             print(f"Downloaded: {url}")  # Print the URL of the downloaded image
         except Exception as e:

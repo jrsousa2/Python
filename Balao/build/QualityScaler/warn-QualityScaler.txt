@@ -444,5 +444,5 @@ missing module named torch.Generator - imported by torch (top-level), torch.util
 missing module named torch.randperm - imported by torch (top-level), torch.utils.data.dataset (top-level)
 missing module named torch.default_generator - imported by torch (top-level), torch.utils.data.dataset (top-level)
 missing module named 'torch._C._VariableFunctions' - imported by torch (conditional)
-missing module named tkinterdnd2.tkinterDnD - imported by tkinterdnd2 (top-level), D:\iTunes\Balao\QualityScaler.py (top-level)
+missing module named tkinterdnd2.tkinterDnD - imported by tkinterdnd2 (top-level), D:\Python\Balao\QualityScaler.py (top-level)
 missing module named posix - imported by os (conditional, optional), shutil (conditional)

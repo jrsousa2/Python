@@ -7,6 +7,6 @@ rem Dim fields (-D): pega height, width and art size fields
 rem Sort fields (-S): pega sort fields
 
 D:
-cd D:\iTunes\Scripts
+cd D:\Python\Scripts
 cscript Excel.vbs -a -s
 

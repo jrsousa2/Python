@@ -2,7 +2,7 @@ rem CHAMA O SCRIPT QUE IRA INCORPORAR A ARTWORK NO PROPRIO ARQUIVO
 rem ELE SO EXECUTA ISSO EM ARQUIVOS QUE AINDA NAO TEM A ARTWORK INCORPORADA
 rem
 D:
-cd D:\iTunes\Scripts
+cd D:\Python\Scripts
 cscript Embed_Artwork_v2.vbs
 pause
 

@@ -2,21 +2,21 @@
 RODAR AI MODEL COM CMD LINE
  
 PARA IMAGEM:
-C:\Python\MyEnv\Scripts\python D:\iTunes\Balao\inference_realesrgan.py --input D:\iTunes\Balao\Input2\teaser.jpg --output D:\iTunes\Balao --model_path D:\iTunes\Balao\weights\RealESRGAN_x4plus_anime_6B.pth --model_name RealESRGAN_x4plus_anime_6B --gpu-id 0 --outscale 2
+C:\Python\MyEnv\Scripts\python D:\Python\Balao\inference_realesrgan.py --input D:\Python\Balao\Input2\teaser.jpg --output D:\Python\Balao --model_path D:\Python\Balao\weights\RealESRGAN_x4plus_anime_6B.pth --model_name RealESRGAN_x4plus_anime_6B --gpu-id 0 --outscale 2
 
-C:\Python\MyEnv\Scripts\python D:\iTunes\Balao\realesrgan-direto.py
+C:\Python\MyEnv\Scripts\python D:\Python\Balao\realesrgan-direto.py
 
 PARA VIDEO: NAO ESTA RODANDO: 
 
-C:\Python\MyEnv\Scripts\python "D:\iTunes\Balao\inference_realesrgan_video.py" -i D:\iTunes\Balao\Balao.mp4 -o D:\iTunes\Balao\Output -n RealESRGAN_x4plus -s 2 --num_process_per_gpu 1
+C:\Python\MyEnv\Scripts\python "D:\Python\Balao\inference_realesrgan_video.py" -i D:\Python\Balao\Balao.mp4 -o D:\Python\Balao\Output -n RealESRGAN_x4plus -s 2 --num_process_per_gpu 1
 
 ###################################################################################################
 
 
-C:\Python\MyEnv\Scripts\python D:\iTunes\Balao\inference_realesrgan.py --input C:\Temp2\frame_0517.png --output C:\Temp --face_enhance --model_name RealESRGAN_x4plus --gpu-id 0 --tile 256 --outscale 1 --suffix out
+C:\Python\MyEnv\Scripts\python D:\Python\Balao\inference_realesrgan.py --input C:\Temp2\frame_0517.png --output C:\Temp --face_enhance --model_name RealESRGAN_x4plus --gpu-id 0 --tile 256 --outscale 1 --suffix out
 
 # TENTA DIRETO O DIRETORIO
-C:\Python\MyEnv\Scripts\python D:\iTunes\Balao\inference_realesrgan.py --input D:\iTunes\Balao\Input2 --output D:\iTunes\Balao\Output --face_enhance --model_name RealESRGAN_x4plus --gpu-id 0  --outscale 2 --suffix out
+C:\Python\MyEnv\Scripts\python D:\Python\Balao\inference_realesrgan.py --input D:\Python\Balao\Input2 --output D:\Python\Balao\Output --face_enhance --model_name RealESRGAN_x4plus --gpu-id 0  --outscale 2 --suffix out
 
 --tile 128
 

@@ -1,7 +1,6 @@
 *.pth
 *.exe
 *.pkg
-*.mp4
 *.dat
 *.xlsx
 *.pyz
@@ -9,6 +8,7 @@
 *.html
 *.toc
 *.doc
+*.docx
 Log*.txt
 Sync*.txt
 *.jpg
@@ -20,10 +20,15 @@ Sync*.txt
 *.PNG
 *.m4a
 *.webp
+*.pbix
 Mp3Tag/
 Excel/
 Fazer/
 E-commerce/
+PowerBI/
+Shortcuts/
+Snowflake/
+iTunes*/
 Z-*
 z-*
 _init_*

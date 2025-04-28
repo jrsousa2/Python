@@ -5,7 +5,7 @@ import numpy as np
 model = cv2.dnn.readNetFromONNX('face_transformation_model.onnx')
 
 # Load an image
-image = cv2.imread("D:\\iTunes\\Baby\\Lula.jpg")
+image = cv2.imread("D:\\Python\\Baby\\Lula.jpg")
 blob = cv2.dnn.blobFromImage(image, scalefactor=1.0, size=(256, 256), mean=(0, 0, 0), swapRB=True, crop=False)
 
 # Perform the transformation

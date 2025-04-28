@@ -28,7 +28,7 @@ echo Past date is %past_date%
 
 rem Sets date to past
 rem date %past_date%
-rem start "" "C:\Program Files\SASHome\x86\SASEnterpriseGuide\4.3\SEGuide.exe" /openfile:D:\iTunes\Codes\organiza.egp
+rem start "" "C:\Program Files\SASHome\x86\SASEnterpriseGuide\4.3\SEGuide.exe" /openfile:D:\Python\Codes\organiza.egp
 
 rem The below will set the date back to what it was
 rem echo Press a key to continue

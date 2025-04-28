@@ -44,7 +44,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")
 'TRIES TO CREATE AN INTERFACE WITH EXCEL
 Set objExcel = CreateObject("Excel.Application")
 'READ ONLY IS FALSE
-my_sheet = "D:\itunes\Itunes DB.xls"
+my_sheet = "D:\Python\Itunes DB.xls"
 objExcel.Workbooks.Open (my_sheet),,False
 
 objExcel.Application.Visible = False

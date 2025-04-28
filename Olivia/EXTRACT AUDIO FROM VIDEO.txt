@@ -37,7 +37,7 @@ This keeps the original quality intact. Use .flac instead of .wav if you need lo
 ################################################################
 
 
-ffmpeg.exe -i "D:\iTunes\Baby\Media\D:\iTunes\Baby\Media\Debate.mp4" -vn -c:a copy "D:\iTunes\Baby\Media\Debate.wav"
+ffmpeg.exe -i "D:\Python\Baby\Media\D:\Python\Baby\Media\Debate.mp4" -vn -c:a copy "D:\Python\Baby\Media\Debate.wav"
 
 
 ffmpeg -i input.mp3 -t 60 -acodec copy output.mp3

@@ -9,7 +9,7 @@ else:
 
 # Load the pre-trained face detector and facial landmark detector
 detector = dlib.get_frontal_face_detector()
-predictor = dlib.shape_predictor("D:\\iTunes\\Baby_filter\\shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("D:\\Python\\Baby_filter\\shape_predictor_68_face_landmarks.dat")
 #detector.set_gpu(0)
 
 def apply_baby_filter(image_path):
@@ -37,4 +37,4 @@ def apply_baby_filter(image_path):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-apply_baby_filter("D:\\iTunes\\Baby_filter\\Lula.jpg")
+apply_baby_filter("D:\\Python\\Baby_filter\\Lula.jpg")

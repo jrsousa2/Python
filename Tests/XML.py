@@ -7,7 +7,7 @@ Cria_PL.Cria_PL("Move_files")
 
 # NOME DO ARQUIVO DA BIBILIOTECA DO ITUNES
 #lib = r'C:\Users\JR Sousa\Music\iTunes\iTunes Music Library.xml'
-lib = r'D:\iTunes\Playlist.xml'
+lib = r'D:\Python\Playlist.xml'
 
 # LE O ARQUIVO ESPECIFICADO
 tree = ET.parse(lib)

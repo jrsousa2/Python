@@ -8,7 +8,7 @@ def char_2_num(pmt):
        v=0
     return v
 
-df = pd.read_excel(r'D:\\iTunes\\File.xlsx')
+df = pd.read_excel(r'D:\\Python\\File.xlsx')
 #df = pd.DataFrame(df_rd, columns= ['id','detail'])
 
 # SHOWS THE IMPORTED FILE 

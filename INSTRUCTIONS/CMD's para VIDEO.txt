@@ -3,7 +3,7 @@ RECORTAR VIDEO
 comeca em 14 sec termina 2:03
 
 REM O ABAIXO RECORTA
-"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iTunes\Balao\Balao.mp4" -ss 00:00:13 -to 00:02:03 -codec copy "D:\iTunes\Balao\Balao2.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\Python\Balao\Balao.mp4" -ss 00:00:13 -to 00:02:03 -codec copy "D:\Python\Balao\Balao2.mp4"
 
 Trim de video
 
@@ -12,39 +12,39 @@ Trim de video
 ffmpeg -i input_video.mp4 -vf "crop=in_w-x-y:in_h" output_video.mp4
 
 POE E TIRA 2 PIXELS:
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_duracao.mp4" -vf "crop=426-54-52:240" -y "D:\iTunes\Balao\Balao.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_duracao.mp4" -vf "crop=426-54-52:240" -y "D:\Python\Balao\Balao.mp4"
 
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_duracao.mp4" -vf "crop=426-57-48:240" -y "D:\iTunes\Balao\Balao_2.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_duracao.mp4" -vf "crop=426-57-48:240" -y "D:\Python\Balao\Balao_2.mp4"
 
 setx PATH "%PATH%;C:\Ffmpeg\bin"
 
 ###################################################################################################
 
 EXTRACTING FRAMES FROM MP4 WITH FFMPEG
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_orig_duracao.mp4" -vf "fps=29.97" "D:\iTunes\Balao\Input\frame_%04d.png"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_orig_duracao.mp4" -vf "fps=29.97" "D:\Python\Balao\Input\frame_%04d.png"
 
 EXTRAI APENAS OS PRIMEIROS 5 SECS
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_2.mp4" -vf "fps=29.97" -t 15 "D:\iTunes\Balao\Input2_2\frame_%04d.png"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_2.mp4" -vf "fps=29.97" -t 15 "D:\Python\Balao\Input2_2\frame_%04d.png"
 
 
 REASSEMBLING FRAMES INTO VIDEO
-"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\iTunes\Balao\Balao_up.mp4
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\Python\Balao\Balao_up.mp4
 
 LOSSLESS FORMAT WITH CUDA (PRECISA TVZ TIRAR FFMPEG DA GRAPH SETTINGS
-"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -hwaccel cuda -i C:\Output_final\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 29.97 -pix_fmt yuv420p D:\iTunes\Balao\Balao_upload.mp4
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -hwaccel cuda -i C:\Output_final\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 29.97 -pix_fmt yuv420p D:\Python\Balao\Balao_upload.mp4
 
 TRULY LOSSLESS (nao eh legal, sem formato)
-"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\iTunes\Balao\Balao_lossless.raw
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\Python\Balao\Balao_lossless.raw
 
 Tentativa
-"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v ffv1 -pix_fmt rgb24 D:\iTunes\Balao\Balao_lossless.mkv
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v ffv1 -pix_fmt rgb24 D:\Python\Balao\Balao_lossless.mkv
 
 
 ###################################################################################################
 
 FAZER O MIX DO VIDEO COM O AUDIO
 
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_upload.mp4" -ss 22 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\iTunes\Balao\Balao_final.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_upload.mp4" -ss 22 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Python\Balao\Balao_final.mp4"
 
 # ASSEMBLES WITH SHORTEST TIME
 ffmpeg -i video.mp4 -ss 22 -i audio.mp3 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest output.mp4
@@ -52,9 +52,9 @@ ffmpeg -i video.mp4 -ss 22 -i audio.mp3 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0
 
 ffmpeg -i input_video.mp4 -vn -c:a copy output_audio.wav
 
-C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Balao\Balao.mp4" -vn -c:a copy "D:\iTunes\Baby\Media\Debate.wav"
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\Python\Balao\Balao.mp4" -vn -c:a copy "D:\Python\Baby\Media\Debate.wav"
 
-C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\recording.m4a" "D:\iTunes\Baby\recording.wav"
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\Python\Baby\recording.m4a" "D:\Python\Baby\recording.wav"
 
 
 

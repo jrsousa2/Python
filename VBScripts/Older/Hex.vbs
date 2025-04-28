@@ -1,6 +1,6 @@
 Set fso = CreateObject("scripting.filesystemobject")
  
-text = fso.OpenTextFile("D:\iTunes\test.txt",1,False,-1).ReadAll  
+text = fso.OpenTextFile("D:\Python\test.txt",1,False,-1).ReadAll  
 ' forreading, don't create, unicode
  
 WScript.Echo "Incorrect simplistic read - gives incorrect ascii codes for unicode chars"

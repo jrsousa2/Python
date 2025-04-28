@@ -11,7 +11,7 @@ ffmpeg -i "D:\Videos\Arosio\Arosio.mp4"
 
 ########################################################################################################################
 
-ffmpeg -i "D:\Videos\Olivia\Olivia_nosound.mp4" -ss 22 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\iTunes\Balao\Balao_final.mp4"
+ffmpeg -i "D:\Videos\Olivia\Olivia_nosound.mp4" -ss 22 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Python\Balao\Balao_final.mp4"
 
 # ASSEMBLES WITH SHORTEST TIME
 ffmpeg -i video.mp4 -ss 22 -i audio.mp3 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest output.mp4
@@ -19,6 +19,6 @@ ffmpeg -i video.mp4 -ss 22 -i audio.mp3 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0
 
 ffmpeg -i input_video.mp4 -vn -c:a copy output_audio.wav
 
-C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Balao\Balao.mp4" -vn -c:a copy "D:\iTunes\Baby\Media\Debate.wav"
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\Python\Balao\Balao.mp4" -vn -c:a copy "D:\Python\Baby\Media\Debate.wav"
 
-C:\ffmpeg\bin\ffmpeg.exe -i "D:\iTunes\Baby\recording.m4a" "D:\iTunes\Baby\recording.wav"
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\Python\Baby\recording.m4a" "D:\Python\Baby\recording.wav"

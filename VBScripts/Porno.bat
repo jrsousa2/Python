@@ -1,6 +1,6 @@
 chcp 65001
 
-dir /s/b "D:\Porno\*.*" > "D:\iTunes\Excel\Porno.m3u"
+dir /s/b "D:\Porno\*.*" > "D:\Python\Excel\Porno.m3u"
 
 chcp 437
 

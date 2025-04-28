@@ -3,7 +3,7 @@ RECORTAR VIDEO
 comeca em 14 sec termina 2:03
 
 REM O ABAIXO RECORTA
-"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iTunes\Balao\Balao.mp4" -ss 00:00:13 -to 00:02:03 -codec copy "D:\iTunes\Balao\Balao2.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\Python\Balao\Balao.mp4" -ss 00:00:13 -to 00:02:03 -codec copy "D:\Python\Balao\Balao2.mp4"
 
 Trim de video
 
@@ -12,8 +12,8 @@ Trim de video
 ffmpeg -i input_video.mp4 -vf "crop=in_w-x-y:in_h" output_video.mp4
 
 POE E TIRA 2 PIXELS:
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_duracao.mp4" -vf "crop=426-54-52:240" -y "D:\iTunes\Balao\Balao.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_duracao.mp4" -vf "crop=426-54-52:240" -y "D:\Python\Balao\Balao.mp4"
 
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_duracao.mp4" -vf "crop=426-57-48:240" -y "D:\iTunes\Balao\Balao_2.mp4"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_duracao.mp4" -vf "crop=426-57-48:240" -y "D:\Python\Balao\Balao_2.mp4"
 
 setx PATH "%PATH%;C:\Ffmpeg\bin"

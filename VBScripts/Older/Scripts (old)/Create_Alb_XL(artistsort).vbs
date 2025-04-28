@@ -135,10 +135,10 @@ Next
 'SAVE FILE
 objExcel.DisplayAlerts = False
 
-Wscript.StdOut.Write "Output name (file will be saved to F:\iTunes\Excel\): "
+Wscript.StdOut.Write "Output name (file will be saved to D:\Python\Excel\): "
 result = WScript.StdIn.ReadLine
 'COLOCAR O NUMERO DA PLAYLIST DESEJADA AQUI
-my_sheet = "F:\iTunes\Excel\"& result &".xls"
+my_sheet = "D:\Python\Excel\"& result &".xls"
 objWorkbook.SaveAs(my_sheet)
 
 'objExcel.ActiveWorkbook.Save 'my_sheet

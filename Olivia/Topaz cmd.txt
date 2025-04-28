@@ -10,7 +10,7 @@ THE BELOW WORKS:
 ffmpeg "-hide_banner" -start_number 4 "-i" "D:/Videos/Olivia/Input/frame_%04d.png" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" "tvai_up=model=prob-4:scale=0:w=640:h=480:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=0.2:device=0:vram=0.1:instances=1,scale=w=640:h=480:flags=lanczos:threads=0" "-c:v" "png" "-pix_fmt" "rgb24" -start_number 4 "D:/Videos/Olivia/Output/frame_%04d.png"
 
 THE BATCH:
-D:\iTunes\Olivia\Run.bat
+D:\Python\Olivia\Run.bat
 
 ###############################################################################################
 ###############################################################################################

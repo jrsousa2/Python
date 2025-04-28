@@ -174,17 +174,17 @@ def inference_video(args, video_save_path, device=None, total_workers=1, worker_
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth']
-        model_path = "D:\\iTunes\\Balao\\weights\\RealESRGAN_x4plus.pth"
+        model_path = "D:\\Python\\Balao\\weights\\RealESRGAN_x4plus.pth"
     elif args.model_name == 'RealESRNet_x4plus':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.1/RealESRNet_x4plus.pth']
-        model_path = "D:\\iTunes\\Balao\\weights\\RealESRNet_x4plus.pth"
+        model_path = "D:\\Python\\Balao\\weights\\RealESRNet_x4plus.pth"
     elif args.model_name == 'RealESRGAN_x4plus_anime_6B':  # x4 RRDBNet model with 6 blocks
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=6, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth']
-        model_path = "D:\\iTunes\\Balao\\weights\\RealESRGAN_x4plus_anime_6B.pth"
+        model_path = "D:\\Python\\Balao\\weights\\RealESRGAN_x4plus_anime_6B.pth"
     elif args.model_name == 'RealESRGAN_x2plus':  # x2 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=2)
         netscale = 2
@@ -240,7 +240,7 @@ def inference_video(args, video_save_path, device=None, total_workers=1, worker_
         from gfpgan import GFPGANer
         face_enhancer = GFPGANer(
             # model_path='https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth',
-            model_path = "D:\\iTunes\\Balao\\weights\\GFPGANv1.3.pth",
+            model_path = "D:\\Python\\Balao\\weights\\GFPGANv1.3.pth",
             upscale=args.outscale,
             arch='clean',
             channel_multiplier=2,
@@ -382,8 +382,8 @@ def main():
     args.denoise_strength = 0.5
     args.outscale = 2             
     args.model_name = "RealESRGAN_x4plus" # "RealESRGAN_x4plus_anime_6B"
-    # "D:\\iTunes\\Balao\weights\\RealESRGAN_x4plus_anime_6B.pth"
-    args.model_path = "D:\\iTunes\\Balao\weights\\RealESRGAN_x4plus.pth" 
+    # "D:\\Python\\Balao\weights\\RealESRGAN_x4plus_anime_6B.pth"
+    args.model_path = "D:\\Python\\Balao\weights\\RealESRGAN_x4plus.pth" 
     args.suffix = ""
     args.tile = 0
     args.tile_pad = 10

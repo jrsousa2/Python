@@ -73,17 +73,17 @@ def main():
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth']
-        model_path = "D:\\iTunes\\Balao\\weights\\RealESRGAN_x4plus.pth"
+        model_path = "D:\\Python\\Balao\\weights\\RealESRGAN_x4plus.pth"
     elif args.model_name == 'RealESRNet_x4plus':  # x4 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.1/RealESRNet_x4plus.pth']
-        model_path = "D:\\iTunes\\Balao\\weights\\RealESRNet_x4plus.pth"
+        model_path = "D:\\Python\\Balao\\weights\\RealESRNet_x4plus.pth"
     elif args.model_name == 'RealESRGAN_x4plus_anime_6B':  # x4 RRDBNet model with 6 blocks
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=6, num_grow_ch=32, scale=4)
         netscale = 4
         file_url = ['https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth']
-        model_path = "D:\\iTunes\\Balao\\weights\\RealESRGAN_x4plus_anime_6B.pth"
+        model_path = "D:\\Python\\Balao\\weights\\RealESRGAN_x4plus_anime_6B.pth"
     elif args.model_name == 'RealESRGAN_x2plus':  # x2 RRDBNet model
         model = RRDBNet(num_in_ch=3, num_out_ch=3, num_feat=64, num_block=23, num_grow_ch=32, scale=2)
         netscale = 2
@@ -147,7 +147,7 @@ def main():
         face_enhancer = GFPGANer(
             # IF THIS ONE IS COMMENTED OUT, IT WILL DOWNLOAD FROM THE INTERNET (DESABILITAR)
             # model_path='https://github.com/TencentARC/GFPGAN/releases/download/v1.3.0/GFPGANv1.3.pth',
-            model_path = "D:\\iTunes\\Balao\\weights\\GFPGANv1.3.pth",
+            model_path = "D:\\Python\\Balao\\weights\\GFPGANv1.3.pth",
             upscale=args.outscale,
             arch='clean',
             channel_multiplier=2,
@@ -224,7 +224,7 @@ def main():
                    extension = 'png'
                 # ret = cv2.imwrite(save_path, output)
                 # TRIES TO OUTPUT TO D:\
-                # ret = cv2.imwrite(r'D:\iTunes\Balao\Input2\test.png', output)
+                # ret = cv2.imwrite(r'D:\Python\Balao\Input2\test.png', output)
                 ret = cv2.imwrite(r'C:\temp\test.png', output)
                 print("\nSaving image to:", save_path, "RC:", ret)
                 # Memory cleanup

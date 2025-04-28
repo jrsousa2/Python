@@ -4,10 +4,10 @@ ffmpeg -framerate 29.97 -hwaccel cuda -i D:\Videos\Olivia\Output\frame_%04d.png 
 #############################################################################################################
 
 REASSEMBLING FRAMES INTO VIDEO
-ffmpeg -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\iTunes\Balao\Balao_up.mp4
+ffmpeg -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\Python\Balao\Balao_up.mp4
 
 TRULY LOSSLESS (nao eh legal, sem formato)
-ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\iTunes\Balao\Balao_lossless.raw
+ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\Python\Balao\Balao_lossless.raw
 
 Tentativa
-ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v ffv1 -pix_fmt rgb24 D:\iTunes\Balao\Balao_lossless.mkv
+ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v ffv1 -pix_fmt rgb24 D:\Python\Balao\Balao_lossless.mkv

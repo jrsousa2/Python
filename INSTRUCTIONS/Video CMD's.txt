@@ -1,3 +1,3 @@
 EXTRAI APENAS OS PRIMEIROS 5 SECS
-"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\iTunes\Balao\Balao_2.mp4" -vf "fps=29.97" -t 15 "D:\iTunes\Balao\Input2_2\frame_%04d.png"
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_2.mp4" -vf "fps=29.97" -t 15 "D:\Python\Balao\Input2_2\frame_%04d.png"
 

@@ -19,10 +19,10 @@ def pitch_shift(audio_path, shift_semitones):
     return shifted_audio, samplerate
 
 # Example usage
-audio_path = "D:\\iTunes\\Baby\\output.wav"
+audio_path = "D:\\Python\\Baby\\output.wav"
 shifted_audio, samplerate = pitch_shift(audio_path, 12)  # Shift up by 12 semitones (1 octave)
 
 # Save the transformed audio
-sf.write("D:\\iTunes\\Baby\\baby_voice.wav", shifted_audio, samplerate)
+sf.write("D:\\Python\\Baby\\baby_voice.wav", shifted_audio, samplerate)
 
 
