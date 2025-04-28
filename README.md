@@ -8,7 +8,7 @@
 - Search, download and attachment of MP3 artwork (Apple or Discogs)
 - Searching and populating MP3 tags on the Discogs website automatically
 - Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). 
-- Download codes will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
+- Download video codes will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes
 - Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress)
 - Web scraping of tables on Wikipedia with BeautifulSoup
