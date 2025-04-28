@@ -11,8 +11,8 @@
 - Download video codes will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes
 - Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress)
-- Web scraping of tables on Wikipedia with BeautifulSoup
-- Automatic creation of formatted slides with formatted data scraped from Wikipedia (see final video created below)
+- Web scraping of tables on Wikipedia using BeautifulSoup
+- Automatic creation of formatted PPT slides with formatted data scraped from Wikipedia (see final video created below)
 - Image, audio and video processing using ffmpeg
 
 Video created from a powerpoint deck created automatically in Python (audio synced with ffmpeg):
