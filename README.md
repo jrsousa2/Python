@@ -5,7 +5,7 @@
 - Speech recognition and transcripting / translation (PT to EN)
 - Upward pitch shifting of speech (baby voice)
 - Play counts syncing between iTunes and Windows Media Player
-- Search, download and attachment of mp3 artwork (Apple or Discogs)
+- Search, download and attachment of MP3 artwork (Apple or Discogs)
 - Searching and populating MP3 tags on the Discogs website automatically
 - Creation of stand-alone/static executables from Python codes
 - Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress)

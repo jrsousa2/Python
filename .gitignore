@@ -21,6 +21,9 @@ Sync*.txt
 *.m4a
 *.webp
 *.pbix
+Z-*
+z-*
+_init_.*
 Mp3Tag/
 Excel/
 Fazer/
@@ -29,6 +32,5 @@ PowerBI/
 Shortcuts/
 Snowflake/
 iTunes*/
-Z-*
-z-*
-_init_*
+Job*/
+
