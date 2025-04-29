@@ -14,7 +14,7 @@
 - Creation of stand-alone/static executables from Python codes
 - Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress)
 - Web scraping of tables on Wikipedia using BeautifulSoup
-- Automatic creation of formatted PPT slides with formatted data scraped from Wikipedia (see final video created below)
+- Automatic creation of formatted PPT slides with data scraped from Wikipedia (see final video below)
 - Image, audio and video processing using ffmpeg
 
 Video created from a PPT deck created in Python (audio synced with ffmpeg):
