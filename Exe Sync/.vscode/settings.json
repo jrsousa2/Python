@@ -5,7 +5,7 @@
     "editor.hover.sticky": false,
     "editor.autoClosingBrackets": "never",
     "editor.acceptSuggestionOnCommitCharacter": false,
-    /* I don't know if this is still necessary */
+    /* # nao sei se eh necessario mais-ver settings.json as well */
     "html.suggest.html5": false,
     "editor.snippetSuggestions": "none", 
     /* works for a SE user  */
@@ -23,7 +23,12 @@
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
-    "python.analysis.extraPaths": [ "D:\\Python\\Novelas", "D:\\Python\\iTunes" ],
-    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe"
+    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe",
+    // "python.autoComplete.extraPaths": [ "D:\\Python\\iTunes" ] ,
+    "python.analysis.extraPaths": [ "D:\\Python\\iTunes" ],
+    //"python.defaultInterpreterPath": "D:\\Python\\myenv\\Scripts\\python.exe",
+    // "terminal.integrated.scrollback": 0,
+    "powershell.integratedConsole.forceClearScrollbackBuffer": true,
+    "python.pythonPath": "D:\\Python\\myenv\\Scripts\\python.exe"
 
 }

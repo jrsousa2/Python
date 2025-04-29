@@ -9,13 +9,7 @@ import openpyxl
 from unidecode import unidecode
 from re import sub
 
-import sys 
-  
-# Insert the path of modules folder  
-sys.path.insert(0, "D:\\Python\\iTunes") 
-# import Read_PL # type: ignore
-
-import Files # type: ignore
+import Files
 
 # VARIABLE USED IN THE iTunes FUNCTIONS
 # ExtArray = [".unk",".jpg",".png",".bmp"]

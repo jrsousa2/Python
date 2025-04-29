@@ -10,10 +10,6 @@ import Move
 import Read_PL
 import Files
 
-#from sys import path
-# Insert the path of modules folder  
-#path.insert(0, "D:\\Python\\WMP")
-
 Log_file = "D:\\Python\\Move_files_log.txt"
 
 def Call_move(Check_dir=True,rows=None):

@@ -44,7 +44,7 @@ def Call_artwork(recheck_files=True,override_art=True,PL_nbr=None):
     # Cria lista de arqs a serem ignorados
     if not recheck_files:
        print("\nCreating lists of files to be skipped")
-       Read_PL.Cria_skip_list(playlists,"Looked",PL_files)
+       Read_PL.Create_skip_list(playlists,"Looked",PL_files)
     
     # CREATES PL's (doesn't recreate any, unless they don't exis)
     PL = Read_PL.Read_PL("Hits")

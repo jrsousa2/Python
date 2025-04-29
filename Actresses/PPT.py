@@ -18,12 +18,8 @@ from pptx.dml.color import RGBColor
 #from pptx.util import PP_ALIGN  # Import this for text alignment
 from pptx.enum.text import PP_ALIGN
 from re import sub
-import sys
 
-# Insert the path of modules folder  
-sys.path.insert(0, "D:\\Python\\Novelas") 
-sys.path.insert(0, "D:\\Python\\iTunes")
-import Excel # type: ignore
+import Excel 
 # from Images import Wid # type: ignore
 
 import pandas as pd

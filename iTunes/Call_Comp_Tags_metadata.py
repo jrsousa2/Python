@@ -7,11 +7,6 @@
 from os.path import exists
 import Files
 
-from sys import path
-
-# Insert the path of modules folder  
-path.insert(0, "D:\\Python\\WMP")
-
 # TENHO QUE PASSAR OS PMTS PARA QUE ELES POSSAM RETORNAR A ROTINA PRINCIPAL
 def Reads_tags(Arq,i,dict_main,tag_app,tag_tiny):
     # populates the dicts

@@ -319,7 +319,7 @@ def Add_file_to_PL(PLs,PL_name,arq): #,PL_files
                print("File not found!")   
            #PL_files[PL].add(arq.lower())
 
-def Cria_skip_list(PLs,PL,dic):
+def Create_skip_list(PLs,PL,dic):
     try:
         This_PL = PLs.ItemByName(PL)
     except Exception:
@@ -467,4 +467,3 @@ def iTunes_tag_dict(track,cols,Len_type="num"):
 
 # INITIALIZES iTunes
 Init_iTunes()
-

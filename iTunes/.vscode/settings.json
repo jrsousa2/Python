@@ -22,6 +22,7 @@
     "editor.wordBasedSuggestions": false,
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
-    "editor.lightbulb.enabled": false
-
+    "editor.lightbulb.enabled": false,
+    "python.analysis.extraPaths": [ "D:\\Python\\WMP" ],
+    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe"
 }

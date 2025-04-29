@@ -8,11 +8,7 @@ from unidecode import unidecode
 import requests
 from bs4 import BeautifulSoup
 
-import sys 
-  
-# Insert the path of modules folder  
-sys.path.insert(0, "D:\\Python\\iTunes") 
-import Read_PL # type: ignore
+import Read_PL
 
 # VARIABLE USED IN THE iTunes FUNCTIONS
 ExtArray = [".unk",".jpg",".png",".bmp"]
