@@ -18,7 +18,6 @@
 - Image, audio and video processing using ffmpeg
 
 Video created from a powerpoint deck created automatically in Python (audio synced with ffmpeg):
-[Famous Brazilian actresses](https://github.com/jrsousa2/VS_code/blob/main/Atrizes/Final_video/Atrizes.mp4)
 
-[Google drive link](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
+[Brazilian actresses](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
 
