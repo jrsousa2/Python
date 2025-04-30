@@ -10,6 +10,7 @@
 *.doc
 # Log*.txt
 # Sync*.txt
+Transfer*
 *.jpg
 *.zip
 *.egp
