@@ -8,8 +8,8 @@
 *.html
 *.toc
 *.doc
-# Log*.txt
-# Sync*.txt
+Log*
+Sync*
 Transfer*
 *.jpg
 *.zip
