@@ -8,9 +8,10 @@
 *.html
 *.toc
 *.doc
-Log*
-Sync*
-Transfer*
+Log*.txt
+Sync*.txt
+Transfer*.txt
+Move*.txt
 *.jpg
 *.zip
 *.egp
