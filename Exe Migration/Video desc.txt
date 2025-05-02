@@ -1,0 +1,14 @@
+Migrate your iTunes library to a new drive with this fast application
+
+This program lets you change the location of the tracks in your iTunes library to a new drive on the disk. It doesn't move the files, you need to do that manually first (just cut and paste the folder from its current drive to a new desired one). Reason to do it that way is that it's more convenient than doing it inside the program. The relative paths need to remain the same, only the drive can change.
+
+Launch the application and enter the old and the new drive. The program will fix the location of all the files in the iTunes library to point to the new drive.
+
+The program uses the iTunes library XML file to locate the original path for each track and update it to point to the new drive, thus fixing the missing/broken paths after the files are manually moved. A simple self-explanatory GUI makes it easier for the user to navigate the program.
+
+The user should do a test first with a single sample file for safety. For example, move file "D:\MP3\Abba - SOS.mp3" to "E:\MP3\Abba - SOS.mp3" and launch the program to see how it works. Updated files are added to a new playlist called Updt_location.
+
+Application can be downloaded in the link:
+https://jrsousa2.gumroad.com/l/itunes
+
+https://youtu.be/9g73Hwe55eY

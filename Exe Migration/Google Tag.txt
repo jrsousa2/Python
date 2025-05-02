@@ -1,0 +1,19 @@
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PB74N30B97"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PB74N30B97');
+</script>
+
+Measurement ID:
+G-PB74N30B97
+
+Stream ID:
+8458960660
+
+https://jrsousa2.gumroad.com/l/ufylg
+
+https://jrsousa2.gumroad.com/l/itunes

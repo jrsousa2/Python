@@ -1,6 +1,6 @@
 # FUNCTIONS THAT READ AND CREATE PLAYLISTS
 # iTunes API
-import win32com.client
+import win32com.client # pywin32
 from pandas import DataFrame, to_datetime
 from datetime import datetime
 from unidecode import unidecode
@@ -78,10 +78,17 @@ def Init_iTunes():
     global Lib
     global PL_ID_dict
     global PL_name_dict
+    global lib_xml_path
 
-    iTunesApp = win32com.client.Dispatch("iTunes.Application.1")
-    Sources = iTunesApp.Sources
-    Lib = iTunesApp.LibraryPlaylist
+    # CHECKS IF iTunes EXISTS
+    try:
+        iTunesApp = win32com.client.Dispatch("iTunes.Application.1")
+        Sources = iTunesApp.Sources
+        Lib = iTunesApp.LibraryPlaylist
+    except:
+        success = False    
+    else:
+        success = True
 
     # Get the path to the iTunes Library XML file
     lib_xml_path = iTunesApp.LibraryXMLPath
@@ -104,13 +111,15 @@ def Init_iTunes():
                  PL_name_dict[PL_name] = j
 
     dict = {}
-    dict['App'] = iTunesApp
-    dict['Sources'] = Sources
-    dict["Lib"] = Lib
-    dict['PLs'] = PLs
-    dict['Lib_XML_path'] = lib_xml_path
-    
+    dict['Success'] = success
+    if success:
+       dict['App'] = iTunesApp
+       dict['Sources'] = Sources
+       dict["Lib"] = Lib
+       dict['PLs'] = PLs
+       dict['Lib_XML_path'] = lib_xml_path
     return dict
+
 
 # PLAYLISTS (NAO ESTA SENDO USADO, PODE SER DELETADO DEPOIS)
 def PL_nbr_by_name(PL_name):
@@ -485,7 +494,7 @@ def order_list(smaller_list,order_list=None):
     return smaller_list
 
 # READS XML LIBRARY
-def Read_xml(col_names,rows=None,Len_type="num"):
+def Read_xml(col_names,rows=None,Len_type="num",Launch_iTunes=True):
     dict = Init_iTunes() 
     lib_xml_path = dict['Lib_XML_path'] 
 

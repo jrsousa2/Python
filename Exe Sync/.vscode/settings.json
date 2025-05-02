@@ -5,10 +5,10 @@
     "editor.hover.sticky": false,
     "editor.autoClosingBrackets": "never",
     "editor.acceptSuggestionOnCommitCharacter": false,
-    /* # nao sei se eh necessario mais-ver settings.json as well */
+    // nao sei se eh necessario mais-ver settings.json as well 
     "html.suggest.html5": false,
     "editor.snippetSuggestions": "none", 
-    /* works for a SE user  */
+    // works for a SE user  
     "editor.acceptSuggestionOnEnter": "off",
     "editor.minimap.enabled": false,
     "editor.quickSuggestions": {
@@ -24,11 +24,9 @@
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
     "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe",
-    // "python.autoComplete.extraPaths": [ "D:\\Python\\iTunes" ] ,
-    "python.analysis.extraPaths": [ "D:\\Python\\iTunes" ],
-    //"python.defaultInterpreterPath": "D:\\Python\\myenv\\Scripts\\python.exe",
+    "python.analysis.extraPaths": [ "D:\\Python\\iTunes", "D:\\Python\\WMP" ]
     // "terminal.integrated.scrollback": 0,
-    "powershell.integratedConsole.forceClearScrollbackBuffer": true,
-    "python.pythonPath": "D:\\Python\\myenv\\Scripts\\python.exe"
+    // "powershell.integratedConsole.forceClearScrollbackBuffer": true,
+    // "python.pythonPath": "D:\\Python\\myenv\\Scripts\\python.exe"
 
 }

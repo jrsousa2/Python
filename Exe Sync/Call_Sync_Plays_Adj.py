@@ -8,12 +8,15 @@
 # HERE THE ID IS THE PID (PERSISTENT ID) FOR ITUNES, SOMETHING ELSE FOR WMP
 
 from os.path import exists
-import Read_PL
-# import pandas as pd
-import Files
 
 import sys
+sys.path.insert(0, "D:\\Python\\iTunes")
 sys.path.insert(0, "D:\\Python\\WMP")
+
+from Read_PL import iTunes_tag_dict, Read_xml
+# import pandas as pd
+from Files import file_w_ext
+
 import WMP_Read_PL as WMP 
 
 # CALLS Read_PL FUNCTION 
@@ -24,7 +27,7 @@ def Save(df,output="iTunes_vs_WMP.xlsx"):
     # CREATES A NEW COLUMN WITH THE FILE NAME WO/ THE PATH
     # RENAME THE COLUMNS HEADERS
     if "Arq" in df.columns:
-        df.loc[:, "File"] = df["Arq"].apply(Files.file_w_ext)
+        df.loc[:, "File"] = df["Arq"].apply(file_w_ext)
         # df = df.rename(columns={"Arq": "Location" })
 
     # SAVE TO EXCEL FILE:
@@ -59,13 +62,9 @@ def df_dedupe(source,df):
 # MAIN CODE
 def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # CALLS Read_PL FUNCTION ,Do_lib=True,rows=10
-    if Do_lib:
-       # ONLY IN THIS CASE WE NEED TO ADD THE LENGTH OF THE TRACK TO VERIFY ACCURACY
-       iTu_col_names = col_names[:]
-       iTu_col_names.append("PID")
-       iTu_dict = Read_PL.Read_xml(iTu_col_names,rows=rows)
-    else:
-        iTu_dict = Read_PL.Read_PL(col_names,PL_name=PL_name,PL_nbr=PL_nbr,Do_lib=Do_lib,rows=rows,Modify_cols=False)
+    iTu_col_names = col_names[:]
+    iTu_col_names.append("PID")
+    iTu_dict = Read_xml(iTu_col_names,rows=rows)
     
     # ASSIGNS VARS
     iTu_App = iTu_dict["App"]
@@ -98,7 +97,7 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # WMP
     miss_files = []
     if Do_lib:
-       print("\nReading the WMP library...")
+       print("\nReading the Windows Media Player library...")
        wmp_dict = WMP.Read_WMP_PL(col_names,Do_lib=Do_lib,rows=rows,Modify_cols=False) 
     else:
         Arq = [x for x in iTu_df["Location"] if exists(x)]
@@ -157,12 +156,12 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # TRACK METADATA
     cols = ["Art","Title","Genre"]
     # COMPARE AND CHANGE THE FILES
-    for i in range(nbr_files):
+    for i in range(nbr_files,0):
         if Do_lib:
            iTu_track = iTu_App.LibraryPlaylist.Tracks.ItemByPersistentID(*ID[i])
         else:    
             iTu_track = iTu_App.GetITObjectByID(*ID[i])
-        track_dict = Read_PL.iTunes_tag_dict(iTu_track, cols)
+        track_dict = iTunes_tag_dict(iTu_track, cols)
         track_meta = track_dict["Art"] +" - "+ track_dict["Title"]
         
         # CHANGE TAGS, BOTH ITUNES AND WMP CAN BE UPDATED AT THE SAME TIME NOW (NO LONGER XOR)
@@ -207,7 +206,7 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
               #WMP_track.setItemInfo("UserPlayCount", str(max_plays))
               print("(doublecheck WMP count:",WMP_track.getiteminfo("UserPlayCount"),")")
     
-    print("\nUpdated",wmp_cnt,"WMP plays")
+    print("\nUpdated",wmp_cnt,"Windows Media Player plays")
     print("Updated",iTu_cnt,"iTunes plays")
 
     print("\nThe iTunes df has",iTu_start_rows,"tracks before deduping (",iTu_end_rows,"after)")
@@ -217,13 +216,6 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     print("\nThe merged df has",merged_rows,"tracks")
     print("\nThe merged df has",diff_plays,"tracks where the WMP and iTunes play counts differ")
 
-    # MISSING
-    if not Do_lib:
-       miss_nbr = len(miss_files)
-       print("\nFiles not found in WMP:",miss_nbr)
-       for i in range(miss_nbr):   
-           print("Missing",i+1,"of",miss_nbr,":",miss_files[i])
-       print()
 
 # CALLS PROGRAM 
 Sync_plays(Do_lib=True)
