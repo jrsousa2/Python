@@ -22,6 +22,8 @@ Move*.txt
 *.m4a
 *.webp
 *.pbix
+Read_PL.py
+*Sync*
 Z-*
 z-*
 *__init__.py
