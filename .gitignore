@@ -23,6 +23,7 @@ Move*.txt
 *.webp
 *.pbix
 Read_PL.py
+WMP_Read_PL.py
 *Sync*
 Z-*
 z-*
