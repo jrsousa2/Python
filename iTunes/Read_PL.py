@@ -1,7 +1,7 @@
 # FUNCTIONS THAT READ AND CREATE PLAYLISTS
 # iTunes API
 import win32com.client # pywin32
-from pandas import DataFrame, to_datetime
+from pandas import DataFrame, to_datetime, to_numeric
 from datetime import datetime
 from unidecode import unidecode
 from re import sub
@@ -14,7 +14,7 @@ from binascii import a2b_hex
 
 # ORDER OF THE COLS. IN THE DF (BUT THEY CAN BE SPECIFIED ANY WAY)
 # THE BELOW IS JUST SO THE RIGHT HEADERS GO WITH THE RIGHT COLS.
-order_list_itunes = ["PL_name","Pos","ID","PID","PID2","Arq","Art","Title","AA","Album","Genre","Year","Group","Bitrate","Len","Covers","Plays","Skips","Added"]
+order_list_itunes = ["PL_nbr", "PL_name","Pos","ID","PID","PID2","Arq","Art","Title","AA","Album","Genre","Year","Group","Bitrate","Len","Covers","Plays","Skips","Added"]
 
 # XML COLS THAT WE WANT TO KEEP 'Track ID' "Total Time"
 #keep_lst = ["Location","Artist","Name","Persistent ID"]
@@ -120,30 +120,142 @@ def Init_iTunes():
        dict['Lib_XML_path'] = lib_xml_path
     return dict
 
+# GETS THE ATTRIBUTE OF AN ITUNES TRACK
+def Get_track_attrib(track, key, Len_type="char"):
+    if key=="Covers":
+       value = track.Artwork.Count
+    elif key=="ID":
+        value = track.GetITObjectIDs()
+    else:
+        value = getattr(track, iTu_tag_dict[key])
+    if key=="Len" and Len_type=="num":
+       value =  time_to_sec(value)   
+       # value = pd.to_timedelta(secs, unit="s") 
+    if key=="Added":
+        year = value.year
+        month = value.month
+        day = value.day
+        hour = value.hour
+        minute = value.minute
+        second = value.second
+        # CONVERTS PYWINTYPE DATE TO PANDAS DATETIME
+        value = to_datetime(f"{year}-{month}-{day} {hour}:{minute}:{second}")    
+    return value
 
-# PLAYLISTS (NAO ESTA SENDO USADO, PODE SER DELETADO DEPOIS)
-def PL_nbr_by_name(PL_name):
+# CODE TO OBTAIN ALL PROPERTIES OF TRACK AT A TIME (THE REQUESTED ONES IN THE COLS)
+def iTunes_tag_dict(track,cols,Len_type="num"):
     dict = {}
-    PL_nbr = PL_name_dict.get(PL_name,-1)
-    Achou = PL_nbr != -1
-    dict["res"] = Achou          
-    dict["PL_nbr"] = PL_nbr
+    # PROPERTIES
+    for key in cols:
+        dict[key] = Get_track_attrib(track, key, Len_type=Len_type)
+        #list.append(value)
+    return dict
+
+# ORDERS A SUBLIST BASED ON THE ORDER OF THE SUPERLIST 
+# ORDER LIST SO DF COLUMN HEADERS ALIGNS WITH THE VALUES IN THE ORDER THEY WERE APPENDED
+# order_list=order_list_itunes or order_list_wmp
+def order_list(col_names,order_list=None,Add_cols=False):
+    # CREATES A COPY OF THE PROVIDED PMT LIST
+    order_col_names = col_names[:]
+    # ADDS COLS. IF THEY WEREN'T INCLUDED
+    if Add_cols:
+       if "PL_nbr" not in col_names:
+           order_col_names.append("PL_nbr")
+       if "PL_name" not in col_names:
+           order_col_names.append("PL_name")
+       if "Pos" not in col_names:
+           order_col_names.append("Pos") 
+    # Create a dictionary to store the index of each element in the larger list
+    index_dict = {element: index for index, element in enumerate(order_list)}
+    # Define a custom key function that returns the index of each element in the larger list
+    key_func = lambda element: index_dict[element]
+    # The below sorts in place (don't use)
+    # smaller_list.sort(key=key_func)
+    # returns an entirely new list (won't affect the passed pmt)
+    return sorted(order_col_names, key=key_func)
+
+
+# READS XML LIBRARY
+def Read_xml(col_names,rows=None,Len_type="num"):
+    dict = Init_iTunes() 
+    lib_xml_path = dict['Lib_XML_path'] 
+
+    # GIVES HEADS-UP
+    print("Parsing the XML (may take a while...)")
+    tree = ET.parse(lib_xml_path)
+    root = tree.getroot()
+    numtracks = len(root.findall("./dict/dict/dict"))
+    # LOGIC TO DISPLAY IN THE LOG
+    tam = max(numtracks // 20, 1)
+
+    # tracks is a list of dictionaries    
+    tracks = []
+    m = 0
+    print("\nReading XML entries...\n")
+    for dict_entry in root.findall("./dict/dict/dict"):
+        if rows is not None and m >= rows:
+           break
+        track = {}
+        iter_elem = iter(dict_entry)
+        for elem in iter_elem:
+            if elem.tag == "key" and elem.text in XML_tag_dict_inv.keys() and XML_tag_dict_inv[elem.text] in col_names: #
+               key = XML_tag_dict_inv[elem.text]
+               next_elem = next(iter_elem)
+               value = next_elem.text
+               if key == "Arq":
+                  # Extract only the file path from the location URL
+                  location = value.split("file://localhost")[1]
+                  location = location.lstrip("/")
+                  location = location.replace("/","\\")
+                  track[key] = unquote(location)
+               #    elif key=="Len" and Len_type=="num":
+               #         value =  time_to_sec(value)   
+                       # value = pd.to_timedelta(secs, unit="s") 
+               # THIS KEY ONLY EXISTS IN THE FILE IF THERE IS ARTWORK (NO NEED TO TEST IF IT'S A VALID NUMBER)        
+               elif key in ["Covers", "Year", "Plays"]:
+                    track[key] = int(value)
+               elif key=="Added":
+                    #value = next_elem.text
+                    pars_value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%SZ')
+                    year = pars_value.year
+                    month = pars_value.month
+                    day = pars_value.day
+                    hour = pars_value.hour
+                    minute = pars_value.minute
+                    second = pars_value.second
+                    # CONVERTS PYWINTYPE DATE TO PANDAS DATETIME
+                    value_conv = to_datetime(f"{year}-{month}-{day} {hour}:{minute}:{second}")    
+                    track[key] = value_conv
+               else:
+                   track[key] = value
+        
+        # FINISHED READING A DICTIONARY ENTRY
+        tracks.append(track)
+        m = m+1
+        if m % 1000==0:
+           print("Row. no:",m,"of",numtracks)
+
+    # THE LOOP HAS ENDED
+    order_col_names = order_list(col_names,order_list=order_list_itunes)
+    df = DataFrame(tracks, columns=order_col_names)
+    # FILLS NAN VALUES IN ALL COLS. WITH 0 OR BLANK, DEPENDING ON THE COL. TYPE
+    df = df.apply(replace_nan)
+    # Apply the function to create a new column 'Y'
+    if "PID" in col_names:
+        df['PID2'] = df['PID'].apply(unpack_PID)
+
+    # FILLS MISSING COL. "COVERS" WITH 0
+    # if "Covers" in col_names:
+    #     df.Covers = df.Covers.fillna(0)
+    # df = df.reindex(columns=col_names)
+    # VALUE RETURNED IS A DICT
+    dict = {"App": iTunesApp, "Sources": Sources, "Lib": Lib, "PLs": PLs, "DF": df}
     return dict
 
 # PLAYLISTS
-def PL_name_by_ID(PL_Id):
-    Achou = False
-    PL_name = PL_ID_dict.get(PL_Id,"")
-    return PL_name
-
-# PLAYLISTS
-def Read_PL(col_names,PL_name=None,PL_nbr=None,Do_lib=False,rows=None,Modify_cols=True,Len_type="num"):
+def Read_PL(col_names,PL_name=None,PL_nbr=None,Do_lib=False,rows=None,Len_type="num",Order_df=False):
     # LAUNCHES ITUNES
     Init_iTunes()
-
-    # CREATES A COPY OF THE COL. LIST SO IT'S NOT MODIFIED OUTSIDE OF THIS FUNCTION
-    if not Modify_cols:
-       col_names = col_names[:]
 
     # LISTA A SER PROCESSADA (PRIORIDADE EH DADA A LIBRARY)
     if PL_name is not None and not Do_lib:
@@ -170,8 +282,6 @@ def Read_PL(col_names,PL_name=None,PL_nbr=None,Do_lib=False,rows=None,Modify_col
         read_PL = Lib
         PL_name = "library"
     
-    #num = listarray(k)
-    #Set playlist = playlists.Item(num)
     # data IS A LIST OF LISTS
     data = []
     PL_list = []
@@ -202,10 +312,13 @@ def Read_PL(col_names,PL_name=None,PL_nbr=None,Do_lib=False,rows=None,Modify_col
         # LOGIC TO DISPLAY IN THE LOG
         tam = max(numtracks // 20, 1)
         
-        # ADD PLAYLIST NAME TO LIST
+        # ADD PLAYLIST NAME OR LIBRARY TO LIST
         PL_list.append(PL_name)
-        # ORDER LIST SO COLUMN HEADERS ALWAYS MATCH THEIR VALUES
-        col_names = order_list(col_names,order_list=order_list_itunes)
+
+        # ORDER THE LIST OF COLUMNS TO MATCH THE RIGHT ORDER
+        # SO COLUMN HEADERS ALWAYS ALIGNS WITH THEIR VALUES
+        order_col_names = order_list(col_names,order_list=order_list_itunes,Add_cols=True)
+
         # INITIATES LIST (m IS NEEDED TO INDICATE POSITION IN THE PLAYLIST)
         # REMEMBER THAT POS IS ONLY USED TO REFERENCE THE iTUNES DB, NOT THE LISTS
         # THE RANGE FOR ITEMS IN AN ITUNES PL IS NOT 0 TO (N-1) (IT'S 1 TO N)
@@ -213,37 +326,44 @@ def Read_PL(col_names,PL_name=None,PL_nbr=None,Do_lib=False,rows=None,Modify_col
             track = tracks.Item(m)
             if track.Kind == 1:
                # THE SOURCE (PLAYLIST/LIBRARY)
-               list = [PL_name]
-               # THE TRACK POSITION
-               list.append(m)
-               for key in col_names:
+               list = [PL_nbr, PL_name]
+               # THE TRACK POSITION (POS)
+               list.append(m) 
+               for key in order_list(col_names,order_list=order_list_itunes):
                    value = Get_track_attrib(track, key, Len_type=Len_type)
                    list.append(value)
                # ADD ROW TO LIST, BEFORE CREATING DF 
                data.append(list)
                if (m+1) % tam==0:
                    print("Row. no: ",m+1)
-        #print("")
+    
     # DATAFRAME
-    # ADDS COL. PL IF IT WASN'T INCLUDED
-    if "PL_name" not in col_names:
-        col_names.append("PL_name")
-    if "Pos" not in col_names:
-        col_names.append("Pos") 
-    # ORDER THE LIST OF COLUMNS TO MATCH THE ABOVE ORDER
-    # SO COLUMN HEADERS ALWAYS MATCH THEIR VALUES
-    col_names = order_list(col_names,order_list=order_list_itunes)
-    df = DataFrame(data, columns=col_names)
+    df = DataFrame(data, columns=order_col_names)
+    # CONVERTS COL PL_NBR TO NUMERIC
+    df['PL_nbr'] = to_numeric(df['PL_nbr'], errors="coerce")
 
-    # IF LEN IS SELECTED, TRANSFORM INTO SECONDS (DUPLICATED)
-    if False and "Len" in col_names and Len_type=="num":
-       df["Len"] = pd.to_timedelta(df["Len"], unit="s")
     # ORDERS DF BY ART/TITLE (CONVERTED TO UNICODE)
-    df = Order(df, col_names)
+    if Order_df:
+       df = Order(df, order_col_names)
     # VALUE RETURNED IS A DICT
     dict = {"App": iTunesApp, "Sources": Sources, "Lib": Lib, "PLs": PLs, "PL": read_PL, "PL_nbr": PL_nbr, \
             "PL_Name": PL_name, "PL_list": PL_list, "tracks": tracks, "DF": df}
     return dict
+
+# PLAYLISTS (NAO ESTA SENDO USADO, PODE SER DELETADO DEPOIS)
+def PL_nbr_by_name(PL_name):
+    dict = {}
+    PL_nbr = PL_name_dict.get(PL_name,-1)
+    Achou = PL_nbr != -1
+    dict["res"] = Achou          
+    dict["PL_nbr"] = PL_nbr
+    return dict
+
+# PLAYLISTS
+def PL_name_by_ID(PL_Id):
+    Achou = False
+    PL_name = PL_ID_dict.get(PL_Id,"")
+    return PL_name
 
 # REASSIGNS PLAYLIST
 def Reassign_PL(PL_Name):
@@ -450,125 +570,6 @@ def Read_lib_miss(rows=None):
 
     # VALUE RETURNED IS A DICT
     dict = {"App": iTunesApp, "PLs": PLs, "tracks": tracks, "DF": df}
-    return dict
-
-# GETS THE ATTRIBUTE OF AN ITUNES TRACK
-def Get_track_attrib(track, key, Len_type="char"):
-    if key=="Covers":
-       value = track.Artwork.Count
-    elif key=="ID":
-        value = track.GetITObjectIDs()
-    else:
-        value = getattr(track, iTu_tag_dict[key])
-    if key=="Len" and Len_type=="num":
-        value =  time_to_sec(value)   
-        # value = pd.to_timedelta(secs, unit="s") 
-    if key=="Added":
-        year = value.year
-        month = value.month
-        day = value.day
-        hour = value.hour
-        minute = value.minute
-        second = value.second
-        # CONVERTS PYWINTYPE DATE TO PANDAS DATETIME
-        value = to_datetime(f"{year}-{month}-{day} {hour}:{minute}:{second}")    
-    return value
-
-# CODE TO OBTAIN ALL PROPERTIES OF TRACK AT A TIME (THE REQUESTED ONES IN THE COLS)
-def iTunes_tag_dict(track,cols,Len_type="num"):
-    dict = {}
-    # PROPERTIES
-    for key in cols:
-        dict[key] = Get_track_attrib(track, key, Len_type=Len_type)
-        #list.append(value)
-    return dict
-
-# ORDERS A SUBLIST BASED ON THE ORDER OF THE SUPERLIST order_list=order_list_itunes
-def order_list(smaller_list,order_list=None):
-    # Create a dictionary to store the index of each element in the larger list
-    index_dict = {element: index for index, element in enumerate(order_list)}
-    # Define a custom key function that returns the index of each element in the larger list
-    key_func = lambda element: index_dict[element]
-    # Sort the smaller list based on the custom key function
-    smaller_list.sort(key=key_func)
-    return smaller_list
-
-# READS XML LIBRARY
-def Read_xml(col_names,rows=None,Len_type="num",Launch_iTunes=True):
-    dict = Init_iTunes() 
-    lib_xml_path = dict['Lib_XML_path'] 
-
-    # GIVES HEADS-UP
-    print("Parsing the XML (may take a while...)")
-    tree = ET.parse(lib_xml_path)
-    root = tree.getroot()
-    numtracks = len(root.findall("./dict/dict/dict"))
-    # LOGIC TO DISPLAY IN THE LOG
-    tam = max(numtracks // 20, 1)
-
-    # tracks is a list of dictionaries    
-    tracks = []
-    m = 0
-    print("\nReading XML entries...\n")
-    for dict_entry in root.findall("./dict/dict/dict"):
-        if rows is not None and m >= rows:
-           break
-        track = {}
-        iter_elem = iter(dict_entry)
-        for elem in iter_elem:
-            if elem.tag == "key" and elem.text in XML_tag_dict_inv.keys() and XML_tag_dict_inv[elem.text] in col_names: #
-               key = XML_tag_dict_inv[elem.text]
-               next_elem = next(iter_elem)
-               value = next_elem.text
-               if key == "Arq":
-                  # Extract only the file path from the location URL
-                  location = value.split("file://localhost")[1]
-                  location = location.lstrip("/")
-                  location = location.replace("/","\\")
-                  track[key] = unquote(location)
-               #    elif key=="Len" and Len_type=="num":
-               #         value =  time_to_sec(value)   
-                       # value = pd.to_timedelta(secs, unit="s") 
-               # THIS KEY ONLY EXISTS IN THE FILE IF THERE IS ARTWORK (NO NEED TO TEST IF IT'S A VALID NUMBER)        
-               elif key in ["Covers", "Year", "Plays"]:
-                    track[key] = int(value)
-               elif key=="Added":
-                    #value = next_elem.text
-                    pars_value = datetime.strptime(value, '%Y-%m-%dT%H:%M:%SZ')
-                    year = pars_value.year
-                    month = pars_value.month
-                    day = pars_value.day
-                    hour = pars_value.hour
-                    minute = pars_value.minute
-                    second = pars_value.second
-                    # CONVERTS PYWINTYPE DATE TO PANDAS DATETIME
-                    value_conv = to_datetime(f"{year}-{month}-{day} {hour}:{minute}:{second}")    
-                    track[key] = value_conv
-               else:
-                   track[key] = value
-        
-        # FINISHED READING A DICTIONARY ENTRY
-        tracks.append(track)
-        m = m+1
-        if m % 1000==0:
-           print("Row. no:",m,"of",numtracks)
-
-    # THE LOOP HAS ENDED
-    #df = DataFrame(tracks)
-    col_names = order_list(col_names,order_list=order_list_itunes)
-    df = DataFrame(tracks, columns=col_names)
-    # FILLS NAN VALUES IN ALL COLS. WITH 0 OR BLANK, DEPENDING ON THE COL. TYPE
-    df = df.apply(replace_nan)
-    # Apply the function to create a new column 'Y'
-    if "PID" in col_names:
-        df['PID2'] = df['PID'].apply(unpack_PID)
-
-    # FILLS MISSING COL. "COVERS" WITH 0
-    # if "Covers" in col_names:
-    #     df.Covers = df.Covers.fillna(0)
-    # df = df.reindex(columns=col_names)
-    # VALUE RETURNED IS A DICT
-    dict = {"App": iTunesApp, "Sources": Sources, "Lib": Lib, "PLs": PLs, "DF": df}
     return dict
 
 

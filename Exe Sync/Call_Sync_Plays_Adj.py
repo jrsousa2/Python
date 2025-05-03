@@ -218,4 +218,4 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
 
 
 # CALLS PROGRAM 
-Sync_plays(Do_lib=True)
+Sync_plays(Do_lib=True, rows=1000)

@@ -5,7 +5,7 @@
 import wx
 from GUI_form import MainFrame1  # Import the generated GUI
 
-from threading import Thread
+# from threading import Thread
 
 import sys
 sys.path.insert(0, "D:\\Python\\iTunes")
@@ -18,6 +18,7 @@ from os.path import exists
 
 import pandas as pd
 
+# global col_names 
 # COLS THAT MATTER FOR THIS PGM 
 col_names =  ["Arq", "Plays", "ID"]
 
@@ -46,38 +47,6 @@ def df_dedupe(source,df):
     dict["DF"] = df_dedupe
     return dict
 
-# MAIN CODE
-def read_iTunes(rows=None):
-    # CALLS Read_PL FUNCTION ,Do_lib=True,rows=10
-    iTu_col_names = col_names[:]
-    iTu_col_names.append("PID")
-    iTu_dict = Read_xml(iTu_col_names,rows=rows)
-    
-    # ASSIGNS VARS
-    iTu_App = iTu_dict["App"]
-    iTu_df = iTu_dict["DF"]
-    # MAKES A COPY OF THE ORIGINAL PATH LIST ("ARQ")
-    iTu_df["Location"] = iTu_df["Arq"].copy()
-    # LOWERCASE THE FILE NAME
-    iTu_df["Arq"] = iTu_df["Arq"].str.lower()
-
-    plus_miss_rows = iTu_df.shape[0]
-    
-    Found = [exists(x) for x in iTu_df["Location"]]
-    iTu_df["Found"] = Found
-
-    print("\nThe iTunes df has",Found.count(False),"missing tracks")
-
-    # SEL ONLY FOUND FILES
-    iTu_df = iTu_df[iTu_df["Found"] == True]
-    
-    # DROPS DUPES
-    print("\nDeduping iTunes df, this may take a while...")
-    dict = df_dedupe("iTunes", iTu_df)
-    iTu_df = dict["DF"]
-    iTu_start_rows = dict["start_rows"]
-    iTu_end_rows = dict["end_rows"]
-
 
 class MyApp(wx.App):
     def OnInit(self):
@@ -86,7 +55,7 @@ class MyApp(wx.App):
         # Add this flag
         self.iTunes_launched = False  
         # ADDS A DICTIONARY TO THE CLASS THAT WILL BE USED TO RETURN VALUES (IN ONE OF THE FUNCTIONS)
-        self.result = {}
+        # self.result = {}
         
         # Bind button click
         self.frame.btn_Sync.Bind(wx.EVT_BUTTON, self.on_button_click)
@@ -144,16 +113,9 @@ class MyApp(wx.App):
                     wx.CallAfter(self.frame.OutputWindowCtrl.SetValue, f"Processed {m} of {numtracks} files...")
 
         # DATAFRAME
-        # ADDS COL. PL IF IT WASN'T INCLUDED JUST SO ALL COLS. ALIGN
-        if "PL_nbr" not in col_names:
-            col_names.append("PL_nbr") 
-        if "PL_name" not in col_names:
-            col_names.append("PL_name")
-        if "Pos" not in col_names:
-            col_names.append("Pos")    
         # ORDER THE LIST SO COLUMN HEADERS MATCH THEIR VALUES
-        col_names = order_list(col_names,order_list=order_list_wmp)
-        df = pd.DataFrame(data, columns=col_names)
+        order_col_names = order_list(col_names,order_list=order_list_wmp)
+        df = pd.DataFrame(data, columns=order_col_names)
 
         # RETURN ALL RELEVANT OBJS
         self.result['WMP'] = wmp
@@ -163,6 +125,7 @@ class MyApp(wx.App):
         # return dict
 
     def on_button_click(self, event):
+        
         # Assuming OutputWindowCtrl is a wx.TextCtrl, access it and set the message
         output_text_ctrl = self.frame.OutputWindowCtrl  # Replace with the correct reference to your TextCtrl
 
@@ -196,7 +159,7 @@ class MyApp(wx.App):
               iTu_col_names.append("PID")
 
               output_text_ctrl.SetValue("Parsing the iTunes XML...")
-              iTu_dict = Read_xml(iTu_col_names,rows=None)
+              iTu_dict = Read_xml(iTu_col_names,rows=1000)
 
               # ASSIGNS VARS
               iTu_App = iTu_dict["App"]
@@ -230,30 +193,89 @@ class MyApp(wx.App):
               iTu_end_rows = dict["end_rows"]
 
               # THIS PART IS MORE COMPLICATED BECAUSE I NEED TO SHOW PROGRESS
-              thread = Thread(target=self.Read_WMP_library, args=(100,))
-              thread.start()  # Starts the task only at this point
+              # thread = Thread(target=self.Read_WMP_library, args=(100,))
+              # thread.start()  # Starts the task only at this point
 
-               # Wait for the thread to finish before getting the returned values
-              thread.join()
+              # Wait for the thread to finish before getting the returned values
+              # thread.join()
+
+              # INIT WMP
+              dict = Init_wmp()
+              wmp = dict['WMP']
+              library = dict['Library']
+              rows = 2000
+
+              # THIS IS THE LIBRARY
+              numtracks = len(library) 
+              PL_name = "library"
+              PL_nbr = 0
+
+              # PROCESS SPECIFIED NUMBER OF ROWS
+              if rows is None:
+                 numtracks = len(library)   
+              else:
+                  numtracks = min(rows, len(library))
+                
+              # data IS A LIST OF LISTS
+              data = []
+              output_text_ctrl.SetValue(f"Reading the WMP music library")
+              output_text_ctrl.SetValue(f"tracks: {library.Count} (processing {numtracks})")
+              
+
+              #wx.CallAfter(self.frame.OutputWindowCtrl.SetValue, f"Reading the WMP music library")
+              #wx.CallAfter(self.frame.OutputWindowCtrl.SetValue, f"\ntracks: ",library.Count,"(processing",numtracks,")")
+
+              # LOGIC TO DISPLAY IN THE LOG
+              tam = max(numtracks // 20, 1)
+                
+              # ORDER LIST SO COLUMN HEADERS ALIGNS WITH THE VALUES AS THEY WERE APPENDED
+              order_col_names = order_list(col_names,order_list=order_list_wmp,Add_cols=True)
+              # THE RANGE FOR ITEMS IN A WMP PL IS 0 TO (N-1)
+              for m in range(numtracks):
+                  track = library[m]    
+                    
+                  # ONLY DOES AUDIO
+                  if track.getiteminfo("MediaType")=="audio":
+                      # THE SOURCE (PLAYLIST/LIBRARY)
+                      tag_list = [PL_nbr,PL_name]
+                      # THE TRACK POSITION
+                      tag_list.append(m)
+                      dict = WMP_tag_dict(track,col_names)
+                      for key in order_list(col_names,order_list=order_list_wmp):
+                          value = dict[key]
+                          tag_list.append(value)
+                      #ADD ROW TO LIST, BEFORE CREATING DF
+                      data.append(tag_list)
+                      if (m+1) % tam==0:
+                          wx.CallAfter(self.frame.OutputWindowCtrl.SetValue, f"Processed {m} of {numtracks} files...")
+
+              # DATAFRAME
+              wx.CallAfter(self.frame.OutputWindowCtrl.SetValue, f"Finished...")
+              # df = pd.DataFrame(data, columns=order_col_names)
+
+              # RETURN ALL RELEVANT OBJS
+            #   self.result['WMP'] = wmp
+            #   self.result['Lib'] = library
+            #   self.result['DF'] = df
 
               # WMP ASSIGNING
-              wmp_df = self.result["DF"]
-              # USED IF INPUT IS THE WHOLE LIBRARY
-              WMP_lib = self.result["Lib"]
-              # USED IF INPUT IS A PLAYLIST (BASED ON iTunes)
-              WMP_player = self.result["WMP"]
+            #   wmp_df = self.result["DF"]
+            #   # USED IF INPUT IS THE WHOLE LIBRARY
+            #   WMP_lib = self.result["Lib"]
+            #   # USED IF INPUT IS A PLAYLIST (BASED ON iTunes)
+            #   WMP_player = self.result["WMP"]
             
               # CHANGE DF-ELIMINATE DUPES
-              print("\nDeduping WMP df, this may take a while...")
-              dict = df_dedupe("WMP",wmp_df)
-              wmp_df = dict["DF"]
-              wmp_start_rows = dict["start_rows"]
-              wmp_end_rows = dict["end_rows"]
+            #   print("\nDeduping WMP df, this may take a while...")
+            #   dict = df_dedupe("WMP",wmp_df)
+            #   wmp_df = dict["DF"]
+            #   wmp_start_rows = dict["start_rows"]
+            #   wmp_end_rows = dict["end_rows"]
 
-              wmp_df = wmp_df.rename(columns={"Pos": "WMP_Pos"})
+            #   wmp_df = wmp_df.rename(columns={"Pos": "WMP_Pos"})
         
-              # JOIN THE DATAFRAMES [["Arq", "max_Plays_iTunes", "ID", "Location"]]
-              df = iTu_df.merge(wmp_df[["Arq", "max_Plays_WMP", "WMP_Pos"]], on="Arq", how="inner")  
+            #   # JOIN THE DATAFRAMES [["Arq", "max_Plays_iTunes", "ID", "Location"]]
+            #   df = iTu_df.merge(wmp_df[["Arq", "max_Plays_WMP", "WMP_Pos"]], on="Arq", how="inner")  
            
            
            if not success:
