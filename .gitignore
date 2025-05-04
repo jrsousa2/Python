@@ -36,4 +36,6 @@ PowerBI/
 Shortcuts/
 Cloud/
 Job*/
+# Note the below has a escape char (backslash) for the special character blank
+Exe\ Sync/
 
