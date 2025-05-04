@@ -138,13 +138,13 @@ def Comp(iTunes=True,rows=None):
        for i in range(nbr_updt):
            n = to_fix_dic['All'][i]
            print("\nFixing",i+1,"of",nbr_updt,":",Files.file_w_ext(Arq[n]))
-           dict_tiny = Files.tag_dict(Arq[n],tags_comp_lst)
+           dict_tiny = Files.tinytag_tags_dict(Arq[n],tags_comp_lst)
            if iTunes:
               track = App.LibraryPlaylist.Tracks.ItemByPersistentID(*PID[n])
-              dict_app = Read_PL.iTunes_tag_dict(track,tags_comp_lst)
+              dict_app = Read_PL.iTunes_sel_tags_dict(track,tags_comp_lst)
            else: 
                track = library[n]   
-               dict_app = WMP.WMP_tag_dict(track,tags_comp_lst)
+               dict_app = WMP.WMP_sel_tags_dict(track,tags_comp_lst)
 
            for key in tags_comp_lst:
                if dict_app[key] != dict_tiny[key]:
@@ -154,12 +154,12 @@ def Comp(iTunes=True,rows=None):
                   # UPDATE TAG
                   if iTunes:
                      # get the attribute name from the dictionary
-                     attr_name = Read_PL.iTu_tag_dict[key]
+                     attr_name = Read_PL.iTunes_all_tags_dict[key]
                      # update the attribute value of the track object dynamically
                      setattr(track, attr_name, dict_app[key])
                   else:
                      # Get the attribute name from the dictionary
-                     attr_name = WMP.tag_dict[key]
+                     attr_name = WMP.WMP_all_tags_dict[key]
                      new_value = dict_tiny[key]
                      track.setItemInfo(attr_name, new_value)
         

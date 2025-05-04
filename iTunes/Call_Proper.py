@@ -112,7 +112,7 @@ def Call_proper(rows=None):
                      fixed[key] = fixed[key]+1
                      print(i+1,"Fixing",key,":",main_dic[n][key],"->",proper_dic[key])
                      # MAPPING
-                     attr_name = Read_PL.iTu_tag_dict[key]    
+                     attr_name = Read_PL.iTunes_all_tags_dict[key]    
                      # SET PROPERTY TO TRACK
                      setattr(track, attr_name, proper_dic[key])
               print()            

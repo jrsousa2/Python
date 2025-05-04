@@ -99,7 +99,7 @@ def Proper_fname(PL_name=None,PL_nbr=None,Do_lib=False,rows=None, do_cnt=100):
         if exists(path) and path != New_location and path.lower()==New_location.lower() and not fez and Files.Is_DMP3(path):
            print("From",Files.file_w_ext(path),"->",Files.file_w_ext(New_location))
            cols = ["Plays", "Added"]
-           track_dict = WMP.WMP_tag_dict(track,cols)
+           track_dict = WMP.WMP_sel_tags_dict(track,cols)
            plays = track_dict["Plays"]
            Added = track.getItemInfo("AcquisitionTime")
            temp_path = "D:\\JR\\" + file_no_ext + ext

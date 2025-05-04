@@ -507,7 +507,7 @@ def Do_Counts(df):
     print("\nCounts Update\n")
 
     # create a dictionary to store attribute names
-    tag_dict = {"Plays": "PlayedCount", "Skips": "SkippedCount"}
+    transfer_tags_dict = {"Plays": "PlayedCount", "Skips": "SkippedCount"}
 
     # RE-CREATES LISTS AFTER ORDER HAS CHANGED
     # AQUI TODAS AS TRACK ENTRAM, INDEPENDENTE DE SEREM MISSING
@@ -571,7 +571,7 @@ def Do_Counts(df):
             Cur_count = tag_assign[key]
             # CHANGES TRACK COUNTS    
             if Cur_count < Max[key][i]:
-               attr_name = tag_dict[key]
+               attr_name = transfer_tags_dict[key]
                # PRINTS
                print("Updating",key,"from",Cur_count,"->",Max[key][i],"(",fixed_count[key],"updates)")
                # ADD ENTRY TO LOG FILE
@@ -707,7 +707,7 @@ def Transfer(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,call_Covers=1, call
     tracks_lst = [App.GetITObjectByID(*ID[i]) for i in range(nbr_files)]
     list = ["AA","Album","Genre","Year","Plays","Skips"]
     for key in list:
-        Col = [getattr(tracks_lst[i], Read_PL.iTu_tag_dict[key]) for i in range(nbr_files)]
+        Col = [getattr(tracks_lst[i], Read_PL.iTunes_all_tags_dict[key]) for i in range(nbr_files)]
         # ADDS TO THE DF
         df.loc[:, key] = Col
     

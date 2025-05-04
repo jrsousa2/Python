@@ -230,7 +230,7 @@ def read_tinytag(File, tag):
     return res
 
 # OBTAIN ALL PROPERTIES OF TRACK AT A TIME (REQUESTED ONES IN COLS)
-def tag_dict(File,cols):
+def tinytag_tags_dict(File,cols):
     dict = {}
     # PROPERTIES
     for key in cols:

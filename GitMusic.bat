@@ -21,12 +21,12 @@ echo .
 
 REM FIRST iTunes
 copy /y "D:\Python\iTunes\Call_Save_to_Excel.py" "%REPO_PATH%"
-copy /y "D:\Python\iTunes\Call_Sync_Plays.py" "%REPO_PATH%"
-copy /y "D:\Python\iTunes\Read_PL.py" "%REPO_PATH%"
+:: copy /y "D:\Python\iTunes\Call_Sync_Plays.py" "%REPO_PATH%"
+:: copy /y "D:\Python\iTunes\Read_PL.py" "%REPO_PATH%"
 copy /y "D:\Python\iTunes\README.md" "%REPO_PATH%"
 
 REM NOW WMP
-copy /y "D:\Python\WMP\WMP_Read_PL.py" "%REPO_PATH%"
+rem copy /y "D:\Python\WMP\WMP_Read_PL.py" "%REPO_PATH%"
 
 REM SKIP LINE
 echo .

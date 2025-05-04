@@ -16,7 +16,7 @@ Genre_order_list = ["Brasil","iPhone","Favorite","Easy","Novela","Pop","Rock","A
 Kw = {}
 
 # create a dictionary to store attribute names
-tag_dict = {"genre": "Genre", "group": "Grouping"}
+local_tags_dict = {"genre": "Genre", "group": "Grouping"}
 
 # DON'T CHANGE THE FIRST 10 POSITIONS BELOW */
 # String replacement
@@ -351,9 +351,9 @@ def Add_to_tag(track,New_tag,Tag="Genre"):
        Str = "" 
     if Str != "":
        # check if the tag is valid
-       if Tag.lower() in tag_dict:
+       if Tag.lower() in local_tags_dict:
           # get the attribute name from the dictionary
-          attr_name = tag_dict[Tag.lower()]
+          attr_name = local_tags_dict[Tag.lower()]
           # update the attribute value of the track object dynamically
           setattr(track, attr_name, Str)
        else:
@@ -393,9 +393,9 @@ def Rem_from_tag(track,Rem_tag,Tag="Genre",Full_match=True):
        Str = "" 
     if Str != "":
        # check if the tag is valid
-       if Tag.lower() in tag_dict:
+       if Tag.lower() in local_tags_dict:
           # get the attribute name from the dictionary
-          attr_name = tag_dict[Tag.lower()]
+          attr_name = local_tags_dict[Tag.lower()]
           # update the attribute value of the track object dynamically
           setattr(track, attr_name, Str)
        else:

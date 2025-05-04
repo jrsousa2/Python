@@ -90,7 +90,7 @@ def Remove_dupes(PL_name=None,PL_nbr=None,Do_lib=False):
     tracks_lst = [App.GetITObjectByID(*ID[i]) for i in range(nbr_files)]
     list = ["Bitrate","Len"]
     for key in list:
-        Col = [getattr(tracks_lst[i], Read_PL.iTu_tag_dict[key]) for i in range(nbr_files)]
+        Col = [getattr(tracks_lst[i], Read_PL.iTunes_all_tags_dict[key]) for i in range(nbr_files)]
         # ADDS TO THE DF
         df.loc[:, key] = Col
 
