@@ -21,4 +21,4 @@ def get_folder_sizes_in_mb(folder_path):
         print(f"Folder: {folder_name}: {size:.2f} MB")
 
 # Example usage:
-get_folder_sizes_in_mb('C:\\Python\\Python38\\Lib\\site-packages')
+get_folder_sizes_in_mb(r"C:\Python\Python3.9-v1\Lib\site-packages")

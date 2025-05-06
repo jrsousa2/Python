@@ -2,6 +2,11 @@ pyinstaller --onefile QualityScaler.py
 
 pyinstaller --noconsole --onefile --strip Call_Move_Library_GUI.py
 
+pyinstaller --noconsole --onefile --strip --paths=D:\Python\iTunes --paths=D:\Python\WMP Main.py
+
+"D:\\Python\\iTunes")
+sys.path.insert(0, "D:\\Python\\WMP")
+
 https://drive.google.com/file/d/16aL286gj5nKe3EF9GOY5TeEP9w-ADWMw/view?usp=sharing
 
 pyinstaller --onefile your_script.py
