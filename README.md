@@ -16,6 +16,8 @@
 - Web scraping of tables on Wikipedia using BeautifulSoup
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia (see final video below)
 - Image, audio and video processing using ffmpeg
+- Image pattern recognition (trying to check if an MP3 cover is a generic vinyl/LP) so it can be automatically replaced. This is done by comparing the cover with a given vinyl image.
+- Submitting windows commands from Python
 
 Video created from a PPT deck created in Python (audio synced with ffmpeg):
 [Brazilian actresses](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
