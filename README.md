@@ -2,7 +2,7 @@
 
 **Various projects that I've developed in Python, including:**
 - AI video enhancement
-- Speech recognition and transcripting / translation (PT to EN)
+- Speech recognition and transcription/translation (PT to EN)
 - Upward pitch shifting of speech (baby voice)
 - Play counts syncing between iTunes and Windows Media Player
 - Moving MP3 files under their right folder and creating complete log files with changes.
