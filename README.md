@@ -7,7 +7,7 @@
 - Play counts syncing between iTunes and Windows Media Player.
 - Moving MP3 files under their right folder and creating complete log files with changes.
 - Search, download and attachment of MP3 artwork (Apple or Discogs), with log files creation.
-- Image pattern recognition (trying to check if an MP3 cover is a generic vinyl/LP) so it can be automatically replaced. This is done by comparing the cover with a given vinyl image.
+- Image pattern recognition (trying to check if an MP3 cover is a generic vinyl/LP so it can be automatically replaced). This is done by comparing the cover with a given vinyl image.
 - Searching and populating MP3 tags on the Discogs website automatically.
 - Making MP3 tag names in sync with the actual file names (to detect and resolve conflicts)
 - Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). 
