@@ -17,6 +17,7 @@
 - Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia (see final video below).
+- Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
 - Image, audio and video processing using ffmpeg.
 - Submitting windows commands from Python.
 
