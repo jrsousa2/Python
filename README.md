@@ -1,7 +1,7 @@
 ### Personal Python projects developed in VS Code
 
 **Various projects that I've developed in Python, including:**
-- AI video enhancement with open source code Real-ESRGAN.
+- AI video enhancement with open source code Real-ESRGAN (this falls under ML).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN).
 - Upward pitch shifting of speech (baby voice).
