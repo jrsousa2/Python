@@ -24,5 +24,5 @@
 Video created from a PPT deck created in Python (audio synced with ffmpeg):
 [Brazilian actresses](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
 
-ML* - Machine Learning.
+*ML: Machine Learning.
 
