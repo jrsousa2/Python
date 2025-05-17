@@ -1,4 +1,0 @@
-C:\ffmpeg\bin\ffmpeg.exe -i "D:\Python\Baby\recording.m4a" output.wav
-
-
-C:\ffmpeg\bin\ffmpeg.exe -i "D:\Python\Baby\recording.m4a" "D:\Python\Baby\recording.wav"

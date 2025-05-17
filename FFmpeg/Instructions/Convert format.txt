@@ -1,0 +1,4 @@
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\Videos\Lula\recording.m4a" output.wav
+
+
+C:\ffmpeg\bin\ffmpeg.exe -i "D:\Videos\Lula\recording.m4a" "D:\Videos\Lula\recording.wav"

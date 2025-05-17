@@ -1,0 +1,34 @@
+# Better to cd to the location where the srt file is since ffmpeg filter file paths can be a nightmare
+# Ensure that your ffmpeg build has the subtitle options with ffmpeg -filters | findstr subtitles
+# COMMAND
+ffmpeg -i "D:\Videos\Arosio\Arosio_final.mp4" -vf "subtitles=subtitles.srt" -c:a copy "D:\Videos\Arosio\Arosio_subtitle_final.mp4"
+
+ffmpeg -i "D:\Videos\Arosio\Arosio_final.mp4" -vf "subtitles=D\:\\Videos\\Arosio\\subtitles.srt" -c:a copy "D:\Videos\Arosio\Arosio_subtitle_final.mp4"
+
+ffmpeg -i yourvideo.mp4 -vf "subtitles=yoursubtitledocument.txt:force_style='Fontsize=20'" -c:a copy -c:v libx264 -crf 23 -preset veryfast nameoftheoutputvideo.mp4
+
+
+-i yourvideo.mp4: Specifies the input video file.
+
+-vf "subtitles=yoursubtitledocument.txt:force_style='Fontsize=20'" : Applies a video filter to burn subtitles into the video.
+
+subtitles=yoursubtitledocument.txt means it uses the subtitle file (can be .srt or .ass).
+
+force_style='Fontsize=20' changes subtitle style, here increasing font size to 20.
+
+-c:a copy
+Copies the audio stream without re-encoding (fast and keeps original quality).
+
+-c:v libx264
+Re-encodes the video using the H.264 codec (widely compatible).
+
+-crf 23
+Controls video quality: lower number = better quality, 23 is a reasonable default.
+
+-preset veryfast
+Controls encoding speed vs compression.
+
+veryfast means faster encoding but bigger file size.
+
+nameoftheoutputvideo.mp4
+Output file name.

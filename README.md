@@ -4,7 +4,7 @@
 - AI video enhancement with open source code Real-ESRGAN (this is ML/DL*).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN) (this is ML/DL).
-- Automatic creation of subtitle file (.srt) from transcribed\translated audio.
+- Automatic creation of subtitle file (.srt) from transcribed\translated audio. [Ana Paula](https://drive.google.com/file/d/1B6sfs_E2MWkTN-DnnCS2a-nTI4polJzJ/view?usp=sharing)
 - Upward pitch shifting of speech (baby voice). This is ML/DL.
 - Play counts syncing between iTunes and Windows Media Player.
 - Moving MP3 files under their right folder and creating complete log files with changes.
@@ -25,6 +25,7 @@ This is done by comparing the cover with a given vinyl image. This is ML/DL.
 
 Video created from a PPT deck created in Python (audio synced with ffmpeg):
 [Brazilian actresses](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
+
 
 *ML: Machine Learning.<br>
 *DL: Deep Learning.

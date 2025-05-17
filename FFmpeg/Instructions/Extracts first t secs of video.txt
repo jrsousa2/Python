@@ -1,0 +1,3 @@
+EXTRACT THE FIRST T SECONDS
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Videos\Balao\Balao_2.mp4" -vf "fps=29.97" -t 15 "D:\Videos\Balao\Input2_2\frame_%04d.png"
+

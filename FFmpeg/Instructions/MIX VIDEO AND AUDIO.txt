@@ -1,10 +1,12 @@
 FAZER O MIX DO VIDEO COM O AUDIO
 
-/* THIS IS LOSSLESS (FLAC IS LOSSLESS) */
-ffmpeg -i "D:\Videos\Arosio\Arosio_higher_fps.mp4" -i "D:\Videos\Arosio\Audio.aac" -c:v copy -c:a flac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Arosio\Arosio_final.mp4"
-
 /* THIS IS MORE COMPATIBLE WITH MOST PLAYERS */
-ffmpeg -i "D:\Videos\Arosio\Arosio_hd_nosound.mp4" -i "D:\Videos\Arosio\Audio.aac" -c:v copy -c:a flac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Arosio\Arosio_final2.mp4"
+ffmpeg -i "D:\Videos\Arosio\Arosio_crop_fps.mp4" -i "D:\Videos\Arosio\Audio.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Arosio\Arosio_final.mp4"
+
+/* THIS IS LOSSLESS (FLAC IS LOSSLESS) */
+ffmpeg -i "D:\Videos\Arosio\Arosio_crop_fps.mp4" -i "D:\Videos\Arosio\Audio.aac" -c:v copy -c:a flac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Arosio\Arosio_final.mp4"
+
+
 
 
 ffmpeg -i "D:\Videos\Arosio\Arosio.mp4"
