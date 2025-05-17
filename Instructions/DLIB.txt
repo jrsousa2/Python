@@ -1,0 +1,70 @@
+PYTHON PACKAGES INSTALLED FOR THIS:
+dlib
+
+MSVC (Microsoft Visual C++) compiler tools.
+Windows SDK (for system-level programming).
+C++ standard library (essential for C++ development).
+
+CMake support (important for configuring dlib with CMake).
+
+C:\Temp\dlib\build
+
+cmake .. -DDLIB_USE_CUDA=ON
+
+cmake .. -DDLIB_USE_CUDA=ON -DCUDAToolkit_ROOT_DIR="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7"
+
+Isso eh um pgm, nao eh package:
+CMAKE
+VISUAL STUDIO 2019
+
+dlib also requires C++ build tools:
+
+First we need to install C++ build tools for Windows using Visual Studio Installer. If you have installed Visual Studio then you can find it in the Start. Start the Visual Studio Installer Program. You will see the following if any tools are installed:
+
+Windows:
+Install the "Desktop development with C++" workload using Microsoft Build Tools.
+
+Install Visual Studio with C++ Tools:
+
+Download and install the Visual Studio Community Edition from Visual Studio.
+During installation, select the workload: Desktop development with C++.
+Make sure to include the C++ CMake tools and Windows SDK components.
+
+To install the CUDA version of dlib, make sure you have CUDA and cuDNN installed on your system. How do i do this?
+
+pip uninstall dlib
+pip install cmake  # Ensure cmake is installed
+pip install dlib --no-cache-dir
+
+
+pip install dlib --global-option=build_ext --global-option="-DDLIB_USE_CUDA=1" --no-cache-dir
+
+
+#############################################################################################
+#############################################################################################
+#############################################################################################
+ABAIXO NAO FUNCIONA:
+
+Download a prebuilt .whl file for dlib compatible with your Python version and architecture.
+Visit Unofficial Python Binaries to find a precompiled dlib wheel.
+Install it:
+bash
+Copy code
+pip install path\to\dlib.whl
+
+pip install d:\itunes\baby\dlib-19.22.99-cp38-cp38-win_amd64.whl
+
+Dlib compiled wheels for Python 3.7, 3.8, 3.9 for Windows 10 X64
+Dlib compiled binary (.whl) for python 3.7, 3.8, 3.9 for windows x64
+
+After wasting a lot of time to get these files, I compiled them myself.
+
+1- Download the file you need
+
+2- copy it in the root folder of your python distribuition
+
+3- open a cmd shell in the your root python folder
+
+example:
+
+python -m pip install d:\itunes\baby\dlib-19.22.99-cp38-cp38-win_amd64.whl
