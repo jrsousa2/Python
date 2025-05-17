@@ -27,5 +27,5 @@
 *ML: Machine Learning.<br>
 *DL: Deep Learning.
 
-**Video created from the PPT deck created in Python (audio synced with ffmpeg).
+**Video created from the PPT deck created in Python (soundtrack added with ffmpeg).
 
