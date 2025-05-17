@@ -1,17 +1,11 @@
 Migrate your iTunes library with a free applet built in Python
-Nao passar de 10 minutos de video.
+Video -> Nao passar de 10 minutos de video.
 
+HEXADECIMAL CONVERTION
 AE533B6A86544EC5
-
-https://github.com/jrsousa2/iTunesLibrary/releases/tag/v1.0.0
-https://github.com/jrsousa2/iTunesLibrary/releases/download/v1.0.0/iTunesLibraryMigration.exe
-
-https://github.com/jrsousa2/iTunesLibrary/blob/main/README.md
 
 HIGH / LOW long integers
 (-1370277014, -2041295163)
-
-
 
 
 <?xml version="1.0" encoding="UTF-8"?>
