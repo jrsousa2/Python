@@ -15,7 +15,7 @@
 - Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). 
 - Codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes.
-- Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress).
+- Fitting statistical models such as Logistics Regression using PySpark ML for parameter and goodness-of-fit optimization (in progress).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
