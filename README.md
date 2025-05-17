@@ -30,5 +30,5 @@ This is done by comparing the cover with a given vinyl image. This is ML/DL.
 *ML: Machine Learning.<br>
 *DL: Deep Learning.
 
-**Video created from a PPT deck created in Python (audio synced with ffmpeg).
+**Video created from the PPT deck created in Python (audio synced with ffmpeg).
 
