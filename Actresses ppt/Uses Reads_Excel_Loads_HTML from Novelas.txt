@@ -1,3 +1,6 @@
 code Novelas\Reads_Excel_Loads_HTML.py is used to scrape Wikipedia pages with links from an Excel file
 
+The Excel file is called "D:\\Videos\\Atrizes BR\\Brasil.xlsm" (tabs GERAL or FALTA).
+The code takes the URL's from it 
+
 It saves the results to an Excel file called "D:\\Videos\\Atrizes BR\\Results.xlsx"

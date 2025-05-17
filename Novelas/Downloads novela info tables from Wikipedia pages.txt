@@ -1,1 +1,3 @@
-Saves the results to an Excel file called "D:\\Videos\\Atrizes BR\\Results.xlsx"
+Reads_Excel_Loads_HTML.py reads the URL's from an Excel file called "D:\\Videos\\Atrizes BR\\Brasil.xlsm" (tabs GERAL or FALTA).
+
+It saves the results to an Excel file called "D:\\Videos\\Atrizes BR\\Results.xlsx"
