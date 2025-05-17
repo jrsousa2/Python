@@ -18,15 +18,17 @@ This is done by comparing the cover with a given vinyl image. This is ML/DL.
 - Creation of stand-alone/static executables from Python codes.
 - Fitting statistical models such as Logistics Regression using ML for parameter and goodness-of-fit optimization (in progress).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
-- Automatic creation of formatted PPT slides with data scraped from Wikipedia (see final video below).
+- Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
 - Image, audio and video processing using ffmpeg.
 - Submitting windows commands from Python.
 
-Video created from a PPT deck created in Python (audio synced with ffmpeg):
-[Brazilian actresses](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
+
+
 
 
 *ML: Machine Learning.<br>
 *DL: Deep Learning.
+
+**Video created from a PPT deck created in Python (audio synced with ffmpeg).
 
