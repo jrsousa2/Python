@@ -1,0 +1,15 @@
+Use the provided checksum to verify if the downloaded file is ok
+
+Syntax is:
+CertUtil -hashfile spark-3.5.1-bin-hadoop3.tgz SHA512
+
+#############################################################################
+
+Java 8 test:
+CertUtil -hashfile D:\Downloads_chrome\OpenJDK8U-jdk_x64_windows_hotspot_8u452b09.msi SHA256
+
+Note in this case it's SHA256
+
+Right key is:
+989f085584ca58701eab2d2b2f5576b7594325f0a6f85572b34586774963c46c
+989f085584ca58701eab2d2b2f5576b7594325f0a6f85572b34586774963c46c

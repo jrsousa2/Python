@@ -1,5 +1,7 @@
 # THIS IS MOSTLY TO TEST THE INPUT DATA
 # AND THE SPEED / PERFORMANCE 
+# LAZY COMPUTATION CAN MAKE DSPARK IN WINDOWS FULL OF BUGS
+# UDF's (USER DEFINED FUNCTIONS TOO)
 from pyspark.sql import SparkSession
 
 from pyspark.sql.functions import when, col
@@ -34,13 +36,15 @@ df = df.select([
 ])
 
 # TAKE ONLY 100 ROWS OF THE SPARK DF
-new_spark_df = df.limit(100)
+# new_spark_df = df.limit(100)
+# SPARK df's CAN BE SHOWN BUT NOT PANDAS
+# new_spark_df.show(5)
 
-# DOES IT WORK?
-new_spark_df.coalesce(1).write.mode("overwrite").csv("D:\\Python\\PySpark\\output_csv")
+# # DOES IT WORK?
+# new_spark_df.coalesce(1).write.mode("overwrite").csv("D:\\Python\\PySpark\\output_csv")
 
-# IF NEED TO SAVE THE FILE IN PARQUET FORMAT (COLUMNAR FORMAT)
-new_spark_df.write.mode("overwrite").parquet("D:\\Python\\PySpark\\output.parquet")
+# # IF NEED TO SAVE THE FILE IN PARQUET FORMAT (COLUMNAR FORMAT)
+# new_spark_df.write.mode("overwrite").parquet("D:\\Python\\PySpark\\output.parquet")
 
 # DO A TEST WITH SOME COLS.
 # assembler = VectorAssembler(
@@ -60,7 +64,9 @@ new_spark_df.write.mode("overwrite").parquet("D:\\Python\\PySpark\\output.parque
 
 
 # # Show top 5 rows
-# df.show(5) 
+# Convert first 100 rows to pandas DataFrame
+new_pandas_df = df.limit(100).toPandas()
+print(new_pandas_df.head(5))
 
 # DISPLAYS SOME STATS ABOUT THE FILE
 # new_df = df.describe().show()

@@ -1,0 +1,10 @@
+Ctrl + K H (clears the terminal entirely)
+
+Navigate: File > Preferences > Keyboard Shortcuts
+search for workbench.action.terminal.clear
+If it has no mapping or you wish to change the mapping, continue; otherwise note & use the existing mapping
+Double click on this entry & you'll be prompted for a key binding. 
+Hold CTRL and tap K. Ctrl + K should now be listed. Press enter to save this mapping
+Right click the entry and select Change when expression. Type terminalFocus then press enter.
+That's it. Now, when the terminal is in focus and you press Ctrl+K you'll get the behaviour 
+you'd have expected to get from running clear/cls.

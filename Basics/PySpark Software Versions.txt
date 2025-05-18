@@ -1,0 +1,20 @@
+Versions:
+Python 3.9
+Hadoop 3.3.5 
+Java 11.0
+
+Taken from PySpark in python:
+Spark version: 3.5.5 (3.3.x may be better)
+Hadoop version: 3.3.4
+
+It seems I need Apache spark installed to.
+
+SPARK_HOME=C:\Spark\spark-3.5.5-bin-hadoop3
+PATH=%SPARK_HOME%\bin;%PATH%
+
+# ACTIVATE THE VIRT ENV CREATED FIRST (it only has PySpark)
+C:\Python\Python3.11-v1\Scripts\activate
+
+
+CMD LINE USED TO TEST SIMPLE CODE:
+D:\Python>python -c "from pyspark.sql import SparkSession; spark = SparkSession.builder.appName('Main').getOrCreate(); df = spark.createDataFrame([(1,2)], ['num','id']); print(df.count())"

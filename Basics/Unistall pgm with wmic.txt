@@ -1,0 +1,10 @@
+# Uninstall everything
+pip uninstall pyspark py4j -y
+
+# Remove all Java versions
+wmic product where name="Java" call uninstall /nointeractive  
+
+# Fresh install
+# Or download from Oracle
+choco install adoptopenjdk11  
+pip install pyspark==3.5.5

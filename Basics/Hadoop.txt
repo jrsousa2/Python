@@ -1,0 +1,11 @@
+MapReduce was created by Google in 2004.
+
+Hadoop was inspired by Google's MapReduce and HDFS (Google File System).
+
+Hadoop was later developed by Doug Cutting and Mike Cafarella, based on Google's ideas.
+
+Hadoop is a distributed data storage & batch processing app.
+
+Hadoop is used with MapReduce. 
+
+HDFS is Hadoop's native file system. Spark can use it too.
