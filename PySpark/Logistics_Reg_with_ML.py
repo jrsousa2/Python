@@ -61,7 +61,7 @@ data = assembler.transform(df)
 # Train/test split
 train, test = data.randomSplit([0.8, 0.2], seed=42)
 
-# Fit logistic regression model
+# Fit logistic regression model (labelCol is the response variable, featuresCol the predictors (a vector)
 LR = LogisticRegression(featuresCol="features", labelCol="is_late")
 model = LR.fit(train)
 
