@@ -7,7 +7,36 @@ from pyspark.ml.evaluation import BinaryClassificationEvaluator
 spark = SparkSession.builder.getOrCreate()
 
 # Load sample data (e.g., from a Delta table or CSV)
-df = spark.read.csv("dbfs:/mnt/logistics/deliveries.csv", header=True, inferSchema=True)
+# df = spark.read.csv("dbfs:/mnt/logistics/deliveries.csv", header=True, inferSchema=True)
+
+# From a CSV file
+df = spark.read.csv("D:\\Python\\PySpark\\Data\\Credit_Risk.csv", header=True, inferSchema=True)
+
+# CONVERTS COL. NAMES DASHES TO _
+df = df.toDF(*[col.replace("-", "_") for col in df.columns])
+
+
+# Show top 5 rows
+df.show(5) 
+
+# DISPLAYS SOME STATS ABOUT THE FILE
+df.describe().show()
+
+# ALL THE ABOVE AND min, max, mean, stddev, count
+df.summary().show()
+
+# BELOW WOULD SAVE THE DF TO CSV FILES (number of file depends on the size of the cluster)
+# df.write.csv("output.csv", header=True)
+
+# IF A SINGLE FILE IS NEEDED THE MULTIPLE PARTS FROM THE MULTIPLE NODES CAN BE COMBINED 
+# BUT BE CAREFUL, THIS CAN BE SLOW IF THERE'S TOO MUCH DATA
+# df.coalesce(1).write.csv("output.csv", header=True)
+
+
+# IF NEED TO SAVE THE FILE IN PARQUET FORMAT
+# df.write.parquet("output.parquet")
+
+
 
 # Let's say the dataset has: 'distance_km', 'delivery_time_min', 'weather_delay', 'is_late'
 # A logistics regression usually uses categorical variables with multiple levels (levels with rare freqs can be grouped)
