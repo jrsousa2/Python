@@ -1,3 +1,12 @@
+# Spark ML treats all numeric cols as continuous by default.
+# If you want to treat a numeric column as discrete (categorical), you need to:
+# Convert it to a categorical feature, often by converting it to a string type first, then using StringIndexer to create category indices.
+# Or use OneHotEncoder on the indexed column to create dummy variables.
+# Spark ML does not automatically treat numeric columns as discrete categories, even if they represent categories encoded as numbers.
+# Summary:
+# Numeric columns = continuous by default.
+# For categorical behavior, explicitly index and encode them as categories.
+
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import LogisticRegression
@@ -41,19 +50,20 @@ df.summary().show()
 # Let's say the dataset has: 'distance_km', 'delivery_time_min', 'weather_delay', 'is_late'
 # A logistics regression usually uses categorical variables with multiple levels (levels with rare freqs can be grouped)
 
-# Prepare features
+# Prepare features (creates a new column thru the concatenation of inputCols and saves it as new col called features
 assembler = VectorAssembler(
     inputCols=["distance_km", "delivery_time_min", "weather_delay"],
     outputCol="features"
 )
+
 data = assembler.transform(df)
 
 # Train/test split
 train, test = data.randomSplit([0.8, 0.2], seed=42)
 
 # Fit logistic regression model
-lr = LogisticRegression(featuresCol="features", labelCol="is_late")
-model = lr.fit(train)
+LR = LogisticRegression(featuresCol="features", labelCol="is_late")
+model = LR.fit(train)
 
 # Predict on test set
 predictions = model.transform(test)

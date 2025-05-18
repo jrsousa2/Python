@@ -1,6 +1,10 @@
+# THIS IS MOSTLY TO TEST THE INPUT DATA
+# AND THE SPEED / PERFORMANCE 
 from pyspark.sql import SparkSession
 
 from pyspark.sql.functions import when, col
+
+from pyspark.ml.feature import VectorAssembler
 
 
 import os
@@ -31,12 +35,24 @@ df = df.select([
     for c in df.columns
 ])
 
+# DO A TEST WITH SOME COLS.
+assembler = VectorAssembler(
+    inputCols=["NumberOfOpenCreditLinesAndLoans", "NumberOfTimes90DaysLate", "NumberRealEstateLoansOrLines"],
+    outputCol="features"
+)
+
+# TRANSFORMS DATA (SHOULD ADD ONE COL TO THE DATA)
+data = assembler.transform(df)
+
 
 # Convert first 100 rows to pandas DataFrame
-new_df = df.limit(100).toPandas()
+new_df = data.limit(100).toPandas()
 
 # # Save to Excel
-new_df.to_excel("D:\\Python\\PySpark\\100_samples_new.xlsx", index=False)
+new_df.to_excel("D:\\Python\\PySpark\\100_samples_new2.xlsx", index=False)
+
+# IF NEED TO SAVE THE FILE IN PARQUET FORMAT (COLUMNAR FORMAT)
+new_df.write.parquet("D:\\Python\\PySpark\\output.parquet")
 
 # # Show top 5 rows
 # df.show(5) 
