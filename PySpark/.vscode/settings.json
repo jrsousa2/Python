@@ -21,5 +21,5 @@
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
-    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe"
+    "python.defaultInterpreterPath": "C:\\Python\\Python3.11-v1\\Scripts\\python.exe"
 }

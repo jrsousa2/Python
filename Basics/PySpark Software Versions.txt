@@ -1,10 +1,10 @@
 Versions:
-Python 3.9
+Python 3.11.8
 Hadoop 3.3.5 
 Java 11.0
 
 Taken from PySpark in python:
-Spark version: 3.5.5 (3.3.x may be better)
+Spark version: 3.5.5
 Hadoop version: 3.3.4
 
 It seems I need Apache spark installed to.
@@ -23,6 +23,7 @@ PySpark interactive shell or PySpark REPL:
 PySpark can also be run from the cmd prompt.
 Type PySpark, it will waits for cmds.
 
+The below error has been fixed after 2 days of debugging (wow).
 Errors:
 java.net.SocketException: Connection reset
 ClosedChannelException

@@ -23,6 +23,7 @@ nums = list(range(0,1001))
 # In databricks with an attached cluster sc should be recognized right away
 # Needs to create and attach a cluster for this to work
 nums_rdd = sc.parallelize(nums)
+print(nums_rdd.collect())
 
 df = spark.range(5)
 df.show()
