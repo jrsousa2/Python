@@ -18,3 +18,11 @@ C:\Python\Python3.11-v1\Scripts\activate
 
 CMD LINE USED TO TEST SIMPLE CODE:
 D:\Python>python -c "from pyspark.sql import SparkSession; spark = SparkSession.builder.appName('Main').getOrCreate(); df = spark.createDataFrame([(1,2)], ['num','id']); print(df.count())"
+
+PySpark interactive shell or PySpark REPL:
+PySpark can also be run from the cmd prompt.
+Type PySpark, it will waits for cmds.
+
+Errors:
+java.net.SocketException: Connection reset
+ClosedChannelException
