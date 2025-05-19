@@ -9,3 +9,5 @@ Hadoop is a distributed data storage & batch processing app.
 Hadoop is used with MapReduce. 
 
 HDFS is Hadoop's native file system. Spark can use it too.
+
+Apache Spark was designed to do in-memory distributed data processing, making it much faster for many workloads, especially iterative algorithms and interactive queries.

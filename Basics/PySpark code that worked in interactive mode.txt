@@ -1,4 +1,4 @@
-FINALLY! GOOD GRIEF! 
+GOOD GRIEF! FINALLY! 
 
 THE SOLUTION WAS TO ADD DEFINED PORTS FOR EACH SERVICE IN:
 C:\Spark\spark-3.5.5-bin-hadoop3\conf\spark-defaults.conf
