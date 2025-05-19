@@ -1,0 +1,20 @@
+A quick way to use netstat on Windows to check active ports:
+
+Open Command Prompt.
+
+Run this to list all active TCP connections with the owning process ID (PID):
+netstat -ano | findstr ESTABLISHED
+
+To see which ports your machine is listening on:
+netstat -ano | findstr LISTENING
+
+To filter for a specific port (e.g., 4040):
+netstat -ano | findstr :4040
+
+SPARK_SUBMIT_OPTS=-Dspark.driver.port=50010 -Dspark.blockManager.port=50020 -Dspark.driver.bindAddress=127.0.0.1
+pyspark
+
+# THESE 2 PORTS HAVE BEEN ADDED TO THE CONFIG
+netstat -ano | findstr ":56010 :56020 :4040"
+  TCP    127.0.0.1:50010        0.0.0.0:0              LISTENING       4012
+  TCP    127.0.0.1:50020        0.0.0.0:0              LISTENING       4012

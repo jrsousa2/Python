@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
 # Create a SparkSession
-spark = SparkSession.builder.appName("Testing PySpark Example").getOrCreate()
+spark = SparkSession.builder.appName("Example").getOrCreate()
 
 sample_data = [{"name": "John    D.", "age": 30},
   {"name": "Alice   G.", "age": 25},
