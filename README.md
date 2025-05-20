@@ -15,7 +15,9 @@
 - Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). 
 - Codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes.
-- Fitting statistical models such as Logistics Regression using PySpark ML for parameter and goodness-of-fit optimization (in progress).
+- Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This will allow me to achieve the below task (Azure account is free).
+- Fitting models such as Logistics Regression using PySpark ML for parameter and goodness-of-fit optimization (in progress). 
+- Fitting ML time series models to stocks, though it's not much use if the market is not stable (in consideration).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.

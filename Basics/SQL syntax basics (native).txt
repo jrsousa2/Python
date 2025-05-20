@@ -1,0 +1,118 @@
+# Using rank to rank a numeric column
+
+SELECT 
+  name,
+  salary,
+  RANK() OVER (ORDER BY salary DESC) AS rank
+FROM employees;
+
+name	salary	rank
+Bob	90000	1
+Charlie	90000	1
+Alice	80000	3
+David	70000	4
+
+Another example:
+SELECT DISTINCT "forecast date"
+FROM (
+  SELECT 
+    "forecast date",
+    RANK() OVER (ORDER BY "forecast deposits $" DESC) AS rnk
+  FROM table
+) sub
+WHERE rnk = 2;
+
+
+Ties get assigned the same rank and the next rank is skipped (2)
+
+If you don't want to skip ranks, use DENSE_RANK() instead
+
+# Could be ASC too
+SELECT 
+  name,
+  salary,
+  DENSE_RANK() OVER (ORDER BY salary DESC) AS rank
+FROM employees;
+
+name	salary	rank
+Bob	90000	1
+Charlie	90000	1
+Alice	80000	2
+David	70000	3
+
+# Row number usage (unlike rank() or dense_rank() all rows are populated)
+SELECT 
+  name,
+  score,
+  ROW_NUMBER() OVER (ORDER BY score DESC) AS row_num
+FROM students;
+
+name	score	row_num
+Bob	92	1
+Charlie	92	2
+Alice	85	3
+David	78	4
+
+Window functions in SQL perform calculations across a set of rows that are 
+related to the current row — called a window — without collapsing the rows 
+like a GROUP BY would.
+
+Return one result per row
+
+Use OVER() to define the window
+
+Can use ordering and partitioning within that window
+
+
+Function	What it does
+ROW_NUMBER()	Gives each row a unique number
+RANK()		Ranks rows, with gaps for ties
+DENSE_RANK()	Like RANK(), but no gaps
+NTILE(n)	Divides rows into n roughly equal groups
+LAG()		Gets a value from a previous row
+LEAD()		Gets a value from a next row
+SUM(), AVG(), COUNT(), MIN(), MAX()	Can also be used as window functions
+
+SELECT 
+  employee,
+  month,
+  revenue,
+  LAG(revenue) OVER (PARTITION BY employee ORDER BY month) AS prev_revenue
+FROM sales;
+
+RESULT:
+
+employee	month	revenue	prev_revenue
+Alice	Jan	1000	NULL
+Alice	Feb	1500	1000
+Alice	Mar	1300	1500
+
+The SQL command TRUNCATE is used to quickly delete all rows from a table 
+-- but unlike DELETE, it’s more efficient and cannot be rolled back in many databases.
+
+-- Syntax:
+TRUNCATE TABLE table_name;
+
+ALTER TABLE table_name ADD column_name datatype;
+
+ALTER TABLE table_name DROP COLUMN column_name;
+
+CALL procedure_name(arg1, arg2, ...);
+
+MERGE is a DML command used to combine INSERT, UPDATE, and/or DELETE in a single 
+statement, often called "upsert" (update or insert).
+
+Synchronizes two tables by:
+Updating matching rows
+Inserting new rows
+Optionally deleting rows (in some DBs)
+
+MERGE INTO target_table t
+USING source_table s
+ON (t.id = s.id)
+WHEN MATCHED THEN
+  UPDATE SET t.name = s.name
+WHEN NOT MATCHED THEN
+  INSERT (id, name) VALUES (s.id, s.name);
+
+
