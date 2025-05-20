@@ -23,6 +23,17 @@ FROM (
 WHERE rnk = 2;
 
 
+WITH ranked_companies AS (
+  SELECT 
+    company,
+    RANK() OVER (ORDER BY some_metric ASC) AS rnk
+  FROM your_table
+  GROUP BY company
+)
+SELECT *
+FROM ranked_companies
+WHERE rnk = 1;
+
 Ties get assigned the same rank and the next rank is skipped (2)
 
 If you don't want to skip ranks, use DENSE_RANK() instead
@@ -83,9 +94,16 @@ FROM sales;
 RESULT:
 
 employee	month	revenue	prev_revenue
-Alice	Jan	1000	NULL
-Alice	Feb	1500	1000
-Alice	Mar	1300	1500
+Alice		Jan	1000	NULL
+Alice		Feb	1500	1000
+Alice		Mar	1300	1500
+
+POSSIBLE RESULT IN AN UNFORESEEN SCENARIO (month alone doesn't break the tie):
+
+mployee	month	revenue	prev_revenue
+Alice	Jan	1200	null
+Alice	Jan	1000	1200
+Alice	Feb	1300	1000
 
 The SQL command TRUNCATE is used to quickly delete all rows from a table 
 -- but unlike DELETE, it’s more efficient and cannot be rolled back in many databases.

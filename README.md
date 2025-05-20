@@ -1,10 +1,10 @@
 ### Personal Python projects developed in VS Code
 
 **Various projects that I've developed in Python, including:**
-- AI video enhancement with open source code Real-ESRGAN (this is ML/DL*).
+- AI video/image enhancement with open source code Real-ESRGAN (this is ML/DL*).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN) (this is ML/DL).
-- Automatic creation of subtitle file (.srt) from transcribed\translated audio. [Ana Paula](https://drive.google.com/file/d/1B6sfs_E2MWkTN-DnnCS2a-nTI4polJzJ/view?usp=sharing)
+- Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://drive.google.com/file/d/1B6sfs_E2MWkTN-DnnCS2a-nTI4polJzJ/view?usp=sharing)
 - Upward shifting of speech pitch (baby voice). This is ML/DL.
 - Play counts syncing between iTunes and Windows Media Player.
 - Moving MP3 files under their right folder and creating complete log files with changes.
