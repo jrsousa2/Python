@@ -134,3 +134,25 @@ WHEN NOT MATCHED THEN
   INSERT (id, name) VALUES (s.id, s.name);
 
 
+Data Definition Language (DDL)
+CREATE
+ALTER
+DROP
+RENAME
+TRUNCATE
+COMMENT
+
+Data Query Language (DQL)
+SELECT
+Data Manipulation Language (DML)
+INSERT
+UPDATE
+DELETE
+MERGE
+CALL
+EXPLAIN PLAN
+LOCK TABLE
+
+Data Control Language (DCL)
+GRANT
+REVOKE
