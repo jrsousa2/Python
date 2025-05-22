@@ -1,6 +1,9 @@
-### Personal Python projects developed in VS Code
+### Personal Python projects developed in VS Code. 
+
+Please note this page is not about impeccable or professional "software" development -- if it can even be called that. It's about curiosity, experimentation, learning and letting your creativity run free.
 
 **Various projects that I've developed in Python, including:**
+
 - AI video/image enhancement with open source code Real-ESRGAN (this is ML/DL*).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN) (this is ML/DL).
