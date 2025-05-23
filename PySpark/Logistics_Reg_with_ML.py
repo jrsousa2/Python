@@ -24,7 +24,6 @@ df = spark.read.csv("D:\\Python\\PySpark\\Data\\Credit_Risk.csv", header=True, i
 # CONVERTS COL. NAMES DASHES TO _
 df = df.toDF(*[col.replace("-", "_") for col in df.columns])
 
-
 # Show top 5 rows
 df.show(5) 
 
@@ -33,19 +32,6 @@ df.describe().show()
 
 # ALL THE ABOVE AND min, max, mean, stddev, count
 df.summary().show()
-
-# BELOW WOULD SAVE THE DF TO CSV FILES (number of file depends on the size of the cluster)
-# df.write.csv("output.csv", header=True)
-
-# IF A SINGLE FILE IS NEEDED THE MULTIPLE PARTS FROM THE MULTIPLE NODES CAN BE COMBINED 
-# BUT BE CAREFUL, THIS CAN BE SLOW IF THERE'S TOO MUCH DATA
-# df.coalesce(1).write.csv("output.csv", header=True)
-
-
-# IF NEED TO SAVE THE FILE IN PARQUET FORMAT
-# df.write.parquet("output.parquet")
-
-
 
 # Let's say the dataset has: 'distance_km', 'delivery_time_min', 'weather_delay', 'is_late'
 # A logistics regression usually uses categorical variables with multiple levels (levels with rare freqs can be grouped)
@@ -58,10 +44,12 @@ assembler = VectorAssembler(
 
 data = assembler.transform(df)
 
-# Train/test split
+# Train/test split (see is used for random split))
 train, test = data.randomSplit([0.8, 0.2], seed=42)
 
-# Fit logistic regression model (labelCol is the response variable, featuresCol the predictors (a vector)
+# Fit logistic regression model
+# labelCol is the response variable, 
+# featuresCol the predictors (a vector)
 LR = LogisticRegression(featuresCol="features", labelCol="is_late")
 model = LR.fit(train)
 

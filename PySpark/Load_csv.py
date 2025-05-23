@@ -1,18 +1,13 @@
-# THIS IS MOSTLY TO TEST THE INPUT DATA
-# AND THE SPEED / PERFORMANCE 
-# LAZY COMPUTATION CAN MAKE DSPARK IN WINDOWS FULL OF BUGS
+# THIS IS MOSTLY TO TEST THE INPUT DATA AND THE SPEED / PERFORMANCE 
+# ENSURE TO ENABLE ACCESS TO THE PYTHON INTEPRETER IN THE CFA (CONTROLLED FOLDER ACCESS)
+# OTHERWISE FOLDER IS FOUND BUT ERROR MSG WILL SAY IT WASN'T (WHEN IN FACT IT'S THE WRITE PERMISSION)
+# LAZY COMPUTATION CAN MAKE SPARK IN WINDOWS FULL OF BUGS
 # UDF's (USER DEFINED FUNCTIONS TOO)
 from pyspark.sql import SparkSession
 
 from pyspark.sql.functions import when, col
 
-from pyspark.ml.feature import VectorAssembler
-
-
 import os
-
-# Start Spark session (Databricks does this automatically)
-# spark = SparkSession.builder.getOrCreate()
 
 # BELOW ENSURES ALL LOCAL MACHINE CORES ARE USED
 spark = SparkSession.builder.master("local[*]").appName("MyApp").getOrCreate()
@@ -35,43 +30,32 @@ df = df.select([
     for c in df.columns
 ])
 
-# TAKE ONLY 100 ROWS OF THE SPARK DF
-# new_spark_df = df.limit(100)
-# SPARK df's CAN BE SHOWN BUT NOT PANDAS
-# new_spark_df.show(5)
+# TAKE ONLY 10000 ROWS OF THE SPARK DF
+# Convert to pandas DataFrame
+pandas_df = df.limit(10000).toPandas()
 
-# # DOES IT WORK?
-# new_spark_df.coalesce(1).write.mode("overwrite").csv("D:\\Python\\PySpark\\output_csv")
-
-# # IF NEED TO SAVE THE FILE IN PARQUET FORMAT (COLUMNAR FORMAT)
-# new_spark_df.write.mode("overwrite").parquet("D:\\Python\\PySpark\\output.parquet")
-
-# DO A TEST WITH SOME COLS.
-# assembler = VectorAssembler(
-#     inputCols=["NumberOfOpenCreditLinesAndLoans", "NumberOfTimes90DaysLate", "NumberRealEstateLoansOrLines"],
-#     outputCol="features"
-# )
-
-# # TRANSFORMS DATA (SHOULD ADD ONE COL TO THE DATA)
-# spark_data = assembler.transform(df)
-
-
-# Convert first 100 rows to pandas DataFrame
-# new_pandas_df = spark_data.limit(100).toPandas()
-
-# # # Save to Excel
-# new_pandas_df.to_excel("D:\\Python\\PySpark\\100_samples_new2.xlsx", index=False)
-
-
-# # Show top 5 rows
-# Convert first 100 rows to pandas DataFrame
-new_pandas_df = df.limit(100).toPandas()
-print(new_pandas_df.head(5))
+# # Show top 5 rows (tail for bottom)
+print(pandas_df.head(5))
 
 # DISPLAYS SOME STATS ABOUT THE FILE
 # new_df = df.describe().show()
 # Save to Excel
-# new_pandas_df.to_excel("D:\\Python\\PySpark\\Summary.xlsx", index=False)
+file_nm = "D:\\Python\\PySpark\\Data\\Samples.xlsx"
+if not os.path.exists(file_nm):
+   pandas_df.to_excel(file_nm, index=False)
+
+# SPARK df's CAN BE SHOWN BUT NOT PANDAS
+# spark_df.show(5)
+
+# IF A SINGLE FILE IS NEEDED THE MULTIPLE PARTS FROM THE MULTIPLE NODES CAN BE COMBINED 
+# BUT BE CAREFUL, THIS CAN BE SLOW IF THERE'S TOO MUCH DATA
+# spark_df.coalesce(1).write.mode("overwrite").csv("D:\\Python\\PySpark\\output_csv", header=True)
+
+# BELOW WOULD SAVE THE DF TO CSV FILES (number of file depends on the size of the cluster)
+# spark_df.write.csv("output.csv", header=True)
+
+# IF NEED TO SAVE THE FILE IN PARQUET FORMAT (COLUMNAR FORMAT)
+# spark_df.write.mode("overwrite").parquet("D:\\Python\\PySpark\\output.parquet")
 
 # input("Press Enter to exit...")
 spark.stop()
