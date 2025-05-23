@@ -19,7 +19,7 @@ Please note this page is not about impeccable or professional software developme
 - Codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes.
 - Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This will allow me to achieve the below task (free Azure account is constrained).
-- Fitting models such as Logistics Regression using PySpark ML for parameter and goodness-of-fit optimization ***. 
+- Fitting models such as Logistics Regression using PySpark ML for parameter and goodness-of-fit optimization (results below). 
 - Fitting ML time series models to stocks, though it's not much use if the market is not stable (in consideration).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
@@ -33,8 +33,8 @@ Please note this page is not about impeccable or professional software developme
 
 **Video created from the PPT deck created in Python (soundtrack added with ffmpeg).
 
-### Below are the results of the fitting of a logistics regression with PySpark using a credit risk file available on the internet.
-*It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*
+**Below are the results of the fitting of a logistics regression with PySpark using a credit risk file available on the internet.**
+*It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*<br>
 The response variable is called SeriousDlqin2yrs and probably means whether a given customer became serious delinquent in 2 years time horizon.
 
 The area under the ROC curve (a measure of the goodness-of-fit of the model) is modest at best:
