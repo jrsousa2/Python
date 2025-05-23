@@ -37,7 +37,7 @@ Please note this page is not about impeccable or professional software developme
 *It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*<br>
 The binary response variable is called SeriousDlqin2yrs and indicates whether a given customer became serious delinquent in a 2-year time horizon (1=Yes, 0=No).
 
-The area under the ROC curve (a measure of the goodness-of-fit of the model) is modest:<br>
+The area under the ROC curve (a measure of the goodness-of-fit of the model) is modest at best:<br>
 AUC: 0.687
 
 For the first-time PySpark ML user this can come out as a bit disappointing. They were probably expecting the PySpark ML engine to do more "magic" like automatically selecting the best features, tuning hyperparameters, or trying multiple models to find the absolute best fit all on its own. But it's still just the classic logistics regression, which surprisingly also falls under the umbrella of ML.
