@@ -33,7 +33,7 @@ Please note this page is not about impeccable or professional software developme
 
 **Video created from the PPT deck created in Python (soundtrack added with ffmpeg).
 
-***Below are the results of the fitting of a logistics regression with PySpark using a credit risk file available on the internet.
+### Below are the results of the fitting of a logistics regression with PySpark using a credit risk file available on the internet.
 *It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*
 The response variable is called SeriousDlqin2yrs and probably means whether a given customer became serious delinquent in 2 years time horizon.
 
@@ -59,14 +59,3 @@ Test dataset (20% of the data)
 | 1      | 0          |  1618 |
 | 1      | 1          |    80 |
 | **Total** |            | **24134** |
-
-+----------------+----------+-----+
-| Actual         |prediction|count|
-+----------------+----------+-----+
-|               0|         0|22384|
-|               0|         1|   52|
-|               1|         0| 1618|
-|               1|         1|   80|
-+----------------+----------+-----+
-|           Total|          |24134|
-+----------------+----------+-----+
