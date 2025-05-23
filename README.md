@@ -41,6 +41,14 @@ The area under the ROC curve (a measure of the goodness-of-fit of the model) is 
 AUC: 0.687
 
 Train dataset (20% of the data)
+| Actual | Prediction | Count |
+|--------|------------|-------|
+| 0      | 0          | 89285 |
+| 0      | 1          |   191 |
+| 1      | 0          |  6407 |
+| 1      | 1          |   252 |
+| **Total** |            | **96135** |
+
 +----------------+----------+-----+
 | Actual         |prediction|count|
 +----------------+----------+-----+
