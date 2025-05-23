@@ -13,7 +13,8 @@ from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 
 # Start Spark session (Databricks does this automatically)
-spark = SparkSession.builder.getOrCreate()
+# spark = SparkSession.builder.getOrCreate()
+spark = SparkSession.builder.master("local[*]").appName("MyApp").getOrCreate()
 
 # Load sample data (e.g., from a Delta table or CSV)
 # df = spark.read.csv("dbfs:/mnt/logistics/deliveries.csv", header=True, inferSchema=True)
@@ -30,6 +31,9 @@ def actual_vs_pred_summary(df_predictions):
 # From a CSV file
 df = spark.read.csv("D:\\Python\\PySpark\\Data\\Credit_Risk.csv", header=True, inferSchema=True)
 
+# LIMIT DF TO 10000 ROWS
+df = df.limit(10000)
+
 # CONVERTS COL. NAMES DASHES TO _
 df = df.toDF(*[col.replace("-", "_") for col in df.columns])
 
@@ -45,12 +49,26 @@ df.describe().show()
 # Let's say the dataset has: 'distance_km', 'delivery_time_min', 'weather_delay', 'is_late'
 # A logistics regression usually uses categorical variables with multiple levels (levels with rare freqs can be grouped)
 
+inputCols = [
+    "RevolvingUtilizationOfUnsecuredLines",
+    "age",
+    "NumberOfTime30_59DaysPastDueNotWorse",
+    "DebtRatio",
+    "MonthlyIncome",
+    "NumberOfOpenCreditLinesAndLoans",
+    "NumberOfTimes90DaysLate",
+    "NumberRealEstateLoansOrLines",
+    "NumberOfTime60_89DaysPastDueNotWorse",
+    "NumberOfDependents"
+]
+
 # Prepare features (creates a new column thru the concatenation of inputCols and saves it as new col called features
 assembler = VectorAssembler(
-    inputCols=["distance_km", "delivery_time_min", "weather_delay"],
+    inputCols=inputCols,
     outputCol="features"
 )
 
+# ADDS THE VECTOR COL. TO THE SPARK DF
 data = assembler.transform(df)
 
 # Train/test split (see is used for random split))
