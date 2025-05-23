@@ -129,7 +129,7 @@ file_nm = "D:\\Python\\PySpark\\Data\\Check_file.xlsx"
 train, test = data.randomSplit([0.8, 0.2], seed=42)
 
 # Fit logistic regression model
-# labelCol is the response variable, 
+# labelCol is the response variable 
 # featuresCol the predictors (a vector)
 LR = LogisticRegression(featuresCol=outputCol, labelCol=labelCol)
 model = LR.fit(train)
