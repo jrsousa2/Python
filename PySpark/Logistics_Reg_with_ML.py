@@ -18,6 +18,15 @@ spark = SparkSession.builder.getOrCreate()
 # Load sample data (e.g., from a Delta table or CSV)
 # df = spark.read.csv("dbfs:/mnt/logistics/deliveries.csv", header=True, inferSchema=True)
 
+# SUMMARIZES THE DF OVER ACTUAL AND PREDICTED 
+def actual_vs_pred_summary(df_predictions):
+    return (
+        df_predictions.groupBy("is_late", "prediction")
+        .count()
+        .orderBy("is_late", "prediction")
+    )
+
+
 # From a CSV file
 df = spark.read.csv("D:\\Python\\PySpark\\Data\\Credit_Risk.csv", header=True, inferSchema=True)
 
@@ -31,7 +40,7 @@ df.show(5)
 df.describe().show()
 
 # ALL THE ABOVE AND min, max, mean, stddev, count
-df.summary().show()
+# df.summary().show()
 
 # Let's say the dataset has: 'distance_km', 'delivery_time_min', 'weather_delay', 'is_late'
 # A logistics regression usually uses categorical variables with multiple levels (levels with rare freqs can be grouped)
@@ -56,7 +65,18 @@ model = LR.fit(train)
 # Predict on test set
 predictions = model.transform(test)
 
-# Evaluate
+# Evaluate ROC curve 
+# The iconic area under the ROC curve is a measure of the goodness-of-fit of the model
 evaluator = BinaryClassificationEvaluator(labelCol="is_late")
 auc = evaluator.evaluate(predictions)
 print(f"AUC: {auc:.3f}")
+
+# Summary for train
+train_summary = actual_vs_pred_summary(model.transform(train))
+print("Train dataset")
+train_summary.show()
+
+# Summary for test
+test_summary = actual_vs_pred_summary(model.transform(test))
+print("Test dataset")
+test_summary.show()
