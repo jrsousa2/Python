@@ -33,9 +33,9 @@ Please note this page is not about impeccable or professional software developme
 
 **Video created from the PPT deck created in Python (soundtrack added with ffmpeg).
 
-**Below are the results of the fitting of a logistics regression with PySpark using a credit risk file available on the internet.**
+**Below are the results of the fitting of a logistics regression with PySpark using a credit risk file available on the internet.**<br>
 *It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*<br>
-The response variable is called SeriousDlqin2yrs and probably means whether a given customer became serious delinquent in 2 years time horizon.
+The binary response variable is called SeriousDlqin2yrs and probably means whether a given customer became serious delinquent in 2 years time horizon (1=yes, 0=No).
 
 The area under the ROC curve (a measure of the goodness-of-fit of the model) is modest at best:
 AUC: 0.687
