@@ -1,1 +1,0 @@
-"C:\Program Files\SASHome\SASFoundation\9.3\sas.exe" "D:\Python\FreeDB\Outputs\Load_into_SAS.sas"
