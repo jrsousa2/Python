@@ -9,6 +9,7 @@ Please note this page is not about impeccable or professional software developme
 - Speech recognition and transcription/translation (PT to EN) (this is ML/DL).
 - Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://drive.google.com/file/d/1B6sfs_E2MWkTN-DnnCS2a-nTI4polJzJ/view?usp=sharing)
 - Upward shifting of speech pitch (baby voice). This is ML/DL.
+- Given a person's name in a given language, predict the gender of the person (this is ML/DL).
 - Play counts syncing between iTunes and Windows Media Player.
 - Moving MP3 files under their right folder and creating complete log files with changes.
 - Search, download and attachment of MP3 artwork (Apple or Discogs), with log files creation.
