@@ -2,6 +2,8 @@
 
 Please note this page is not about impeccable or professional software development — if it can even be called that. It's about curiosity, experimentation, learning and letting your creativity run free. 🐍
 
+I have a knack for programming (it's about algorithms, not memorization)! 
+
 **Various projects that I've developed in Python, including:**
 
 - AI video/image enhancement with open source code Real-ESRGAN (this is ML/DL*).
