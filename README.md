@@ -1,10 +1,9 @@
 ### Personal Python projects developed in VS Code. 
 
-I have a knack for programming (which is about algorithms, not memorization)!
+I have a knack for programming (it's about algorithms development, not memorization)!
 
-But please note this page is not about impeccable or professional software development — if it can even be called that. It's about curiosity, experimentation, learning and letting your creativity run free. 🐍
+Please note this page is not about impeccable or professional software development — if it can even be called that. It's about curiosity, experimentation, learning and letting your creativity run free. 🐍
 
- 
 
 **Various projects that I've developed in Python, including:**
 
