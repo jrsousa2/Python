@@ -1,6 +1,0 @@
-list = [3, 54, 67, 40]
-list.reverse 
-
-reverse(list)
-
-[40, 67, 54, 3]
