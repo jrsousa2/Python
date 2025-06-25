@@ -19,8 +19,7 @@ Note this page is not about impeccable or professional software development — 
 - Image pattern recognition (trying to check if an MP3 cover is a generic vinyl/LP so it can be automatically replaced). This is done by comparing the cover with a given vinyl image (this is ML/DL).
 - Searching and populating MP3 tags on the Discogs website automatically.
 - Making MP3 tag names in sync with the actual file names (to detect and resolve conflicts)
-- Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). 
-- Codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
+- Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). Python codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes.
 - Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to achieve the below task (free Azure account is constrained).
 - Fitting models such as Logistics Regression using PySpark ML ([results below](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
