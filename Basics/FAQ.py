@@ -73,13 +73,16 @@ def get_missing_number(lst):
 def get_missing_numbers(lst):
     return sorted(set(range(1, 101)) - set(lst))
 
-print("Q8",)
+my_set = set(list(range(1,101)))
+my_list = list(my_set - {2, 3, 4})
+# OR my_set.remove(2)
+print("Q8 missing numbers from 1 to 100 in list",get_missing_numbers(my_list))
 
 lst = list(range(1, 100))
 lst.remove(50)
 print(get_missing_number(lst))  # Output: {50}
 
-# 9. Compute the intersection of two lists
+# 9. Compute the intersection of two lists (BELOW IS UNECESSARY)
 def intersect(lst1, lst2):
     lst2_copy = lst2[:]
     res = []
@@ -88,6 +91,13 @@ def intersect(lst1, lst2):
             res.append(el)
             lst2_copy.remove(el)
     return res
+
+lst1 = [2, 5, 10] 
+lst2 = [5, 3, 9]
+print("Q9 elements in common in both lists",intersect(lst1, lst2))
+
+print("Q9 elements in common in both lists",list(set(lst1) & set(lst2)))
+
 
 # 10. Find max and min in unsorted list
 lst = [4, 3, 6, 4, 888, 1, -11, 22, 3]
