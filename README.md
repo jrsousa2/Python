@@ -94,8 +94,8 @@ Immutable objects cannot be changed after they are created. Any "change" to an i
 
 | **Type**    | **Explanation**                                                                                          |
 | ----------- | -------------------------------------------------------------------------------------------------------- |
-| int       | Integer numbers, whole numbers without a decimal point (e.g., 42, -7).                                   |
-| float     | Floating-point numbers, numbers with decimals (e.g., 3.14, -0.001).                                      |
+| `int`       | Integer numbers, whole numbers without a decimal point (e.g., 42, -7).                                   |
+| `float`     | Floating-point numbers, numbers with decimals (e.g., 3.14, -0.001).                                      |
 | complex   | Complex numbers with a real and imaginary part; represented as a + bj where j is the imaginary unit. |
 | bool      | Boolean type representing truth values: True or False.                                               |
 | str       | Strings, sequences of characters used for text (e.g., "hello").                                        |
