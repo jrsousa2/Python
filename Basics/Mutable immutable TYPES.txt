@@ -1,0 +1,28 @@
+| Type      | Mutable? |
+| --------- | -------- |
+| int       | No       |
+| float     | No       |
+| bool      | No       |
+| str       | No       |
+| tuple     | No       |
+| frozenset | No       |
+| bytes     | No       |
+| list      | Yes      |
+| set       | Yes      |
+| dict      | Yes      |
+| bytearray | Yes      |
+
+| **Type**    | **Explanation**                                                                                          |
+| ----------- | -------------------------------------------------------------------------------------------------------- |
+| int       | Integer numbers, whole numbers without a decimal point (e.g., 42, -7).                                   |
+| float     | Floating-point numbers, numbers with decimals (e.g., 3.14, -0.001).                                      |
+| complex   | Complex numbers with a real and imaginary part; represented as a + bj where j is the imaginary unit. |
+| bool      | Boolean type representing truth values: True or False.                                               |
+| str       | Strings, sequences of characters used for text (e.g., "hello").                                        |
+| tuple     | Immutable ordered sequence of elements (can be mixed types), e.g., (1, 2, 3).                          |
+| frozenset | Immutable version of a set, an unordered collection of unique elements that cannot be changed.           |
+| bytes     | Immutable sequence of bytes, used for binary data (e.g., file content, network data).                    |
+| list      | Mutable ordered sequence of elements, can be changed by adding, removing, or modifying items.            |
+| set       | Mutable unordered collection of unique elements, useful for fast membership tests and operations.        |
+| dict      | Mutable collection of key-value pairs (a mapping), e.g., {"a": 1, "b": 2}.                             |
+| bytearray | Mutable sequence of bytes, similar to bytes but can be modified.                                       |
