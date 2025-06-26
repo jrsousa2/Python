@@ -71,6 +71,11 @@ Test dataset (20% of the data)
 
 **Python language reminders:**
 
+Mutable objects can be changed after they are created. You can modify their contents without creating a new object. When you change a mutable object, the object’s identity (its memory 
+address) stays the same.
+
+Immutable objects cannot be changed after they are created. Any "change" to an immutable object creates a new object instead. When you try to modify them, you actually get a new object with the change applied.
+
 | Type      | Mutable? |
 | --------- | -------- |
 | int       | No       |
