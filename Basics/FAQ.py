@@ -110,7 +110,7 @@ def reverse(string):
         return string
     return reverse(string[1:]) + string[0]
 
-print(reverse("hello"))  # Output: olleh
+print("Q10 reverse string",reverse("hello"))  # Output: olleh
 
 # 12. Compute the first n Fibonacci numbers
 a, b = 0, 1  # initialize the first two
