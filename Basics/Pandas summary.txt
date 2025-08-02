@@ -4,14 +4,16 @@
 •	df.to_csv('file.csv') – save to CSV
 •	df.to_excel(file_nm, index=False)
 type(var) -> type of the variable
+
 ________________________________________
 📄 Viewing & Exploring
-•	df.head() – first 5 rows
+•	df.head() – first 5 rows (In spark it's df.show() )
 •	df.tail() – last 5 rows
 •	df.info() – column types, non-nulls
-•	df.describe() – stats summary
+•	df.describe() – stats summary   (In spark df.describe().show() )
 •	df.shape – a tuple -> (rows, columns)
 •	df.columns – column names -> returns a Pandas Index object, which behaves like a list but is not exactly one. You can convert it with list(df.columns)
+
 ________________________________________
 🧹 Cleaning Data
 •	new = df.drop(columns=['col']) – drop column -- or df.drop(columns=['col'], inplace=True)
@@ -19,8 +21,9 @@ ________________________________________
 •	new = df.dropna() – drop nulls
 •	new =df.fillna(value) – fill nulls
 •	df.duplicated() – find duplicates – Returns a column with an index
-•	 duplicates_list = df.duplicated().tolist() convertes Booleans seris to list
+•	duplicates_list = df.duplicated().tolist() convertes Booleans series to list
 •	new =df.drop_duplicates() – remove duplicates
+
 ________________________________________
 🔍 Filtering & Selecting
 •	df['col'] or df.col – select column
@@ -39,6 +42,7 @@ ________________________________________
         df.loc[:, "Covers"] = Covers
 # UPDATES VALUE OF COL Covers at index 100 to Hello 
 df.loc[100, "Covers"] = "Hello"
+
 ________________________________________
 🔄 Modifying
 •	df['new'] = df['a'] + df['b'] – create new col
@@ -46,6 +50,7 @@ ________________________________________
 •	df.map() – element-wise mapping
 •	df.replace(old, new) – replace values
 •	df.astype(type) – convert type
+
 ________________________________________
 📊 Grouping & Aggregation
 •	df.groupby('col').sum() – group & sum
@@ -53,10 +58,12 @@ ________________________________________
 •	df.pivot_table(values='x', index='y') – pivot summary
 
 •	df["dist_Key"] = df.groupby("track_stdz")["Key"].transform("nunique")
+
 ________________________________________
 📈 Sorting
 •	df.sort_values('col') – sort by column
 •	df.sort_values(['a', 'b'], ascending=[True, False]) – multi-sort
+
 ________________________________________
 🔗 Merging & Joining
 •	pd.concat([df1, df2]) – stack DataFrames

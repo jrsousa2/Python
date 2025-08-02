@@ -10,11 +10,15 @@ Other options: .read.json(), .read.parquet(), .read.option()
 
 🔍 3. Basic Data Exploration
 
-df.show()             # Display first 20 rows
-df.printSchema()      # Show schema
+df.show()             # Display first 20 rows (In pandas it's df.head() )
+df.printSchema()      # Show schema (Column names, Data types, Whether each column is nullable)
 df.columns            # List column names
-df.describe().show()  # Summary stats
+df.describe().show()  # Summary stats    (In Pandas df.describe() )
 
+
+
+rows = df.count()           # Number of rows
+columns = len(df.columns)   # Number of columns
 
 🔧 4. Select & Filter
 
