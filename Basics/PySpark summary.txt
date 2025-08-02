@@ -1,0 +1,80 @@
+1. Start a Session
+
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.appName("Example").getOrCreate()
+📄 2. Load Data
+
+df = spark.read.csv("file.csv", header=True, inferSchema=True)
+Other options: .read.json(), .read.parquet(), .read.option()
+
+🔍 3. Basic Data Exploration
+
+df.show()             # Display first 20 rows
+df.printSchema()      # Show schema
+df.columns            # List column names
+df.describe().show()  # Summary stats
+
+
+🔧 4. Select & Filter
+
+df.select("col1", "col2").show()
+df.filter(df["age"] > 30).show()
+df.withColumn("new_col", df["age"] + 1).show()
+
+🧹 5. Grouping & Aggregation
+
+df.groupBy("gender").agg({"salary": "avg"}).show()
+df.groupBy("dept").count().show()
+
+🔄 6. Joins
+
+df1.join(df2, df1.id == df2.id, "inner").show()
+Join types: "inner", "left", "right", "outer"
+
+📌 7. Sorting & Limiting
+
+df.orderBy("age").show()
+df.orderBy(df["age"].desc()).show()
+df.limit(10).show()
+
+🧪 8. Writing Data
+
+df.write.csv("output.csv", header=True)
+df.write.parquet("data.parquet")
+
+🔄 9. Caching / Persisting
+
+df.cache()
+df.persist()
+
+❌ 10. Stop Session
+
+spark.stop()
+
+
+# SPARK SESSION AND CONTEXT
+# BELOW ENSURES ALL LOCAL MACHINE CORES ARE USED
+spark = SparkSession.builder.master("local[*]").appName("MyApp").getOrCreate()
+
+# Access SparkContext from SparkSession
+sc = spark.sparkContext
+
+# SUPRESS ERRORS
+sc.setLogLevel("ERROR")
+
+# Create a large list of numbers
+nums = list(range(0,1001))
+
+# Parallelize (take a python list and distribute into an rdd - resilient distributed dataset)
+# sc is short for SparkContext
+
+# Needs to create and attach a cluster for this to work
+nums_rdd = sc.parallelize(nums)
+print(nums_rdd.collect())
+
+# CREATE DF WITH SINGLE COL WITH VALUES O TO 4
+df = spark.range(5)
+
+rename id to index
+df = spark.range(5).withColumnRenamed("id", "index")
