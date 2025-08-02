@@ -1,0 +1,73 @@
+🧱 Creating DataFrames
+•	pd.DataFrame(data) – create a DataFrame
+•	pd.read_csv('file.csv') – read CSV file
+•	df.to_csv('file.csv') – save to CSV
+•	df.to_excel(file_nm, index=False)
+type(var) -> type of the variable
+________________________________________
+📄 Viewing & Exploring
+•	df.head() – first 5 rows
+•	df.tail() – last 5 rows
+•	df.info() – column types, non-nulls
+•	df.describe() – stats summary
+•	df.shape – a tuple -> (rows, columns)
+•	df.columns – column names -> returns a Pandas Index object, which behaves like a list but is not exactly one. You can convert it with list(df.columns)
+________________________________________
+🧹 Cleaning Data
+•	new = df.drop(columns=['col']) – drop column -- or df.drop(columns=['col'], inplace=True)
+•	new = df.rename(columns={'old': 'new'}) – rename – or df.rename(columns={'old': 'new'}, inplace=True)
+•	new = df.dropna() – drop nulls
+•	new =df.fillna(value) – fill nulls
+•	df.duplicated() – find duplicates – Returns a column with an index
+•	 duplicates_list = df.duplicated().tolist() convertes Booleans seris to list
+•	new =df.drop_duplicates() – remove duplicates
+________________________________________
+🔍 Filtering & Selecting
+•	df['col'] or df.col – select column
+•	df[['col1', 'col2']] – multiple columns
+•	df[df['col'] > 5] – filter rows
+•	df.loc[0] – row by label
+•	df.iloc[0] – row by index
+•	
+•	df = df[df["dist_PL"] > 1]
+•	df = df.loc[df["dist_PL"] > 1]
+•	df = df.query("dist_PL > 1")
+•	df = df[df["dist_PL"].isin([2, 3, 4])]
+
+# ADDS LIST COVERS AS A COL TO THE DF    
+        df.loc[:, "Covers"] = Covers
+# UPDATES VALUE OF COL Covers at index 100 to Hello 
+df.loc[100, "Covers"] = "Hello"
+________________________________________
+🔄 Modifying
+•	df['new'] = df['a'] + df['b'] – create new col
+•	df.apply(func) – apply function
+•	df.map() – element-wise mapping
+•	df.replace(old, new) – replace values
+•	df.astype(type) – convert type
+________________________________________
+📊 Grouping & Aggregation
+•	df.groupby('col').sum() – group & sum
+•	df.groupby('col').agg({'x': 'mean', 'y': 'max'}) – multiple aggs
+•	df.pivot_table(values='x', index='y') – pivot summary
+•	    df["dist_Key"] = df.groupby("track_stdz")["Key"].transform("nunique")
+________________________________________
+📈 Sorting
+•	df.sort_values('col') – sort by column
+•	df.sort_values(['a', 'b'], ascending=[True, False]) – multi-sort
+________________________________________
+🔗 Merging & Joining
+•	pd.concat([df1, df2]) – stack DataFrames
+•	df.merge(df2, on='col') – SQL-style join
+•	df.join(df2) – join on index
+
+
+# KEEP ONLY SELECTED COLS.
+df = df.loc[:, col_names]
+
+# BELOW TO FORCE GROUPS WHERE ONE AT LEAST ONE IS DEAD
+# CREATE NEW COL CONVERTING
+df["Key"] = df["not_miss"].astype(str)
+
+df.shape returns a tuple (rows, columns)
+
