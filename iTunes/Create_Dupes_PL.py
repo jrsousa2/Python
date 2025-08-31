@@ -37,8 +37,8 @@ def Dupes_PL(rows=None):
     # DISPLAY NUMBER OF ROWS
     print("The df has",df.shape[0],"favorite files\n")
 
-    # SELECT ONLY NON DUPE-TAGGED
-    df = df[df["Grouping"].str.contains("Dupe", na=False)]
+    # SELECT ONLY NON DUPE-TAGGED (~ iIS FOR NOT)
+    df = df[~df["Grouping"].str.contains("Dupe", na=False)]
 
     # DISPLAY NUMBER OF ROWS
     print("The df has",df.shape[0],"non dupe-tagged favorite files\n")
