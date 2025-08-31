@@ -1,6 +1,10 @@
 # TRY TO RESET ALBUM RATING
 from os.path import exists
-import Tags
+
+import sys
+sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+sys.path.insert(0, "D:\\Python\\WMP")
+
 import Read_PL
 
 def Upgrade(PL_name=None,PL_nbr=None):

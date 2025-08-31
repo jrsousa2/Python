@@ -143,6 +143,12 @@ def get_sec(time_str):
     h, m, s = time_str.split(':')
     return int(h) * 3600 + int(m) * 60 + int(s)
 
+# CONVERTS TIME STRING TO SECONDS (INT)
+def time_to_sec(time_str):
+    min, sec = map(int, time_str.split(":"))
+    return 60*min + sec
+
+
 # PRINT ON SCREEN AND IN THE FILE
 # args NEEDS TO BE A TUPLE
 def Print_to_file(Arq, txt, *args):

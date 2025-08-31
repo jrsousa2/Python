@@ -1,4 +1,4 @@
-from Tags import compress, Remove_dupe_spaces
+# from Tags import compress, Remove_dupe_spaces
 import Tags
 import Files
 
@@ -272,10 +272,10 @@ def Art_srch_list(Cur_Art,Srch_AA_Album,Names_list,Variations_list):
 # SIMILARITY RATIO
 def similar_ratio(base, comp, thres = 0.95):
     # Tokenize the strings into words (split on whitespace)
-    base = compress(base.lower())
-    base = Remove_dupe_spaces(base)
-    comp = compress(comp.lower())
-    comp = Remove_dupe_spaces(comp)
+    base = Tags.compress(base.lower())
+    base = Tags.Remove_dupe_spaces(base)
+    comp = Tags.compress(comp.lower())
+    comp = Tags.Remove_dupe_spaces(comp)
     words_base = base.split(" ")
     words_comp = comp.split(" ")
 

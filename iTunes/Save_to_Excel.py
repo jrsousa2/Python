@@ -5,18 +5,18 @@
 # IF NOT SPECIFIED, IT'S ALL THE TRACKS.
 # MAKE SURE PYTHON HAS ACCESS TO THE FOLDER IF FOLDER RANSOMWARE PROTECTION IS ENABLED
 
+import sys
+sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+sys.path.insert(0, "D:\\Python\\WMP")
+
 #import pandas as pd
 from Files import file_w_ext
 
-import sys
-sys.path.insert(0, "D:\\Python\\iTunes")
-sys.path.insert(0, "D:\\Python\\WMP")
+
 
 # MAIN CODE
 def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=False,col_names = ["Arq","Art","Title"]):
-    # CALLS Read_PL FUNCTION ,Do_lib=True,rows=10
-    # col_names =  ["Arq","Art","Title","AA","Album","Genre","Covers","Year"]
-    
+    # BEGIN
     if iTunes:
        import Read_PL
        # EXCLUDE INVALID TAGS 
@@ -30,7 +30,9 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
                col_names.remove("ID")  # 6 is not in the list
            except:
                pass
-           dict = Read_PL.Read_xml(col_names,rows=rows)
+            
+           # CALL PROCEDURE              
+           dict = Read_PL.Read_xml(col_names,rows=rows,track_time=True)
            df = dict['DF']
     else:
         import WMP_Read_PL # type: ignore
@@ -81,4 +83,8 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
     # print("Hello, " + file_nm + "!")
 
 # CHAMA PROGRAM PL_name="ALL",Fave-iPhone ["Arq","Art","Title","Len"] "ID", "PID", "Added"
-Save_Excel(PL_name="Faves-Easy",Do_lib=1,rows=150,iTunes=0,XML=1,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])
+# Save_Excel(PL_name="Faves-Easy",Do_lib=1,rows=150,iTunes=0,XML=1,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])
+# rows=5000
+Save_Excel(iTunes=1,XML=1,col_names = ["Arq","Art","Title", "Genre", "PID", "Added"], rows=5000)
+
+# ["Arq","Art","Title","Genre","PID", "Added"]

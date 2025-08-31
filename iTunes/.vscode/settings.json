@@ -23,6 +23,6 @@
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
-    "python.analysis.extraPaths": [ "D:\\Python\\WMP" ],
-    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe"
+    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe",
+    "python.analysis.extraPaths": [ "D:\\Python\\iTunes\\Modules", "D:\\Python\\WMP" ]
 }
