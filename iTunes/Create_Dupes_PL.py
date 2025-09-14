@@ -38,7 +38,7 @@ def Dupes_PL(rows=None):
     print("The df has",df.shape[0],"favorite files\n")
 
     # SELECT ONLY NON DUPE-TAGGED (~ iIS FOR NOT)
-    df = df[~df["Grouping"].str.contains("Dupe", na=False)]
+    df = df[~df["Group"].str.contains("Dupe", na=False)]
 
     # DISPLAY NUMBER OF ROWS
     print("The df has",df.shape[0],"non dupe-tagged favorite files\n")
@@ -105,4 +105,4 @@ def Dupes_PL(rows=None):
            Read_PL.Add_track_to_PL(PLs,Dupes_PL_name,track) 
 
 # CALLS FUNCTION
-Dupes_PL(rows=5000)
+Dupes_PL(rows=2000)

@@ -301,27 +301,66 @@ def remove_tag(path, tag):
     else:
         print("Tag",tag,"not found in the file.")
 
+# COMPARES TWO SETS OR LISTS CASE-INSENTITIVE
+# ELEMENTS THAT ARE IN orig_set_lower BUT NOT IN comp_set_lower.
+def Set_diff(orig, comp):
+    # CREATES SETS
+    orig_set_lower = {item.lower() for item in orig}
+    comp_set_lower = {item.lower() for item in comp}
+
+    # TAKES THE DIFFERENCE OF THE 2 SETS    
+    diff_lower = orig_set_lower.difference(comp_set_lower)
+    
+    # FOR EACH ELEMENT IN THE DIFFERENT OF THE 2 SETS, FINDS ORIGINAL VALUE (NON LOWERCASE)
+    diff = [item for item in orig if item.lower() in diff_lower]
+    # TURNS LIST TO SET
+    diff = set(diff)
+    
+    return diff
+
+# INTERSECTION BT TWO LISTS OR SETS
+def Set_common(orig, comp):
+    # Create lowercase sets
+    orig_set_lower = {item.lower() for item in orig}
+    comp_set_lower = {item.lower() for item in comp}
+
+    # Take the intersection
+    common_lower = orig_set_lower.intersection(comp_set_lower)
+    
+    # Map back to original-case items from orig_set
+    common = [item for item in orig if item.lower() in common_lower]
+    
+    # Convert to set
+    common = set(common)
+    
+    return common
 
 # SCANS A WINDOWS FOLDER FOR FILES 
 # CLEANS-UP THE RESULTS FOR OPTIMAL SEARCH AND RETURNS A LIST OF TUPLES
-def get_Win_files(dir, exts):
+# THE SECOND ELEMENT IN THE TUPLE IS THE FILE LOWER CASE, UNIDECODED AND WO/ EXTENSION
+def get_Win_files(dir, exts, Progress=False, Ref_total=None):
 
-    total_files = sum(len(files) for _, _, files in os.walk(dir))
-    process_files = 0
+    if Progress:
+        print("Reading files in", dir,"\n")
+        # total_files = sum(len(files) for _, _, files in os.walk(dir))
+        # total_files = 65000
+        process = 0
 
     file_list = []
     for root, dirs, files in os.walk(dir):
         for file in files:
-            # PROGRESS
-            # process_files += 1
-            # if process_files % 4000==1:
-            #     progress_perc = (process_files / total_files) * 100
-            #     print(f"Progress: {progress_perc:.0f}%")
-            
-            # ADDS FILE TO LIST ONLY IF MP3 (OR EXT PROVIDED)
+            # ADDS FILE TO LIST ONLY IF MP3 (OR EXTS PROVIDED)
+            # TURNS EXTS INTO TUPLE TO SUPPLY TO FUNCTION ENDSWITH
             if file.lower().endswith(tuple(ext.lower() for ext in exts)):
-               file_list.append(os.path.join(root, file))
-
+                # PRINT PROGRESS EVERY 100 FILES
+                if Progress:
+                    process += 1
+                    if process % 1000 == 0 or process == Ref_total:
+                        print(f"File {process} of {Ref_total}", end="\r")
+                        if process == Ref_total:
+                            print("\n")
+                file_list.append(os.path.join(root, file))        
+    
     # NORMALIZE FILE LIST FOR SEARCHES IGNORING CASE AND ACCENTS
     normal_filelist = [(file, unidecode(file_wo_ext(file.lower()))) for file in file_list]           
     return normal_filelist
