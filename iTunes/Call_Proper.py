@@ -3,7 +3,7 @@
 # IT'S NOW RELYING ON THE XML, INSTEAD OF READING THE LIBRARY, WHICH IS MUCH MORE TIME CONSUMING
 # THE XML IS ALWAYS IN SYNC WITH THE LIBRARY
 
-import Proper
+import Call_Proper
 from os.path import exists
 import Read_PL
 #import Files
@@ -13,7 +13,7 @@ def Proper_dict(main_dict):
     # populates the dicts
     proper_dict = {}
     for key in main_dict:
-        proper_dict[key] = Proper.Proper(main_dict[key],key)
+        proper_dict[key] = Call_Proper.Call_Proper(main_dict[key],key)
     return proper_dict
 
 # CHECK IF A VALUE IS THIS PESKY NAN VALUE

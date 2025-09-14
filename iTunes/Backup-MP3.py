@@ -86,14 +86,14 @@ for i in range(nbr_to_copy):
     src_file = files_src[pos]
     dst_file = files_dest[pos]
     if os.path.getmtime(src_file) > os.path.getmtime(dst_file):
-       print(f"Copying file {i+1} of {nbr_to_copy}: {src_file} to {dst_file}")
+       print(f"Copying file {i+1} of {nbr_to_copy}: {src_file} to {Dest}")
        # before_copy = comp_binary(src_file,dst_file)
        # PRESERVES TIMESTAMP
        copy2(src_file, dst_file)
        # print("File comparison -- Before:", before_copy, " -- After:",comp_binary(src_file,dst_file),"\n")
 
-# DELETED FILES THAT ARE NOT IN SOURCE FOLDER
-# BELOW COMPARISON IS CASE INSENSITIVE
+# DELETE FILES THAT ARE NOT IN SOURCE FOLDER
+# BELOW COMPARISON IS CASE-INSENSITIVE
 files_to_del = list(Set_diff(Dest_list, Source_list))
 nbr_to_del = len(files_to_del)
 print("There are",nbr_to_del,"files to be deleted from", Dest, "\n")

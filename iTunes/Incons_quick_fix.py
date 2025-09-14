@@ -3,7 +3,7 @@
 # COMPARES IF FILENAMES MATCH THE TAGS (SYNCS FILENAMES WITH TAGS)
 from os.path import exists
 from os import rename
-import Proper
+import Call_Proper
 import Read_PL
 import Tags
 import Files
@@ -94,7 +94,7 @@ def file_vs_tags(PL_name=None,PL_nbr=None,Do_lib=False):
                   subdir = dict2["Subdir"]
                   tag_no_sp_chars_ext = dict2["Filename"]
                   tags_no_sp_chars = Files.file_wo_ext(tag_no_sp_chars_ext)
-                  tags_no_sp_chars = Proper.Proper(tags_no_sp_chars,Tag="file")
+                  tags_no_sp_chars = Call_Proper.Call_Proper(tags_no_sp_chars,Tag="file")
 
                   # But the files can still be different, if they are, rename and update location
                   # CARACTERES ESPECIAIS NAO CONTAM, SAO "", FAZER COM QUE NAO DE DIFERENCA AQUI
@@ -104,7 +104,7 @@ def file_vs_tags(PL_name=None,PL_nbr=None,Do_lib=False):
                   # CREATES VARS TO USE
                   # subdir = Files.Folder(Arq[i])
                   file_no_nbr_no_ext = Files.File_no_nbr_no_ext(track_path)
-                  file_no_nbr_no_ext = Proper.Proper(file_no_nbr_no_ext,Tag="file")
+                  file_no_nbr_no_ext = Call_Proper.Call_Proper(file_no_nbr_no_ext,Tag="file")
                   
                   # Maybe only the case of the file name is changing
                   Tags_eq_file_case_insen = tags_no_sp_chars.lower().replace(" ", "") == file_no_nbr_no_ext.lower().replace(" ", "")

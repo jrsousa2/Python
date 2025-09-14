@@ -5,7 +5,7 @@ import re
 from os.path import exists
 from unidecode import unidecode
 from Search import similar_ratio
-import Proper
+import Call_Proper
 import Read_PL
 import Files
 
@@ -580,8 +580,8 @@ def file_tag_comp(track):
        
        if dict["match"]:
           if dict["best"] == "file": 
-             dict["Art"] = Proper.Proper(file_dict["Art"])
-             dict["Title"] = Proper.Proper(file_dict["Title"])
+             dict["Art"] = Call_Proper.Call_Proper(file_dict["Art"])
+             dict["Title"] = Call_Proper.Call_Proper(file_dict["Title"])
     
     # FINAL
     return dict
@@ -596,8 +596,8 @@ def Rewrite_tags(track,New_art,New_title):
        Arq = Files.file_wo_ext(track.location)
        Art = track.Artist
        Title = track.Name
-       art_aux = Proper.Proper(New_art)
-       title_aux = Proper.Proper(New_title)
+       art_aux = Call_Proper.Call_Proper(New_art)
+       title_aux = Call_Proper.Call_Proper(New_title)
        if art_aux.lower() != Art.lower():
           print("\nChanging Artist tag // Arq:",Arq)
           print("From",Art,"->",art_aux,"\n")

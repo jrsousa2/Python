@@ -2,7 +2,7 @@
 # MOVE MP3 FILES TO THEIR PROPER FOLDER BASED ON THE TAGS
 from os.path import exists
 from re import sub #For regular expressions
-import Proper
+import Call_Proper
 import Tags
 import Files
 
@@ -134,7 +134,7 @@ def Move(Location,Art,Genre):
        no = int(file[pos1+1:pos2])
     pos = aux.lower().rfind(".mp3")
     file_no_ext = aux[0:pos]
-    file_no_ext = Proper.Proper(file_no_ext,"file")
+    file_no_ext = Call_Proper.Call_Proper(file_no_ext,"file")
     New_file = file_no_ext + ".mp3"
     New_location = Dest_Dir + New_file
     i=0
