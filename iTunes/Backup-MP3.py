@@ -81,16 +81,16 @@ nbr_to_copy = len(files_to_copy)
 print("There are",nbr_to_copy,"files to be copied to",Dest,"\n")
 
 # COPIES THE FILES THAT DIFFER AT MODIFIED DATE
-for i in range(10): #range(nbr_to_copy):
+for i in range(nbr_to_copy):
     pos = files_to_copy[i]
     src_file = files_src[pos]
     dst_file = files_dest[pos]
     if os.path.getmtime(src_file) > os.path.getmtime(dst_file):
        print(f"Copying file {i+1} of {nbr_to_copy}: {src_file} to {dst_file}")
-       before_copy = comp_binary(src_file,dst_file)
+       # before_copy = comp_binary(src_file,dst_file)
        # PRESERVES TIMESTAMP
        copy2(src_file, dst_file)
-       print("File comparison -- Before:", before_copy, " -- After:",comp_binary(src_file,dst_file),"\n")
+       # print("File comparison -- Before:", before_copy, " -- After:",comp_binary(src_file,dst_file),"\n")
 
 # DELETED FILES THAT ARE NOT IN SOURCE FOLDER
 # BELOW COMPARISON IS CASE INSENSITIVE

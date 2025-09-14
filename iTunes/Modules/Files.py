@@ -155,6 +155,7 @@ def Print_to_file(Arq, txt, *args):
     with open(Arq, "a", encoding="utf-8") as file:
          file.write(txt.format(*args))
 
+# THIS IS NOT A SONG LENGTH, IT'S ACTUAL CLOCK TIME
 def track_time():
     # Get the current time
     now = datetime.now()
