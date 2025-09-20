@@ -140,9 +140,9 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # POPULATES LISTS
     Arq = [x for x in df["Location"]]
     if Do_lib:
-       ID = [x for x in df["PID2"]]
+       PID = [x for x in df["PID2"]]
     else:    
-        ID = [x for x in df["ID"]]
+        PID = [x for x in df["ID"]]
     WMP_Pos = [x for x in df["WMP_Pos"]]
     iTunes_plays = [int(x) for x in df["max_Plays_iTunes"]]
     WMP_plays = [x for x in df["max_Plays_WMP"]]
@@ -159,9 +159,9 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     # COMPARE AND CHANGE THE FILES
     for i in range(nbr_files):
         if Do_lib:
-           iTu_track = iTu_App.LibraryPlaylist.Tracks.ItemByPersistentID(*ID[i])
+           iTu_track = iTu_App.LibraryPlaylist.Tracks.ItemByPersistentID(*PID[i])
         else:    
-            iTu_track = iTu_App.GetITObjectByID(*ID[i])
+            iTu_track = iTu_App.GetITObjectByID(*PID[i])
         track_dict = Read_PL.iTunes_tag_dict(iTu_track, cols)
         track_meta = track_dict["Art"] +" - "+ track_dict["Title"]
         

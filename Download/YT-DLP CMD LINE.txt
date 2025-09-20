@@ -4,6 +4,10 @@ domain, host, path, secure, expiration, name, value.
 
 SID, SIDCC, APISID, HSID
 
+/* AUDIO */
+yt-dlp --cookies-from-browser chrome -f bestaudio --extract-audio --audio-format mp3 "https://www.youtube.com/watch?v=kRCin4s7VQo&pp=ygUPbWFyaW5hIGZyYW5jZXNh" -o "D:\MP3\Youtube\Marina - A Francesa.mp3"
+
+
 /* USING BROWSER COOKIES (SEEMS TO BE THE BEST CMD) */
 yt-dlp --cookies-from-browser chrome https://www.youtube.com/watch?v=kOzGFJZZVe8
 

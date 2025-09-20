@@ -1,19 +1,22 @@
 # FIXES THE CASE OF THE TAGS OF ALL MP3 FILES IN THE LIBRARY 
 # ACCORDING TO A GIVEN LOGIC FOUND IN MODULE PROPER
 # IT'S NOW RELYING ON THE XML, INSTEAD OF READING THE LIBRARY, WHICH IS MUCH MORE TIME CONSUMING
-# THE XML IS ALWAYS IN SYNC WITH THE LIBRARY
+# THE XML IS ALWAYS IN SYNC WITH THE LIBRARY (IF REFRESHED)
 
-import Call_Proper
+import sys
+sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+
 from os.path import exists
 import Read_PL
 #import Files
+import Proper
 
 # INITIALIZE DICTS
 def Proper_dict(main_dict):
     # populates the dicts
     proper_dict = {}
     for key in main_dict:
-        proper_dict[key] = Call_Proper.Call_Proper(main_dict[key],key)
+        proper_dict[key] = Proper.Proper(main_dict[key],key)
     return proper_dict
 
 # CHECK IF A VALUE IS THIS PESKY NAN VALUE
@@ -27,14 +30,16 @@ def nan_to_blank(value):
 # 1o ADICIONA TRACKS NA PLAYLIST
 def Call_proper(rows=None):
     # START
-    dict = Read_PL.Init_iTunes()
-    App = dict['App']
-    PLs = dict['PLs']
+    # dict = Read_PL.Init_iTunes()
+    # App = dict['App']
+    # PLs = dict['PLs']
 
     # READS XML
     col_names = ["Arq","Art","Title","AA","Album","PID"]
     dict = Read_PL.Read_xml(col_names,rows=rows)
     df = dict['DF']
+    App = dict['App']
+    PLs = dict['PLs']
 
     # TEST LIST CREATION (list comprehension) 
     Arq = [x for x in df['Arq']]
@@ -42,14 +47,14 @@ def Call_proper(rows=None):
     Title = [x for x in df['Title']]
     AA = [x for x in df['AA']]
     Album = [x for x in df['Album']]
-    PID = [x for x in df['PID']]
+    PID2 = [x for x in df['PID2']]
     nbr_files = len(Arq)
 
     # CREATES LIST OF DICTIONARIES 
     main_dic = []
     for i in range(nbr_files):
-        dic = {'Art': nan_to_blank(Art[i]),'Title': nan_to_blank(Title[i]),'AA': nan_to_blank(AA[i]),'Album': nan_to_blank(Album[i])}
-        main_dic.append(dic)
+        dict = {'Art': nan_to_blank(Art[i]),'Title': nan_to_blank(Title[i]),'AA': nan_to_blank(AA[i]),'Album': nan_to_blank(Album[i])}
+        main_dic.append(dict)
 
     to_fix_dic = {}
     to_fix_dic['All'] = []
@@ -73,7 +78,7 @@ def Call_proper(rows=None):
 
     # SAINDO DO LOOP
     # Stats das tags que serao arrumadas
-    print("")
+    print()
     for key in to_fix_dic:
         if key=="All":
            print("Files to have case fixed:",len(to_fix_dic[key]),"\n")
@@ -95,10 +100,7 @@ def Call_proper(rows=None):
 
        for i in range(len(to_fix_dic['All'])):
            n = to_fix_dic['All'][i]
-           #m = ID[n]
-           #track = App.GetITObjectByID(*m)
-
-           m = Read_PL.unpack('!ii', Read_PL.a2b_hex(PID[n]))
+           m = PID2[n]
            track = App.LibraryPlaylist.Tracks.ItemByPersistentID(*m)
 
            if Arq[n]==track.Location:

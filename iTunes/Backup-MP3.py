@@ -96,7 +96,7 @@ for i in range(nbr_to_copy):
 # BELOW COMPARISON IS CASE-INSENSITIVE
 files_to_del = list(Set_diff(Dest_list, Source_list))
 nbr_to_del = len(files_to_del)
-print("There are",nbr_to_del,"files to be deleted from", Dest, "\n")
+print("\nThere are",nbr_to_del,"files to be deleted from", Dest, "\n")
 
 # DELETING FILES
 for i in range(10): #range(nbr_to_del):
