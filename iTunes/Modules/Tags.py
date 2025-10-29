@@ -5,9 +5,15 @@ import re
 from os.path import exists
 from unidecode import unidecode
 from Search import similar_ratio
-import Call_Proper
+
+import sys
+sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+#sys.path.insert(0, "D:\\Python\\WMP")
+
+from Proper import Proper
 import Read_PL
 import Files
+
 
 # USADO PARA ORDENAR COMO OS GENRES APARECEM NA TAG GENRE
 Genre_order_list = ["Brasil","iPhone","Favorite","Easy","Novela","Pop","Rock","Alternative","Hip-Hop","Rap","Searched","Found","Attached","Brazil"]
@@ -580,8 +586,8 @@ def file_tag_comp(track):
        
        if dict["match"]:
           if dict["best"] == "file": 
-             dict["Art"] = Call_Proper.Call_Proper(file_dict["Art"])
-             dict["Title"] = Call_Proper.Call_Proper(file_dict["Title"])
+             dict["Art"] = Proper(file_dict["Art"])
+             dict["Title"] = Proper(file_dict["Title"])
     
     # FINAL
     return dict
@@ -596,8 +602,8 @@ def Rewrite_tags(track,New_art,New_title):
        Arq = Files.file_wo_ext(track.location)
        Art = track.Artist
        Title = track.Name
-       art_aux = Call_Proper.Call_Proper(New_art)
-       title_aux = Call_Proper.Call_Proper(New_title)
+       art_aux = Proper(New_art)
+       title_aux = Proper(New_title)
        if art_aux.lower() != Art.lower():
           print("\nChanging Artist tag // Arq:",Arq)
           print("From",Art,"->",art_aux,"\n")

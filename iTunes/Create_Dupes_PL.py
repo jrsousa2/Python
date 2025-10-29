@@ -9,7 +9,7 @@ sys.path.insert(0, "D:\\Python\\iTunes\Modules")
 sys.path.insert(0, "D:\\Python\\WMP")
 
 import Read_PL
-import Tags
+from Tags import Stdz
 from Files import file_wo_ext
 
 # DISABLE PANDAS WARNINGS
@@ -47,7 +47,7 @@ def Dupes_PL(rows=None):
     df["Title_std"] = df["Title"].str.rsplit("(", n=1).str[0].str.strip()
 
     # ADDS NEW COL.
-    df["track_stdz"] = (df["Art"] + " & " + df["Title_std"]).map(Tags.Stdz)
+    df["track_stdz"] = (df["Art"] + " & " + df["Title_std"]).map(Stdz)
 
 
     # CREATES COL. WITH STDZ TRACK NAMES
@@ -105,4 +105,4 @@ def Dupes_PL(rows=None):
            Read_PL.Add_track_to_PL(PLs,Dupes_PL_name,track) 
 
 # CALLS FUNCTION
-Dupes_PL(rows=2000)
+Dupes_PL(rows=None)
