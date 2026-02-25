@@ -1,3 +1,4 @@
+# CODE IS WORKING. THE API TOKEN IS TAKEN FROM THE OS 
 import requests
 import os
 
