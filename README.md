@@ -8,6 +8,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 
 **Various projects that I've developed in Python, including:**
 
+- Creation of video images with AI Prompting [POV](https://github.com/jrsousa2/Python/blob/main/n8n/FLUX.png)
 - AI video/image enhancement with open source code Real-ESRGAN (this is ML/DL*).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN) (this is ML/DL).
