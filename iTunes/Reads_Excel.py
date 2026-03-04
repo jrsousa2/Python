@@ -9,6 +9,10 @@ import fnmatch
 #import re
 #from unidecode import unidecode
 
+import sys
+sys.path.insert(0, "D:\\Python\\Modules")
+
+import Excel
 import Read_PL
 import Files
 from Search import similar_ratio
@@ -53,61 +57,6 @@ def find_fullfile(root_dir, target):
     # RETURNS FILE FOUND
     return full_file
 
-# OPENS AN EXCEL FILE AND SPECIFIED SHEET
-# LAYOUT ARE THE COLS OF THE FILE
-def open_excel(Arq,Sheet):
-    dict = {}
-    dict["file"] = None
-    dict["sheet"] = None
-    if not isfile(Arq):
-       print("File doesn't exist") 
-    else:
-        workbook = openpyxl.load_workbook(Arq, data_only=True)
-        worksheet = workbook[Sheet]
-        worksheet = workbook.active
-    dict["file"] = workbook
-    dict["sheet"] = worksheet   
-    headers = []
-    for cell in worksheet[1]:
-        headers.append(cell.value)
-    dict["headers"] = headers
-    return dict
-
-# FIRST EMPTY ROW IN THE FILE
-def empty_row(worksheet):
-    next_row = 2
-    while worksheet.cell(row=next_row, column=1).value is not None:
-          next_row = next_row+1
-    
-    return next_row      
-
-def last_row(sheet):
-   # Iterate through the rows in column A to find the last non-empty cell
-   last_row = None
-
-   for row in sheet.iter_rows(min_row=1, max_row=sheet.max_row, min_col=1, max_col=1):
-      cell = row[0]  # Column A (index 0)
-      if cell.value is not None:
-         last_row = cell.row
-   return last_row 
-
-# WRITE TO ARTIST EXCEL Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_Artists", "Srch_Variations"]
-def col_number(headers,col_name):
-    col = headers.index(col_name)+1
-    return col 
-
-# WRITE TO ARTIST EXCEL Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_Artists", "Srch_Variations"]
-def read_from_excel(worksheet,nrow,col_number):
-    nrow = 1
-    return nrow  
-
-# WRITE TO ARTIST EXCEL Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_Artists", "Srch_Variations"]
-def write_to_excel(worksheet,nrow,headers,col_name,value_to_write):
-    col = headers.index(col_name)
-    worksheet.cell(row=nrow, column=col, value=value_to_write)
-    nrow = nrow+1
-    return nrow        
-
 # MAIN CODE
 def Updt_novela(PL_name=None,PL_nbr=None):
 
@@ -119,12 +68,12 @@ def Updt_novela(PL_name=None,PL_nbr=None):
     # OPENS EXCEL FILE
     #Excel_file = "D:\\Python\\Excel\\Novela_selected.xlsx"
     Excel_file = "D:\\Videos\\Novelas80s.xlsx"
-    excelf = open_excel(Excel_file,"Final")
+    excelf = Excel.open_excel(Excel_file,"Final")
 
     worksheet = excelf["sheet"]
     headers = excelf["headers"]
 
-    rows = last_row(worksheet)-1
+    rows = Excel.last_row(worksheet)-1
 
     # LIST OF ALL FILE NAMES WO/ THE PATH
     print("Creating list of all files...\n")
@@ -154,13 +103,13 @@ def Updt_novela(PL_name=None,PL_nbr=None):
     PL_novela = Read_PL.Create_PL(PL_novela_nm,recreate="n") 
 
     # Artist	Title	Type
-    File_col = col_number(headers,"File")
-    Art_col = col_number(headers,"Artist")
-    Title_col = col_number(headers,"Title")
-    Genre_col = col_number(headers,"Genre")
-    Type_col = col_number(headers,"Type")
-    Path_col = col_number(headers,"Fullname")
-    Score_col = col_number(headers,"Score")
+    File_col = Excel.col_number(headers,"File")
+    Art_col = Excel.col_number(headers,"Artist")
+    Title_col = Excel.col_number(headers,"Title")
+    Genre_col = Excel.col_number(headers,"Genre")
+    Type_col = Excel.col_number(headers,"Type")
+    Path_col = Excel.col_number(headers,"Fullname")
+    Score_col = Excel.col_number(headers,"Score")
     # col1 = col_number(headers,"Key1")
     next_row = 1
     found = 0

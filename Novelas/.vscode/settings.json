@@ -23,7 +23,7 @@
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
-    "python.analysis.extraPaths": [ "D:\\Python\\iTunes" ],
+    "python.analysis.extraPaths": [ "D:\\Python\\iTunes", "D:\\Python\\Modules" ],
     "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe"
 
 }

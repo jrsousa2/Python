@@ -8,9 +8,13 @@ from os.path import exists, isfile
 from timeit import default_timer
 from time import sleep
 import openpyxl
+
+import sys
+sys.path.insert(0, "D:\\Python\\Modules")
+
 # import datetime
 import Read_PL
-import Stdz
+import Tags
 import Images
 import Files
 
@@ -86,13 +90,7 @@ def open_excel(Arq,layout):
         dict["sheet"] = worksheet    
     return dict
 
-# FIRST EMPTY ROW IN THE FILE
-def empty_row(worksheet):
-    next_row = 2
-    if Excel:
-       while worksheet.cell(row=next_row, column=1).value is not None:
-             next_row = next_row+1
-    return next_row      
+    
 
 # WRITE TO ARTIST EXCEL Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_Artists", "Srch_Variations"]
 def write_Art(worksheet,next_row,API,search,Art,Srch_art,Srch_varis):
@@ -189,7 +187,7 @@ def Split_art_list(my_list,delimiters):
 # STANDARDIZES EACH ELEMENT OF A LIST PER THE SIMPLE_STDZ FUNCTION
 def Stdz_list(my_list):
     # Use list comprehension to lowercase and remove leading/trailing whitespaces
-    my_list = [Stdz.Stdz(x) for x in my_list]
+    my_list = [Tags.Stdz(x) for x in my_list]
     # Return the updated list
     return my_list
 
@@ -221,7 +219,7 @@ def Score(dict,Alb_by_art_Year,VA_Year):
 # Measure execution time of using for loop
 def Search_track_in_list(song,songlist):
     # Convert the search string to lowercase (or uppercase)
-    song_stdz = Stdz.Stdz(song)
+    song_stdz = Tags.Stdz(song)
     stdz_songlist = Stdz_list(songlist)
     dict = {}
     Achou = song_stdz in stdz_songlist
@@ -246,7 +244,7 @@ def Art_srch_list(Cur_Art,Srch_AA_Album,Names_list,Variations_list):
        print("\t\tArtists list OK, checking artists")
     else:
         print("\t\tChecking Album artist (artists list exception)")
-        split = Stdz.Split_AA_Album("","",Srch_AA_Album)
+        split = Tags.Split_AA_Album("","",Srch_AA_Album)
         Srch_AA = split["AA"]
         Srch_Album = split["Album"]
         Names_list = []
@@ -274,11 +272,11 @@ def Art_srch_list(Cur_Art,Srch_AA_Album,Names_list,Variations_list):
            if Variations_list[i] is not None:
               artists_alias.extend(Variations_list[i])
        Art_match = True
-       artists_alias = {Stdz.Stdz(x) for x in artists_alias}
+       artists_alias = {Tags.Stdz(x) for x in artists_alias}
        i = 0
        while (Art_match and i<nbr_actual_arts):
               print("\t\tChecking artist",i+1,"of",nbr_actual_arts,"in variations list:",Art_list[i])
-              if Stdz.Stdz(Art_list[i]) not in artists_alias:
+              if Tags.Stdz(Art_list[i]) not in artists_alias:
                  Art_match = False
               i=i+1 
        Files.Print_to_file(Log_file,"Searched artist ({}) in variation list. Found? {}\n", Cur_Art, Art_match)       
@@ -291,7 +289,7 @@ def Srch_disco(disco,Res_list,Art,Title,AA,Album,srch_type,country,format="",lab
     if count_res<20:
        # READS THE INPUT PMTS
        params = {
-       "artist": Stdz.coalesce(Art,AA),
+       "artist": Tags.coalesce(Art,AA),
        "track": Title,
        "title": Album,
        "type": srch_type,
@@ -331,7 +329,7 @@ def Srch_disco(disco,Res_list,Art,Title,AA,Album,srch_type,country,format="",lab
 # AS A COMBINATION OF ALL SEARCH PMTS
 def Srch_priority(disco,Art,Title,AA,Album,Genre,Year):
     # ASSIGNS THE PRIORITY IN THE SEARCH
-    if Stdz.Is_Brasil(Genre):
+    if Tags.Is_Brasil(Genre):
         country = ["Brazil", "US", ""]
     else: 
         country = ["US", "Brazil", ""]
@@ -387,7 +385,7 @@ def count_results(Res_list):
 def Call_art_match(srch_res,Obj,k,j,Art,excelf,next_row):
     # CAN ONLY CONTINUE IF NOT OUT OF RANGE
     Has_art_list = False
-    split = Stdz.Split_AA_Album("","",srch_res["AA_Album"])
+    split = Tags.Split_AA_Album("","",srch_res["AA_Album"])
     New_AA = split["AA"]
     print("\t\t",srch_res["Type"].capitalize(),"ID:",srch_res["ID"],"--Country:",srch_res["Country"],"--Album:",srch_res["AA_Album"][0:70])
     # CHECK SE PODE CONTINUAR (tirei and Obj_exists abaixo)
@@ -530,7 +528,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
     excelf["Year"] = open_excel(Excel_Year,Year_layout)
     next_row = {}
     for key in excelf:
-        next_row[key] = empty_row(excelf[key]["sheet"])
+        next_row[key] = Excel.empty_row(excelf[key]["sheet"])
     print("\n")
     print("Starting code at",Files.track_time(),"\n")
     # USED FOR IMAGE RETRIEVING
@@ -623,7 +621,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
                               srch_res["ID"] = Obj.id
                            if Check_attrib(Obj,"year"):
                               srch_res["Year"] = int(Obj.year) 
-                           srch_res["AA_Album"] = Stdz.coalesce(Obj.title,"")
+                           srch_res["AA_Album"] = Tags.coalesce(Obj.title,"")
                            # THE BELOW IS A DICTIONARY VALUE
                            srch_res["Style"] = Get_attrib(Obj,"style")
                            # THE BELOW IS THE SAME AS THE ABOVE, EXCEPT IT'S NOT A LIST
@@ -632,7 +630,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
                               srch_res["Genre"] = Obj.genres[0]
                            # FIRST LETTER OF THE TYPE (M/R)
                            # type_ID = srch_res["Type"][0]+str(srch_res["ID"])
-                           type_ID = srch_res["Type"][0]+str(srch_res["Year"])+Stdz.Stdz(srch_res["AA_Album"])
+                           type_ID = srch_res["Type"][0]+str(srch_res["Year"])+Tags.Stdz(srch_res["AA_Album"])
                         Skip = False 
                         # IF SEARCHED BEFORE DON'T SEARCH AGAIN  
                         if type_ID in IDs_searched:
@@ -656,16 +654,16 @@ def Call_disco(PL_name=None,PL_nbr=None):
                            if not Art_match and Title_match_dic["Art_match"]:
                               Art_match = True
                               srch_res["VA"] = True
-                           Live_check = Stdz.Album_is_live(Genre[i],srch_res["AA_Album"])==Stdz.Genre_is_live(Genre[i])   
+                           Live_check = Tags.Album_is_live(Genre[i],srch_res["AA_Album"])==Tags.Genre_is_live(Genre[i])   
                            if Art_match and Title_match and srch_res["Year"]>0 and Live_check:
                               print("\t\tTrack found in album",srch_res["AA_Album"])
                               srch_res["Label"] = Get_attrib(Obj,"label")
                               srch_res["Format"] = Get_attrib(Obj,"format")
-                              split = Stdz.Split_AA_Album(Art[i],Title[i],srch_res["AA_Album"])
+                              split = Tags.Split_AA_Album(Art[i],Title[i],srch_res["AA_Album"])
                               srch_res["AA"] = split["AA"]
                               srch_res["Album"] = split["Album"]
                               srch_res["quality"] = split["quality"]
-                              srch_res["Alb_by_art"] = Stdz.Alb_by_art(Art[i],Title[i],srch_res["AA"])
+                              srch_res["Alb_by_art"] = Tags.Alb_by_art(Art[i],Title[i],srch_res["AA"])
                               if Check_attrib(Obj,"main_release") and Check_attrib(Obj.main_release,"id"):
                                  srch_res["Main_ID"] = Obj.main_release.id
                               # ADDS RES TO LIST
@@ -684,7 +682,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
            # END OF FOR k
            # END OF SEARCH FOR FILE
            # UPDATE GROUPING 
-           New_Grouping = Stdz.Add_to_tag(track,"Searched",Tag="Grouping")
+           New_Grouping = Tags.Add_to_tag(track,"Searched",Tag="Grouping")
            # SAVE MISMATCH EXCEL FILES
            if Excel:
               excelf["Art"]["file"].save(Excel_Art)
@@ -738,7 +736,7 @@ def Call_disco(PL_name=None,PL_nbr=None):
               # THIS IS TO KNOW IF A RY IS LESS THAN THE CURRENT YEAR
               if Rel_Year < Mast_Year < 9999 and (Rel_Year<Year[i] or Year[i]==0):
                  add_tag = "RY=" + str(Rel_Year)
-                 New_Grouping = Stdz.Add_to_tag(track,add_tag,Tag="Grouping")
+                 New_Grouping = Tags.Add_to_tag(track,add_tag,Tag="Grouping")
 
               # YEAR
               if (Year[i]==0 or Year[i]>New_Year+1) and New_Year>0:
@@ -750,8 +748,8 @@ def Call_disco(PL_name=None,PL_nbr=None):
 
               # GENRE
               Cur_Genre = track.Genre
-              New_Genre_vl = Stdz.coalesce(srch_res["Style"], srch_res["Genre"])
-              New_Genre = Stdz.Add_to_tag(track,New_Genre_vl)
+              New_Genre_vl = Tags.coalesce(srch_res["Style"], srch_res["Genre"])
+              New_Genre = Tags.Add_to_tag(track,New_Genre_vl)
               if New_Genre != "":
                  fixed["Genre"] = fixed["Genre"] +1
                  print("\tUpdated Genre of",file_nm,"|| From",Genre[i],"->",New_Genre)
@@ -781,17 +779,17 @@ def Call_disco(PL_name=None,PL_nbr=None):
                  Files.Print_to_file(Log_file,"Image of {} is None (image doesn't exist)\n",file_nm)   
               # ALBUM SELECTION LOGIC
               Curr_Album_blank = Cur_AA=="" and Cur_Album==""
-              Nice_cover_vl = Stdz.Nice_cover(Cur_Album,Cur_Genre,Cur_covers)
-              Alb_by_art_vl = Stdz.Alb_by_art(Art[i],Title[i],srch_AA)
-              Alb_not_great = not Stdz.Greatest_Hits(Cur_Album) and Alb_by_art_vl
+              Nice_cover_vl = Tags.Nice_cover(Cur_Album,Cur_Genre,Cur_covers)
+              Alb_by_art_vl = Tags.Alb_by_art(Art[i],Title[i],srch_AA)
+              Alb_not_great = not Tags.Greatest_Hits(Cur_Album) and Alb_by_art_vl
               srch_Album_pop = srch_AA != "" and srch_Album != "" and Has_image 
               Albums_eq = Cur_AA==srch_AA and Cur_Album==srch_Album and Cur_covers==0
-              VA_wo_cover = Stdz.Is_VA(Cur_AA) and not Nice_cover_vl and Cur_covers==0
-              VA = Stdz.Is_VA(Cur_AA) and not Nice_cover_vl and Alb_by_art_vl
+              VA_wo_cover = Tags.Is_VA(Cur_AA) and not Nice_cover_vl and Cur_covers==0
+              VA = Tags.Is_VA(Cur_AA) and not Nice_cover_vl and Alb_by_art_vl
 
               # Alb_is_Brasil = srch_res["Country"]=="Brazil" and Cur_covers==0
-              By_art_wo_cover = Stdz.Alb_by_art(Art[i],Title[i],Cur_AA) and Stdz.Alb_by_art(Art[i],Title[i],srch_AA) \
-                                and not Stdz.Nice_cover(Cur_Album,Cur_Genre,Cur_covers) and Cur_covers==0
+              By_art_wo_cover = Tags.Alb_by_art(Art[i],Title[i],Cur_AA) and Tags.Alb_by_art(Art[i],Title[i],srch_AA) \
+                                and not Tags.Nice_cover(Cur_Album,Cur_Genre,Cur_covers) and Cur_covers==0
               Updt_Album = srch_Album_pop and (Curr_Album_blank or VA_wo_cover or Albums_eq or By_art_wo_cover or VA)
               if Updt_Album and Has_image:
                  # AQUI TEM QUE COLOCAR EM FUNCAO DO TIPO
@@ -807,26 +805,26 @@ def Call_disco(PL_name=None,PL_nbr=None):
                     attachf = Images.Attach_cover(Log_file,track,srch_AA,srch_Album,New_cover_file,fixed["Album"],VA=True)
                  if attachf["Tag_updt"]:
                     if vinil_dict["match"]:
-                       New_Grouping = Stdz.Add_to_tag(track,"VinylCover",Tag="Grouping")
+                       New_Grouping = Tags.Add_to_tag(track,"VinylCover",Tag="Grouping")
                     fixed["Album"] = fixed["Album"]+1
                     Read_PL.Add_track_to_PL(PLs,PL_nm["Album"],track)
                     # UPDATES GROUPING
                     # add_tag = srch_res["Type"]+"\\Country="+srch_res["Country"]+"\\Label="+srch_res["Label"]+"\\Format="+srch_res["Format"]
-                    New_Grouping = Stdz.Add_to_tag(track,srch_res["Type"],Tag="Grouping")
+                    New_Grouping = Tags.Add_to_tag(track,srch_res["Type"],Tag="Grouping")
                     if srch_res["quality"] != "accurate":
-                       New_Grouping = Stdz.Add_to_tag(track,srch_res["quality"],Tag="Grouping")
+                       New_Grouping = Tags.Add_to_tag(track,srch_res["quality"],Tag="Grouping")
                     if srch_res["VA"] == True:
-                       New_Grouping = Stdz.Add_to_tag(track,"\\Various",Tag="Grouping")   
+                       New_Grouping = Tags.Add_to_tag(track,"\\Various",Tag="Grouping")   
                  if attachf["Attached"]:
                     fixed["Attached"] = fixed["Attached"]+1
-                    New_Grouping = Stdz.Add_to_tag(track,"Attached",Tag="Grouping")
+                    New_Grouping = Tags.Add_to_tag(track,"Attached",Tag="Grouping")
                     #Create_PL.Add_track_to_PL(PLs,PL_nm["Attached"],track)
                  if attachf["Deleted"]:
                     fixed["Deleted"] = fixed["Deleted"]+1
                  if attachf["Exception"]:
                     fixed["Attach exc"] = fixed["Attach exc"]+1 
               # UPDATE GROUPING ONLY AT THE END OF THE BLOCK
-              New_Grouping = Stdz.Add_to_tag(track,"Found",Tag="Grouping") 
+              New_Grouping = Tags.Add_to_tag(track,"Found",Tag="Grouping") 
            else:   
                 print("\tNOT FOUND! :",file_nm,"\n")
                 Read_PL.Add_track_to_PL(PLs,PL_nm["Not_found"],track)

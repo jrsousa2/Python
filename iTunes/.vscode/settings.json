@@ -24,5 +24,5 @@
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
     "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe",
-    "python.analysis.extraPaths": [ "D:\\Python\\iTunes\\Modules", "D:\\Python\\WMP" ]
+    "python.analysis.extraPaths": [ "D:\\Python\\Modules" ]
 }

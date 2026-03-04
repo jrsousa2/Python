@@ -2,8 +2,7 @@
 # IF THERE ARE MISSING FILES, ADD THEM
 
 import sys
-sys.path.insert(0, "D:\\Python\\iTunes\Modules")
-sys.path.insert(0, "D:\\Python\\WMP")
+sys.path.insert(0, "D:\\Python\\Modules")
 
 # from os.path import exists
 import Read_PL

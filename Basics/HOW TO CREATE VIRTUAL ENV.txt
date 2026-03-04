@@ -1,0 +1,80 @@
+/* CREATE MINIMAL ENVIRONMENT */
+
+MOVE TO THE C:\Python DIR FIRST
+
+/* START BY CREATING A FOLDER */
+C:\Python>mkdir Python3.9-v1
+
+
+/* CREATE VIRT ENV (this will use Python 3.9) */
+C:\Python>C:\Python\Python39\python.exe -m venv Python3.9-v1
+
+# ACTIVATE THE VIRT ENV CREATED (THE SHORTCUT IN THE PATH IS TO THE STANDARD)
+C:\Python\Python3.9-v1\Scripts\activate
+
+/* MOVE TO THE FOLDER JUST IN CASE */
+C:\Python>cd Python3.9-v1
+
+/* DOUBLECHECK THE PYTHON VERSION JUST IN CASE */
+(Python3.9-v1) C:\Python\Python3.9-v1>python --version
+Python 3.9.0
+
+/* CHECK ANY INSTALLED PKG's (SHOULD BE NONE) */
+pip list
+
+/* UPGRADE PIP BEFORE ANY PKG INSTALLS */
+python -m pip install --upgrade pip
+
+
+/* SELECT THE INTERPRETER IN VS CODE */
+C:\Python\Python3.9-v1\Scripts\python.exe
+
+INSTALL PKGS: 
+pip install pandas cx_Freeze wxpython pywin32
+pip install wxpython (the GUI builder)
+
+
+###############################################################
+###############################################################
+###############################################################
+
+# CREATE VIRT ENV IN THE MAIN PYTHON DIR 
+
+/* OLD VERSION */
+python3.8 -m venv MyEnv
+
+# ACTIVATE THE VIRT ENV CREATED
+MyEnv\Scripts\activate  # On Windows
+
+C:\Python\MyEnv\Scripts\activate (WAS ADDED TO THE PATH, JUST "ACTIVATE" WORKS)
+
+WITHIN VS CODE, ACTIVATE AGAIN USING THE TERMINAL WITH THE CMD:
+myenv\Scripts\activate
+
+TO DEACTIVATE:
+deactivate
+
+NOTE THE DISTINCTION BETWEEN PYTHON INSTALLATION FOLDERS AND VIRT ENVIRONMENTS
+
+* ATENCAO!! *
+* ESCOLHER COMO INTERPRETER O ARQUIVO PYTHON.EXE DO SUBFOLDER SCRIPTS DO VIRTUAL ENV. *
+
+############################################################
+
+MOVE TO THE C:\Python DIR FIRST
+
+/* NEWER VERSION (SPECIFY PATH TO PYTHON EXE) */
+C:\Python\Python39\python -m venv MyEnv39
+
+# ACTIVATE THE VIRT ENV CREATED
+MyEnv39\Scripts\activate
+
+/* USE BELOW TO AVOID AMBIGUOUS */
+C:\Python\Python39\python -m pip install --upgrade pip
+
+INSTALL A PACKAGE (EXAMPLE):
+C:\Python\Python39\Scripts\pip install yt-dlp
+
+* ATENCAO!! *
+* ESCOLHER COMO INTERPRETER O ARQUIVO PYTHON.EXE DO SUBFOLDER SCRIPTS DO VIRTUAL ENV. *
+

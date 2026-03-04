@@ -13,7 +13,7 @@ import Read_PL
 import Files
 
 import sys
-sys.path.insert(0, "D:\\Python\\WMP")
+sys.path.insert(0, "D:\\Python\\Modules")
 import WMP_Read_PL as WMP 
 
 # CALLS Read_PL FUNCTION 

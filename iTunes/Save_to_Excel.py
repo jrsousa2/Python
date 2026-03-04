@@ -6,8 +6,7 @@
 # MAKE SURE PYTHON HAS ACCESS TO THE FOLDER IF FOLDER RANSOMWARE PROTECTION IS ENABLED
 
 import sys
-sys.path.insert(0, "D:\\Python\\iTunes\Modules")
-sys.path.insert(0, "D:\\Python\\WMP")
+sys.path.insert(0, "D:\\Python\\Modules")
 
 #import pandas as pd
 from Files import file_w_ext

@@ -10,62 +10,15 @@ import openpyxl
 from unidecode import unidecode
 from re import sub
 
+import sys
+sys.path.insert(0, "D:\\Python\\Modules")
+
+import Excel
 import Files
 
 # VARIABLE USED IN THE iTunes FUNCTIONS
 # ExtArray = [".unk",".jpg",".png",".bmp"]
 
-
-# OPENS AN EXCEL FILE AND SPECIFIED SHEET
-# LAYOUT ARE THE COLS OF THE FILE
-def open_excel(Arq,Sheet):
-    dict = {}
-    dict["file"] = None
-    dict["sheet"] = None
-    if not isfile(Arq):
-       print("File doesn't exist") 
-    else:
-        workbook = openpyxl.load_workbook(Arq) #, data_only=True
-        worksheet = workbook[Sheet]
-        worksheet = workbook.active
-    dict["file"] = workbook
-    dict["sheet"] = worksheet   
-    headers = []
-    for cell in worksheet[1]:
-        headers.append(cell.value)
-    dict["headers"] = headers
-    return dict
-
-# FIRST EMPTY ROW IN THE FILE
-def empty_row(worksheet):
-    next_row = 2
-    while worksheet.cell(row=next_row, column=1).value is not None:
-          next_row = next_row+1
-    
-    return next_row      
-
-def last_row(sheet):
-   # Iterate through the rows in column A to find the last non-empty cell
-   last_row = None
-
-   for row in sheet.iter_rows(min_row=1, max_row=sheet.max_row, min_col=1, max_col=1):
-      cell = row[0]  # Column A (index 0)
-      if cell.value is not None:
-         last_row = cell.row
-   return last_row 
-
-# WRITE TO ARTIST EXCEL Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_Artists", "Srch_Variations"]
-def col_number(headers,col_name):
-    if col_name in headers:
-       col = headers.index(col_name)+1
-    else:
-        col = ""   
-    return col 
-
-# WRITE TO ARTIST EXCEL Art_layout = ["API", "Search", "Cur_Artist", "Nbr_srch_art", "Srch_Artists", "Srch_Variations"]
-def read_from_excel(worksheet,nrow,col_number):
-    nrow = 1
-    return nrow  
 
 # Function to search for a value in a column and return another column value from the same row
 def search_df(df, search_col, search_val, return_col):
@@ -85,16 +38,16 @@ def Pop_images():
     # OPENS EXCEL FILE TO READ FROM (WRITES TO THE SAME FILE)
     Excel_infile = r"D:\Videos\Atrizes BR\Atrizes.xlsx"
     Excel_outfile = r"D:\Videos\Atrizes BR\Atrizes_out.xlsx"
-    excelf = open_excel(Excel_infile,"Atrizes")
+    excelf = Excel.open_excel(Excel_infile,"Atrizes")
     workbook = excelf["file"]
     worksheet = excelf["sheet"]
     headers = excelf["headers"]
-    rows = last_row(worksheet)-1
+    rows = Excel.last_row(worksheet)-1
 
     # Artist	Title	Type
-    Atriz_col = col_number(headers,"Atriz")
-    Sel_col = col_number(headers,"Select")
-    Img_col = col_number(headers,"Image")
+    Atriz_col = Excel.col_number(headers,"Atriz")
+    Sel_col = Excel.col_number(headers,"Select")
+    Img_col = Excel.col_number(headers,"Image")
     #Novela_col = col_number(headers,"Novela")
     #Year_col = col_number(headers,"Year")
 

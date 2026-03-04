@@ -2,7 +2,7 @@
 from os.path import exists
 
 import sys
-sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+sys.path.insert(0, "D:\\Python\\Modules")
 sys.path.insert(0, "D:\\Python\\WMP")
 
 import Read_PL

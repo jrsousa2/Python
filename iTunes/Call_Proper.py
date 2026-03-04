@@ -4,7 +4,7 @@
 # THE XML IS ALWAYS IN SYNC WITH THE LIBRARY (IF REFRESHED)
 
 import sys
-sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+sys.path.insert(0, "D:\\Python\\Modules")
 
 from os.path import exists
 import Read_PL

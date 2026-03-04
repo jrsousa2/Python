@@ -7,7 +7,7 @@ from unidecode import unidecode
 from Search import similar_ratio
 
 import sys
-sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+sys.path.insert(0, "D:\\Python\\Modules")
 #sys.path.insert(0, "D:\\Python\\WMP")
 
 from Proper import Proper

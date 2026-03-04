@@ -1,8 +1,9 @@
+# GOOGLE TEXT TO SPEECH MODULE
 import speech_recognition as sr
-from pydub import AudioSegment
-from gtts import gTTS
-import librosa
-import soundfile as sf
+# from pydub import AudioSegment
+# from gtts import gTTS
+# import librosa
+# import soundfile as sf
 
 # Function to transcribe audio and get word timings
 def transcribe_audio(audio_path):
@@ -25,7 +26,7 @@ def transcribe_audio(audio_path):
     return words
 
 # Example usage
-audio_path = "D:\\Python\\Baby\\Media\\Debate_crop.wav"
+audio_path = "D:\\Videos\Lula\\Debate_crop.wav"
 words = transcribe_audio(audio_path)
 
 # Print transcribed words and timings

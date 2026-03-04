@@ -8,7 +8,7 @@ from send2trash import send2trash
 from random import sample
 
 import sys
-sys.path.insert(0, "D:\\Python\\iTunes\Modules")
+sys.path.insert(0, "D:\\Python\\Modules")
 
 from Files import get_Win_files, Set_diff, Set_common
 

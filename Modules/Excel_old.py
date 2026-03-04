@@ -53,10 +53,3 @@ def read_from_excel(worksheet,nrow,col_number):
     nrow = 1
     return nrow  
 
-# Function to search for a value in a column and return another column value from the same row
-def search_df(df, search_col, search_val, return_col):
-    result = df.loc[df[search_col] == search_val, return_col]
-    if not result.empty:
-        return result.iloc[0]
-    else:
-        return None
