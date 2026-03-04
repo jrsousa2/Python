@@ -1,5 +1,0 @@
-PATH:
-C:\Python\MyEnv39
-
-INTERPRETER:
-C:\Python\Python3.9-v1\Scripts\python.exe

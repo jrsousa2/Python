@@ -24,9 +24,6 @@
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
     "python.defaultInterpreterPath": "C:\\Python\\MyEnv\\Scripts\\python.exe",
-    //"python.defaultInterpreterPath": "D:\\Python\\myenv\\Scripts\\python.exe",
     // "terminal.integrated.scrollback": 0,
-    "powershell.integratedConsole.forceClearScrollbackBuffer": true,
-    "python.pythonPath": "D:\\Python\\myenv\\Scripts\\python.exe"
-
+    "powershell.integratedConsole.forceClearScrollbackBuffer": true
 }

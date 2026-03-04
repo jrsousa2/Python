@@ -6,6 +6,10 @@
 
 from os import rename
 from os.path import exists
+
+import sys
+sys.path.insert(0, "D:\\Python\\Modules")
+
 import Move
 import Read_PL
 import Files
@@ -46,7 +50,8 @@ def Call_move(Check_dir=True,rows=None):
             else:
                 miss=miss+1      
 
-    print("\nFiles to be moved:",len(To_fix_list),", missing or not 'MP3' folder",miss,"\n")
+    print("\nFiles to be moved:",len(To_fix_list))
+    print("Missing or not in 'MP3' folder:",miss,"\n")
 
     # CHAMA A FUNCAO QUE CRIA A PL
     # CRIA PLAYLIST APENAS SE HOUVER ARQUIVOS 

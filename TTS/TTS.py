@@ -16,7 +16,7 @@ async def main(Seq, text):
     output = "audio" + str(Seq) + ".mp3"
     path = "D:\\Videos\\n8n\\Sound\\" + output
     if not exists(path):
-       tts = edge_tts.Communicate(text, voice="pt-BR-AntonioNeural") # , rate="+50%"
+       tts = edge_tts.Communicate(text, voice="pt-BR-AntonioNeural", rate="+10%") # , rate="+50%"
        await tts.save(path)
 
 # MAIN CODE
