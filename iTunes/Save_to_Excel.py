@@ -84,6 +84,6 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
 # CHAMA PROGRAM PL_name="ALL",Fave-iPhone ["Arq","Art","Title","Len"] "ID", "PID", "Added"
 # Save_Excel(PL_name="Faves-Easy",Do_lib=1,rows=150,iTunes=0,XML=1,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])
 # rows=5000
-Save_Excel(iTunes=1,XML=1,col_names = ["Arq","Art","Title", "Genre", "PID", "Added"], rows=5000)
+Save_Excel(PL_name="BBB",iTunes=1,XML=0,col_names = ["Arq","Art","Title", "Len", "Genre", "Added"], rows=5000)
 
 # ["Arq","Art","Title","Genre","PID", "Added"]

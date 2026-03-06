@@ -3,15 +3,16 @@ import os
 import torch
 
 from timeit import default_timer
+from datetime import datetime
 
-print("\n","CUDA is available:",torch.cuda.is_available(),"\n")  # Returns True if CUDA is available, else False
-print("Device number:",torch.cuda.current_device(),"\n")  # Prints the current CUDA device ID
-print("GPU device name:",torch.cuda.get_device_name(torch.cuda.current_device()),"\n")  # Name of the GPU
+print("\nCUDA is available:",torch.cuda.is_available())  # Returns True if CUDA is available, else False
+print("\nDevice number:",torch.cuda.current_device())  # Prints the current CUDA device ID
+print("\nGPU device name:",torch.cuda.get_device_name(torch.cuda.current_device()))  # Name of the GPU
 
 # Verify the TORCH_HOME environment variable
 torch_home = os.getenv('TORCH_HOME')
 
-print(f"\nTORCH_HOME is set to {torch_home}\n")
+print(f"\nTORCH_HOME is set to {torch_home}")
 
  # Check if CUDA is available and set device to GPU if possible
 if torch.cuda.is_available():
@@ -29,8 +30,8 @@ def load_model_to_dev():
 def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.srt"):
 
     # IF MODEL BELOW ERRORS OUT YOU NEED TO CALL THE LOAD_MODEL_TO_DEV FUNCTION  
-    print("Loading model...")
-    model = whisper.load_model("large", download_root=torch_home, device= device)
+    print("\nLoading model...")
+    model = whisper.load_model("large", download_root=torch_home).to(device) #, device= device)
 
     print("\nWhere model is stored:",next(model.parameters()).device)
     
@@ -52,7 +53,7 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
 
     # Write to SRT file
     with open(output_srt, "w", encoding="utf-8") as f:
-        f.writelines(subs)
+         f.writelines(subs)
 
     print(f"\nTranslated SRT file saved as {output_srt}\n")
 
@@ -61,15 +62,22 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
 # output_file = "D:\\Videos\\Arosio\\subtitles.srt"
 
 input_file = "D:\\Videos\\n8n\\Video_ext\\Rogue_final.mp4"
+
+#input_file = "D:\\Videos\\n8n\\Sound\\audio1.mp3"
 output_file = "D:\\Videos\\n8n\\Video_ext\\subtitles.srt"
 
 elapsed_time = 0
 start_time = default_timer()
-print("Start time:",start_time)
+
+start_time_act = datetime.now()
+print("\nStart time:", start_time_act)
 
 generate_translated_srt(input_file, audio_lang="PT", output_srt=output_file)
 
 end_time = default_timer()
-print("End time:",start_time)
+end_time_act = datetime.now()
+print("\nStart time:", start_time_act)
+print("\nEnd time:",end_time_act)
+
 elapsed_time = end_time - start_time
-print("Elapsed time:",start_time)
+print("\nElapsed time:",elapsed_time)

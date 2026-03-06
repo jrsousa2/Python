@@ -1,0 +1,3 @@
+import huggingface_hub
+print(huggingface_hub.__file__)
+print(huggingface_hub.__version__)
