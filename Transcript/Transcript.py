@@ -61,10 +61,10 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
 # input_file = "D:\\Videos\\Arosio\\Audio.aac"
 # output_file = "D:\\Videos\\Arosio\\subtitles.srt"
 
-input_file = "D:\\Videos\\n8n\\Video_ext\\Rogue_final.mp4"
+input_file = r"D:\Videos\n8n\Test\sample.mkv"
 
 #input_file = "D:\\Videos\\n8n\\Sound\\audio1.mp3"
-output_file = "D:\\Videos\\n8n\\Video_ext\\subtitles.srt"
+output_file = "D:\\Videos\\n8n\\Test\\subtitles.srt"
 
 elapsed_time = 0
 start_time = default_timer()
@@ -72,7 +72,7 @@ start_time = default_timer()
 start_time_act = datetime.now()
 print("\nStart time:", start_time_act)
 
-generate_translated_srt(input_file, audio_lang="PT", output_srt=output_file)
+generate_translated_srt(input_file, audio_lang="EN", output_srt=output_file)
 
 end_time = default_timer()
 end_time_act = datetime.now()
@@ -80,4 +80,4 @@ print("\nStart time:", start_time_act)
 print("\nEnd time:",end_time_act)
 
 elapsed_time = end_time - start_time
-print("\nElapsed time:",elapsed_time)
+print("\nElapsed time:",elapsed_time,"\n")

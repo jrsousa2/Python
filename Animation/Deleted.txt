@@ -1,0 +1,19 @@
+# Try moving main UNet to GPU
+# try:
+#     # UNet on GPU (float16)
+#     pipe.unet.to("cuda", dtype=torch.float16)
+#     # pipe.unet.to("cuda")
+#     # Offload large modules to CPU to avoid VRAM overflow
+#     pipe.vae.to("cpu")
+#     # THE BELOW DON'T EXIST! REMOVED
+#     # pipe.text_encoder.to("cpu")
+#     # pipe.prompt_encoder.to("cpu")
+#     device = "cuda"
+# except RuntimeError as e:
+#     print("GPU memory insufficient, falling back to CPU.")
+#     device = "cpu"
+#     exit()
+
+# print("\nPipeline ready. Main UNet device:", next(pipe.unet.parameters()).device)
+# print("VAE device:", next(pipe.vae.parameters()).device)
+# print("Text encoder device:", next(pipe.text_encoder.parameters()).device)
