@@ -9,16 +9,16 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 **Various projects that I've developed in Python, including:**
 
 - Creation of video/images with Gen AI/AI Prompting. [AI video](https://www.youtube.com/watch?v=SsHmTKZYvJQ)
-- AI video/image enhancement with open source code Real-ESRGAN (this is ML/DL*).
+- AI video/image enhancement with open source code Real-ESRGAN.
 - Checking if NVIDIA's CUDA is enabled after installation.
-- Speech recognition and transcription/translation (PT to EN) (this is ML/DL).
+- Speech recognition and transcription/translation (PT to EN).
 - Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://drive.google.com/file/d/1B6sfs_E2MWkTN-DnnCS2a-nTI4polJzJ/view?usp=sharing)
 - Upward shifting of speech pitch (baby voice).
-- Given a person's name in a given language, predict the gender of the person (this is ML/DL).
+- Given a person's name in a given language, predict the gender of the person.
 - Play counts syncing between iTunes and Windows Media Player.
 - Moving MP3 files under their right folder and creating complete log files with changes.
 - Search, download and attachment of MP3 artwork (Apple or Discogs), with log files creation.
-- Image pattern recognition (trying to check if an MP3 cover is a generic vinyl/LP so it can be automatically replaced). This is done by comparing the cover with a given vinyl image (this is ML/DL).
+- Image pattern recognition (trying to check if an MP3 cover is a generic vinyl/LP so it can be automatically replaced). This is done by comparing the cover with a given vinyl image.
 - Searching and populating MP3 tags on the Discogs website automatically.
 - Making MP3 tag names in sync with the actual file names (to detect and resolve conflicts).
 - Incremental backup of circa 63k MP3 files from an SSD drive to a MicroSD card (final backup mirrors SSD).
