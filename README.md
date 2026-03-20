@@ -8,11 +8,11 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 
 **Various projects that I've developed in Python, including:**
 
-- Creation of video/images with Gen AI/AI Prompting. [AI video](https://www.youtube.com/watch?v=SsHmTKZYvJQ)
+- Creation of video/images with Gen AI/AI Prompting. [AI video](https://youtu.be/SsHmTKZYvJQ)
 - AI video/image enhancement with open source code Real-ESRGAN.
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN).
-- Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://drive.google.com/file/d/1B6sfs_E2MWkTN-DnnCS2a-nTI4polJzJ/view?usp=sharing)
+- Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://youtu.be/FWDDlcXsx_k)
 - Upward shifting of speech pitch (baby voice).
 - Given a person's name in a given language, predict the gender of the person.
 - Play counts syncing between iTunes and Windows Media Player.
@@ -28,7 +28,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Fitting models such as Logistics Regression using PySpark ML ([results below](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
 - Fitting ML time series models to stocks, though it's not much use if the market is not stable (in consideration).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
-- Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://drive.google.com/file/d/1l_Zxaq1p-71HO2b6AdjMkAQa74wRyHxH/view?usp=sharing)
+- Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://youtu.be/hOnESTqThUs)
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
 - Image, audio and video processing using ffmpeg.
 - Submitting Windows commands from Python.
