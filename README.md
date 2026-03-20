@@ -25,7 +25,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). Python codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes.
 - Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to achieve the below task (free Azure account is constrained).
-- Fitting models such as Logistics Regression using PySpark ML ([results below](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
+- Fitting models such as Logistics Regression using PySpark ML ([Logistics Regression](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
 - Fitting ML time series models to stocks, though it's not much use if the market is not stable (in consideration).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://youtu.be/hOnESTqThUs)
