@@ -1,21 +1,31 @@
-# CODE NEEDS TO BE SCHEDULED IN WINDOWS OR UNIX
+# THIS CODE NEEDS TO BE SCHEDULED IN WINDOWS OR UNIX
+# I USED THE WINDOWS TASK SCHEDULER
 
 import yfinance as yf
 import smtplib
 from email.message import EmailMessage
+from os import environ
 
-Ticker = "VALE"
-Target = 100
+Ticker = "TSLA"
+Target = 400
 
-price = yf.Ticker(Ticker).history(period="1d")["Close"].iloc[-1]
+APP_PASSWORD = environ["GMAIL_APP_SMTP_PASSWORD"]
+APP_PASSWORD = APP_PASSWORD.replace(" ", "")
 
-if price > Target:
+data = yf.Ticker(Ticker).history(period="1d")
+
+if data.empty:
+    raise RuntimeError("No price data returned")
+
+price = data["Close"].iloc[-1]
+
+if price < Target:
     msg = EmailMessage()
     msg.set_content(f"{Ticker} is above {Target}: {price}")
-    msg["Subject"] = Ticker + "Stock Alert"
+    msg["Subject"] = Ticker + " Stock Alert"
     msg["From"] = "jrfsousa2@gmail.com"
     msg["To"] = "jrfsousa2@gmail.com"
 
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as s:
-        s.login("jrfsousa2@gmail.com", "APP_PASSWORD")
+        s.login("jrfsousa2@gmail.com", APP_PASSWORD)
         s.send_message(msg)
