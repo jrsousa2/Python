@@ -30,6 +30,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Fitting ML time series models to stocks, though it's not much use if the market is not stable (in consideration).
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://youtu.be/hOnESTqThUs)
+- Check a stock price online and send an e-mail alert if price above target (or run it manually with a batch).
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
 - Image, audio and video processing using ffmpeg.
 - Submitting Windows commands from Python.
