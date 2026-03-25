@@ -1,0 +1,3 @@
+The purpose is to avoid my having to see how awful my stock price is (if I were to set it up using TradingView or Schwab).
+
+Besides, this alert can run indefinitely, unlike Schwab's 60-day expiry.
