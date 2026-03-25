@@ -1,4 +1,12 @@
 @echo off
-cmd /k "cd /d C:\Python\Python3.11-v1\Scripts && activate"
+REM Go to Python Scripts folder
+cd /d C:\Python\Python3.11-v1\Scripts
 
-"C:\Python\Python3.11-v1\Scripts\python.exe" "D:\Python\Stock Alert\Alert.py"
+REM Activate the virtual environment
+call activate.bat
+
+REM Run your Python script (path with spaces in quotes)
+python "D:\Python\Stock Alert\Alert.py"
+
+REM Keep the window open without pause
+cmd /k
