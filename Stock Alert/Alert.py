@@ -30,4 +30,4 @@ if price > Target:
         s.login("jrfsousa2@gmail.com", APP_PASSWORD)
         s.send_message(msg)
 else:
-    print("Price is not above target:",Target,"\n")        
+    print("\nPrice is not above target:",Target,"\n")        

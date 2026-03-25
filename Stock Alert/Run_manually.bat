@@ -1,4 +1,4 @@
-@echo on
+@echo off
 REM Go to Python Scripts folder
 cd /d C:\Python\Python3.11-v1\Scripts
 
