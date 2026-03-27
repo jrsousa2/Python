@@ -12,12 +12,17 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Used n8n NoCode orchestration tool to do the above. [n8n WF](https://github.com/jrsousa2/Python/blob/main/n8n/n8n%20WF.png)
 - Cloning my own voice with the TTS module (will provide sample of that later).
 - Checking a stock price online and sending an e-mail alert if price above target.
-- AI video/image enhancement with open source code Real-ESRGAN.
-- Checking if NVIDIA's CUDA is enabled after installation.
 - Speech recognition and transcription/translation (PT to EN).
 - Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://youtu.be/FWDDlcXsx_k)
-- Upward shifting of speech pitch (baby voice).
+- Web scraping of tables on Wikipedia using BeautifulSoup.
+- Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://youtu.be/hOnESTqThUs)
 - Given a person's name in a given language, predict the gender of the person.
+- Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to run the below task (free Azure account is constrained).
+- Fitting models such as Logistics Regression using PySpark ML ([Logistics Regression](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
+- Fitting ML time series models to stocks, though it's not much use if the market is not stable (not done yet!).
+- AI video/image enhancement with open source code Real-ESRGAN (Generative Adversarial Network).
+- Checking if NVIDIA's CUDA is enabled after installation.
+- Upward shifting of speech pitch (baby voice).
 - Play counts syncing between iTunes and Windows Media Player.
 - Moving MP3 files under their right folder and creating complete log files with changes.
 - Search, download and attachment of MP3 artwork (Apple or Discogs), with log files creation.
@@ -27,11 +32,6 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Incremental backup of circa 63k MP3 files from an SSD drive to a MicroSD card (final backup mirrors SSD).
 - Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). Python codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
 - Creation of stand-alone/static executables from Python codes.
-- Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to achieve the below task (free Azure account is constrained).
-- Fitting models such as Logistics Regression using PySpark ML ([Logistics Regression](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
-- Fitting ML time series models to stocks, though it's not much use if the market is not stable (in consideration).
-- Web scraping of tables on Wikipedia using BeautifulSoup.
-- Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://youtu.be/hOnESTqThUs)
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
 - Image, audio and video processing using ffmpeg.
 - Submitting Windows commands from Python.
