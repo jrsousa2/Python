@@ -1,0 +1,13 @@
+EXTRACT SAMPLE AUDIO FILES FROM VIDEOS I RECORDED:
+
+ffmpeg -i input.mp4 -vn -ac 1 -ar 22050 -c:a pcm_s16le output.wav
+
+# EN
+ffmpeg -i D:\Videos\Youtube_channel\Jose-Apple2-EN.mp4 -vn -ac 1 -ar 22050 -c:a pcm_s16le -y F:\TTS\Jose-EN.wav
+
+# EN 
+ffmpeg -i D:\Videos\Youtube_channel\Jose-FB-EN.mp4 -vn -ac 1 -ar 22050 -c:a pcm_s16le -y F:\TTS\Jose-EN2.wav
+
+# PT
+ffmpeg -i D:\Videos\Youtube_channel\Jose-Adobe-PT.mp4 -vn -ac 1 -ar 22050 -c:a pcm_s16le -y F:\TTS\Jose-PT.wav
+

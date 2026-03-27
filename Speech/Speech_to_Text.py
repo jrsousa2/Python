@@ -1,5 +1,6 @@
-# GOOGLE TEXT TO SPEECH MODULE
 import speech_recognition as sr
+
+# GOOGLE TEXT TO SPEECH MODULE (not being used)
 # from pydub import AudioSegment
 # from gtts import gTTS
 # import librosa

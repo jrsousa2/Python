@@ -1,0 +1,86 @@
+INSTALLING TTS REQUIRES TORCH (I WANT TO USE TORCH WITH CUDA)
+
+VERSIONS:
+torch==2.1.0+cu118
+torchaudio==2.1.0+cu118
+torchvision==0.16.0+cu118
+
+TORCH+CUDA (THE RIGHT VERSIONS):
+Fix FOR CU118 NOT BEING FOUND: (correct solution)
+
+Install torch from the PyTorch index first.
+
+Run:
+
+ESSE RODA:
+pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu118
+Looking in indexes: https://download.pytorch.org/whl/cu118
+
+pip install "transformers==4.38.2" --force-reinstall
+
+pip install transformers==4.38.2 --force-reinstall --no-deps
+
+pip install huggingface-hub==0.23.5
+
+
+# INSTALL WITHOUT CHECKING DEPENDENCIES
+pip install TTS==0.22.0 --no-deps
+
+pip install TTS==0.22.0 --upgrade-strategy only-if-needed
+
+UNINSTALL THE NEWER VERSION: setuptools 82.0.1
+
+NOW INSTALL WITHOUT RESOLVING DEPENDENCIES:
+
+pip install setuptools==68.2.2 --no-deps
+
+###############################################################
+
+=======================================================
+
+TO INSTALL TTS: (NOT SURE IF THESE ARE THE BEST VERSIONS)
+pip install TTS==0.13.0 transformers==4.25.1 --no-deps
+
+
+BELOW DEPRECATED:
+pip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 --index-url https://download.pytorch.org/whl/cu117 --force-reinstall
+
+NEWEST:
+pip install torch==2.11.0+cu118 torchvision==0.15.2+cu118 torchaudio==2.11.0+cu118 -f https://download.pytorch.org/whl/cu118/torch_stable.html --upgrade-strategy only-if-needed
+
+A LITTLE NEWER:
+pip install torch==2.4.0+cu118 torchvision==0.18.0+cu118 torchaudio==2.4.0+cu118 -f https://download.pytorch.org/whl/cu118/torch_stable.html --upgrade-strategy only-if-needed
+
+A LITTLE OLDER:
+pip install torch==2.1.0+cu118 torchvision==0.16.0+cu118 torchaudio==2.1.0+cu118 --index-url https://download.pytorch.org/whl/cu118
+
+###############################################################
+
+/* START BY CREATING A FOLDER */
+C:\Python>mkdir Python3.9-v2
+
+
+/* CREATE VIRT ENV (this will use THE RIGHT Python VERSION) */
+C:\Python>C:\Python\Python39\python.exe -m venv Python3.9-v2
+
+# ACTIVATE THE VIRT ENV CREATED (THE SHORTCUT IN THE PATH IS TO THE STANDARD)
+C:\Python\Python3.9-v2\Scripts\activate
+
+/* MOVE TO THE FOLDER JUST IN CASE */
+C:\Python>cd Python3.9-v2
+
+/* DOUBLECHECK THE PYTHON VERSION JUST IN CASE */
+(Python3.9-v2) C:\Python\Python3.9-v2>python --version
+Python 3.9.0
+
+/* CHECK ANY INSTALLED PKG's (SHOULD BE NONE) */
+pip list
+
+/* UPGRADE PIP BEFORE ANY PKG INSTALLS */
+python -m pip install --upgrade pip
+
+/* CHECK VERSION */
+pip --version
+
+/* SELECT THE INTERPRETER IN VS CODE */
+C:\Python\Python3.9-v2\Scripts\python.exe

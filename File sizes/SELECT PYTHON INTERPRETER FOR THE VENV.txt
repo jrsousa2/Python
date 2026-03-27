@@ -1,0 +1,5 @@
+/* SELECT THE INTERPRETER IN VS CODE FOR THE VENV YOU WANT TO CHECK */
+
+C:\Python\Python3.9-v2\Scripts\python.exe
+
+C:\Python\MyEnv\Scripts\python.exe

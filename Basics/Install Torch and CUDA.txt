@@ -1,3 +1,7 @@
+THE BELOW IS OUTDATED:
+
+=======================================================
+
 REQUIREMENTS FOR REALESRGAN:
 
 # CREATE VIRT ENV IN THE CURRENT DIR
