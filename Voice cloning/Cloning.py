@@ -5,13 +5,23 @@ from TTS.api import TTS
 import os
 import warnings
 
+from timeit import default_timer
+from datetime import datetime
+#from sys import exit
+
+elapsed_time = 0
+start_time = default_timer()
+
+start_time_act = datetime.now()
+print("\nStart time:", start_time_act)
+
+print("Working dir:", os.getcwd(),"\n")
+
 warnings.filterwarnings(
     "ignore",
     category=FutureWarning,
     message=".*torch.load.*weights_only=False.*"
 )
-
-print("Working dir:", os.getcwd(),"\n")
 
 # Verify the TORCH_HOME environment variable
 # TTS_HOME = getenv('TTS_HOME')
@@ -35,7 +45,17 @@ Sample=(
 # TTS
 tts.tts_to_file(
     text= Sample,
-    speaker_wav=r"F:\TTS\Jose-EN2.wav",
+    speaker_wav=r"F:\TTS\Jose-EN.wav",
     language="en",
-    file_path=r"F:\TTS\output.wav"
+    file_path=r"F:\TTS\output2.wav"
 )
+
+# TIME FINAL
+end_time = default_timer()
+end_time_act = datetime.now()
+print("\nStart time:", start_time_act)
+print("\nEnd time:",end_time_act)
+
+elapsed_time = end_time - start_time
+print("\nElapsed time:",elapsed_time,"\n")
+
