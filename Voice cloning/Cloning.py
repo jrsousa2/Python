@@ -36,18 +36,24 @@ tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to("cuda")
 # Move to GPU
 #tts.to("cuda")
 
-Sample=(
+EN_Sample=(
    "Would it be possible for earth to become rogue and people survive with more advanced technology (tech of say 100 years ahead)?"
    "Yes, let's unpack it step by step."
    "What does it mean for Earth to become a rogue planet?" 
 )
 
+PT_Sample=(
+    "Seria possível a Terra se tornar um planeta errante e as pessoas sobreviverem com tecnologia mais avançada (tecnologia de, digamos, 100 anos à frente)?"
+    "Sim, vamos analisar passo a passo."
+    "O que significa a Terra se tornar um planeta errante? "
+)
+
 # TTS
 tts.tts_to_file(
-    text= Sample,
-    speaker_wav=r"F:\TTS\Jose-EN.wav",
+    text= PT_Sample,
+    speaker_wav=r"F:\TTS\Jose-PT.wav",
     language="en",
-    file_path=r"F:\TTS\output2.wav"
+    file_path=r"F:\TTS\output3.wav"
 )
 
 # TIME FINAL
