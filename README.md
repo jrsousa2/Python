@@ -19,7 +19,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Given a person's name in a given language, predict the gender of the person.
 - Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to run the below task (free Azure account is constrained).
 - Fitting models such as Logistics Regression using PySpark ML ([Logistics Regression](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
-- Fitting ML time series models to stocks, though it's not much use if the market is not stable (not done yet!).
+<!-- - Fitting ML time series models to stocks, though it's not much use if the market is not stable (not done yet!). -->
 - AI video/image enhancement with open source code Real-ESRGAN (Generative Adversarial Network).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Upward shifting of speech pitch (baby voice).
