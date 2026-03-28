@@ -1,0 +1,17 @@
+REASSEMBLING FRAMES INTO VIDEO:
+
+ffmpeg -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y D:\Python\Balao\Balao_up.mp4
+
+#############################################################################################################
+
+LOSSLESS FORMAT WITH CUDA (MAYBE NECESSARY TO REMOVE FFMPEG FROM GRAPH SETTINGS)
+
+ffmpeg -framerate 29.97 -hwaccel cuda -i D:\Videos\Olivia\Output\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 29.97 -pix_fmt yuv420p D:\Videos\Olivia\Olivia_nosound.mp4
+
+#############################################################################################################
+
+TRULY LOSSLESS (NOT GOOD, NO FORMAT)
+ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\Python\Balao\Balao_lossless.raw
+
+ATTEMPT
+ffmpeg -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v ffv1 -pix_fmt rgb24 D:\Python\Balao\Balao_lossless.mkv

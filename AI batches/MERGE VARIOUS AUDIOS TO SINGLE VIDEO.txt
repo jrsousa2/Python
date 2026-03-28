@@ -1,0 +1,18 @@
+TO MERGE AUDIO E VIDEO WHILE CONVERTING TO mp4:
+
+I USED THIS ONE:
+TALVEZ ESSA?
+ffmpeg -i "E:\MP3\Brasil\F\Fafá De Belém - Coração Do Agreste.mp3" -i "E:\MP3\Favorites_Brasil\Marcos Sabino - Reluz.mp3" -i "E:\MP3\Favorites_Brasil\Elba Ramalho - De Volta Pro Aconchego.mp3" -filter_complex "[0][1][2]concat=n=3:v=0:a=1[out]" -map "[out]" -y "D:\Videos\Atrizes BR\Final4.mp3"
+
+
+#########################################################################################
+#########################################################################################
+
+ffmpeg -i "E:\MP3\Brasil\F\Fafá De Belém - Coração Do Agreste.mp3" -i "E:\MP3\Favorites_Brasil\Elba Ramalho - De Volta Pro Aconchego.mp3" -filter_complex "[0][1]concat=n=2:v=0:a=1[out]" -map "[out]" -y "D:\Videos\Atrizes BR\Final2.mp3"
+
+
+PARA FUNDIR AUDIO E VIDEO CONVERTENDO PARA mp4:
+ffmpeg -i "D:\Videos\Atrizes BR\Atrizes.wmv" -i "D:\Videos\Atrizes BR\Final2.mp3" -filter_complex "[0][1]concat=n=1:v=1:a=1[out]" -map "[out]" -map 0:v -shortest -y "D:\Videos\Atrizes BR\Final.mp4"
+
+SEM CONVERTER PARA mp4 / FUNDIR AUDIO E VIDEO :
+ffmpeg -i "D:\Videos\Atrizes BR\Atrizes.wmv" -i "D:\Videos\Atrizes BR\Final4.mp3" -c:v copy -c:a wmav2 -map 0:v -map 1:a -shortest -y "D:\Videos\Atrizes BR\Final3.wmv"

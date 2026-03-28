@@ -12,6 +12,17 @@ ffmpeg -framerate 23.98 -hwaccel cuda -i D:\Videos\Arosio\Output\frame_%04d.png 
 #############################################################################################################
 
 REASSEMBLING FRAMES INTO VIDEO
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\Videos\Balao\Balao_up.mp4
+
+LOSSLESS FORMAT WITH CUDA (PRECISA TVZ TIRAR FFMPEG DA GRAPH SETTINGS
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -hwaccel cuda -i C:\Output_final\frame_%04d.png -c:v libx264 -crf 0 -preset veryslow -r 29.97 -pix_fmt yuv420p D:\Videos\Balao\Balao_upload.mp4
+
+TRULY LOSSLESS (nao eh legal, sem formato)
+"C:\ffmpeg\bin\ffmpeg.exe" -framerate 29.97 -i C:\Output_final\frame_%04d.png -c:v rawvideo -pix_fmt rgb24 D:\Videos\Balao\Balao_lossless.raw
+
+#############################################################################################################
+
+REASSEMBLING FRAMES INTO VIDEO
 ffmpeg -framerate 29.97 -i C:\temp2\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p D:\Python\Balao\Balao_up.mp4
 
 TRULY LOSSLESS (nao eh legal, sem formato)

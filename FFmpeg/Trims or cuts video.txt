@@ -1,4 +1,10 @@
-TA FUNCIONANDO:
+CUT VIDEO
+
+setx PATH "%PATH%;C:\Ffmpeg\bin"
+
+#############################################################################
+
+IT'S WORKING:
 
 "C:\ffmpeg\bin\ffmpeg.exe" -y -i "D:\iPod videos\Bring It On (2000) [1080p]\Bring.It.On.2000.1080p.BluRay.x264.YIFY.mp4" -ss 13:14 -to 16:01 -c:v copy -c:a copy "D:\iPod videos\Bring It On (2000) [1080p]\Trecho.mp4"
 

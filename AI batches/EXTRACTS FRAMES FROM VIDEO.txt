@@ -1,0 +1,34 @@
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+ffmpeg -i "D:\Videos\Balao\Balao_time_dim_crop.mp4" -t 6 -vf "fps=29.97" "D:\Videos\Balao\Input\frame_%04d.png"
+
+# START AT 5 SECS AND GRAB 1 SEC OF FRAMES 
+# USED FOR TESTING AND COMPARISON OF THE MODELS
+ffmpeg -ss 5 -i "D:\Videos\Balao2\video.mp4" -t 1 -vf "fps=29.97" "D:\Videos\Balao2\Input2\frame_%04d.png"
+
+
+# START AT 0 SECS AND GRAB 90 SECS (CROPS THE VIDEO REMOVING THE LAST PART)
+ffmpeg -i "D:\Videos\Balao2\video.mp4" -t 90 -vf "fps=29.97" "D:\Videos\Balao2\Input\frame_%04d.png"
+
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO
+ffmpeg -ss 0 -i "D:\Videos\Olivia\Magic.mp4" -t 2 -vf "fps=29.97" "D:\Videos\Olivia\Input\frame_%04d.png"
+
+EXTRACTS ALL FRAMES OF THE VIDEO 
+ffmpeg -ss 0 -i "D:\Videos\Olivia\Magic.mp4" -vf "fps=29.97" "D:\Videos\Olivia\Input\frame_%04d.png"
+
+
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_orig_duracao.mp4" -vf "fps=29.97" "D:\Python\Balao\Input\frame_%04d.png"
+
+EXTRAI APENAS OS PRIMEIROS 5 SECS
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Python\Balao\Balao_2.mp4" -vf "fps=29.97" -t 15 "D:\Python\Balao\Input2_2\frame_%04d.png"
+
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+ffmpeg -i "D:\Videos\Balao\Balao_time_dim_crop.mp4" -t 6 -vf "fps=29.97" "D:\Videos\Balao\Input\frame_%04d.png"
+
+ffmpeg -ss 5 -i "D:\Videos\Balao\Balao_time_dim_crop.mp4" -t 10 -vf "fps=29.97" "D:\Videos\Balao\Input\frame_%04d.png"
+
+

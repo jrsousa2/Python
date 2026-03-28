@@ -1,0 +1,7 @@
+/* MERGE FRAMES */
+ffmpeg -framerate 29.97 -i D:\Videos\Balao2\Output_Iris\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y D:\videos\Balao2\Balao_nosound.mp4
+
+/* JOINS AUDIO (START AT 23 SEC TO MIRROR SOUND IN ORIGINAL VIDEO) */
+ffmpeg -i "D:\Videos\Balao2\Balao_nosound.mp4" -ss 23 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Python\Balao2\Balao\Balao_final.mp4"
+
+Relembre a abertura do Balao Magico em 1983 (restaurado com I.A.)

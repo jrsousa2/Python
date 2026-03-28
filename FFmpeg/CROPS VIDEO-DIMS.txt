@@ -13,3 +13,14 @@ in_h-y-b: Crops y from the top and b from the bottom.
 x:y: Moves the crop starting position to (x, y).
 
 setx PATH "%PATH%;C:\Ffmpeg\bin"
+
+Trim de video: 55px 48px
+
+ffmpeg -i input_video.mp4 -vf "crop=in_w-x-y:in_h" output_video.mp4
+
+PUT AND TAKE OUT 2 PIXELS:
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Videos\Balao\Balao_duracao.mp4" -vf "crop=426-54-52:240" -y "D:\Videos\Balao\Balao.mp4"
+
+"C:\ffmpeg\bin\ffmpeg.exe" -i "D:\Videos\Balao\Balao_duracao.mp4" -vf "crop=426-57-48:240" -y "D:\Videos\Balao\Balao_2.mp4"
+
+########################################################################################################

@@ -5,7 +5,7 @@ ffmpeg -i "D:\Videos\Arosio\Arosio_final.mp4" -vf "subtitles=subtitles.srt" -c:a
 
 ffmpeg -i "D:\Videos\Arosio\Arosio_final.mp4" -vf "subtitles=D\:\\Videos\\Arosio\\subtitles.srt" -c:a copy "D:\Videos\Arosio\Arosio_subtitle_final.mp4"
 
-ffmpeg -i yourvideo.mp4 -vf "subtitles=yoursubtitledocument.txt:force_style='Fontsize=20'" -c:a copy -c:v libx264 -crf 23 -preset veryfast nameoftheoutputvideo.mp4
+ffmpeg -i yourvideo.mp4 -vf "subtitles=yoursubtitledocument.txt:force_style='Fontsize=20'" -c:a copy -c:v libx264 -crf 23 -preset veryfast outputvideo.mp4
 
 
 -i yourvideo.mp4: Specifies the input video file.

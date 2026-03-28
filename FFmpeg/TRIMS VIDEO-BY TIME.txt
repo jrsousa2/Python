@@ -1,0 +1,5 @@
+REM BELOW WILL CUT VIDEO BY TIME
+
+ffmpeg -y -i "D:\Videos\Balao\Balao.mp4" -ss 00:00:13 -to 00:02:03 -codec copy "D:\Videos\Balao\Balao2.mp4"
+
+ffmpeg -i "D:\Videos\Arosio\Arosio_crop.mp4" -t 4 -c copy -y "D:\Videos\Arosio\Arosio_crop_4s.mp4"
