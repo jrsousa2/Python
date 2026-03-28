@@ -1,0 +1,28 @@
+WILL START AT X SECS: HENCE 1ST FRAME=721
+
+# OVERLAY "LIKE ICON" TO THE 240 FIRST FRAMES
+ffmpeg -start_number 721 -i D:\Videos\Arosio\Original\frame_%04d.png -i D:\videos\Arosio\Final-Transp.png -frames:v 240 -filter_complex overlay=1012 -start_number 721 -y D:\Videos\Arosio\Output\frame_%04d.png
+
+-frames:v 240
+Process exactly 240 frames.
+
+So frames used:
+0721 → 0960
+
+
+Meaning of overlay=1012
+
+This is shorthand for:
+overlay=x=1012:y=0
+
+So the overlay image is placed:
+1012 pixels from the left
+0 pixels from the top
+
+###################################################################################
+###################################################################################
+
+
+# OLD CODE
+# OVERLAY "LIKE ICON" TO THE 120 FIRST FRAMES
+ffmpeg -start_number 721 -i D:\Videos\Arosio\Output\frame_%04d.png -i D:\videos\Arosio\Final-Transp.png -framesv 120 -filter_complex overlay=11 -start_number 721 -y D:\Videos\Arosio\Bakframe_%04d.png

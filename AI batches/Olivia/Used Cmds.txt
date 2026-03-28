@@ -1,7 +1,22 @@
+# OVERLAY "LIKE ICON" TO THE 120 FIRST FRAMES
+ffmpeg -start_number 721 -i D:\Videos\Arosio\Original\frame_%04d.png -i D:\videos\Arosio\Final-Transp.png -frames:v 240 -filter_complex overlay=1012 -start_number 721 -y D:\Videos\Arosio\Output\frame_%04d.png
+
+-filter_complex overlay=W-w-10:2
+
+WILL START AT 15 SECS AT 30FPS: HENCE 1ST FRAME=450
+
+# OVERLAY "LIKE ICON" TO THE 240 FIRST FRAMES (8 SECS)
+
+# FINAL CMD
+ffmpeg -start_number 450 -i D:\Videos\Balao2\Output_Iris_Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 240 -filter_complex overlay=W-w-10:2 -start_number 450 -y D:\Videos\Balao2\Output_Iris_Aft_Overlay\frame_%04d.png
+
+
+
 /* MERGE FRAMES */
 ffmpeg -framerate 29.97 -i D:\Videos\Balao2\Output_Iris\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y D:\videos\Balao2\Balao_nosound.mp4
 
-/* JOINS AUDIO (START AT 23 SEC TO MIRROR SOUND IN ORIGINAL VIDEO) */
-ffmpeg -i "D:\Videos\Balao2\Balao_nosound.mp4" -ss 23 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Python\Balao2\Balao\Balao_final.mp4"
+/* JOINS AUDIO */
+/* START AT 23 SEC TO MIRROR SOUNDTRACK IN ORIGINAL VIDEO */
+ffmpeg -i "D:\Videos\Balao2\Balao_nosound.mp4" -ss 23 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Balao2\Balao_final.mp4"
 
-Relembre a abertura do Balao Magico em 1983 (restaurado com I.A.)
+Relembre a abertura do Balão Mágico em 1983 (restaurado com I.A.)
