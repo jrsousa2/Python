@@ -46,7 +46,7 @@ echo Input Parameter was: %1%
 echo Selected_Model was set to: %Sel_Model%
 
 REM Set input and output directories
-set Input_dir=%Base_Dir%/Input
+set Input_dir=%Base_Dir%/\Input-20 samples
 
 REM THE OUTPUT FOLDER IS NAMED AFTER THE CHOSEN MODEL
 set output_dir=%Base_Dir%/Output_%Sel_model%
@@ -265,7 +265,8 @@ echo.
 
     REM HERE THE BATCH SCRIPT IS CALLED AGAIN.
     echo RESTARTING...
-    call_Balao_AI %Sel_Model%
+    REM call_Balao %Sel_Model%
+    call "%~nx0" %Sel_Model%
 
 ) else (
     D:

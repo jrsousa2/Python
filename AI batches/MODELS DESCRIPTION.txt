@@ -11,6 +11,8 @@ AVCLABS.COM
 4. Gaia – Upscale HQ: If your goal is to upscale high-quality footage to HD or 4K resolutions while preserving details, Gaia is a suitable choice. 
 AVCLABS.COM
 
+5. Iris - Specialized enhancement for faces. Low input quality -> vram=2 -> 3 iris-2 -> iris-3
+
 5. Theia – Details/Fidelity: This model allows for fine-tuning parameters like sharpening, compression correction, and noise reduction, offering more control over the enhancement process. 
 AVCLABS.COM
 
