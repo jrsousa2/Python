@@ -1,0 +1,62 @@
+EXTRACT FRAMES:
+
+ORIGINAL DIMENSION OF THE FRAME IS: 720 X 540 PIXELS
+O ASPECT RATIO EH 4:3
+
+AFTER ENHANCEMENT, IT WILL BE HD: 1280 X 720 (16:9)
+O VIDEO FULL HD EH 1920 X 1080
+
+
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO
+ffmpeg -ss 0 -i "D:\Videos\Pobres\Praia_crop.webm" -t 2 -vf "fps=29.97" -y "D:\Videos\Pobres\Input\frame_%04d.png"
+
+EXTRACT FROM ORIGINAL:
+ffmpeg -ss 0 -i "D:\Videos\Pobres\Praia_crop.webm" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -pix_fmt rgb24 -y "D:\Videos\Pobres\5s\frame_%04d.tiff"
+
+#####################################################################################################
+
+DON'T USE BELOW (LARGER IMG FORMAT)
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO (LESS LOSS OF DETAIL)
+ffmpeg -ss 0 -i "D:\Videos\Pobres\Praia_crop.mp4" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -y "D:\Videos\Pobres\5s\frame_%04d.tiff"
+
+/* NO DOWNSIZING */
+ffmpeg -ss 0 -i "D:\Videos\Pobres\Praia_crop.mp4" -t 5 -vf "fps=29.97" -pix_fmt rgb24 -y "D:\Videos\Pobres\5s\frame_%04d.tiff"
+
+EXTRACTS ONLY 2 SECONDS OF THE VIDEO (LESS LOSS OF DETAIL)
+ffmpeg -ss 0 -i "D:\Videos\Pobres\Praia_crop.mp4" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" "D:\Videos\Pobres\5s\frame_%04d.png"
+
+/* FINAL TUDO */
+ffmpeg -ss 0 -i "D:\Videos\Pobres\Praia_crop.mp4" -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -y "D:\Videos\Pobres\5s\frame_%04d.png"
+
+ffmpeg -i "D:\Python\Baby_voice\Media\Debate_orig.mp4" -r 30 -af "asetrate=44100*1.5,atempo=0.6667" "D:\Python\Baby_voice\Media\Debate_chipmunk.mp4"
+
+#####################################################################################################
+
+# OVERLAY "LIKE ICON" TO THE 120 FIRST FRAMES
+ffmpeg -start_number 721 -i D:\Videos\Arosio\Original\frame_%04d.png -i D:\videos\Arosio\Final-Transp.png -frames:v 240 -filter_complex overlay=1012 -start_number 721 -y D:\Videos\Arosio\Output\frame_%04d.png
+
+-filter_complex overlay=W-w-10:2
+
+WILL START AT 15 SECS AT 30FPS: HENCE 1ST FRAME=450
+
+# OVERLAY "LIKE ICON" TO THE 240 FIRST FRAMES (8 SECS)
+
+# FINAL CMD
+ffmpeg -start_number 450 -i D:\Videos\Balao2\Output_Iris_Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 240 -filter_complex overlay=W-w-10:2 -start_number 450 -y D:\Videos\Balao2\Output_Iris_Aft_Overlay\frame_%04d.png
+
+
+
+/* MERGE FRAMES */
+ffmpeg -framerate 29.97 -i D:\Videos\Balao2\Output_Iris\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y D:\videos\Balao2\Balao_nosound.mp4
+
+/* JOINS AUDIO */
+/* START AT 23 SEC TO MIRROR SOUNDTRACK IN ORIGINAL VIDEO */
+ffmpeg -i "D:\Videos\Balao2\Balao_nosound.mp4" -ss 23 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "D:\Videos\Balao2\Balao_final.mp4"
+
+Relembre a abertura do Balão Mágico em 1983 (restaurado com I.A.)
+
+https://drive.google.com/file/d/1KPbJ059M8ViDMZrEMk061beRpZBdeGB2/view?usp=drive_link
+
+https://drive.google.com/uc?export=download&id=1KPbJ059M8ViDMZrEMk061beRpZBdeGB2

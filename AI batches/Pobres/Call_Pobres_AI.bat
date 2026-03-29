@@ -1,59 +1,30 @@
 @echo off
-REM MODEL IS CHOSEB BY ADDING A CALLING INPUT PARAMETER: 
+REM MODEL IS A CALLING INPUT PARAMETER: 
 REM IT CAN BE: Proteus (default-no pmt needed) Iris Nyx Gaia Artemis Theia
 
-REM IT SEEMS THAT FILTER NEEDS AT LEAST 4 IMAGES TO PROCESS OR IT WON'T DO IT.
+REM IT SEEMS THAT IT NEEDS AT LEAST 4 IMAGES TO PROCESS OR IT WON'T DO IT.
 REM setlocal enabledelayedexpansion
 
-REM SET ALL INPUT PARAMETERS (CODE SETS A DEFAULT FOR NO PARAMETER PROVIDED)
+REM SET INPUT PARAMETERS, AND SETS A DEFAULT FOR NO PARAMETER PROVIDED
 REM setlocal
 
-REM SET THE BASE DIRECTORY HERE AND THE REST IS MOSTLY AUTOMATICALLY SET
-set Base_dir=D:\Videos\Balao2
+REM #########################################################################
 
 REM SET THE DIMENSIONS OF THE UPSCALE
-REM EG (HD=1280X760 / FULL HD=1920X1080)
+rem set dim_Wid=1920
+rem set dim_Hei=1080
+
+rem set dim_Wid=1280
+rem set dim_Hei=760
 
 REM THESE VALES ARE BEING USED (2X)
-set dim_Wid=960
-set dim_Hei=720
+set dim_Wid=1440
+set dim_Hei=1080
+
 
 REM DON'T FORGET TO SET THE INPUT/OUTPUT IMAGE TYPE
 set Ext=png
 
-REM RE-SCALING VIDEO
-set Re_scale_YN=Y
-
-REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING VIDEO BASELINES
-set Re_scale_Pad=N
-
-REM IF APPLICABLE, WILL THE ASPECT RATIO FOR THE UPSCALED MATCH THE THE ORIGINAL VIDEO?
-set Aspect_ratio_change=N
-
-REM Recover Detail (rdt)
-REM Purpose: tells the AI to try to add or enhance fine textures and micro-details in the frame
-REM that may have been lost due to compression, blur, or denoising.
-REM Effect: makes edges sharper, surfaces more detailed.
-REM Scope: mostly local detail, often affects textures in foliage, hair, fabric, etc.
-REM Range: 0.0 → 1.0
-REM Default / safe: 0.3 – 0.4
-REM Adds visible detail without making textures harsh or unnatural
-REM Stronger: 0.5 – 0.6
-REM For softer or compressed footage, but can look "crispy" if too high
-
-
-REM RECOVER ORIGINAL DETAIL / BLEND 
-REM IN MODELS: PROTEUS/IRIS/NYX/ARTEMIS
-REM NOT IN: GAIA / THEIA (NOT IN RHEA EITHER, BUT RHEA IS UNUSABLE ANYWAY)
-REM Purpose: mixes a fraction of the original unprocessed frame back into the enhanced output.
-REM Effect: prevents over-sharpening or "hallucination" by the AI; preserves naturalness and prevents artifacts.
-REM Scope: global frame blending, not just micro-texture.
-REM Always optional - you choose how much original image you want to "retain."
-REM PMT IS CALLED BLEND IN THE FILTER
-REM RANGE=0.0 TO 1.0
-set rec_orig_detail=0.4
-
-REM #########################################################################
 REM #########################################################################
 
 REM ENTER HERE THE DEFAULT MODEL
@@ -72,10 +43,15 @@ echo Input Parameter was: %1%
 echo Selected_Model was set to: %Sel_Model%
 
 REM Set input and output directories
-set Input_dir=%Base_Dir%/Input
+set Input_dir=D:/Videos/Balao2/Input
+rem set Output_dir=D:/Videos/Balao2/Output
 
 REM THE OUTPUT FOLDER IS NAMED AFTER THE CHOSEN MODEL
-set output_dir=%Base_Dir%/Output_%Sel_model%
+set output_dir=D:/Videos/Balao2/Output_%Sel_model%
+
+REM THIS IS FOR TEST PURPOSES ONLY
+rem set Input_dir=D:/Videos/Balao2/5s
+rem set output_dir=D:/Videos/Balao2/Models/%Sel_model%
 
 if not exist "%output_dir%" (
     echo.
@@ -97,7 +73,16 @@ set SESSIONNAME=Console
 
 
 REM #########################################################################
+REM SET THE VARIABLES
 
+REM RE-SCALING VIDEO
+set Re_scale_YN=N
+
+REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING VIDEO BASELINES
+set Re_scale_Pad=N
+
+REM IF APPLICABLE, WILL THE ASPECT RATIO FOR THE UPSCALED MATCH THE THE ORIGINAL VIDEO?
+set Aspect_ratio_change=N
 
 REM BLOCK OF NESTED IF'S
 if %Re_scale_YN%==Y (
@@ -139,28 +124,25 @@ if %Re_scale_YN%==Y (
 )
 
 
-REM ##################################################################################
-REM ##################################################################################
+rem RECOVER DETAIL (MODELS PROTEUS/IRIS/ARTEMIS) 0.0 TO 1.0
+set rec_detail=0.4
 
-REM DEFINE THE 6 MODELS
+REM DEFINE THE 5 MODELS
 
 REM PROTEUS: GENERAL ENHANCEMENT FOR MOST VIDEOS
-set Proteus="tvai_up=model=prob-4:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+set Proteus="tvai_up=model=prob-4:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_detail%:device=0:vram=0.1:instances=1%Re_scale%"
 
 REM IRIS: SPECIAL ENHANCEMENT FOR FACES 
-set Iris="tvai_up=model=iris-2:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+set Iris="tvai_up=model=iris-2:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_detail%:device=0:vram=0.1:instances=1%Re_scale%"
 
 REM NYX: DEDICATED DENOISING
 set Nyx="tvai_up=model=nyx-3:scale=1:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:device=0:vram=0.1:instances=1%Re_scale%"
 
 REM ARTEMIS: DENOISE AND SHARPEN
-set Artemis="tvai_up=model=ahq-12:scale=0:w=%dim_Wid%:h=%dim_Hei%:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+set Artemis="tvai_up=model=ahq-12:scale=0:w=%dim_Wid%:h=%dim_Hei%:blend=%rec_detail%:device=0:vram=0.1:instances=1%Re_scale%"
 
 REM THEIA: HIGH FIDELITY AND DETAIL ENHANCEMENT
 set Theia="tvai_up=model=thf-4:scale=0:w=%dim_Wid%:h=%dim_Hei%:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1%Re_scale%"
-
-REM GAIA: Upscale HQ: If your goal is to upscale high-quality footage to HD or 4K resolutions while REM preserving details, Gaia is a suitable choice. 
-set Gaia="tvai_up=model=ghq-5:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
 
 REM #########################################################################
 REM SET THE CHOSEN MODEL
@@ -171,12 +153,12 @@ if "%Sel_model%"=="Proteus" (
     set Model=%Proteus%
 ) else if "%Sel_model%"=="Iris" (
     set Model=%Iris%
+) else if "%Sel_model%"=="Gaia" (
+    set Model=%Iris%
 ) else if "%Sel_model%"=="Nyx" (
     set Model=%Nyx%
 ) else if "%Sel_model%"=="Artemis" (
     set Model=%Artemis%
-) else if "%Sel_model%"=="Gaia" (
-    set Model=%Gaia%
 ) else if "%Sel_model%"=="Theia" (
     set Model=%Theia%
 ) else (
@@ -187,9 +169,9 @@ REM #########################################################################
 REM DISPLAYS INPUT/OUTPUT
 
 echo.
-echo INPUT FOLDER is "%Input_dir%"
+echo INPUT FOLDER is %Input_dir%
 echo.
-echo OUTPUT FOLDER is "%Output_dir%"
+echo OUTPUT FOLDER is %Output_dir%
 echo.
 
 REM DISPLAYS THE MODEL CHOSEN
@@ -208,7 +190,7 @@ REM Display the result
 echo Model is: %Model%
 echo.
 
-echo Recover detail Parameter=%rec_orig_detail%
+echo Recover detail Parameter=%rec_detail%
 echo.
 
 
@@ -247,7 +229,7 @@ echo BELOW IS THE CMD THAT WILL BE RUN
 echo ffmpeg -hide_banner -hwaccel_device 0 -start_number %frames_done_pls_1% -i "%input_dir%\frame_%%04d.%Ext%" "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" %Model% "-c:v" "%Ext%" "-pix_fmt" "rgb24" -start_number %frames_done_pls_1% -y "%output_dir%\frame_%%04d.%Ext%"
 echo.
 
-    REM RUN THE MAIN COMMAND
+    REM THE MAIN COMMAND
     ffmpeg -hide_banner -hwaccel_device 0 -start_number %frames_done_pls_1% -i "%input_dir%\frame_%%04d.%Ext%"  "-sws_flags" "spline+accurate_rnd+full_chroma_int" "-filter_complex" %Model% "-c:v" "%Ext%" "-pix_fmt" "rgb24" -start_number  %frames_done_pls_1% -y "%output_dir%\frame_%%04d.%Ext%"
 
     REM GOES BACK TO ORIGINAL DRIVE:
@@ -260,7 +242,7 @@ echo.
 
     REM HERE THE BATCH SCRIPT IS CALLED AGAIN.
     echo RESTARTING...
-    call_AI_Template %Sel_Model%
+    call_Pobres_AI %Sel_Model%
 
 ) else (
     D:

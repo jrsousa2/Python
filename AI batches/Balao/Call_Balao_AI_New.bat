@@ -11,49 +11,23 @@ REM setlocal
 REM SET THE BASE DIRECTORY HERE AND THE REST IS MOSTLY AUTOMATICALLY SET
 set Base_dir=D:\Videos\Balao2
 
+REM #########################################################################
+
 REM SET THE DIMENSIONS OF THE UPSCALE
-REM EG (HD=1280X760 / FULL HD=1920X1080)
+rem set dim_Wid=1920
+rem set dim_Hei=1080
+
+rem set dim_Wid=1280
+rem set dim_Hei=760
 
 REM THESE VALES ARE BEING USED (2X)
 set dim_Wid=960
 set dim_Hei=720
 
+
 REM DON'T FORGET TO SET THE INPUT/OUTPUT IMAGE TYPE
 set Ext=png
 
-REM RE-SCALING VIDEO
-set Re_scale_YN=Y
-
-REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING VIDEO BASELINES
-set Re_scale_Pad=N
-
-REM IF APPLICABLE, WILL THE ASPECT RATIO FOR THE UPSCALED MATCH THE THE ORIGINAL VIDEO?
-set Aspect_ratio_change=N
-
-REM Recover Detail (rdt)
-REM Purpose: tells the AI to try to add or enhance fine textures and micro-details in the frame
-REM that may have been lost due to compression, blur, or denoising.
-REM Effect: makes edges sharper, surfaces more detailed.
-REM Scope: mostly local detail, often affects textures in foliage, hair, fabric, etc.
-REM Range: 0.0 → 1.0
-REM Default / safe: 0.3 – 0.4
-REM Adds visible detail without making textures harsh or unnatural
-REM Stronger: 0.5 – 0.6
-REM For softer or compressed footage, but can look "crispy" if too high
-
-
-REM RECOVER ORIGINAL DETAIL / BLEND 
-REM IN MODELS: PROTEUS/IRIS/NYX/ARTEMIS
-REM NOT IN: GAIA / THEIA (NOT IN RHEA EITHER, BUT RHEA IS UNUSABLE ANYWAY)
-REM Purpose: mixes a fraction of the original unprocessed frame back into the enhanced output.
-REM Effect: prevents over-sharpening or "hallucination" by the AI; preserves naturalness and prevents artifacts.
-REM Scope: global frame blending, not just micro-texture.
-REM Always optional - you choose how much original image you want to "retain."
-REM PMT IS CALLED BLEND IN THE FILTER
-REM RANGE=0.0 TO 1.0
-set rec_orig_detail=0.4
-
-REM #########################################################################
 REM #########################################################################
 
 REM ENTER HERE THE DEFAULT MODEL
@@ -97,7 +71,16 @@ set SESSIONNAME=Console
 
 
 REM #########################################################################
+REM SET THE VARIABLES
 
+REM RE-SCALING VIDEO
+set Re_scale_YN=Y
+
+REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING VIDEO BASELINES
+set Re_scale_Pad=N
+
+REM IF APPLICABLE, WILL THE ASPECT RATIO FOR THE UPSCALED MATCH THE THE ORIGINAL VIDEO?
+set Aspect_ratio_change=N
 
 REM BLOCK OF NESTED IF'S
 if %Re_scale_YN%==Y (
@@ -138,6 +121,28 @@ if %Re_scale_YN%==Y (
     set Re_scale=
 )
 
+REM Recover Detail (rdt)
+REM Purpose: tells the AI to try to add or enhance fine textures and micro-details in the frame
+REM  that may have been lost due to compression, blur, or denoising.
+REM Effect: makes edges sharper, surfaces more detailed.
+REM Scope: mostly local detail, often affects textures in foliage, hair, fabric, etc.
+REM Range: 0.0 → 1.0
+REM Default / safe: 0.3 – 0.4
+REM Adds visible detail without making textures harsh or unnatural
+REM Stronger: 0.5 – 0.6
+REM For softer or compressed footage, but can look "crispy" if too high
+
+
+REM RECOVER ORIGINAL DETAIL / BLEND 
+REM IN MODELS: PROTEUS/IRIS/NYX/ARTEMIS
+REM NOT IN: GAIA / THEIA (NOT IN RHEA EITHER, BUT RHEA IS UNUSABLE ANYWAY)
+REM Purpose: mixes a fraction of the original unprocessed frame back into the enhanced output.
+REM Effect: prevents over-sharpening or "hallucination" by the AI; preserves naturalness and prevents artifacts.
+REM Scope: global frame blending, not just micro-texture.
+REM Always optional - you choose how much original image you want to "retain."
+REM PMT IS CALLED BLEND IN THE FILTER
+REM RANGE=0.0 TO 1.0
+set rec_orig_detail=0.4
 
 REM ##################################################################################
 REM ##################################################################################
@@ -260,7 +265,7 @@ echo.
 
     REM HERE THE BATCH SCRIPT IS CALLED AGAIN.
     echo RESTARTING...
-    call_AI_Template %Sel_Model%
+    call_Balao_AI %Sel_Model%
 
 ) else (
     D:

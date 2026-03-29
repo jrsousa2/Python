@@ -1,0 +1,23 @@
+CROPS VIDEO DIMENSIONS:
+
+DO ONLY 10 SECONDS, START AT 1 SEC
+ffmpeg.exe -ss 1 -i "D:\Videos\Praia\Praia.mp4" -t 10 -vf "crop=in_w-480:in_h:240:0" -y "D:\Videos\Praia\Praia_crop.mp4"
+
+DO ONLY 10 SECONDS, START AT 1 SEC (NAO USAR ESSE)
+ffmpeg.exe -ss 1 -i "D:\Videos\Praia\Praia.mp4" -t 10 -vf "crop=in_w-499:in_h:262:0" -y "D:\Videos\Praia\Praia_crop.mp4"
+
+
+in_w - 499 → Width after removing 262 + 237 = 499 pixels.
+in_h → Keep the full height.
+262 → Start the crop at X = 262 (to remove the left part).
+0 → No cropping from the top.
+
+
+ffmpeg.exe -i "D:\Videos\Praia\Praia.mp4" -vf "crop=in_w-262-237:in_h-0-0:262:0" -y "D:\Videos\Praia\Praia_crop.mp4"
+
+SINTAXE: cropping x from left, a from right, y from top, and b from bottom):
+
+ffmpeg -i input_video.mp4 -vf "crop=in_w-x-a:in_h-y-b:x:y" output_video.mp4
+in_w-x-a: Crops x from the left and a from the right.
+in_h-y-b: Crops y from the top and b from the bottom.
+x:y: Moves the crop starting position to (x, y).
