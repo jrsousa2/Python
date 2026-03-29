@@ -19,10 +19,10 @@ ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -vf "fps=29.97" -y "F:\Videos\Pobre
 
 #####################################################################################################
 
-EXTRACT FROM ORIGINAL 2 SECONDS (HALF THE SIZE):
+EXTRACT FRAMES - 2 SECONDS (HALF THE SIZE):
 ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.webm" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -pix_fmt rgb24 -y "F:\Videos\Pobres\Input\frame_%04d.png"
 
-EXTRACT ALL FRAMES FROM ORIGINAL (HALF THE SIZE):
+EXTRACT ALL FRAMES (HALF THE SIZE):
 ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -pix_fmt rgb24 -y "F:\Videos\Pobres\Input\frame_%04d.png"
 
 #####################################################################################################
@@ -60,17 +60,17 @@ ffmpeg -start_number 450 -i F:\Videos\Balao2\Output_Iris_Bef_Overlay\frame_%04d.
 
 
 /* MERGE FRAMES */
-ffmpeg -framerate 29.97 -i F:\Videos\Balao2\Output_Iris\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y F:\videos\Balao2\Balao_nosound.mp4
+ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y F:\videos\Pobres\Pobres_nosound.mp4
+
+/* USING GPU */
+ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -filter_hw_device cuda -hwupload_cuda -c:v libx264 -r 29.97 -pix_fmt yuv420p -preset fast -crf 18 -y F:\videos\Pobres\Pobres_nosound2.mp4
+
+ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -c:v h264_nvenc -r 29.97 -pix_fmt yuv420p -y F:\videos\Pobres\Pobres_nosound2.mp4
 
 /* JOINS AUDIO */
 /* START AT 23 SEC TO MIRROR SOUNDTRACK IN ORIGINAL VIDEO */
 ffmpeg -i "F:\Videos\Balao2\Balao_nosound.mp4" -ss 23 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "F:\Videos\Balao2\Balao_final.mp4"
 
-Relembre a abertura do Balão Mágico em 1983 (restaurado com I.A.)
-
-https://drive.google.com/file/d/1KPbJ059M8ViDMZrEMk061beRpZBdeGB2/view?usp=drive_link
-
-https://drive.google.com/uc?export=download&id=1KPbJ059M8ViDMZrEMk061beRpZBdeGB2
 
 #################################################################################
 #################################################################################

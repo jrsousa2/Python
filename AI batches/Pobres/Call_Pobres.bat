@@ -24,7 +24,7 @@ REM SET INPUT AND OUTPUT DIRECTORIES
 set Input_dir=%Base_Dir%\Input
 
 REM THE OUTPUT FOLDER IS NAMED AFTER THE CHOSEN MODEL
-set output_dir=%Base_Dir%\Output_Fin_%Sel_model%
+set output_dir=%Base_Dir%\Output_%Sel_model%
 
 REM SET THE DIMENSIONS OF THE UPSCALE
 REM EG (HD=1280X760 / FULL HD=1920X1080)
@@ -37,7 +37,7 @@ REM DON'T FORGET TO SET THE INPUT/OUTPUT IMAGE TYPE
 set Ext=png
 
 REM RE-SCALING VIDEO
-set Re_scale_YN=N
+set Re_scale_YN=Y
 
 REM IF RE-SCALING THE VIDEO, IT'S EITHER PADDING WITH VERTICAL BARS OR CROPPING VIDEO BASELINES
 set Re_scale_Pad=N
@@ -55,7 +55,7 @@ REM Sharpen/enhance details: 0.1 to 1 (0=no sharpening)
 set details=0
 
 REM Optional slight blur before processing (0=no pre-blur)
-preblur=0
+set preblur=0
 
 REM Recover Detail (rdt)
 REM Purpose: tells the AI to try to add or enhance fine textures and micro-details in the frame
@@ -83,10 +83,13 @@ set rec_orig_detail=0.4
 REM estimate controls motion/temporal analysis depth
 REM It's very expensive computationally
 REM VALUES=8 (slowest) To 1 (fastest)
-set estimate=4
+set estimate=8
 
 REM VRAM USE AS A PERC OF GPU VRAM
-set vram=0.6
+set vram=0.9
+
+REM INSTANCES (DEFAULT IS 1)
+set instances=3
 
 REM #########################################################################
 REM #########################################################################
@@ -170,17 +173,6 @@ REM ############################################################################
 
 REM DEFINE THE 6 MODELS
 
-if %Re_scale_YN%==Y (
- set Scale_pmt=:scale=0:w=%dim_Wid%:h=%dim_Hei%
-) else (
- set set Scale_pmt=
-)
-
-REM PROTEUS: GENERAL ENHANCEMENT FOR MOST VIDEOS
-set Proteus="tvai_up=model=prob-4%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
-
-
-REM IRIS: SPECIAL ENHANCEMENT FOR FACES 
 
 if %Input_quality%==low (
  set Iris_model=iris-3
@@ -188,21 +180,34 @@ if %Input_quality%==low (
  set Iris_model=iris-2
 )
 
+REM NEEDED SO AI UPSCALES THE FRAME
+REM THE 2nd UPSCALE IS DONE BY FFMPEG (JUST A TOUCH-UP/ADJUSTMENT)
+if %Re_scale_YN%==Y (
+set Scale_pmt=:scale=0:w=%dim_Wid%:h=%dim_Hei%
+) else (
+set set Scale_pmt=
+)
+
+REM PROTEUS: GENERAL ENHANCEMENT FOR MOST VIDEOS
+set Proteus="tvai_up=model=prob-4%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=0.1:instances=%instances%%Re_scale%"
+
+
+REM IRIS: SPECIAL ENHANCEMENT FOR FACES 
 REM Iris doesn't have pmt: rdt=%rdt% 
-set Iris="tvai_up=model=%Iris_model%%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=1%Re_scale%"
+set Iris="tvai_up=model=%Iris_model%%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 
 REM NYX: DEDICATED DENOISING
-set Nyx="tvai_up=model=nyx-3%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:device=0:vram=%vram%:instances=1%Re_scale%"
+set Nyx="tvai_up=model=nyx-3%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM ARTEMIS: DENOISE AND SHARPEN
-set Artemis="tvai_up=model=ahq-12:scale=0:w=%dim_Wid%:h=%dim_Hei%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=1%Re_scale%"
+set Artemis="tvai_up=model=ahq-12:scale=0:w=%dim_Wid%:h=%dim_Hei%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM THEIA: HIGH FIDELITY AND DETAIL ENHANCEMENT
-set Theia="tvai_up=model=thf-4%Scale_pmt%:noise=%noise%:blur=0:compression=0:device=0:vram=%vram%:instances=1%Re_scale%"
+set Theia="tvai_up=model=thf-4%Scale_pmt%:noise=%noise%:blur=0:compression=0:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM GAIA: Upscale HQ: If your goal is to upscale high-quality footage to HD or 4K resolutions while REM preserving details, Gaia is a suitable choice. 
-set Gaia="tvai_up=model=ghq-5%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=1%Re_scale%"
+set Gaia="tvai_up=model=ghq-5%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM #########################################################################
 REM SET THE CHOSEN MODEL
@@ -273,7 +278,11 @@ echo.
 echo GPU VRAM percentage=%vram%
 echo.
 
-REM pause
+echo Running instances=%instances%
+echo.
+
+REM @FOR TEST
+rem pause
 
 REM #########################################################################
 

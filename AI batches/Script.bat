@@ -1,5 +1,5 @@
 @echo off
-REM MODEL IS CHOSEB BY ADDING A CALLING INPUT PARAMETER: 
+REM MODEL IS CHOSEN BY AN INPUT PARAMETER AT CALL TIME: 
 REM IT CAN BE: Proteus (Default-no pmt needed) Iris / Nyx / Gaia / Artemis / Theia
 
 REM IT SEEMS THAT FILTER NEEDS AT LEAST 4 IMAGES TO PROCESS OR IT WON'T DO IT.
@@ -18,14 +18,20 @@ if "%1%"=="" (
 )
 
 REM SET THE BASE DIRECTORY HERE AND THE REST IS MOSTLY AUTOMATICALLY SET
-set Base_dir=D:\Videos\Balao2
+set Base_dir=F:\Videos\Pobres
+
+REM SET INPUT AND OUTPUT DIRECTORIES
+set Input_dir=%Base_Dir%\Input
+
+REM THE OUTPUT FOLDER IS NAMED AFTER THE CHOSEN MODEL
+set output_dir=%Base_Dir%\Output_%Sel_model%
 
 REM SET THE DIMENSIONS OF THE UPSCALE
 REM EG (HD=1280X760 / FULL HD=1920X1080)
 
-REM THESE VALES ARE BEING USED (2X)
-set dim_Wid=960
-set dim_Hei=720
+REM THESE VALES ARE BEING USED (NO NEED TO SPECIFY IF NOT RE-SCALING)
+set dim_Wid=1440
+set dim_Hei=1080
 
 REM DON'T FORGET TO SET THE INPUT/OUTPUT IMAGE TYPE
 set Ext=png
@@ -39,6 +45,18 @@ set Re_scale_Pad=N
 REM IF APPLICABLE, WILL THE ASPECT RATIO FOR THE UPSCALED MATCH THE THE ORIGINAL VIDEO?
 set Aspect_ratio_change=N
 
+REM INPUT QUALITY
+set Input_quality=low
+
+REM 0=no denoise, 0.1 to 1 (higher=remove more noise)
+set noise=0
+
+REM Sharpen/enhance details: 0.1 to 1 (0=no sharpening)
+set details=0
+
+REM Optional slight blur before processing (0=no pre-blur)
+set preblur=0
+
 REM Recover Detail (rdt)
 REM Purpose: tells the AI to try to add or enhance fine textures and micro-details in the frame
 REM that may have been lost due to compression, blur, or denoising.
@@ -49,7 +67,7 @@ REM Default / safe: 0.3 – 0.4
 REM Adds visible detail without making textures harsh or unnatural
 REM Stronger: 0.5 – 0.6
 REM For softer or compressed footage, but can look "crispy" if too high
-
+set rdt=0.3
 
 REM RECOVER ORIGINAL DETAIL / BLEND 
 REM IN MODELS: PROTEUS/IRIS/NYX/ARTEMIS
@@ -59,8 +77,19 @@ REM Effect: prevents over-sharpening or "hallucination" by the AI; preserves nat
 REM Scope: global frame blending, not just micro-texture.
 REM Always optional - you choose how much original image you want to "retain."
 REM PMT IS CALLED BLEND IN THE FILTER
-REM RANGE=0.0 TO 1.0
+REM RANGE: 0.0 TO 1.0
 set rec_orig_detail=0.4
+
+REM estimate controls motion/temporal analysis depth
+REM It's very expensive computationally
+REM VALUES=8 (slowest) To 1 (fastest)
+set estimate=8
+
+REM VRAM USE AS A PERC OF GPU VRAM
+set vram=0.9
+
+REM INSTANCES (DEFAULT IS 1)
+set instances=3
 
 REM #########################################################################
 REM #########################################################################
@@ -71,18 +100,18 @@ echo.
 echo Input Parameter was: %1%
 echo Selected_Model was set to: %Sel_Model%
 
-REM Set input and output directories
-set Input_dir=%Base_Dir%/Input
-
-REM THE OUTPUT FOLDER IS NAMED AFTER THE CHOSEN MODEL
-set output_dir=%Base_Dir%/Output_%Sel_model%
-
 if not exist "%output_dir%" (
     echo.
     echo Directory "%output_dir%" doesn't exist, creating...
     mkdir "%output_dir%"
     REM pause
 )
+
+
+REM #########################################################################
+REM #########################################################################
+REM #########################################################################
+REM NO PMTS BELOW
 
 
 REM MOVES TO C:
@@ -144,23 +173,41 @@ REM ############################################################################
 
 REM DEFINE THE 6 MODELS
 
+
+if %Input_quality%==low (
+ set Iris_model=iris-3
+) else (
+ set Iris_model=iris-2
+)
+
+REM NEEDED SO AI UPSCALES THE FRAME
+REM THE 2nd UPSCALE IS DONE BY FFMPEG (JUST A TOUCH-UP/ADJUSTMENT)
+if %Re_scale_YN%==Y (
+set Scale_pmt=:scale=0:w=%dim_Wid%:h=%dim_Hei%
+) else (
+set set Scale_pmt=
+)
+
 REM PROTEUS: GENERAL ENHANCEMENT FOR MOST VIDEOS
-set Proteus="tvai_up=model=prob-4:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+set Proteus="tvai_up=model=prob-4%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=0.1:instances=%instances%%Re_scale%"
+
 
 REM IRIS: SPECIAL ENHANCEMENT FOR FACES 
-set Iris="tvai_up=model=iris-2:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+REM Iris doesn't have pmt: rdt=%rdt% 
+set Iris="tvai_up=model=%Iris_model%%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
+
 
 REM NYX: DEDICATED DENOISING
-set Nyx="tvai_up=model=nyx-3:scale=1:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:device=0:vram=0.1:instances=1%Re_scale%"
+set Nyx="tvai_up=model=nyx-3%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM ARTEMIS: DENOISE AND SHARPEN
-set Artemis="tvai_up=model=ahq-12:scale=0:w=%dim_Wid%:h=%dim_Hei%:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+set Artemis="tvai_up=model=ahq-12:scale=0:w=%dim_Wid%:h=%dim_Hei%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM THEIA: HIGH FIDELITY AND DETAIL ENHANCEMENT
-set Theia="tvai_up=model=thf-4:scale=0:w=%dim_Wid%:h=%dim_Hei%:noise=0:blur=0:compression=0:device=0:vram=0.1:instances=1%Re_scale%"
+set Theia="tvai_up=model=thf-4%Scale_pmt%:noise=%noise%:blur=0:compression=0:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM GAIA: Upscale HQ: If your goal is to upscale high-quality footage to HD or 4K resolutions while REM preserving details, Gaia is a suitable choice. 
-set Gaia="tvai_up=model=ghq-5:scale=0:w=%dim_Wid%:h=%dim_Hei%:preblur=0:noise=0:details=0:halo=0:blur=0:compression=0:estimate=8:blend=%rec_orig_detail%:device=0:vram=0.1:instances=1%Re_scale%"
+set Gaia="tvai_up=model=ghq-5%Scale_pmt%:preblur=0:noise=%noise%:details=%details%:halo=0:blur=0:compression=0:estimate=%estimate%:blend=%rec_orig_detail%:device=0:vram=%vram%:instances=%instances%%Re_scale%"
 
 REM #########################################################################
 REM SET THE CHOSEN MODEL
@@ -171,6 +218,7 @@ if "%Sel_model%"=="Proteus" (
     set Model=%Proteus%
 ) else if "%Sel_model%"=="Iris" (
     set Model=%Iris%
+    set rdt=0.0
 ) else if "%Sel_model%"=="Nyx" (
     set Model=%Nyx%
 ) else if "%Sel_model%"=="Artemis" (
@@ -208,9 +256,33 @@ REM Display the result
 echo Model is: %Model%
 echo.
 
-echo Recover detail Parameter=%rec_orig_detail%
+REM Display the input quality
+echo Input quality is: %Input_quality%
 echo.
 
+echo Recover detail=%rdt%
+echo.
+
+echo Recover Original detail=%rec_orig_detail%
+echo.
+
+echo Noise (Increasing levels of noise reduction)=%noise%
+echo.
+
+echo Details (Extra sharpening)=%details%
+echo.
+
+echo Estimate (Lower->faster)=%estimate%
+echo.
+
+echo GPU VRAM percentage=%vram%
+echo.
+
+echo Running instances=%instances%
+echo.
+
+REM @FOR TEST
+rem pause
 
 REM #########################################################################
 
@@ -261,7 +333,7 @@ echo.
     REM HERE THE BATCH SCRIPT IS CALLED AGAIN.
     echo RESTARTING...
     rem call_AI_Template %Sel_Model%
-    call "%~nx0" %Sel_Model%
+    call "%~dp0%~nx0" %Sel_Model%
 
 ) else (
     D:
