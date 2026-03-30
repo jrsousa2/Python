@@ -23,7 +23,7 @@
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
-    "python.defaultInterpreterPath": "C:\\Python\\Python3.10-v1\\Scripts\\python.exe",
+    "python.defaultInterpreterPath": "C:\\Python\\MyEnv39\\Scripts\\python.exe",
     "python.analysis.extraPaths": [ "D:\\Python\\Modules", "C:\\Python\\face_reaging\\model"],
     // "terminal.integrated.scrollback": 0,
     "powershell.integratedConsole.forceClearScrollbackBuffer": true

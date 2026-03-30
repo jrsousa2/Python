@@ -1,0 +1,3 @@
+I CHANGED IT TO VENV MYENV
+
+VENV3.9-v2 could work too, but it's corrupted (missing pkg resource)

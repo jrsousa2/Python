@@ -10,8 +10,8 @@ import warnings
 # HIDE SOME WARNINGS
 warnings.filterwarnings(
     "ignore",
-    category=FutureWarning,
-    message="*TypedStorage is deprecated*"
+    category=UserWarning,
+    message=".*TypedStorage is deprecated.*"
 )
 
 print("\nCUDA is available:",torch.cuda.is_available())  # Returns True if CUDA is available, else False
@@ -31,7 +31,7 @@ else:
 
 def load_model_to_dev():
     # Load Whisper model
-    # "Large" model is required for translation
+    # "Large" model is required for transcription/translation
     # Move model to GPU if available
     model = whisper.load_model("large").to(device)
     return model

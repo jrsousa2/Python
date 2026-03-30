@@ -54,17 +54,16 @@ ffmpeg -i "F:\Videos\Pobres\Praia_audio.opus" -t 00:09:30 -y F:\Videos\Pobres\Pr
 
 3) OVERLAY "LIKE" ICON
 
-# OVERLAY "LIKE ICON" TO THE 120 FIRST FRAMES
-ffmpeg -start_number 721 -i F:\Videos\Arosio\Original\frame_%04d.png -i F:\videos\Arosio\Final-Transp.png -frames:v 240 -filter_complex overlay=1012 -start_number 721 -y F:\Videos\Arosio\Output\frame_%04d.png
+# OVERLAY "LIKE ICON" TO THE 350 FIRST FRAMES (~12 SECS)
 
--filter_complex overlay=W-w-10:2
+# FINAL CMD W-w-10:2 (1st pos: 10 pixels from the right 2nd pos: 70 pixels below top)
+ffmpeg -start_number 450 -i F:\Videos\Pobres\Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 350 -filter_complex overlay=W-w-10:90 -start_number 450 -y F:\Videos\Pobres\Aft_Overlay\frame_%04d.png
 
-WILL START AT 15 SECS AT 30FPS: HENCE 1ST FRAME=450
+REM TEST WHAT IT WILL BE LIKE (AFTER COPYRIGHT CHECK)-DOESN'T WORK
+ffmpeg -i "F:\Videos\Pobres\Aft_Overlay\frame_0450.png"^
+ -vf "scale=iw*0.97:ih*0.97,eq=contrast=1.03:brightness=0.02:saturation=1.02,crop=trunc(iw/2)*2:trunc(ih/2)*2"^
+ "F:\Videos\Pobres\Test_Frame.png"
 
-# OVERLAY "LIKE ICON" TO THE 240 FIRST FRAMES (8 SECS)
-
-# FINAL CMD
-ffmpeg -start_number 450 -i F:\Videos\Pobres\Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 240 -filter_complex overlay=W-w-10:2 -start_number 450 -y F:\Videos\Pobres\Aft_Overlay\frame_%04d.png
 
 #####################################################################################################
 #####################################################################################################
@@ -77,20 +76,16 @@ ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -c:v libx
 /* USING GPU (DOESN'T WORK) */
 ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -filter_hw_device cuda -hwupload_cuda -c:v libx264 -r 29.97 -pix_fmt yuv420p -preset fast -crf 18 -y F:\videos\Pobres\Pobres_nosound2.mp4
 
-/* JOINS AUDIO */
-/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
-ffmpeg -i "F:\Videos\Pobres\Balao_nosound.mp4" -i "F:\Videos\Pobres\Praia_audio1.opus" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "F:\Videos\Balao2\Balao_final.mp4"
-
 #################################################################################
 #################################################################################
 
 COPYRIGHT CHECK:
 
-ffmpeg -i "F:\Videos\Pobres\Balao_sound.mp4" ^
--vf "scale=iw*0.97:ih*0.97,eq=contrast=1.03:brightness=0.02:saturation=1.02,crop=trunc(iw/2)*2:trunc(ih/2)*2" ^
--c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p ^
--c:a aac -b:a 128k -af "asetrate=48000*1.01,aresample=48000" ^
--movflags +faststart "F:\Videos\Pobres\Balao_Final.mp4"
+ffmpeg -i "F:\Videos\Pobres\Pobres_nosound.mp4"^
+ -vf "scale=iw*0.97:ih*0.97,eq=contrast=1.03:brightness=0.02:saturation=1.02,crop=trunc(iw/2)*2:trunc(ih/2)*2"^
+ -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p^
+ -c:a aac -b:a 128k -af "asetrate=48000*1.01,aresample=48000"^
+ -movflags +faststart "F:\Videos\Pobres\Pobres_quase_Final.mp4"
 
 #################################################################################
 #################################################################################
@@ -98,6 +93,11 @@ ffmpeg -i "F:\Videos\Pobres\Balao_sound.mp4" ^
 IMPROVE IMAGE WITH OFFICE:
 
 C:\Program Files\Microsoft Office\Office14
+
+/* JOINS AUDIO AND VIDEO */
+/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
+ffmpeg -i "F:\Videos\Pobres\Pobres_quase_Final.mp4" -i "F:\Videos\Pobres\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "F:\Videos\Pobres\Pobres_Final.mp4"
+
 
 #################################################################################
 #################################################################################

@@ -2,7 +2,6 @@ from timeit import default_timer
 from datetime import datetime
 
 # START OF THE CODE
-elapsed_time = 0
 start_time = default_timer()
 
 start_time_act = datetime.now()
