@@ -1,0 +1,12 @@
+# NOT SURE IF THIS WILL WORK
+from pywinauto import Application
+
+app = Application().start(
+    r'"C:\Program Files (x86)\Microsoft Office\Office14\OIS.EXE" image.jpg'
+)
+
+dlg = app.window(title_re="Microsoft Office Picture Manager")
+
+dlg.menu_select("Picture->Auto Correct")
+
+dlg.type_keys("^s")   # Ctrl+S save

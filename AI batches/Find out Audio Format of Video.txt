@@ -1,0 +1,2 @@
+/* PROBES AUDIO FORMAT OF VIDEO STREAM */
+ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,codec_type,sample_rate,channels,bit_rate -of default=noprint_wrappers=1 "F:\Videos\Pobres\Praia_crop.webm"

@@ -5,6 +5,15 @@ import torch
 from timeit import default_timer
 from datetime import datetime
 
+import warnings
+
+# HIDE SOME WARNINGS
+warnings.filterwarnings(
+    "ignore",
+    category=FutureWarning,
+    message="*TypedStorage is deprecated*"
+)
+
 print("\nCUDA is available:",torch.cuda.is_available())  # Returns True if CUDA is available, else False
 print("\nDevice number:",torch.cuda.current_device())  # Prints the current CUDA device ID
 print("\nGPU device name:",torch.cuda.get_device_name(torch.cuda.current_device()))  # Name of the GPU
@@ -37,7 +46,12 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
     
     # Transcribe and translate
     print("\nTranslating media...this may take a while\n")
-    result = model.transcribe(audio_path, language=audio_lang, task="translate", verbose=True)
+    
+    # CALL MODEL
+    result = model.transcribe(audio_path, 
+                              language=audio_lang, 
+                              task="translate", 
+                              verbose=True)
     
     subs = []
     for i, segment in enumerate(result["segments"]):
@@ -61,10 +75,10 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
 # input_file = "D:\\Videos\\Arosio\\Audio.aac"
 # output_file = "D:\\Videos\\Arosio\\subtitles.srt"
 
-input_file = r"D:\Videos\n8n\Test\sample.mkv"
+input_file = r"F:\Videos\Pobres\Praia_audio1.opus"
 
 #input_file = "D:\\Videos\\n8n\\Sound\\audio1.mp3"
-output_file = "D:\\Videos\\n8n\\Test\\subtitles.srt"
+output_file = r"F:\Videos\Pobres\Subtitles1.srt"
 
 elapsed_time = 0
 start_time = default_timer()
@@ -72,7 +86,7 @@ start_time = default_timer()
 start_time_act = datetime.now()
 print("\nStart time:", start_time_act)
 
-generate_translated_srt(input_file, audio_lang="EN", output_srt=output_file)
+generate_translated_srt(input_file, audio_lang="PT", output_srt=output_file)
 
 end_time = default_timer()
 end_time_act = datetime.now()

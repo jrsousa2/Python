@@ -7,18 +7,9 @@ AFTER ENHANCEMENT, IT WILL BE HF: 1280 X 720 (16:9)
 O VIDEO FULL HD EH 1920 X 1080
 
 
-
-EXTRACTS ONLY 5 SECONDS (FULL SIZE)
-ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.webm" -t 5 -vf "fps=29.97" -y "F:\Videos\Pobres\Original\frame_%04d.png"
-
-EXTRACTS ONLY 5 SECONDS IN TIFF (FULL SIZE)
-ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -ss 0 -t 5 -vf "fps=29.97,format=rgb24" -y "F:\Videos\Pobres\Tiff\frame_%04d.tiff"
-
-EXTRACTS ALL FRAMES (FULL SIZE)
-ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -vf "fps=29.97" -y "F:\Videos\Pobres\Input\frame_%04d.png"
-
 #####################################################################################################
-
+#####################################################################################################
+1)
 EXTRACT FRAMES - 2 SECONDS (HALF THE SIZE):
 ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.webm" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -pix_fmt rgb24 -y "F:\Videos\Pobres\Input\frame_%04d.png"
 
@@ -26,24 +17,42 @@ EXTRACT ALL FRAMES (HALF THE SIZE):
 ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -pix_fmt rgb24 -y "F:\Videos\Pobres\Input\frame_%04d.png"
 
 #####################################################################################################
+#####################################################################################################
+THIS WAS NOT USED
 
-DON'T USE BELOW (LARGER IMG FORMAT)
+EXTRACTS ONLY 5 SECONDS (FULL SIZE)-NOT USED
+ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.webm" -t 5 -vf "fps=29.97" -y "F:\Videos\Pobres\Original\frame_%04d.png"
 
-EXTRACTS ONLY 2 SECONDS OF THE VIDEO (LESS LOSS OF DETAIL)
-ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.mp4" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -y "F:\Videos\Pobres\5s\frame_%04d.tiff"
+EXTRACTS ONLY 5 SECONDS IN TIFF (FULL SIZE)-NOT USED
+ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -ss 0 -t 5 -vf "fps=29.97,format=rgb24" -y "F:\Videos\Pobres\Tiff\frame_%04d.tiff"
 
-/* NO DOWNSIZING */
-ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.mp4" -t 5 -vf "fps=29.97" -pix_fmt rgb24 -y "F:\Videos\Pobres\5s\frame_%04d.tiff"
+EXTRACTS ALL FRAMES (FULL SIZE)
+ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -vf "fps=29.97" -y "F:\Videos\Pobres\Input\frame_%04d.png"
 
-EXTRACTS ONLY 2 SECONDS OF THE VIDEO (LESS LOSS OF DETAIL)
-ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.mp4" -t 5 -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" "F:\Videos\Pobres\5s\frame_%04d.png"
-
-/* FINAL TUDO */
-ffmpeg -ss 0 -i "F:\Videos\Pobres\Praia_crop.mp4" -vf "fps=29.97,scale=iw/2:ih/2:flags=lanczos" -y "F:\Videos\Pobres\5s\frame_%04d.png"
-
-ffmpeg -i "F:\Python\Baby_voice\Media\Debate_orig.mp4" -r 30 -af "asetrate=44100*1.5,atempo=0.6667" "F:\Python\Baby_voice\Media\Debate_chipmunk.mp4"
 
 #####################################################################################################
+#####################################################################################################
+
+2) EXTRACT AUDIO FROM ORIGINAL FILE
+
+D:\Python>ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,codec_type,sample_rate,channels,bit_rate -of default=noprint_wrappers=1 "F:\Videos\Pobres\Praia_crop.webm"
+codec_name=opus
+codec_type=audio
+sample_rate=48000
+channels=2
+bit_rate=N/A
+
+THE ORIGINAL AUDIO IS AAC, SO EXTRACT AAC:
+
+/* FINAL FORMAT USED */
+ffmpeg -i "F:\Videos\Pobres\Praia_crop.webm" -vn -c:a copy "F:\Videos\Pobres\Praia_audio.opus"
+
+/* CREATES AUDIO CLIP WITH 9:30 */
+ffmpeg -i "F:\Videos\Pobres\Praia_audio.opus" -t 00:09:30 -y F:\Videos\Pobres\Praia_audio1.opus
+
+#####################################################################################################
+
+3) OVERLAY "LIKE" ICON
 
 # OVERLAY "LIKE ICON" TO THE 120 FIRST FRAMES
 ffmpeg -start_number 721 -i F:\Videos\Arosio\Original\frame_%04d.png -i F:\videos\Arosio\Final-Transp.png -frames:v 240 -filter_complex overlay=1012 -start_number 721 -y F:\Videos\Arosio\Output\frame_%04d.png
@@ -55,22 +64,40 @@ WILL START AT 15 SECS AT 30FPS: HENCE 1ST FRAME=450
 # OVERLAY "LIKE ICON" TO THE 240 FIRST FRAMES (8 SECS)
 
 # FINAL CMD
-ffmpeg -start_number 450 -i F:\Videos\Balao2\Output_Iris_Bef_Overlay\frame_%04d.png -i "F:\Python\AI batches\Icons\Final-Transp.png" -frames:v 240 -filter_complex overlay=W-w-10:2 -start_number 450 -y F:\Videos\Balao2\Output_Iris_Aft_Overlay\frame_%04d.png
+ffmpeg -start_number 450 -i F:\Videos\Pobres\Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 240 -filter_complex overlay=W-w-10:2 -start_number 450 -y F:\Videos\Pobres\Aft_Overlay\frame_%04d.png
 
+#####################################################################################################
+#####################################################################################################
 
+4) MERGE FRAMES
 
 /* MERGE FRAMES */
 ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -c:v libx264 -r 29.97 -pix_fmt yuv420p -y F:\videos\Pobres\Pobres_nosound.mp4
 
-/* USING GPU */
+/* USING GPU (DOESN'T WORK) */
 ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -filter_hw_device cuda -hwupload_cuda -c:v libx264 -r 29.97 -pix_fmt yuv420p -preset fast -crf 18 -y F:\videos\Pobres\Pobres_nosound2.mp4
 
-ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -c:v h264_nvenc -r 29.97 -pix_fmt yuv420p -y F:\videos\Pobres\Pobres_nosound2.mp4
-
 /* JOINS AUDIO */
-/* START AT 23 SEC TO MIRROR SOUNDTRACK IN ORIGINAL VIDEO */
-ffmpeg -i "F:\Videos\Balao2\Balao_nosound.mp4" -ss 23 -i "E:\MP3\Favorites_Brasil\Turma Do Pirlimpimpim - Lindo Balão Azul (1).mp3" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "F:\Videos\Balao2\Balao_final.mp4"
+/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
+ffmpeg -i "F:\Videos\Pobres\Balao_nosound.mp4" -i "F:\Videos\Pobres\Praia_audio1.opus" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -y "F:\Videos\Balao2\Balao_final.mp4"
 
+#################################################################################
+#################################################################################
+
+COPYRIGHT CHECK:
+
+ffmpeg -i "F:\Videos\Pobres\Balao_sound.mp4" ^
+-vf "scale=iw*0.97:ih*0.97,eq=contrast=1.03:brightness=0.02:saturation=1.02,crop=trunc(iw/2)*2:trunc(ih/2)*2" ^
+-c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p ^
+-c:a aac -b:a 128k -af "asetrate=48000*1.01,aresample=48000" ^
+-movflags +faststart "F:\Videos\Pobres\Balao_Final.mp4"
+
+#################################################################################
+#################################################################################
+#################################################################################
+IMPROVE IMAGE WITH OFFICE:
+
+C:\Program Files\Microsoft Office\Office14
 
 #################################################################################
 #################################################################################
