@@ -10,7 +10,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 
 - Creation of video/images with Gen AI/AI Prompting. [AI video](https://youtu.be/SsHmTKZYvJQ)
 - Used n8n (a NoCode orchestration tool) to do the above. [n8n WF](https://github.com/jrsousa2/Python/blob/main/n8n/n8n%20WF.png)
-- Cloning my own voice with the TTS module (will provide sample of that later).
+- Cloning my own voice with the TTS module.
 - Checking a stock price online and sending an e-mail alert if price above target.
 - Speech recognition and transcription/translation (PT to EN).
 - Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://youtu.be/FWDDlcXsx_k)
