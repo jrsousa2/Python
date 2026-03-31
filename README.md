@@ -16,7 +16,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Automatic creation of subtitle file (.srt) from transcribed/translated audio. [Ana Paula](https://youtu.be/FWDDlcXsx_k)
 - Web scraping of tables on Wikipedia using BeautifulSoup.
 - Automatic creation of formatted PPT slides with data scraped from Wikipedia. [Brazilian actresses**](https://youtu.be/hOnESTqThUs)
-- Automating tasks of applications that don't have an API (such as, applying auto correct to images in MS Picture Manager).
+- Automating tasks of apps that don't expose an API (such as, applying auto correct to images in Office Picture Manager).
 - Video enhancement using AI: [Enhanced](https://drive.google.com/uc?export=download&id=1KPbJ059M8ViDMZrEMk061beRpZBdeGB2) Vs. [Original](https://redeglobo.globo.com/video/relembre-a-abertura-do-balao-magico-em-1983-1037992.ghtml).
 - Given a person's name in a given language, predict the gender of the person.
 - Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to run the below task (free Azure account is constrained).
