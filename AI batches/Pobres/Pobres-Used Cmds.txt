@@ -71,10 +71,8 @@ ffmpeg -i "F:\Videos\Pobres\Aft_Overlay\frame_0450.png"^
 4) MERGE FRAMES
 
 /* MERGE FRAMES */
-ffmpeg -framerate 29.97 -start_number 1 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -vframes 17105 -c:v libx264 -r 29.97 -pix_fmt yuv420p -y F:\videos\Pobres\Pobres_nosound.mp4
+ffmpeg -framerate 29.97 -start_number 1 -i F:\Videos\Pobres\Output_Filter\frame_%04d.png -vframes 17105 -c:v libx264 -r 29.97 -pix_fmt yuv420p -y F:\videos\Pobres\Pobres_nosound.mp4
 
-SALVAGE BROKEN FILE:
-ffmpeg -fflags +genpts -i F:\videos\Pobres\Pobres_nosound.mp4 -c copy F:\videos\Pobres\Pobres_nosound_rec.mp4
 
 /* USING GPU (DOESN'T WORK) */
 ffmpeg -framerate 29.97 -i F:\Videos\Pobres\Output_Iris\frame_%04d.png -filter_hw_device cuda -hwupload_cuda -c:v libx264 -r 29.97 -pix_fmt yuv420p -preset fast -crf 18 -y F:\videos\Pobres\Pobres_nosound2.mp4
@@ -97,9 +95,12 @@ IMPROVE IMAGE WITH OFFICE:
 
 C:\Program Files\Microsoft Office\Office14
 
-/* JOINS AUDIO AND VIDEO */
+/* JOINS AUDIO AND VIDEO (switch -shortest /before output name) */
 /* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
-ffmpeg -i "F:\Videos\Pobres\Pobres_quase_Final.mp4" -i "F:\Videos\Pobres\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest -y "F:\Videos\Pobres\Pobres_Final.mp4"
+ffmpeg -i "F:\Videos\Pobres\Pobres_quase_Final.mp4" -i "F:\Videos\Pobres\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "F:\Videos\Pobres\Pobres_Final.mp4"
+
+/* KEEP VIDEO AND SOUND UNALTERED */
+ffmpeg -i "F:\Videos\Pobres\Pobres_nosound.mp4" -i "F:\Videos\Pobres\Praia_audio1.opus" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "F:\Videos\Pobres\Pobres_nochg_Final.mp4"
 
 #################################################################################
 #################################################################################

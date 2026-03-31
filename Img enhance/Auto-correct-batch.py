@@ -8,12 +8,13 @@ from pywinauto import Application
 import os
 import shutil
 import time
+from os.path import exists
 
 # from time import sleep
 # from datetime import datetime
 # from pywinauto.keyboard import send_keys
 
-def wait_for_proc(dlg, timeout=30):
+def wait_for_proc(dlg, timeout=3600):
     """Wait until Auto Correct or Save finishes processing."""
     status = dlg.child_window(control_type="StatusBar")
     start = time.time()
@@ -62,6 +63,14 @@ def Start_app(src):
     # Small delay to ensure it closes
     # sleep(0.2)
 
+def finds_empty_folder(target_folder):
+    nbr = 1
+    subfolder_name = target_folder +"\\"+ f"F{nbr}"
+    while exists(subfolder_name):
+          nbr = nbr+1
+          subfolder_name = target_folder +"\\"+f"F{nbr}"
+    return subfolder_name
+
 # ANY FILE MODIFIED BEFORE THIS DATE WILL BE PROCESSED 
 # Latest_mod_date_str = "2026-03-30_15-45-59"
 # Latest_mod_date = datetime.strptime(Latest_mod_date_str, "%Y-%m-%d_%H-%M-%S")
@@ -75,6 +84,7 @@ def Start_app(src):
 # MAIN CODE 
 # batch_size=How many pics will be edited at the same time in Office Picture Viewer
 src_folder = r"F:\Videos\Pobres\Filter"
+target_folder = r"F:\Videos\Pobres\Save"
 batch_size=100
 
 # dest_folder = r"F:\Videos\Pobres\Done"
@@ -88,9 +98,8 @@ for i in range(0, len(images), batch_size):
     batch = images[i:i+batch_size]
     
     # Create subfolder (F1, F2, ...)
-    subfolder_name = f"F{folder_counter}"
-    subfolder_path = os.path.join(src_folder, subfolder_name)
-    os.makedirs(subfolder_path, exist_ok=True)
+    subfolder_path = finds_empty_folder(target_folder)
+    os.makedirs(subfolder_path, exist_ok=False)
     
     # Move the batch into the subfolder
     for img in batch:
@@ -98,8 +107,8 @@ for i in range(0, len(images), batch_size):
         dest_path = os.path.join(subfolder_path, img)
         shutil.move(src_path, dest_path)
     
-    print(f"Moved {len(batch)} images to {subfolder_name}")
-    folder_counter += 1
+    print(f"Moved {len(batch)} images to {subfolder_path}")
+    # folder_counter += 1
     
     # CALLS THE MACRO
     Start_app(subfolder_path)
