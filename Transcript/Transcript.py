@@ -1,3 +1,5 @@
+# TRANSCRIBES THE AUDIO FROM A FILE
+# CREATES A SUBTITLES FILE
 import whisper
 import os
 import torch

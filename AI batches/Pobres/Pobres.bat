@@ -86,10 +86,10 @@ REM VALUES=8 (slowest) To 1 (fastest)
 set estimate=8
 
 REM VRAM USE AS A PERC OF GPU VRAM
-set vram=0.9
+set vram=0.7
 
 REM INSTANCES (DEFAULT IS 1)
-set instances=3
+set instances=2
 
 REM #########################################################################
 REM #########################################################################

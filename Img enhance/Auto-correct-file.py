@@ -5,7 +5,8 @@ from pywinauto import Application
 import time
 
 # Start OIS with the image
-app = Application(backend="uia").start(r'"C:\Program Files\Microsoft Office\Office14\OIS.EXE" F:\Videos\Pobres\Test.png')
+# BELOW IS OPENING TO A FOLDERn
+app = Application(backend="uia").start(r'"C:\Program Files\Microsoft Office\Office14\OIS.EXE" F:\Videos\Pobres\Done')
 
 # Get the process ID
 pid = app.process
