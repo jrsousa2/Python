@@ -1,3 +1,4 @@
+# SHOWS PYTHON PKG IN DESCENDING ORDER OF SIZE
 import pkg_resources
 import os
 

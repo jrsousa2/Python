@@ -31,7 +31,7 @@ Python is an interpreted language that's extremely powerful and has a lot of mod
 - Searching and populating MP3 tags on the Discogs website automatically.
 - Making MP3 tag names in sync with the actual file names (to detect and resolve conflicts).
 - Incremental backup of circa 63k MP3 files from an SSD drive to a MicroSD card (final backup mirrors SSD).
-- Downloading of videos from Youtube (use "YT-DLP CMD LINE.txt" to see command line usage, as Youtube credentials may be needed and are taken from browser cookies). Python codes for video download will only work if the video doesn't requires credentials. The command line works always (install module yt-dlp).
+- Downloading of videos from Youtube (see "YT-DLP CMD LINE.txt" for command line usage -- Youtube credentials may be needed and are taken from browser cookies).
 - Creation of stand-alone/static executables from Python codes.
 - Calling function by passing another function as parameter and feeding variables to it from called function with lambda.
 - Image, audio and video processing using ffmpeg.

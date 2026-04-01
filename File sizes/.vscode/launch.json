@@ -9,7 +9,8 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "justMyCode": true
 /*             "editor.parameterHints": false, (nao sei se eh necessario mais-ver settings.json as well)
             "editor.hover.enabled": false,
             "editor.parameterHints.enabled": false,
