@@ -58,11 +58,13 @@ ffmpeg -framerate 15.04 -start_number 1 -i D:\Videos\Moon\Output_Iris\frame_%04d
 
 
 /* JOINS AUDIO AND VIDEO (switch -shortest /before output name) */
+/* KEEP VIDEO AND SOUND UNALTERED */
+ffmpeg -i "D:\Videos\Moon\Moon_nosound.mp4" -i "D:\Videos\Moon\Moon_audio.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Moon\Moon_Final.mp4"
+
 /* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
 ffmpeg -i "D:\Videos\Moon\Pobres_quase_Final.mp4" -i "D:\Videos\Moon\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Moon\Pobres_Final.mp4"
 
-/* KEEP VIDEO AND SOUND UNALTERED */
-ffmpeg -i "D:\Videos\Moon\Moon_nosound.mp4" -i "D:\Videos\Moon\Moon_audio.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Moon\Moon_Final.mp4"
+
 
 
 

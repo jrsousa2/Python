@@ -50,7 +50,7 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
     print("\nLoading model...")
     model = whisper.load_model("large", download_root=torch_home).to(device) #, device= device)
 
-    print("\nWhere model is stored:",next(model.parameters()).device)
+    print("\nWhere model is stored:",next(model.parameters()).device,"\n")
     
     # CALL MODEL
     result = model.transcribe(audio_path, 
