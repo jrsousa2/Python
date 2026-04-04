@@ -1,0 +1,77 @@
+EXTRACT FRAMES:
+
+ORIGINAL DIMENSION OF THE FRAME IS: 320 X 240 PIXELS
+O ASPECT RATIO EH 4:3
+
+AFTER ENHANCEMENT, IT WILL BE HD: 960 X 720 (4:3)
+
+O VIDEO FULL HD EH 1920 X 1080
+
+
+#####################################################################################################
+#####################################################################################################
+1)
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+ffmpeg -i "D:\Videos\Moon\Neil Armstrong - First Moon Landing 1969.mp4" -vf "fps=15.04" -y "D:\Videos\Moon\Input\frame_%04d.png"
+
+
+#####################################################################################################
+#####################################################################################################
+
+2) EXTRACT AUDIO FROM ORIGINAL FILE
+
+ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,codec_type,sample_rate,channels,bit_rate -of default=noprint_wrappers=1 "D:\Videos\Moon\Moon.mp4"
+codec_name=aac
+codec_type=audio
+sample_rate=44100
+channels=2
+bit_rate=127999
+
+THE ORIGINAL AUDIO IS AAC, SO EXTRACT AAC:
+
+/* FINAL FORMAT USED */
+ffmpeg -i "D:\Videos\Moon\Moon.mp4" -vn -c:a copy "D:\Videos\Moon\Moon_audio.aac"
+
+
+#####################################################################################################
+
+3) OVERLAY "LIKE" ICON (DOESN'T NEED ICON OVERLAY)
+
+# OVERLAY "LIKE ICON" TO THE 350 FIRST FRAMES (~12 SECS)
+
+# FINAL CMD W-w-10:2 (1st pos: 10 pixels from the right 2nd pos: 90 pixels below top)
+ffmpeg -start_number 450 -i D:\Videos\Moon\Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 350 -filter_complex overlay=W-w-10:50 -start_number 450 -y D:\Videos\Moon\Output_Iris\frame_%04d.png
+
+#####################################################################################################
+#####################################################################################################
+
+4) MERGE FRAMES
+
+/* MERGE FRAMES */
+ffmpeg -framerate 15.04 -start_number 1 -i D:\Videos\Moon\Output_Iris\frame_%04d.png -c:v libx264 -r 15.04 -pix_fmt yuv420p -y D:\videos\Moon\Moon_nosound.mp4
+
+
+#################################################################################
+#################################################################################
+#################################################################################
+
+
+/* JOINS AUDIO AND VIDEO (switch -shortest /before output name) */
+/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
+ffmpeg -i "D:\Videos\Moon\Pobres_quase_Final.mp4" -i "D:\Videos\Moon\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Moon\Pobres_Final.mp4"
+
+/* KEEP VIDEO AND SOUND UNALTERED */
+ffmpeg -i "D:\Videos\Moon\Moon_nosound.mp4" -i "D:\Videos\Moon\Moon_audio.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Moon\Moon_Final.mp4"
+
+
+
+
+
+
+
+
+
+
+
+

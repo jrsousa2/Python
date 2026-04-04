@@ -1,8 +1,10 @@
-# TRANSCRIBES THE AUDIO FROM A FILE
-# CREATES A SUBTITLES FILE
+# TRANSCRIBES OR TRANSLATES (TO ENGLISH) THE AUDIO FROM A FILE
+# TRANSLATES THE AUDIO FROM A GIVEN LANG TO ENGLISH
+# CREATES A SUBTITLES FILE IN ENGLISH
 import whisper
 import os
 import torch
+from os.path import exists
 
 from timeit import default_timer
 from datetime import datetime
@@ -40,19 +42,20 @@ def load_model_to_dev():
 
 def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.srt"):
 
+    task_pmt = "transcribe" # translate / transcribe
+    # Transcribe and translate
+    print(f"\n{'Translating' if task_pmt == 'translate' else 'Transcribing'} media...this may take a while")
+
     # IF MODEL BELOW ERRORS OUT YOU NEED TO CALL THE LOAD_MODEL_TO_DEV FUNCTION  
     print("\nLoading model...")
     model = whisper.load_model("large", download_root=torch_home).to(device) #, device= device)
 
     print("\nWhere model is stored:",next(model.parameters()).device)
     
-    # Transcribe and translate
-    print("\nTranslating media...this may take a while\n")
-    
     # CALL MODEL
     result = model.transcribe(audio_path, 
                               language=audio_lang, 
-                              task="translate", 
+                              task = task_pmt, 
                               verbose=True)
     
     subs = []
@@ -77,10 +80,12 @@ def generate_translated_srt(audio_path, audio_lang="en", output_srt="subtitles.s
 # input_file = "D:\\Videos\\Arosio\\Audio.aac"
 # output_file = "D:\\Videos\\Arosio\\subtitles.srt"
 
-input_file = r"F:\Videos\Pobres\Praia_audio1.opus"
+Base_dir = r"D:\Videos\Moon"
+
+input_file = rf"{Base_dir}\Moon_audio.aac"
 
 #input_file = "D:\\Videos\\n8n\\Sound\\audio1.mp3"
-output_file = r"F:\Videos\Pobres\Subtitles1.srt"
+output_file = rf"{Base_dir}\Subtitles.srt"
 
 elapsed_time = 0
 start_time = default_timer()
@@ -88,7 +93,9 @@ start_time = default_timer()
 start_time_act = datetime.now()
 print("\nStart time:", start_time_act)
 
-generate_translated_srt(input_file, audio_lang="PT", output_srt=output_file)
+# AVOID LOADING THE MODEL WITH AN INVALID INPUT FILE
+if exists(input_file):
+   generate_translated_srt(input_file, audio_lang="EN", output_srt=output_file)
 
 end_time = default_timer()
 end_time_act = datetime.now()
