@@ -29,7 +29,7 @@ bit_rate=127999
 THE ORIGINAL AUDIO IS AAC, SO EXTRACT AAC:
 
 /* FINAL FORMAT USED */
-ffmpeg -i "D:\Videos\Tieta\Tieta.mp4" -vn -c:a copy "D:\Videos\Tieta\Tieta_audio.aac"
+ffmpeg -i "D:\Videos\Tieta\Tieta.mp4" -ss 00:00:00 -t 33 -vn -c:a copy -y "D:\Videos\Tieta\Tieta.aac"
 
 
 #####################################################################################################
@@ -47,20 +47,22 @@ ffmpeg -start_number 450 -i D:\Videos\Tieta\Bef_Overlay\frame_%04d.png -i "D:\Py
 4) MERGE FRAMES
 
 /* MERGE FRAMES */
-ffmpeg -framerate 15.04 -start_number 1 -i D:\Videos\Tieta\Output_Iris\frame_%04d.png -c:v libx264 -r 15.04 -pix_fmt yuv420p -y D:\videos\Tieta\Tieta_nosound.mp4
+ffmpeg -framerate 25 -start_number 1 -i D:\Videos\Tieta\Output_Iris\frame_%04d.png -c:v libx264 -r 25 -pix_fmt yuv420p -y D:\videos\Tieta\Tieta_nosound.mp4
 
 
 #################################################################################
 #################################################################################
 #################################################################################
 
+/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
+ffmpeg -i "D:\Videos\Tieta\Tieta_nosound.mp4" -i "D:\Videos\Tieta\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Tieta\Tieta_Final.mp4"
 
 /* JOINS AUDIO AND VIDEO (switch -shortest /before output name) */
 /* KEEP VIDEO AND SOUND UNALTERED */
+
 ffmpeg -i "D:\Videos\Tieta\Tieta_nosound.mp4" -i "D:\Videos\Tieta\Tieta_audio.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Tieta\Tieta_Final.mp4"
 
-/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
-ffmpeg -i "D:\Videos\Tieta\Pobres_quase_Final.mp4" -i "D:\Videos\Tieta\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Tieta\Pobres_Final.mp4"
+
 
 
 

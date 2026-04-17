@@ -34,12 +34,12 @@ print("\nStart time:", start_time_act)
 # folder = "D:\\Videos\\Novelas\\"
 # input_file = "Final.wav"
 
-folder = "F:\\Videos\\Pobres\\"
-input_file = "Praia_audio1.opus"
+folder = "D:\\Videos\\Tieta\\"
+input_file = "Tieta.aac"
 vol = 2
 
 audio_path = folder + input_file
-shift_semitones = 12  # Shift up by 12 semitones (1 octave)
+shift_semitones = 2  # Shift up by 12 semitones (1 octave)
 
 # CALL FUNCTION
 shifted_audio, samplerate = pitch_shift(audio_path, shift_semitones, vol)
