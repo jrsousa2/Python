@@ -4,8 +4,6 @@ I have a knack for programming (it's about algorithms development, not memorizat
 
 Note this page is not about impeccable or professional software development — it's about curiosity, experimentation, learning and letting your creativity run free. 🐍
 
-Python is an interpreted language that's extremely powerful and has a lot of modules that provide ready-to-use functions. It doesn't need to be memorized, except for basic syntax. It bugs me that recruiters think that a test of Python (that is mostly about memorization) is necessary. For that you can just search in the myriad of functions and libraries. Now algorithm development is different, it requires math skills and reasoning, which I have plenty of.
-
 **Various projects that I've developed in Python, including:**
 
 - Creation of video/images with Gen AI/AI Prompting. [AI video](https://youtu.be/SsHmTKZYvJQ)
@@ -74,6 +72,8 @@ Test dataset (20% of the data)
 
 
 ---
+
+Python is an interpreted language that's extremely powerful and has a lot of modules that provide ready-to-use functions. It doesn't need to be memorized, except for basic syntax. It bugs me that recruiters think that a test of Python (that is mostly about memorization) is necessary. For that you can just search in the myriad of functions and libraries. Now algorithm development is different, it requires math skills and reasoning, which I have plenty of.
 
 **Python language reminders:**
 
