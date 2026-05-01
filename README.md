@@ -35,7 +35,7 @@ Note this page is not about impeccable or professional software development — 
 - Image, audio and video processing using ffmpeg.
 - Submitting Windows commands from Python.
 
-**Btw, take a look at my list of codes to manage iTunes and WMP** [Music Scripts](https://github.com/jrsousa2/Python/blob/main/iTunes/README.md)
+**Btw, here's a little description of some of the scripts to manage iTunes and WMP** [Music Scripts](https://github.com/jrsousa2/Python/blob/main/iTunes/README.md)
 
 *ML: Machine Learning.<br>
 *DL: Deep Learning.
