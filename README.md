@@ -35,12 +35,12 @@ Note this page is not about impeccable or professional software development — 
 - Image, audio and video processing using ffmpeg.
 - Submitting Windows commands from Python.
 
-**A little description of some of the scripts to manage iTunes and WMP ➔** [Music Scripts](https://github.com/jrsousa2/Python/blob/main/iTunes/README.md)
-
 *ML: Machine Learning.<br>
 *DL: Deep Learning.
 
 **Video created from the PPT deck created in Python (soundtrack added with ffmpeg).
+
+**A little guide to some of the scripts to manage iTunes and WMP ➔** [Music Scripts](https://github.com/jrsousa2/Python/blob/main/iTunes/README.md)
 
 #### Fitting of a logistics regression with PySpark to a credit risk file available on the internet.<br>
 *It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*<br>
