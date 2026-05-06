@@ -1,0 +1,101 @@
+EXTRACT FRAMES:
+
+ORIGINAL DIMENSION OF THE FRAME IS: 320 X 240 PIXELS
+O ASPECT RATIO EH 4:3
+
+AFTER ENHANCEMENT, IT WILL BE HD: 960 X 720 (4:3)
+
+REMOVES GREEN
+ffmpeg -ss 10 -t 10 -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "colorbalance=gm=-0.25:gs=-0.15:gh=-0.05,eq=saturation=1.05:contrast=1.03" -c:v libx264 -crf 18 -preset medium -c:a copy "D:\Videos\Xuxa\Xuxa_fixed_10s.mp4"
+
+REMOVE GREEN (DIFFERENT SETTINGS)
+ffmpeg -ss 10 -t 10 -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "colorbalance=gm=-0.18:gs=-0.10:gh=-0.03,eq=saturation=1.03:contrast=1.02" -c:v libx264 -crf 18 -preset medium -c:a copy "D:\Videos\Xuxa\Xuxa_fixed_10s_2.mp4"
+
+ffmpeg -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "colorbalance=gm=-0.18:gs=-0.10:gh=-0.03,eq=saturation=1.03:contrast=1.02" -c:v libx264 -crf 18 -preset medium -c:a copy "D:\Videos\Xuxa\Xuxa_Nogreen.mp4"
+
+USING NORMALIZE
+ffmpeg -ss 10 -t 10 -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "normalize=blackpt=black:whitept=white:smoothing=50,colorbalance=gm=-0.15:gs=-0.08:gh=-0.03,eq=saturation=1.03:contrast=1.02" -c:v libx264 -crf 18 -preset medium -c:a copy "D:\Videos\Xuxa\Xuxa_fixed.mp4"
+
+USING COLOR CHANNEL
+ffmpeg -ss 10 -t 10 -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "colorchannelmixer=rr=1:gg=0.9:bb=1,eq=saturation=1.05" -c:v libx264 -crf 18 -preset medium -c:a copy "D:\Videos\Xuxa\Xuxa_fixed.mp4"
+
+* UPSCALE 3 TIMES
+ffmpeg -ss 17 -t 15 -i "D:\Videos\Xuxa\Xuxa.mp4" ^
+-vf "scale=iw*3:ih*3:flags=lanczos" ^
+-c:v libx264 -crf 18 -preset slow ^
+-c:a copy "D:\Videos\Xuxa\Xuxa_3x.mp4"
+
+####################################################################################################
+####################################################################################################
+1)
+EXTRACTING FRAMES FROM MP4 WITH FFMPEG
+
+ffmpeg -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "fps=25.00" -y "D:\Videos\Xuxa\Input\frame_%04d.png"
+
+/* SAMPLE (10 sec) */
+ffmpeg -ss 17 -t 11 -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "fps=25.00" -y "D:\Videos\Xuxa\Input_sample\frame_%04d.png"
+
+ffmpeg -i "D:\Videos\Xuxa\Xuxa.mp4" -vf "fps=25.00" -y "D:\Videos\Xuxa\Input_sample\frame_%04d.png"
+
+
+#####################################################################################################
+#####################################################################################################
+
+2) EXTRACT AUDIO FROM ORIGINAL FILE
+
+ffprobe -v error -select_streams a:0 -show_entries stream=codec_name,codec_type,sample_rate,channels,bit_rate -of default=noprint_wrappers=1 "D:\Videos\Xuxa\Xuxa.mp4"
+codec_name=aac
+codec_type=audio
+sample_rate=44100
+channels=2
+bit_rate=127999
+
+THE ORIGINAL AUDIO IS AAC, SO EXTRACT AAC:
+
+/* FINAL FORMAT USED */
+ffmpeg -i "D:\Videos\Xuxa\Xuxa.mp4" -vn -c:a copy "D:\Videos\Xuxa\Xuxa_audio.aac"
+
+
+#####################################################################################################
+
+3) OVERLAY "LIKE" ICON (DOESN'T NEED ICON OVERLAY)
+
+# OVERLAY "LIKE ICON" TO THE 350 FIRST FRAMES (~12 SECS)
+
+# FINAL CMD W-w-10:2 (1st pos: 10 pixels from the right 2nd pos: 90 pixels below top)
+ffmpeg -start_number 450 -i D:\Videos\Xuxa\Bef_Overlay\frame_%04d.png -i "D:\Python\AI batches\Icons\Final-Transp.png" -frames:v 350 -filter_complex overlay=W-w-10:50 -start_number 450 -y D:\Videos\Xuxa\Output_Iris\frame_%04d.png
+
+#####################################################################################################
+#####################################################################################################
+
+4) MERGE FRAMES
+
+/* MERGE FRAMES */
+ffmpeg -framerate 25 -start_number 1 -i D:\Videos\Xuxa\Output_Iris\frame_%04d.png -c:v libx264 -r 25 -pix_fmt yuv420p -y D:\videos\Xuxa\Xuxa_nosound.mp4
+
+
+#################################################################################
+#################################################################################
+#################################################################################
+
+
+/* JOINS AUDIO AND VIDEO (switch -shortest /before output name) */
+/* KEEP VIDEO AND SOUND UNALTERED */
+ffmpeg -i "D:\Videos\Xuxa\Xuxa_nosound.mp4" -i "D:\Videos\Xuxa\Xuxa_audio.aac" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Xuxa\Xuxa_Final.mp4"
+
+/* AUDIO .OPUS IS COMMON WITH WEBM/MKV, FOR MP4 IT'S BEST TO KEEP AAC */
+ffmpeg -i "D:\Videos\Xuxa\Pobres_quase_Final.mp4" -i "D:\Videos\Xuxa\Modified Vol2x.wav" -c:v copy -c:a aac -map 0:v:0 -map 1:a:0  -y "D:\Videos\Xuxa\Pobres_Final.mp4"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
