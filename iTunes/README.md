@@ -1,4 +1,4 @@
-#### Readme!
+#### Readme! (May not be up-to-date, use at your own risk!)
 
 The main code Call_Save_to_Excel.py can be run from VS Code (or any other suitable python compiler/editor) and will
 create an Excel file with a list of your mp3 files and chosen tags, either through an interface with iTunes or Windows Media Player.
