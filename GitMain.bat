@@ -22,8 +22,9 @@ IF "%~1"=="" (
  REM git push origin main --force
  git push origin main
  REM echo sem nada mostra o echo status
- echo .
- echo .
+ echo.
+ echo.
  echo VIEWS IF BATCH SUCCEEDED
- git log -n 1
+ REM git log -n 1
+ git log -1 --name-status
 

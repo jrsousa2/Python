@@ -1,5 +1,5 @@
 ###################################################################################################
-RODAR AI MODEL COM CMD LINE
+RUN AI MODEL AS CMD LINE
  
 PARA IMAGEM:
 C:\Python\MyEnv\Scripts\python D:\Python\Balao\inference_realesrgan.py --input D:\Python\Balao\Input2\teaser.jpg --output D:\Python\Balao --model_path D:\Python\Balao\weights\RealESRGAN_x4plus_anime_6B.pth --model_name RealESRGAN_x4plus_anime_6B --gpu-id 0 --outscale 2
