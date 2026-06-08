@@ -1,0 +1,3 @@
+REM TO KNOW WHICH VENV IS BEING USED IN EACH PROJECT
+cd D:\Python
+findstr /s /i /c:"c:" settings.json
