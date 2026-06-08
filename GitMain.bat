@@ -31,4 +31,5 @@ IF "%~1"=="" (
  REM git log -n 1
  git log -1 --name-status
  cd %CURDIR%
+ echo.
 
