@@ -15,8 +15,8 @@ IF "%~1"=="" (
 
  cd D:\Python
  set GIT_TRACE=1
- echo FORCE A RE-READING OF THE .gitignore list
- git rm -r --cached .
+ echo FORCE A RE-READING OF THE .gitignore list (COMMENT OUT)
+ REM git rm -r --cached .
  git add .
  git branch -M main
  git commit -m %Desc%
