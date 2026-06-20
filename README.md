@@ -18,7 +18,7 @@ Note this page is not about impeccable or professional software development — 
 - Video enhancement using AI: [Enhanced](https://drive.google.com/uc?export=download&id=1KPbJ059M8ViDMZrEMk061beRpZBdeGB2) Vs. [Original](https://redeglobo.globo.com/video/relembre-a-abertura-do-balao-magico-em-1983-1037992.ghtml).
 - Given a person's name in a given language, predict the gender of the person.
 - Installed, configured and debugged PySpark on Windows, with Python 3.11.8, Java 11.0 and Hadoop 3.3.5. This allowed me to run the below task (free Azure account is constrained).
-- Fitting models such as Logistics Regression using PySpark ML ([Logistics Regression](#fitting-of-a-logistics-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
+- Fitting models such as Logistic Regression using PySpark ML ([Logistic Regression](#fitting-of-a-logistic-regression-with-pyspark-to-a-credit-risk-file-available-on-the-internet)). 
 - AI video/image enhancement with open source code Real-ESRGAN (Generative Adversarial Network).
 - Checking if NVIDIA's CUDA is enabled after installation.
 - Upward shifting of speech pitch (baby voice).
@@ -46,14 +46,14 @@ Note this page is not about impeccable or professional software development — 
 
 ---
 
-#### Fitting of a logistics regression with PySpark to a credit risk file available on the internet.<br>
+#### Fitting of a logistic regression with PySpark to a credit risk file available on the internet.<br>
 *It's a credit risk dataset (sometimes called the "Give Me Some Credit" dataset from Kaggle), used for predicting if someone will default on loans.*<br>
 The binary response variable is called SeriousDlqin2yrs and indicates whether a given customer became seriously delinquent in a 2-year time horizon (1=Yes, 0=No).
 
 The area under the ROC curve (a measure of the goodness-of-fit of the model) is modest at best:<br>
 AUC: 0.687
 
-For the first-time PySpark ML user this can come out as a bit disappointing. They were probably expecting the PySpark ML engine to do more "magic" like automatically selecting the best features, tuning hyperparameters, or trying multiple models to find the absolute best fit all on its own. But it's still just the classic logistics regression.
+For the first-time PySpark ML user this can come out as a bit disappointing. They were probably expecting the PySpark ML engine to do more "magic" like automatically selecting the best features, tuning hyperparameters, or trying multiple models to find the absolute best fit all on its own. But it's still just the classic logistic regression.
 
 Train dataset (80% of the data)
 | Actual | Prediction | Count |
