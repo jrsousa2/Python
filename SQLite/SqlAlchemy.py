@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
 import pandas as pd
 
-engine = create_engine("sqlite:///D:/Python/Excel/Main_database.db")
+engine = create_engine("sqlite:///D:/Python/Databases/Main_database.db")
 
-df = pd.read_sql("SELECT * FROM iTunes", engine)
+df = pd.read_sql("SELECT * FROM iTunes where ", engine)
 
 print(df.head())
