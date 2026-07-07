@@ -6,7 +6,7 @@ import pandas as pd
 df = pd.read_excel("employees.xlsx")
 
 # Create (or open) SQLite database file
-conn = sqlite3.connect("test_database.db")
+conn = sqlite3.connect("Main_database.db")
 
 # Write DataFrame to a table
 df.to_sql("employees", conn, if_exists="replace", index=False)
