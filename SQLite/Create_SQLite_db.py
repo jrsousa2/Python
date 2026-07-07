@@ -28,5 +28,6 @@ with sqlite3.connect(r"D:\Python\Databases\Main_database.db") as conn:
     df.to_sql("iTunes", conn, if_exists="fail", index=False)
 
     # CHECK IF THE DB TABLE WAS CREATED
+    print("\n\nPrinting 5 lines of the table\n")
     print(pd.read_sql("SELECT * FROM iTunes LIMIT 5", conn))
 
