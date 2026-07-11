@@ -1,0 +1,24 @@
+TO CREATE THE GIT LOCAL REPO DO:
+cd D:\Agent
+git init
+
+# SAY NAME OF THE REMOTE REPO IS PYTHON
+git remote add origin repo_URL
+
+# FIND THE URL OF THE REPO IN THE CODE SUGGESTED BY GITHUB UPON REPO CREATION
+git remote add origin https://github.com/jrsousa2/job-search-AI-agent.git
+git branch -M main
+git push -u origin main
+
+VERIFY:
+git remote -v
+
+DO THE INITIAL COMMIT:
+git add -A
+git commit -m "Initial commit"
+git branch -M main
+git push -u origin main
+
+THEN PUSH WITH A BATCH AS USUAL
+
+

@@ -1,0 +1,6 @@
+# reassign repo after name change if needed
+git remote set-url origin https://github.com/jrsousa2/Python.git
+
+# You can check your current remote with:
+git remote -v
+
