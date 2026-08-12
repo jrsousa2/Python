@@ -28,8 +28,8 @@ IF "%~1"=="" (
  echo.
  echo.
  echo VIEWS IF BATCH SUCCEEDED
- REM git log -n 1
- git log -1 --name-status
+ git log -n 1
+ REM git log -1 --name-status
  cd %CURDIR%
  echo.
 
