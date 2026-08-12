@@ -68,7 +68,7 @@ def Call_move(Check_dir=True,rows=None):
         file_exists = exists(Arq[n])
         m = PID[n]
         track = App.LibraryPlaylist.Tracks.ItemByPersistentID(*m)
-        if Arq[n] != New_location and file_exists and Arq[n]==track.Location:
+        if file_exists and Arq[n] != New_location and Arq[n]==track.Location:
            fixed = fixed+1
            print("Moving",fixed,"of",files_to_move,":",Arq[n],"->",New_location,"\n")
            # ADD ENTRY TO LOG FILE

@@ -11,8 +11,6 @@ sys.path.insert(0, "D:\\Python\\Modules")
 #import pandas as pd
 from Files import file_w_ext
 
-
-
 # MAIN CODE
 def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=False,col_names = ["Arq","Art","Title"]):
     # BEGIN
@@ -84,6 +82,11 @@ def Save_Excel(PL_name=None,PL_nbr=None,Do_lib=False,rows=None,iTunes=True,XML=F
 # CHAMA PROGRAM PL_name="ALL",Fave-iPhone ["Arq","Art","Title","Len"] "ID", "PID", "Added"
 # Save_Excel(PL_name="Faves-Easy",Do_lib=1,rows=150,iTunes=0,XML=1,col_names = ["Arq","Art","Title","AA","Album","Year","Genre"])
 # rows=5000
-Save_Excel(PL_name="BBB",iTunes=1,XML=0,col_names = ["Arq","Art","Title", "Len", "Genre", "Added"], rows=5000)
+cols = ["Art", "Title", "AA", "Album", "Year", "Arq", "Bitrate", "Len", "Genre", "Group"]
+Save_Excel(PL_name="Faves-ALL-128k",iTunes=1,XML=1,col_names = cols, rows=50) 
+
+# Save_Excel(PL_name="Faves-ALL-128k",iTunes=1,XML=1,col_names = ["Arq","Art","Title", "Len", "Genre", "Group"], rows=None)
+
+#Save_Excel(PL_name="BBB",iTunes=1,XML=0,col_names = ["Arq","Art","Title", "Len", "Genre", "Added"], rows=5000)
 
 # ["Arq","Art","Title","Genre","PID", "Added"]

@@ -7,7 +7,7 @@ import pandas as pd
 df = pd.read_excel(r"D:\Python\Excel\ALL-Nov20.xlsx", usecols="A:J")
 
 # COLS WHOSE VALUES HAVE MIXED TYPES: WILL BE CONVERTED TO STRING
-cols = ["Art", "Title", "AA", "Album", "Location", "Length", "Genre"]
+cols = ["Art", "Title", "AA", "Album", "Year", "Location", "Bitrate", "Length", "Rating", "Genre", "Group"]
 
 # COLS IN THE LIST WILL BE CONVERTED TO STR
 for col in cols:

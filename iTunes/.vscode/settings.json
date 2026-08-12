@@ -23,6 +23,6 @@
     "editor.autoSurround": "never",
     "editor.autoClosingQuotes": "never",
     "editor.lightbulb.enabled": false,
-    "python.defaultInterpreterPath": "C:\\Python\\Python38\\python.exe",
+    "python.defaultInterpreterPath": "C:\\Python\\Python3.8-v0\\Scripts\\python.exe",
     "python.analysis.extraPaths": [ "D:\\Python\\Modules" ]
 }
