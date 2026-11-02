@@ -1,0 +1,140 @@
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\TeX.pool.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\eTeX.pool.ltxml... 0.01 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\pdfTeX.pool.ltxml... 0.01 sec) 0.23 sec)
+latexmlc (LaTeXML version 0.8.8)
+invoked as [C:\Strawberry\perl\site\bin/latexmlc D:\Math\Converter\Functional_copy.tex --dest D:\GH\Functional.html]
+processing started Fri Sep 25 21:57:10 2026
+(Digesting TeX Functional_copy...
+(Processing content D:\Math\Converter\Functional_copy.tex...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\LaTeX.pool.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\textcomp.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/latex/base/ts1enc.dfu... 0.05 sec) 1.72 sec) 2.03 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\article.cls.ltxml... 0.02 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\xcolor.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\color.sty.ltxml... 0.02 sec)
+(Processing definitions C:/Program Files/MiKTeX/tex/latex/graphics/dvipsnam.def... 0.20 sec) 1.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amsfonts.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\setspace.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\bm.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\bbm.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amssymb.sty.ltxml... 0.03 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\indentfirst.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\geometry.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\keyval.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/latex/graphics/keyval.sty... 0.05 sec) 1.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\ifpdf.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\ifvtex.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\iftex.sty.ltxml... 0.01 sec) 0.04 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\ifxetex.sty.ltxml... 0.00 sec) 1.11 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\mathtools.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\calc.sty.ltxml... 0.01 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amsmath.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amsbsy.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amsgen.sty.ltxml... 0.01 sec) 0.03 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amstext.sty.ltxml... 0.02 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\amsopn.sty.ltxml... 0.03 sec) 0.25 sec) 0.40 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\hyperref.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\ltxcmds.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty... 0.16 sec) 1.55 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\kvsetkeys.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty... 0.21 sec) 0.96 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\kvdefinekeys.sty.ltxml...
+(Processing definitions C:/Users/JR Sousa/AppData/Roaming/MiKTeX/tex/generic/kvdefinekeys/kvdefinekeys.sty... 0.05 sec) 0.62 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\kvoptions.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/latex/kvoptions/kvoptions.sty... 0.19 sec) 0.85 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\nameref.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\refcount.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/latex/refcount/refcount.sty...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\infwarerr.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/generic/infwarerr/infwarerr.sty... 0.06 sec) 1.16 sec) 1.28 sec) 2.01 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\gettitlestring.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/generic/gettitlestring/gettitlestring.sty... 1.21 sec) 1.77 sec) 3.81 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\url.sty.ltxml... 0.00 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\bitset.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\intcalc.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/generic/intcalc/intcalc.sty... 0.11 sec) 0.75 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\bigintcalc.sty.ltxml...
+(Processing definitions C:/Program Files/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\pdftexcmds.sty.ltxml... 0.01 sec) 0.25 sec) 0.79 sec) 1.83 sec) 2.40 sec) 10.33 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\natbib.sty.ltxml... 0.03 sec)
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\graphicx.sty.ltxml...
+(Loading C:\Strawberry\perl\site\lib\LaTeXML\Package\graphics.sty.ltxml... 0.01 sec) 0.04 sec) 19.88 sec) 19.91 sec)
+(Building...
+(Loading compiled schema C:\Strawberry\perl\site\lib\LaTeXML\resources/RelaxNG\LaTeXML.model... 0.02 sec) 8.37 sec)
+(Rewriting... 0.31 sec)
+(Math Parsing 239 formulae ......
+Warning:not_parsed:OPEN.UNKNOWN.CLOSE>RELOP MathParser failed to match rule 'Anything'
+	at Functional_copy.tex; line 268 col 16 - line 275 col 14
+	In "\begin{equation}\zeta(j)=\left\{\begin{aligned} &\frac{(2\pi\bm{i})^{j}}{2\,%
+	\Gamma(j)}\zeta(1-j)\text{, if $j$ is even},\\
+	&\frac{2\,(2\pi)^{j-1}}{\Gamma(j)}\sin{\frac{\pi j}{2}}\,\zeta^{\prime}(1-j)%
+	\text{, if $j$ is odd,}\end{aligned}\right.\end{equation}"
+	ζ[[UNKNOWN]] ([[OPEN]] j[[UNKNOWN]] )[[CLOSE]]
+	        > =[[RELOP]] \left\{[[OPEN]] Alignment[][[UNKNOWN]]
+Warning:not_parsed:>OPEN MathParser failed to match rule 'Anything'
+	at Functional_copy.tex; line 393 col 16 - line 404 col 14
+	In "\begin{equation}\left\{\begin{aligned} &k\notin\mathbb{Z}_{-}\cup\{0\},\\
+	&-2\pi\leq\Im(z)\leq 2\pi\text{ and }z\neq 0,\\
+	&\Im(b)>0,\\
+	&\text{or }b<0,\\
+	&\text{or }0<\Re(b)<1\text{ and }-2\pi\leq\Im(b)\leq 0,\\
+	&\text{or }-1<\Re(b)<0\text{ and }0\leq\Im(b)\leq 2\pi.\end{aligned}\right.\end{equation}"
+	> \left\{[[OPEN]] Alignment[][[UNKNOWN]]
+Warning:not_parsed:RELOP.UNKNOWN.POSTSUPERSCRIPT>OPEN MathParser failed to match rule 'Anything'
+	at Functional_copy.tex; line 517 col 0 - line 517 col 26
+	In "\begin{multline}\frac{\text{d}^{k}e^{z\,x}\left(1-\pi\,x\cot{\pi x}\right)}{%
+	\text{d}\,x^{k}}=e^{z\,x}\Big{(}z^{k}-\pi\bm{i}\,x\,z^{k}-\pi\bm{i}\,k\,z^{k-1%
+	}+x\,(2\pi\bm{i})^{k+1}\,\Phi\left(e^{2\pi\bm{i}\,x},-k,\frac{z}{2\pi\bm{i}}%
+	\right)\\
+	+k\,(2\pi\bm{i})^{k}\,\Phi\left(e^{2\pi\bm{i}\,x},-k+1,\frac{z}{2\pi\bm{i}}%
+	\right)\Big{)}\end{multline}\frac{\text{d}^{k}e^{z\,x}\left(1-\pi\,x\cot{\pi x%
+	}\right)}{\text{d}\,x^{k}}=e^{z\,x}\Big{(}z^{k}-\pi\bm{i}\,x\,z^{k}-\pi\bm{i}%
+	\,k\,z^{k-1}+x\,(2\pi\bm{i})^{k+1}\,\Phi\left(e^{2\pi\bm{i}\,x},-k,\frac{z}{2%
+	\pi\bm{i}}\right)\\
+	+k\,(2\pi\bm{i})^{k}\,\Phi\left(e^{2\pi\bm{i}\,x},-k+1,\frac{z}{2\pi\bm{i}}%
+	\right)\Big{)}"
+	\frac{\text{d}^{k}e^{z\,x}\left(1-\pi\,x\cot{\pix}\right)}{\text{d}\,x^{k}}[[UNKNOWN]] =[[RELOP]] e[[UNKNOWN]] ^{z\,x}[[POSTSUPERSCRIPT]]
+	        > ([[OPEN]] z[[UNKNOWN]] ^{k}[[POSTSUPERSCRIPT]] -[[ADDOP]] π[[UNKNOWN]] i[[UNKNOWN]] x[[UNKNOWN]] z[[UNKNOWN]] ^{k}[[POSTSUPERSCRIPT]] -[[ADDOP]] π[[UNKNOWN]] i[[UNKNOWN]] k[[UNKNOWN]] z[[UNKNOWN]] ^{k-1}[[POSTSUPERSCRIPT]] +[[ADDOP]] x[[UNKNOWN]] ([[OPEN]] 2[[NUMBER]] π[[UNKNOWN]] i[[UNKNOWN]] )[[CLOSE]] ^{k+1}[[POSTSUPERSCRIPT]] Φ[[UNKNOWN]] \left([[OPEN]] e[[UNKNOWN]] ^{2\pi\bm{i}\,x}[[POSTSUPERSCRIPT]] ,[[PUNCT]] -[[ADDOP]] k[[UNKNOWN]] ,[[PUNCT]] \frac{z}{2\pi\bm{i}}[[UNKNOWN]] \right)[[CLOSE]]
+Warning:not_parsed:PUNCT.ATOM.CLOSE>CLOSE MathParser failed to match rule 'Anything'
+	at Functional_copy.tex; line 519 col 3 - line 519 col 3
+	+[[ADDOP]] k[[UNKNOWN]] ([[OPEN]] 2[[NUMBER]] π[[UNKNOWN]] i[[UNKNOWN]] )[[CLOSE]] ^{k}[[POSTSUPERSCRIPT]] Φ[[UNKNOWN]] \left([[OPEN]] e[[UNKNOWN]] ^{2\pi\bm{i}\,x}[[POSTSUPERSCRIPT]] ,[[PUNCT]] -[[ADDOP]] k[[UNKNOWN]] +[[ADDOP]] 1[[NUMBER]] ,[[PUNCT]] \frac{z}{2\pi\bm{i}}[[UNKNOWN]] \right)[[CLOSE]]
+	        > )[[CLOSE]]
+Warning:not_parsed:POSTSUPERSCRIPT.UNKNOWN.UNKNOWN>RELOP MathParser failed to match rule 'Anything'
+	at Functional_copy.tex; line 540 col 16 - line 547 col 14
+	In "\begin{equation}\int_{0}^{1}\left((1-u)^{k-1}-1\right)u^{2j-1}\,du=\left\{%
+	\begin{aligned} &\frac{\Gamma(k)\,\Gamma(2j)}{\Gamma(2j+k)}-\frac{1}{2j}\text{%
+	, if }j\geq 1\text{,}\\
+	&-H(k-1)\text{, if }j=0\text{ and }\Re(k)>0\end{aligned}\right.\end{equation}"
+	∫[[INTOP]] _{0}[[POSTSUBSCRIPT]] ^{1}[[POSTSUPERSCRIPT]] \left([[OPEN]] ([[OPEN]] 1[[NUMBER]] -[[ADDOP]] u[[UNKNOWN]] )[[CLOSE]] ^{k-1}[[POSTSUPERSCRIPT]] -[[ADDOP]] 1[[NUMBER]] \right)[[CLOSE]] u[[UNKNOWN]] ^{2j-1}[[POSTSUPERSCRIPT]] d[[UNKNOWN]] u[[UNKNOWN]]
+	        > =[[RELOP]] \left\{[[OPEN]] Alignment[][[UNKNOWN]]
+Warning:not_parsed:>OPEN MathParser failed to match rule 'Anything'
+	at Functional_copy.tex; line 563 col 16 - line 570 col 14
+	In "\begin{equation}\left\{\begin{aligned} &f(z)+\frac{z^{k}}{(-z)^{k}}\,f(-z)=g(z%
+	,k)\\
+	&\frac{(-z)^{k}}{z^{k}}\,f(z)+f(-z)=g(-z,k)\end{aligned}\right.\end{equation}"
+	> \left\{[[OPEN]] Alignment[][[UNKNOWN]]
+ 28.82 sec)
+Math parsing succeeded:
+   ltx:XMWrap: 37/38
+   ltx:XMArg: 1134/1136
+   ltx:XMath: 239/243
+Symbols assumed as simple identifiers (with # of occurences):
+   'Delta' (1), 'Gamma' (38), 'H{italic}' (21), 'Li' (25), 'Phi' (46), 'Z{blackboard}' (3), 'a{italic}' (4), 'b{italic}' (263), 'delta' (2), 'd{italic}' (17), 'e{italic}' (161), 'f{italic}' (22), 'g{italic}' (5), 'i{bold italic}' (130), 'j{italic}' (219), 'k{italic}' (289), 'n{italic}' (48), 'pi' (181), 'q{italic}' (23), 'u{italic}' (77), 'x{italic}' (42), 'zeta' (67), 'z{italic}' (257)
+Set MATHPARSER_SPECULATE to speculate on possible notations.
+(Finalizing... 3.62 sec)
+Conversion complete: 6 warnings (See D:/Python\Functional_copy.latexml.log)
+(post-processing...
+(Scan Functional.html processing...
+Scan: DBStatus: 3142/0 objects
+ 1.24 sec)
+(MakeBibliography Functional.html processing... 0.00 sec)
+(CrossRef Functional.html processing... 0.53 sec)
+(MathML::Presentation Functional.html 244 to process...
+converted 244 Maths
+ 3.89 sec)
+(XSLT[using LaTeXML-html5.xsl] Functional.html processing... 0.75 sec)
+(Writer Functional.html processing... 0.01 sec) 6.46 sec)
+Post-processing complete: No obvious problems
+processing finished Fri Sep 25 21:58:19 2026
+Status:conversion:1

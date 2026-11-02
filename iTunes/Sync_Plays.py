@@ -8,13 +8,16 @@
 # HERE THE ID IS THE PID (PERSISTENT ID) FOR ITUNES, SOMETHING ELSE FOR WMP
 
 from os.path import exists
-import Read_PL
-# import pandas as pd
-import Files
+
 
 import sys
 sys.path.insert(0, "D:\\Python\\Modules")
+import msvcrt
+
 import WMP_Read_PL as WMP 
+import Read_PL
+# import pandas as pd
+import Files
 
 # CALLS Read_PL FUNCTION 
 col_names =  ["Arq", "Plays", "ID"]
@@ -99,7 +102,8 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     miss_files = []
     if Do_lib:
        print("\nReading the WMP library...")
-       wmp_dict = WMP.Read_WMP_PL(col_names,Do_lib=Do_lib,rows=rows,Modify_cols=False) 
+       print("\nDuring Play counts processing, press Bar to pause/resume...")
+       wmp_dict = WMP.Read_WMP_PL(col_names,Do_lib=Do_lib,rows=rows)  # removed Modify_cols=False as arg
     else:
         Arq = [x for x in iTu_df["Location"] if exists(x)]
         print("\nReading the tracks from the iTunes playlist in WMP")  
@@ -149,20 +153,36 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
     nbr_files = len(Arq)
 
     # Get the attribute name from the dictionary
-    Plays_attr_name = WMP.tag_dict["Plays"]
+    Plays_attr_name = WMP.WMP_all_tags_dict["Plays"]
 
     print()
     wmp_cnt = 0
     iTu_cnt = 0
     # TRACK METADATA
     cols = ["Art","Title","Genre"]
+
+    paused = False
+
     # COMPARE AND CHANGE THE FILES
     for i in range(nbr_files):
+        # CMD TO PAUSE EXECUTION UNTIL I PRESS A KEY
+        pause_key = b' '
+        if msvcrt.kbhit():
+            key = msvcrt.getch().lower()
+            if key == pause_key:
+                paused = not paused
+                print("\nPaused. Press P to resume..." if paused else "\nResumed")
+
+        while paused:
+            if msvcrt.kbhit() and msvcrt.getch().lower() == pause_key:
+                paused = False
+                print("\nResumed")
+
         if Do_lib:
            iTu_track = iTu_App.LibraryPlaylist.Tracks.ItemByPersistentID(*PID[i])
         else:    
             iTu_track = iTu_App.GetITObjectByID(*PID[i])
-        track_dict = Read_PL.iTunes_tag_dict(iTu_track, cols)
+        track_dict = Read_PL.iTunes_sel_tags_dict(iTu_track, cols)
         track_meta = track_dict["Art"] +" - "+ track_dict["Title"]
         
         # CHANGE TAGS, BOTH ITUNES AND WMP CAN BE UPDATED AT THE SAME TIME NOW (NO LONGER XOR)
