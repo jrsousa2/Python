@@ -245,5 +245,10 @@ def Sync_plays(PL_name=None,PL_nbr=None,Do_lib=False,rows=None):
            print("Missing",i+1,"of",miss_nbr,":",miss_files[i])
        print()
 
+    WMP.playlists = None
+    WMP.library = None
+    WMP.wmp = None   
+
 # CALLS PROGRAM 
 Sync_plays(Do_lib=True)
+
